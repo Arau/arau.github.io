@@ -1,0 +1,84 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> – Rancher</title>
+    <link>/docs/platforms/rancher/</link>
+    <description>Recent content in Rancher on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/platforms/rancher/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Install StorageOS</title>
+      <link>/docs/platforms/rancher/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/rancher/install/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This section of documentation covers use of the
+&lt;a href=&#34;https://www.rancher.com/&#34;&gt;Rancher&lt;/a&gt; orchestrator as a Kubernetes provisioner.&lt;/p&gt;
+&lt;p&gt;{% include platforms/kubernetes-with-storageos.md %}
+{% include platforms/csi-note.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Volume Guide</title>
+      <link>/docs/platforms/rancher/volumeguide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/rancher/volumeguide/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{%include platforms/firstuse.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: StorageOS with {{ page.platform }} best practices</title>
+      <link>/docs/platforms/rancher/bestpractices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/rancher/bestpractices/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% include k8s/bestpractices/pod-placement.md %}
+{% include k8s/bestpractices/api-password.md %}
+{% include k8s/bestpractices/etcd-external.md %}
+{% include k8s/bestpractices/storage-host-setup.md %}
+{% include k8s/bestpractices/resources.md %}
+{% include k8s/bestpractices/private-network.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Troubleshoot</title>
+      <link>/docs/platforms/rancher/troubleshoot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/rancher/troubleshoot/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% include troubleshoot/troubleshoot-header.md %}&lt;/p&gt;
+&lt;h2 id=&#34;list-of-common-issues&#34;&gt;List of common issues&lt;/h2&gt;
+&lt;p&gt;{% include troubleshoot/index-{{ page.platform | downcase }}-install-issues.md %}
+{% include troubleshoot/index-{{ page.platform | downcase }}-volume-issues.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

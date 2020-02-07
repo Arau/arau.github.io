@@ -1,0 +1,72 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> – Azure</title>
+    <link>/docs/platforms/azure-aks/</link>
+    <description>Recent content in Azure on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/platforms/azure-aks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Install StorageOS</title>
+      <link>/docs/platforms/azure-aks/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/azure-aks/install/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Only installations of StorageOS with CSI are supported for AKS.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Visit the &lt;a href=&#34;/docs/platforms/azure-aks/bestpractices/&#34;&gt;best practices page&lt;/a&gt; for production
+deployment advice.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;{% include operator/install.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: StorageOS Volume Guide</title>
+      <link>/docs/platforms/azure-aks/volumeguide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/azure-aks/volumeguide/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% include platforms/firstuse.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: StorageOS with AKS Kubernetes best practices</title>
+      <link>/docs/platforms/azure-aks/bestpractices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/azure-aks/bestpractices/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% include k8s/bestpractices/dedicated-instancegroup.md %}
+{% include k8s/bestpractices/etcd-external.md %}
+{% include k8s/bestpractices/api-password.md %}
+{% include k8s/bestpractices/storage-host-setup.md %}
+{% include k8s/bestpractices/resources.md %}
+{% include k8s/bestpractices/private-network.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
