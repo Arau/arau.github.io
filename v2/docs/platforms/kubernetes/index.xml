@@ -1,0 +1,130 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> – Kubernetes</title>
+    <link>/docs/platforms/kubernetes/</link>
+    <description>Recent content in Kubernetes on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/platforms/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Install StorageOS</title>
+      <link>/docs/platforms/kubernetes/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/kubernetes/install/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This section of documentation covers use of the vanilla
+&lt;a href=&#34;https://kubernetes.io/&#34;&gt;kubernetes&lt;/a&gt; orchestrator. The StorageOS installation
+procedure is slightly different depending on the version you have deployed, so
+follow the appropriate guide. Other documents in this section are version
+agnostic.&lt;/p&gt;
+&lt;h2 id=&#34;kubernetes-with-storageos&#34;&gt;Kubernetes with StorageOS&lt;/h2&gt;
+&lt;p&gt;Kubernetes and StorageOS communicate with each other to perform actions such as
+creation, deletion or mounting of volumes. The CSI (Container Storage
+Interface) driver is the standard communication method. Using CSI, Kubernetes
+and StorageOS communicate over a Unix domain socket.&lt;/p&gt;
+&lt;p&gt;{% if page.platform == &amp;ldquo;azure-aks&amp;rdquo; or page.platform == &amp;ldquo;aws-eks&amp;rdquo; %}
+For this platform the &lt;strong&gt;only supported&lt;/strong&gt; setup for communication is &lt;strong&gt;CSI&lt;/strong&gt;.
+{% else %}
+The former communication procedure, although still in use, uses REST API calls.
+StorageOS still maintains support for it.
+{% endif %}&lt;/p&gt;
+&lt;p&gt;MarkDown file &amp;quot;share/platforms/kubernetes-with-storageos.md&amp;quot;&lt;/p&gt;
+&lt;p&gt;&amp;quot;share/platforms/kubernetes-with-storageos.md&amp;quot;&lt;/p&gt;
+&lt;h2 id=&#34;csi-container-storage-interface-note&#34;&gt;CSI (Container Storage Interface) Note&lt;/h2&gt;
+&lt;p&gt;CSI is the standard method of communication that enables storage drivers to
+release on their own schedule. This allows storage vendors to upgrade, update,
+and enhance their drivers without the need to update Kubernetes source code, or
+follow Kubernetes release cycles.&lt;/p&gt;
+&lt;p&gt;CSI is available from Kubernetes 1.9 alpha. CSI is considered GA from
+Kubernetes 1.13, hence StorageOS recommends the use of CSI. In addition, the
+StorageOS Cluster Operator handles the configuration of the CSI driver and its
+complexity by detecting the version of the Kubernetes installed.&lt;/p&gt;
+&lt;p&gt;Check out the status of the CSI release cycle in relation with Kubernetes in
+the &lt;a href=&#34;https://kubernetes-csi.github.io/docs/&#34;&gt;CSI project&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;CSI communication is fully supported by StorageOS if the cluster is deployed
+with any &lt;a href=&#34;/docs/prerequisites/systemconfiguration#distribution-specifics&#34;&gt;supported Linux
+Distribution&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;MarkDown file &amp;quot;share/platforms/csi-note.md&amp;quot;&lt;/p&gt;
+&lt;p&gt;&amp;quot;share/platforms/csi-note.md&amp;quot;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Volume Guide</title>
+      <link>/docs/platforms/kubernetes/volumeguide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/kubernetes/volumeguide/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% include platforms/firstuse.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: StorageOS with {{ page.platform }} best practices</title>
+      <link>/docs/platforms/kubernetes/bestpractices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/kubernetes/bestpractices/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% include k8s/bestpractices/pod-placement.md %}
+{% include k8s/bestpractices/api-password.md %}
+{% include k8s/bestpractices/etcd-external.md %}
+{% include k8s/bestpractices/storage-host-setup.md %}
+{% include k8s/bestpractices/resources.md %}
+{% include k8s/bestpractices/private-network.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Install applications on Kubernetes</title>
+      <link>/docs/platforms/kubernetes/examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/kubernetes/examples/</guid>
+      <description>
+        
+        
+        &lt;h1 id=&#34;kubernetes&#34;&gt;Kubernetes&lt;/h1&gt;
+&lt;p&gt;StorageOS can be used to provide permanent storage for other applications
+running in &lt;a href=&#34;https://kubernetes.io&#34;&gt;Kubernetes&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Troubleshoot</title>
+      <link>/docs/platforms/kubernetes/troubleshoot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/kubernetes/troubleshoot/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% include troubleshoot/troubleshoot-header.md %}&lt;/p&gt;
+&lt;h2 id=&#34;list-of-common-issues&#34;&gt;List of common issues&lt;/h2&gt;
+&lt;p&gt;{% include troubleshoot/index-{{ page.platform | downcase }}-install-issues.md %}
+{% include troubleshoot/index-{{ page.platform | downcase }}-volume-issues.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,78 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> – Cluster Operator</title>
+    <link>/docs/reference/cluster-operator/</link>
+    <description>Recent content in Cluster Operator on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/reference/cluster-operator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Install</title>
+      <link>/docs/reference/cluster-operator/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/reference/cluster-operator/install/</guid>
+      <description>
+        
+        
+        &lt;p&gt;To install the operator follow the installation page for your orchestrator.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;Kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/docs/platforms/openshift/install/&#34;&gt;OpenShift&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Configuration</title>
+      <link>/docs/reference/cluster-operator/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/reference/cluster-operator/configuration/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% include operator/cr-config-table.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Examples</title>
+      <link>/docs/reference/cluster-operator/examples/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/reference/cluster-operator/examples/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% include operator/examples.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cluster Operator Upgrade</title>
+      <link>/docs/reference/cluster-operator/upgrade/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/reference/cluster-operator/upgrade/</guid>
+      <description>
+        
+        
+        &lt;p&gt;{% include operator/upgrade-uber-yaml.md %}&lt;/p&gt;
+&lt;p&gt;{% include operator/upgrade-helm.md %}&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
