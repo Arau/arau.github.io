@@ -3,861 +3,861 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/docs/platforms/openshift/install/4.2/</loc>
+    <loc>/v2/docs/platforms/openshift/install/4.2/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/install/1.17/</loc>
+    <loc>/v2/docs/platforms/kubernetes/install/1.17/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/install/4.1/</loc>
+    <loc>/v2/docs/platforms/openshift/install/4.1/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/install/1.16/</loc>
+    <loc>/v2/docs/platforms/kubernetes/install/1.16/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/install/3.11/</loc>
+    <loc>/v2/docs/platforms/openshift/install/3.11/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/install/1.15/</loc>
+    <loc>/v2/docs/platforms/kubernetes/install/1.15/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/install/3.10/</loc>
+    <loc>/v2/docs/platforms/openshift/install/3.10/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/install/1.14/</loc>
+    <loc>/v2/docs/platforms/kubernetes/install/1.14/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/install/3.9/</loc>
+    <loc>/v2/docs/platforms/openshift/install/3.9/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/install/1.13/</loc>
+    <loc>/v2/docs/platforms/kubernetes/install/1.13/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/install/3.8/</loc>
+    <loc>/v2/docs/platforms/openshift/install/3.8/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/install/1.12/</loc>
+    <loc>/v2/docs/platforms/kubernetes/install/1.12/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/install/3.7/</loc>
+    <loc>/v2/docs/platforms/openshift/install/3.7/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cluster-operator/install/</loc>
+    <loc>/v2/docs/reference/cluster-operator/install/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/aws-eks/install/</loc>
+    <loc>/v2/docs/platforms/aws-eks/install/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/azure-aks/install/</loc>
+    <loc>/v2/docs/platforms/azure-aks/install/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/dockeree/install/</loc>
+    <loc>/v2/docs/platforms/dockeree/install/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/install/</loc>
+    <loc>/v2/docs/platforms/kubernetes/install/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/install/</loc>
+    <loc>/v2/docs/platforms/openshift/install/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/rancher/install/</loc>
+    <loc>/v2/docs/platforms/rancher/install/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/introduction/</loc>
+    <loc>/v2/docs/introduction/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/</loc>
+    <loc>/v2/docs/platforms/kubernetes/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/rancher/install/rancher-catalog/</loc>
+    <loc>/v2/docs/platforms/rancher/install/rancher-catalog/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/rancher/install/rancher-advanced/</loc>
+    <loc>/v2/docs/platforms/rancher/install/rancher-advanced/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/prerequisites/systemconfiguration/</loc>
+    <loc>/v2/docs/prerequisites/systemconfiguration/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/volumeguide/</loc>
+    <loc>/v2/docs/platforms/openshift/volumeguide/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/rancher/volumeguide/</loc>
+    <loc>/v2/docs/platforms/rancher/volumeguide/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/aws-eks/bestpractices/</loc>
+    <loc>/v2/docs/platforms/aws-eks/bestpractices/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/bestpractices/</loc>
+    <loc>/v2/docs/platforms/openshift/bestpractices/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cluster-operator/configuration/</loc>
+    <loc>/v2/docs/reference/cluster-operator/configuration/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/prerequisites/firewalls/</loc>
+    <loc>/v2/docs/prerequisites/firewalls/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/azure-aks/volumeguide/</loc>
+    <loc>/v2/docs/platforms/azure-aks/volumeguide/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/dockeree/volumeguide/</loc>
+    <loc>/v2/docs/platforms/dockeree/volumeguide/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/azure-aks/bestpractices/</loc>
+    <loc>/v2/docs/platforms/azure-aks/bestpractices/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/dockeree/bestpractices/</loc>
+    <loc>/v2/docs/platforms/dockeree/bestpractices/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/rancher/bestpractices/</loc>
+    <loc>/v2/docs/platforms/rancher/bestpractices/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cluster-operator/examples/</loc>
+    <loc>/v2/docs/reference/cluster-operator/examples/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/prerequisites/mountpropagation/</loc>
+    <loc>/v2/docs/prerequisites/mountpropagation/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/aws-eks/volumeguide/</loc>
+    <loc>/v2/docs/platforms/aws-eks/volumeguide/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/volumeguide/</loc>
+    <loc>/v2/docs/platforms/kubernetes/volumeguide/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/bestpractices/</loc>
+    <loc>/v2/docs/platforms/kubernetes/bestpractices/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cluster-operator/upgrade/</loc>
+    <loc>/v2/docs/reference/cluster-operator/upgrade/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/troubleshoot/</loc>
+    <loc>/v2/docs/platforms/openshift/troubleshoot/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/rancher/troubleshoot/</loc>
+    <loc>/v2/docs/platforms/rancher/troubleshoot/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/</loc>
+    <loc>/v2/docs/concepts/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/prerequisites/</loc>
+    <loc>/v2/docs/prerequisites/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/</loc>
+    <loc>/v2/docs/platforms/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/</loc>
+    <loc>/v2/docs/operations/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/</loc>
+    <loc>/v2/docs/usecases/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/</loc>
+    <loc>/v2/docs/reference/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/support/</loc>
+    <loc>/v2/docs/support/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/self-eval/</loc>
+    <loc>/v2/docs/self-eval/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/updates/</loc>
+    <loc>/v2/docs/operations/updates/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/index.json</loc>
+    <loc>/v2/index.json</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/share/operator/cr-basic-example/</loc>
+    <loc>/v2/share/operator/cr-basic-example/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/cr-config-table/</loc>
+    <loc>/v2/share/operator/cr-config-table/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/cr-csi-example/</loc>
+    <loc>/v2/share/operator/cr-csi-example/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/cr-csi-openshift4/</loc>
+    <loc>/v2/share/operator/cr-csi-openshift4/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/cr-csi-shareddir/</loc>
+    <loc>/v2/share/operator/cr-csi-shareddir/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/cr-rancher-ui/</loc>
+    <loc>/v2/share/operator/cr-rancher-ui/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/examples/</loc>
+    <loc>/v2/share/operator/examples/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/first-volume/</loc>
+    <loc>/v2/share/operator/first-volume/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/install/</loc>
+    <loc>/v2/share/operator/install/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/manual-install-disclaimer/</loc>
+    <loc>/v2/share/operator/manual-install-disclaimer/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/reference/</loc>
+    <loc>/v2/share/operator/reference/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/upgrade-helm/</loc>
+    <loc>/v2/share/operator/upgrade-helm/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/operator/upgrade-uber-yaml/</loc>
+    <loc>/v2/share/operator/upgrade-uber-yaml/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/csi-note/</loc>
+    <loc>/v2/share/platforms/csi-note/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/csi-pvc/</loc>
+    <loc>/v2/share/platforms/csi-pvc/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/csi-sc/</loc>
+    <loc>/v2/share/platforms/csi-sc/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/firstuse/</loc>
+    <loc>/v2/share/platforms/firstuse/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/kubernetes-with-storageos/</loc>
+    <loc>/v2/share/platforms/kubernetes-with-storageos/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/managedservices-docker/</loc>
+    <loc>/v2/share/platforms/managedservices-docker/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/managedservices-upgrades/</loc>
+    <loc>/v2/share/platforms/managedservices-upgrades/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/openshift-install-4.x/</loc>
+    <loc>/v2/share/platforms/openshift-install-4.x/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/openshift-install/</loc>
+    <loc>/v2/share/platforms/openshift-install/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/openshift4-selinux/</loc>
+    <loc>/v2/share/platforms/openshift4-selinux/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/pvc-replica/</loc>
+    <loc>/v2/share/platforms/pvc-replica/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/share/platforms/pvc/</loc>
+    <loc>/v2/share/platforms/pvc/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/docs/reference/api/</loc>
+    <loc>/v2/docs/reference/api/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/architecture/</loc>
+    <loc>/v2/docs/concepts/architecture/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/aws-eks/</loc>
+    <loc>/v2/docs/platforms/aws-eks/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/azure-aks/</loc>
+    <loc>/v2/docs/platforms/azure-aks/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/backups/</loc>
+    <loc>/v2/docs/usecases/backups/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/examples/cassandra/</loc>
+    <loc>/v2/docs/platforms/kubernetes/examples/cassandra/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/cassandra/</loc>
+    <loc>/v2/docs/usecases/cassandra/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/</loc>
+    <loc>/v2/docs/reference/cli/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/cluster/</loc>
+    <loc>/v2/docs/reference/cli/cluster/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/clusterdiscovery/</loc>
+    <loc>/v2/docs/reference/clusterdiscovery/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cluster-operator/</loc>
+    <loc>/v2/docs/reference/cluster-operator/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/clusters/</loc>
+    <loc>/v2/docs/concepts/clusters/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/compression/</loc>
+    <loc>/v2/docs/concepts/compression/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/contributing/</loc>
+    <loc>/v2/docs/reference/contributing/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/decommission-nodes/</loc>
+    <loc>/v2/docs/operations/decommission-nodes/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/dockeree/</loc>
+    <loc>/v2/docs/platforms/dockeree/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/</loc>
+    <loc>/v2/docs/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/elasticsearch/</loc>
+    <loc>/v2/docs/usecases/elasticsearch/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/encryption/</loc>
+    <loc>/v2/docs/concepts/encryption/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/encrypted-volumes/</loc>
+    <loc>/v2/docs/operations/encrypted-volumes/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/envvars/</loc>
+    <loc>/v2/docs/reference/envvars/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/external-etcd/</loc>
+    <loc>/v2/docs/operations/external-etcd/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/fencing/</loc>
+    <loc>/v2/docs/concepts/fencing/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/fencing/</loc>
+    <loc>/v2/docs/operations/fencing/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/gui/</loc>
+    <loc>/v2/docs/reference/gui/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/health/</loc>
+    <loc>/v2/docs/operations/health/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/managing-host-storage/</loc>
+    <loc>/v2/docs/operations/managing-host-storage/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/init-container/</loc>
+    <loc>/v2/docs/reference/init-container/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/examples/</loc>
+    <loc>/v2/docs/platforms/kubernetes/examples/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/troubleshoot/install/</loc>
+    <loc>/v2/docs/platforms/openshift/troubleshoot/install/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/rancher/troubleshoot/install/</loc>
+    <loc>/v2/docs/platforms/rancher/troubleshoot/install/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/jenkins/</loc>
+    <loc>/v2/docs/usecases/jenkins/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/kafka/</loc>
+    <loc>/v2/docs/usecases/kafka/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/troubleshoot/install/</loc>
+    <loc>/v2/docs/platforms/kubernetes/troubleshoot/install/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/troubleshoot/volumes/</loc>
+    <loc>/v2/docs/platforms/kubernetes/troubleshoot/volumes/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/kubevirt/</loc>
+    <loc>/v2/docs/usecases/kubevirt/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/labels/</loc>
+    <loc>/v2/docs/reference/labels/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/licence/</loc>
+    <loc>/v2/docs/reference/cli/licence/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/licensing/</loc>
+    <loc>/v2/docs/operations/licensing/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/login/</loc>
+    <loc>/v2/docs/reference/cli/login/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/logs/</loc>
+    <loc>/v2/docs/reference/cli/logs/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/maintenance/</loc>
+    <loc>/v2/docs/operations/maintenance/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/metrics/</loc>
+    <loc>/v2/docs/concepts/metrics/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/monitoring/</loc>
+    <loc>/v2/docs/operations/monitoring/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/examples/mssql/</loc>
+    <loc>/v2/docs/platforms/kubernetes/examples/mssql/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/mssql/</loc>
+    <loc>/v2/docs/usecases/mssql/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/external-etcd/etcd-tls/</loc>
+    <loc>/v2/docs/operations/external-etcd/etcd-tls/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/examples/mysql/</loc>
+    <loc>/v2/docs/platforms/kubernetes/examples/mysql/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/mysql/</loc>
+    <loc>/v2/docs/usecases/mysql/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/namespaces/</loc>
+    <loc>/v2/docs/concepts/namespaces/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/namespaces/</loc>
+    <loc>/v2/docs/operations/namespaces/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/namespace/</loc>
+    <loc>/v2/docs/reference/cli/namespace/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/nginx/</loc>
+    <loc>/v2/docs/usecases/nginx/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/nodes/</loc>
+    <loc>/v2/docs/concepts/nodes/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/node/</loc>
+    <loc>/v2/docs/reference/cli/node/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/open_source_attribution/</loc>
+    <loc>/v2/docs/reference/open_source_attribution/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/</loc>
+    <loc>/v2/docs/platforms/openshift/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/policies/</loc>
+    <loc>/v2/docs/concepts/policies/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/policies/</loc>
+    <loc>/v2/docs/operations/policies/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/policy/</loc>
+    <loc>/v2/docs/reference/cli/policy/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/overcommitment/</loc>
+    <loc>/v2/docs/operations/overcommitment/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/pools/</loc>
+    <loc>/v2/docs/concepts/pools/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/pool/</loc>
+    <loc>/v2/docs/reference/cli/pool/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/examples/postgres/</loc>
+    <loc>/v2/docs/platforms/kubernetes/examples/postgres/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/postgres/</loc>
+    <loc>/v2/docs/usecases/postgres/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/prometheus/</loc>
+    <loc>/v2/docs/reference/prometheus/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/monitoring/prometheus-setup/</loc>
+    <loc>/v2/docs/operations/monitoring/prometheus-setup/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/introduction/quickstart/</loc>
+    <loc>/v2/docs/introduction/quickstart/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/rancher/</loc>
+    <loc>/v2/docs/platforms/rancher/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/examples/redis/</loc>
+    <loc>/v2/docs/platforms/kubernetes/examples/redis/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/redis/</loc>
+    <loc>/v2/docs/usecases/redis/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/release_notes/</loc>
+    <loc>/v2/docs/reference/release_notes/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/replication/</loc>
+    <loc>/v2/docs/concepts/replication/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/rules/</loc>
+    <loc>/v2/docs/concepts/rules/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/rules/</loc>
+    <loc>/v2/docs/operations/rules/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/rule/</loc>
+    <loc>/v2/docs/reference/cli/rule/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/search/</loc>
+    <loc>/v2/search/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/share/</loc>
+    <loc>/v2/share/</loc>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/v2/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/telemetry/</loc>
+    <loc>/v2/docs/reference/telemetry/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/filesystems/</loc>
+    <loc>/v2/docs/reference/filesystems/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/introduction/platforms/</loc>
+    <loc>/v2/docs/introduction/platforms/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/troubleshoot/</loc>
+    <loc>/v2/docs/platforms/kubernetes/troubleshoot/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/troubleshooting/</loc>
+    <loc>/v2/docs/operations/troubleshooting/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/introduction/tutorials/</loc>
+    <loc>/v2/docs/introduction/tutorials/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/upgrades/</loc>
+    <loc>/v2/docs/operations/upgrades/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/operations/users/</loc>
+    <loc>/v2/docs/operations/users/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/user/</loc>
+    <loc>/v2/docs/reference/cli/user/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/troubleshoot/volumes/</loc>
+    <loc>/v2/docs/platforms/openshift/troubleshoot/volumes/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/rancher/troubleshoot/volumes/</loc>
+    <loc>/v2/docs/platforms/rancher/troubleshoot/volumes/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/concepts/volumes/</loc>
+    <loc>/v2/docs/concepts/volumes/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/reference/cli/volume/</loc>
+    <loc>/v2/docs/reference/cli/volume/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/usecases/zookeeper/</loc>
+    <loc>/v2/docs/usecases/zookeeper/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   

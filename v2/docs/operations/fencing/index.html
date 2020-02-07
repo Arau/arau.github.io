@@ -10,22 +10,22 @@
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
-<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
-<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
-<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
-<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
-<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
-<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/v2/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/v2/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/v2/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/v2/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/v2/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/v2/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/v2/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/v2/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/v2/favicons/android-192x192.png" sizes="192x192">
 
 <title>Fencing | </title><meta property="og:title" content="Fencing" />
 <meta property="og:description" content="For information regarding the fencing feature please see our Fencing concepts page.
 Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod scheduled on an unavailable node, a pod must have the following:
  storageos.com/fenced=true label At least one StorageOS volume mounted Each StorageOS volume the pod mounts must have at least one healthy replica. Fencing is not disabled across the StorageOS cluster - DISABLE_FENCING environment variable is not set to true   N." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/docs/operations/fencing/" />
+<meta property="og:url" content="/v2/docs/operations/fencing/" />
 <meta property="article:modified_time" content="2020-02-07T17:01:25+00:00" />
 <meta itemprop="name" content="Fencing">
 <meta itemprop="description" content="For information regarding the fencing feature please see our Fencing concepts page.
@@ -46,8 +46,8 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 
 
-<link rel="preload" href="/scss/main.min.0700fa2fc86b3536ec504ad12654db3fbe17cdf27bbe61b2f706a1c7dabe97d0.css" as="style">
-<link href="/scss/main.min.0700fa2fc86b3536ec504ad12654db3fbe17cdf27bbe61b2f706a1c7dabe97d0.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/v2/scss/main.min.0700fa2fc86b3536ec504ad12654db3fbe17cdf27bbe61b2f706a1c7dabe97d0.css" as="style">
+<link href="/v2/scss/main.min.0700fa2fc86b3536ec504ad12654db3fbe17cdf27bbe61b2f706a1c7dabe97d0.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -63,7 +63,7 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/v2/">
 		<span class="navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="566.93" height="141.732" viewBox="0 0 566.93 141.732" enable-background="new 0 0 566.93 141.732"><g><g><path fill="#4f5263" d="M119.74 89.882H88.477v-9.34h31.265c1.537.0 2.703-.355 3.476-1.062.744-.693 1.118-1.655 1.118-2.854.0-1.318-.362-2.293-1.078-2.896-.777-.661-1.959-.996-3.515-.996h-18.396c-2.018.0-3.873-.302-5.538-.905-1.682-.627-3.113-1.499-4.277-2.604-1.163-1.099-2.072-2.429-2.708-3.96-.63-1.521-.953-3.196-.953-4.967.0-1.742.293-3.379.884-4.863.593-1.499 1.489-2.828 2.67-3.938 1.182-1.097 2.636-1.957 4.315-2.572 1.657-.604 3.578-.917 5.707-.917h30.002v9.342h-30.002c-1.267.0-2.231.312-2.885.928-.63.615-.942 1.487-.942 2.673.0 1.187.3 2.025.961 2.64.655.604 1.603.917 2.805.917h18.321c4.359.0 7.757 1.054 10.085 3.145 2.375 2.102 3.579 5.291 3.579 9.462.0 1.812-.284 3.5-.842 5.021-.562 1.567-1.42 2.941-2.562 4.105-1.169 1.163-2.617 2.081-4.327 2.695C123.975 89.556 121.982 89.882 119.74 89.882z"/></g><g><path fill="#4f5263" d="M164.764 89.882h-9.486V57.344h-15.196v-9.339h39.878v9.339h-15.196L164.764 89.882z"/></g><g><path fill="#4f5263" d="M214.784 89.882h-9.733c-2.96.0-5.73-.547-8.247-1.653-2.527-1.099-4.742-2.606-6.57-4.51-1.854-1.891-3.307-4.172-4.329-6.755-1.025-2.604-1.544-5.436-1.544-8.422.0-3.028.521-5.849 1.544-8.376 1.033-2.54 2.513-4.73 4.367-6.521 1.863-1.789 4.071-3.198 6.578-4.161 2.509-.984 5.264-1.478 8.2-1.478h9.733c3.043.0 5.878.503 8.422 1.499 2.545.996 4.771 2.415 6.615 4.229 1.847 1.823 3.288 4.015 4.295 6.521 1.01 2.482 1.521 5.278 1.521 8.286.0 3.021-.517 5.853-1.538 8.422-1.039 2.597-2.498 4.877-4.341 6.768-1.84 1.891-4.055 3.411-6.587 4.508C220.634 89.332 217.812 89.882 214.784 89.882zM205.052 57.344c-1.613.0-3.13.28-4.516.854-1.363.57-2.558 1.364-3.521 2.348-.99 1.008-1.771 2.215-2.334 3.624s-.849 2.986-.849 4.688c0 1.687.285 3.274.859 4.729.572 1.442 1.346 2.686 2.323 3.682.987 1.018 2.18 1.835 3.539 2.404 1.355.58 2.873.871 4.497.871h9.732c1.675.0 3.221-.291 4.583-.871 1.385-.569 2.597-1.388 3.596-2.404.981-.996 1.776-2.237 2.351-3.691.567-1.442.854-3.031.854-4.719.0-1.669-.284-3.244-.854-4.677-.562-1.409-1.352-2.63-2.344-3.624-.989-.995-2.198-1.788-3.597-2.372-1.387-.56-2.925-.84-4.589-.84L205.052 57.344z"/></g><path fill="#4f5263" d="M280.707 77.802c1.812-.727 3.38-1.724 4.651-3.009 1.375-1.366 2.433-2.717 3.149-4.642.644-1.711.994-3.611 1.058-5.692.006-.225.013-.6.013-.835v-.11c0-2.35-.356-4.483-1.067-6.389-.72-1.923-1.775-3.59-3.15-4.965-1.362-1.365-3.044-2.428-5.016-3.154-1.938-.716-4.14-1.085-6.786-1.007h-29.51-.482v41.882h9.706V78.975h16.071l10.029 10.903h13.562L280.707 77.802zM278.617 68.821c-1.039 1.085-2.661 1.645-4.827 1.645h-20.514V57.26h20.53c2.076.0 3.689.517 4.78 1.521 1.079 1.008 1.624 2.64 1.624 4.842C280.213 65.85 279.669 67.702 278.617 68.821z"/><path fill="#4f5263" d="M328.355 50.3c-.5-.839-1.086-1.499-1.723-1.968-1.441-1.105-3.906-1.12-5.438-.034-.691.516-1.275 1.188-1.75 1.992l-24.147 39.592h10.89l5.967-9.933h23.068l6.008 9.933h11.322L328.355 50.3zM315.385 72.812l8.273-13.757 8.312 13.757H315.385z"/><g><path fill="#4f5263" d="M399.211 89.882h-25.387c-2.959.0-5.725-.547-8.229-1.653-2.533-1.099-4.74-2.616-6.559-4.497-1.846-1.901-3.299-4.171-4.328-6.768-1.031-2.596-1.551-5.424-1.551-8.422.0-3.041.527-5.849 1.562-8.376 1.021-2.525 2.49-4.73 4.352-6.521 1.863-1.789 4.076-3.198 6.594-4.161 2.508-.984 5.266-1.478 8.186-1.478h22.939v9.342h-22.939c-1.613.0-3.123.291-4.51.851-1.342.56-2.525 1.354-3.531 2.359-.973.993-1.754 2.2-2.318 3.609-.557 1.398-.84 2.979-.84 4.688.0 1.687.283 3.274.846 4.729.574 1.442 1.354 2.686 2.322 3.682 1 1.018 2.191 1.835 3.533 2.416 1.352.567 2.863.872 4.498.872h15.883v-7.817h-18.062v-8.232h27.543v25.377H399.211V89.882z"/></g><g><path fill="#4f5263" d="M448.411 57.344h-38.283v-9.339h38.283V57.344z"/></g><g><path fill="#4f5263" d="M448.472 89.882h-38.347V64.504h36.75v8.231h-27.276v7.807h28.875v9.34H448.472z"/></g><g><path fill="#61c202" d="M487.357 89.882h-9.75c-2.961.0-5.725-.547-8.234-1.653-2.514-1.086-4.725-2.606-6.57-4.51-1.861-1.9-3.326-4.183-4.328-6.767-1.021-2.604-1.553-5.436-1.553-8.41.0-3.021.52-5.838 1.553-8.376 1.035-2.54 2.5-4.73 4.354-6.521 1.871-1.789 4.084-3.198 6.584-4.161 2.514-.984 5.271-1.478 8.195-1.478h9.75c3.033.0 5.859.503 8.416 1.499 2.568 1.009 4.799 2.438 6.611 4.238 1.84 1.801 3.285 3.994 4.291 6.497 1.012 2.517 1.521 5.304 1.521 8.3.014 3.009-.512 5.838-1.545 8.422-1.021 2.583-2.477 4.864-4.336 6.768-1.844 1.899-4.062 3.422-6.592 4.508C493.193 89.332 490.381 89.882 487.357 89.882zM477.607 57.344c-1.619.0-3.135.291-4.498.854-1.361.57-2.549 1.364-3.531 2.348-.982.996-1.768 2.215-2.312 3.613-.572 1.397-.861 2.986-.861 4.698.0 1.696.289 3.286.854 4.719.564 1.442 1.35 2.685 2.327 3.691.983 1.018 2.171 1.835 3.534 2.404 1.355.58 2.861.871 4.484.871h9.758c1.656.0 3.201-.291 4.576-.871 1.375-.569 2.592-1.388 3.598-2.404.973-.996 1.768-2.229 2.354-3.691.553-1.453.842-3.042.842-4.719.0-1.656-.289-3.234-.852-4.679-.559-1.422-1.354-2.628-2.342-3.622-1.01-.995-2.209-1.802-3.59-2.358-1.379-.562-2.932-.854-4.588-.854H477.607z"/></g><g><path fill="#61c202" d="M546.541 89.882h-31.259v-9.329h31.259c1.536.0 2.706-.355 3.476-1.071.756-.704 1.125-1.646 1.119-2.854.006-1.342-.348-2.279-1.074-2.906-.779-.649-1.961-.984-3.521-.984H528.15c-2.033.0-3.896-.302-5.539-.905-1.684-.627-3.129-1.499-4.285-2.604-1.156-1.118-2.077-2.438-2.713-3.96-.621-1.53-.934-3.196-.934-4.967.0-1.73.293-3.364.875-4.863.605-1.521 1.51-2.854 2.682-3.949 1.188-1.084 2.635-1.944 4.303-2.549 1.684-.616 3.604-.931 5.717-.931h29.982v9.341h-29.982c-1.273.0-2.25.312-2.887.928-.613.604-.941 1.51-.941 2.673.0 1.188.312 2.025.965 2.641.647.604 1.598.917 2.801.917h18.312c4.377.0 7.771 1.053 10.104 3.144 2.371 2.103 3.561 5.292 3.561 9.462.0 1.789-.273 3.468-.826 5.01-.592 1.601-1.459 2.987-2.588 4.116-1.139 1.163-2.596 2.069-4.314 2.696C550.765 89.567 548.775 89.882 546.541 89.882z"/></g><path fill="#61c202" d="M11.877 86.458c5.345-3.087 19.171-.064 23.245-2.427.0.0 4.896-2.125 4.896-7.314.0-4.721-4.963-6.698-4.963-6.698-3.021-1.7-9.635-.783-15.334-.783-.511.0-1.528.021-1.528.021-7.31.0-13.236-5.851-13.236-13.042.0-7.189 5.929-13.027 13.236-13.041.193.0 13.574.843 16.767-.981h.005c4.557-2.643 7.917-15.392 13.262-18.479 6.583-3.791 14.966-1.767 18.713 4.542 3.76 6.31 1.478 14.482-5.11 18.297-5.351 3.088-19.173.067-23.25 2.429.0.0-4.833 1.979-4.896 7.092.063 5.825 5.267 7.335 5.267 7.335 3.39.76 13.595.201 16.429.371 7.313.0 13.244 5.824 13.244 13.028.0 7.189-5.917 13.027-13.222 13.038h-.005-.02c-.131.0-1.409.047-1.59.023-5.783.146-12.393-.581-15.051.951-4.554 2.64-7.905 15.377-13.256 18.465-6.582 3.804-14.957 1.766-18.718-4.529C3.001 98.448 5.294 90.26 11.877 86.458z"/></g><g><path fill="#4c5164" d="M94.458 100.802c2.552.0 4.516.649 5.893 1.948 1.376 1.3 2.065 3.279 2.065 5.939.0 1.392-.155 2.626-.464 3.7-.311 1.074-.789 1.979-1.438 2.715-.648.734-1.477 1.295-2.481 1.682-1.006.387-2.196.58-3.573.58h-5.685v-16.564H94.458zM94.644 115.51c.247.0.558-.019.928-.058.371-.038.766-.131 1.184-.278.417-.146.831-.358 1.241-.638.409-.278.776-.657 1.102-1.137s.591-1.079.8-1.799c.208-.72.313-1.59.313-2.609.0-.99-.098-1.875-.29-2.656-.193-.78-.51-1.445-.951-1.995-.44-.549-1.009-.967-1.705-1.253s-1.554-.43-2.575-.43h-3.712v12.853H94.644z"/><path fill="#4c5164" d="M118.597 105.824c.333-1.044.831-1.968 1.497-2.772.665-.804 1.492-1.445 2.482-1.926.988-.479 2.142-.719 3.457-.719 1.313.0 2.467.24 3.457.719.988.479 1.816 1.122 2.481 1.926.665.806 1.164 1.729 1.496 2.772s.499 2.131.499 3.26-.167 2.216-.499 3.26c-.332 1.045-.832 1.969-1.496 2.772-.666.804-1.493 1.442-2.481 1.914-.99.471-2.144.707-3.457.707-1.315.0-2.468-.236-3.457-.707-.99-.472-1.818-1.11-2.482-1.914-.666-.805-1.164-1.729-1.497-2.772s-.499-2.131-.499-3.26S118.265 106.868 118.597 105.824zM120.627 111.554c.217.812.557 1.543 1.021 2.191.464.649 1.06 1.172 1.787 1.566.728.394 1.593.591 2.599.591 1.005.0 1.87-.197 2.599-.591.727-.396 1.322-.917 1.786-1.566.464-.648.804-1.381 1.021-2.191.216-.812.325-1.637.325-2.472s-.108-1.659-.325-2.471c-.217-.812-.557-1.543-1.021-2.192-.464-.648-1.061-1.172-1.786-1.565-.729-.396-1.593-.593-2.599-.593-1.007.0-1.872.197-2.599.593-.728.395-1.323.917-1.787 1.565-.464.649-.804 1.38-1.021 2.192-.216.812-.325 1.636-.325 2.471S120.411 110.742 120.627 111.554z"/><path fill="#4c5164" d="M160.59 103.144c-.843-.588-1.844-.883-3.004-.883-.99.0-1.837.187-2.541.558-.704.372-1.284.87-1.74 1.497-.457.626-.793 1.342-1.009 2.146-.217.806-.325 1.641-.325 2.506.0.943.108 1.838.325 2.681.216.843.553 1.577 1.009 2.204.456.626 1.04 1.125 1.751 1.496.711.37 1.562.557 2.552.557.728.0 1.372-.119 1.938-.359.563-.238 1.052-.571 1.461-.997.41-.426.73-.932.963-1.521.232-.587.371-1.221.417-1.902h2.204c-.217 2.089-.937 3.713-2.157 4.872-1.222 1.16-2.893 1.74-5.011 1.74-1.284.0-2.405-.221-3.364-.661s-1.755-1.048-2.39-1.821c-.635-.772-1.11-1.686-1.427-2.736-.317-1.052-.477-2.182-.477-3.389.0-1.206.17-2.339.51-3.397.34-1.06.839-1.983 1.497-2.772.657-.789 1.478-1.411 2.459-1.867.982-.455 2.107-.685 3.376-.685.866.0 1.687.116 2.459.348.773.232 1.461.572 2.065 1.021.603.449 1.104 1.01 1.508 1.683s.665 1.45.789 2.331h-2.204C161.978 104.614 161.432 103.732 160.59 103.144z"/><path fill="#4c5164" d="M192.779 116.148c-1.129 1.06-2.736 1.589-4.825 1.589-2.135.0-3.802-.506-5-1.521-1.199-1.013-1.799-2.625-1.799-4.837v-10.579h2.204v10.579c0 1.484.396 2.609 1.184 3.375.788.767 1.926 1.148 3.41 1.148 1.406.0 2.479-.383 3.213-1.148.733-.766 1.102-1.891 1.102-3.375v-10.579h2.204v10.579C194.473 113.5 193.908 115.089 192.779 116.148z"/><path fill="#4c5164" d="M214.981 100.802l5.221 13.921 5.242-13.921h3.017v16.564h-2.088v-13.781h-.046l-5.175 13.781h-1.879l-5.174-13.781h-.046v13.781h-2.088v-16.564H214.981z"/><path fill="#4c5164" d="M257.483 100.802v1.855h-9.232v5.267h8.606v1.856h-8.606v5.729h9.303v1.856h-11.507v-16.564L257.483 100.802z"/><path fill="#4c5164" d="M276.461 100.802l8.723 13.434h.047v-13.434h2.088v16.564h-2.411l-8.654-13.294h-.046v13.294h-2.088v-16.564H276.461z"/><path fill="#4c5164" d="M303.048 102.657v-1.855h13.247v1.855h-5.521v14.709h-2.204v-14.709H303.048z"/><path fill="#4c5164" d="M336.849 100.802l6.473 16.564h-2.436l-1.811-4.988h-7.007l-1.854 4.988h-2.251l6.449-16.564H336.849zM338.381 110.522l-2.762-7.727h-.046l-2.808 7.727H338.381z"/><path fill="#4c5164" d="M354.969 102.657v-1.855h13.247v1.855h-5.521v14.709h-2.204v-14.709H354.969z"/><path fill="#4c5164" d="M386.265 100.802v16.564h-2.204v-16.564H386.265z"/><path fill="#4c5164" d="M403.469 105.824c.332-1.044.831-1.968 1.496-2.772.665-.804 1.491-1.445 2.481-1.926.989-.479 2.143-.719 3.457-.719s2.467.24 3.456.719c.99.479 1.817 1.122 2.482 1.926.665.806 1.164 1.729 1.497 2.772.332 1.044.498 2.131.498 3.26s-.166 2.216-.498 3.26c-.333 1.045-.832 1.969-1.497 2.772s-1.492 1.442-2.482 1.914c-.989.471-2.142.707-3.456.707s-2.468-.236-3.457-.707c-.99-.472-1.816-1.11-2.481-1.914-.665-.805-1.164-1.729-1.496-2.772-.333-1.044-.499-2.131-.499-3.26S403.135 106.868 403.469 105.824zM405.497 111.554c.218.812.558 1.543 1.021 2.191.464.649 1.059 1.172 1.786 1.566s1.593.591 2.599.591c1.005.0 1.871-.197 2.599-.591.728-.396 1.321-.917 1.786-1.566.465-.648.805-1.381 1.021-2.191.217-.812.325-1.637.325-2.472s-.108-1.659-.325-2.471-.557-1.543-1.021-2.192c-.465-.648-1.06-1.172-1.786-1.565-.728-.396-1.594-.593-2.599-.593-1.006.0-1.872.197-2.599.593-.729.395-1.322.917-1.786 1.565-.465.649-.805 1.38-1.021 2.192-.217.812-.323 1.636-.323 2.471S405.281 110.742 405.497 111.554z"/><path fill="#4c5164" d="M437.769 100.802l8.723 13.434h.047v-13.434h2.089v16.564h-2.413l-8.653-13.294h-.047v13.294h-2.088v-16.564H437.769z"/></g></svg></span><span class="text-uppercase font-weight-bold"></span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
@@ -126,10 +126,10 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation V2</a>
+    <a  href="/v2/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation V2</a>
   </li>
   <ul>
-    <li class="collapse show" id="docs">
+    <li class="collapse show" id="v2docs">
       
       
       
@@ -143,29 +143,29 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/introduction/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Introduction</a>
+    <a  href="/v2/docs/introduction/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Introduction</a>
   </li>
   <ul>
-    <li class="collapse " id="docsintroduction">
+    <li class="collapse " id="v2docsintroduction">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsintroductionquickstart" href="/docs/introduction/quickstart/">Quickstart</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsintroductionquickstart" href="/v2/docs/introduction/quickstart/">Quickstart</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsintroductionplatforms" href="/docs/introduction/platforms/">Supported Platforms</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsintroductionplatforms" href="/v2/docs/introduction/platforms/">Supported Platforms</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsintroductiontutorials" href="/docs/introduction/tutorials/">Tutorials</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsintroductiontutorials" href="/v2/docs/introduction/tutorials/">Tutorials</a>
       
       
     </li>
@@ -184,89 +184,89 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/concepts/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Concepts</a>
+    <a  href="/v2/docs/concepts/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Concepts</a>
   </li>
   <ul>
-    <li class="collapse " id="docsconcepts">
+    <li class="collapse " id="v2docsconcepts">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsarchitecture" href="/docs/concepts/architecture/">Architecture</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptsarchitecture" href="/v2/docs/concepts/architecture/">Architecture</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsclusters" href="/docs/concepts/clusters/">Clusters</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptsclusters" href="/v2/docs/concepts/clusters/">Clusters</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptscompression" href="/docs/concepts/compression/">Compression</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptscompression" href="/v2/docs/concepts/compression/">Compression</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsencryption" href="/docs/concepts/encryption/">Encryption</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptsencryption" href="/v2/docs/concepts/encryption/">Encryption</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsfencing" href="/docs/concepts/fencing/">Fencing</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptsfencing" href="/v2/docs/concepts/fencing/">Fencing</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsmetrics" href="/docs/concepts/metrics/">Metrics</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptsmetrics" href="/v2/docs/concepts/metrics/">Metrics</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsnamespaces" href="/docs/concepts/namespaces/">Namespaces</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptsnamespaces" href="/v2/docs/concepts/namespaces/">Namespaces</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsnodes" href="/docs/concepts/nodes/">Nodes</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptsnodes" href="/v2/docs/concepts/nodes/">Nodes</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptspolicies" href="/docs/concepts/policies/">Policies</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptspolicies" href="/v2/docs/concepts/policies/">Policies</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptspools" href="/docs/concepts/pools/">Pools</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptspools" href="/v2/docs/concepts/pools/">Pools</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsreplication" href="/docs/concepts/replication/">Replication</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptsreplication" href="/v2/docs/concepts/replication/">Replication</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsrules" href="/docs/concepts/rules/">Rules</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptsrules" href="/v2/docs/concepts/rules/">Rules</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsvolumes" href="/docs/concepts/volumes/">Volumes</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsconceptsvolumes" href="/v2/docs/concepts/volumes/">Volumes</a>
       
       
     </li>
@@ -285,29 +285,29 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/prerequisites/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Prerequisites</a>
+    <a  href="/v2/docs/prerequisites/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Prerequisites</a>
   </li>
   <ul>
-    <li class="collapse " id="docsprerequisites">
+    <li class="collapse " id="v2docsprerequisites">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsprerequisitessystemconfiguration" href="/docs/prerequisites/systemconfiguration/">System Configuration</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsprerequisitessystemconfiguration" href="/v2/docs/prerequisites/systemconfiguration/">System Configuration</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsprerequisitesfirewalls" href="/docs/prerequisites/firewalls/">Ports and Firewall settings</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsprerequisitesfirewalls" href="/v2/docs/prerequisites/firewalls/">Ports and Firewall settings</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsprerequisitesmountpropagation" href="/docs/prerequisites/mountpropagation/">Mount Propagation</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsprerequisitesmountpropagation" href="/v2/docs/prerequisites/mountpropagation/">Mount Propagation</a>
       
       
     </li>
@@ -326,10 +326,10 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Platforms</a>
+    <a  href="/v2/docs/platforms/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Platforms</a>
   </li>
   <ul>
-    <li class="collapse " id="docsplatforms">
+    <li class="collapse " id="v2docsplatforms">
       
       
       
@@ -343,10 +343,10 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Kubernetes</a>
+    <a  href="/v2/docs/platforms/kubernetes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Kubernetes</a>
   </li>
   <ul>
-    <li class="collapse " id="docsplatformskubernetes">
+    <li class="collapse " id="v2docsplatformskubernetes">
       
       
       
@@ -360,47 +360,47 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
+    <a  href="/v2/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
   </li>
   <ul>
-    <li class="collapse " id="docsplatformskubernetesinstall">
+    <li class="collapse " id="v2docsplatformskubernetesinstall">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall117" href="/docs/platforms/kubernetes/install/1.17/">1.17</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall117" href="/v2/docs/platforms/kubernetes/install/1.17/">1.17</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall116" href="/docs/platforms/kubernetes/install/1.16/">1.16</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall116" href="/v2/docs/platforms/kubernetes/install/1.16/">1.16</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall115" href="/docs/platforms/kubernetes/install/1.15/">1.15</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall115" href="/v2/docs/platforms/kubernetes/install/1.15/">1.15</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall114" href="/docs/platforms/kubernetes/install/1.14/">1.14</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall114" href="/v2/docs/platforms/kubernetes/install/1.14/">1.14</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall113" href="/docs/platforms/kubernetes/install/1.13/">1.13</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall113" href="/v2/docs/platforms/kubernetes/install/1.13/">1.13</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall112" href="/docs/platforms/kubernetes/install/1.12/">1.12</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall112" href="/v2/docs/platforms/kubernetes/install/1.12/">1.12</a>
       
       
     </li>
@@ -412,66 +412,13 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesvolumeguide" href="/docs/platforms/kubernetes/volumeguide/">Volume Guide</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesvolumeguide" href="/v2/docs/platforms/kubernetes/volumeguide/">Volume Guide</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesbestpractices" href="/docs/platforms/kubernetes/bestpractices/">Best Practices</a>
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/examples/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install applications on Kubernetes</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformskubernetesexamples">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesexamplescassandra" href="/docs/platforms/kubernetes/examples/cassandra/">Cassandra</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesexamplesmssql" href="/docs/platforms/kubernetes/examples/mssql/">MS SQL</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesexamplesmysql" href="/docs/platforms/kubernetes/examples/mysql/">MySQL</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesexamplespostgres" href="/docs/platforms/kubernetes/examples/postgres/">PostgreSQL</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesexamplesredis" href="/docs/platforms/kubernetes/examples/redis/">Redis</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesbestpractices" href="/v2/docs/platforms/kubernetes/bestpractices/">Best Practices</a>
       
       
       
@@ -484,29 +431,41 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/troubleshoot/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Troubleshoot</a>
+    <a  href="/v2/docs/platforms/kubernetes/examples/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install applications on Kubernetes</a>
   </li>
   <ul>
-    <li class="collapse " id="docsplatformskubernetestroubleshoot">
+    <li class="collapse " id="v2docsplatformskubernetesexamples">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetestroubleshootinstall" href="/docs/platforms/kubernetes/troubleshoot/install/">Kubernetes troubleshoot</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesexamplescassandra" href="/v2/docs/platforms/kubernetes/examples/cassandra/">Cassandra</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetestroubleshootvolumes" href="/docs/platforms/kubernetes/troubleshoot/volumes/">Kubernetes troubleshoot</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesexamplesmssql" href="/v2/docs/platforms/kubernetes/examples/mssql/">MS SQL</a>
       
       
-    </li>
-  </ul>
-</ul>
-
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesexamplesmysql" href="/v2/docs/platforms/kubernetes/examples/mysql/">MySQL</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesexamplespostgres" href="/v2/docs/platforms/kubernetes/examples/postgres/">PostgreSQL</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesexamplesredis" href="/v2/docs/platforms/kubernetes/examples/redis/">Redis</a>
       
       
     </li>
@@ -525,240 +484,23 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/aws-eks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">AWS-EKS</a>
+    <a  href="/v2/docs/platforms/kubernetes/troubleshoot/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Troubleshoot</a>
   </li>
   <ul>
-    <li class="collapse " id="docsplatformsaws-eks">
+    <li class="collapse " id="v2docsplatformskubernetestroubleshoot">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsaws-eksinstall" href="/docs/platforms/aws-eks/install/">Install StorageOS</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetestroubleshootinstall" href="/v2/docs/platforms/kubernetes/troubleshoot/install/">Kubernetes troubleshoot</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsaws-eksbestpractices" href="/docs/platforms/aws-eks/bestpractices/">Best Practices</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsaws-eksvolumeguide" href="/docs/platforms/aws-eks/volumeguide/">StorageOS Volume Guide</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsazure-aks">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsazure-aksinstall" href="/docs/platforms/azure-aks/install/">Install StorageOS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsazure-aksvolumeguide" href="/docs/platforms/azure-aks/volumeguide/">StorageOS Volume Guide</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsazure-aksbestpractices" href="/docs/platforms/azure-aks/bestpractices/">Best Practices</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/dockeree/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">DockerEE</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsdockeree">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsdockereeinstall" href="/docs/platforms/dockeree/install/">Install StorageOS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsdockereevolumeguide" href="/docs/platforms/dockeree/volumeguide/">StorageOS Volume Guide</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsdockereebestpractices" href="/docs/platforms/dockeree/bestpractices/">Best Practices</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/openshift/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">OpenShift</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsopenshift">
-      
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/openshift/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsopenshiftinstall">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall42" href="/docs/platforms/openshift/install/4.2/">4.2</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall41" href="/docs/platforms/openshift/install/4.1/">4.1</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall311" href="/docs/platforms/openshift/install/3.11/">3.11</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall310" href="/docs/platforms/openshift/install/3.10/">3.10</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall39" href="/docs/platforms/openshift/install/3.9/">3.9</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall38" href="/docs/platforms/openshift/install/3.8/">3.8</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall37" href="/docs/platforms/openshift/install/3.7/">3.7</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftvolumeguide" href="/docs/platforms/openshift/volumeguide/">Volume Guide</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftbestpractices" href="/docs/platforms/openshift/bestpractices/">Best Practices</a>
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/openshift/troubleshoot/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Troubleshoot</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsopenshifttroubleshoot">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshifttroubleshootinstall" href="/docs/platforms/openshift/troubleshoot/install/">Installation</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshifttroubleshootvolumes" href="/docs/platforms/openshift/troubleshoot/volumes/">Volume Provisioning</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetestroubleshootvolumes" href="/v2/docs/platforms/kubernetes/troubleshoot/volumes/">Kubernetes troubleshoot</a>
       
       
     </li>
@@ -783,99 +525,29 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/rancher/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Rancher</a>
+    <a  href="/v2/docs/platforms/aws-eks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">AWS-EKS</a>
   </li>
   <ul>
-    <li class="collapse " id="docsplatformsrancher">
-      
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/rancher/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsrancherinstall">
+    <li class="collapse " id="v2docsplatformsaws-eks">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsrancherinstallrancher-catalog" href="/docs/platforms/rancher/install/rancher-catalog/">Rancher Catalog</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsaws-eksinstall" href="/v2/docs/platforms/aws-eks/install/">Install StorageOS</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsrancherinstallrancher-advanced" href="/docs/platforms/rancher/install/rancher-advanced/">Advanced</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsaws-eksbestpractices" href="/v2/docs/platforms/aws-eks/bestpractices/">Best Practices</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsranchervolumeguide" href="/docs/platforms/rancher/volumeguide/">Volume Guide</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsrancherbestpractices" href="/docs/platforms/rancher/bestpractices/">Best Practices</a>
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/rancher/troubleshoot/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Troubleshoot</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsranchertroubleshoot">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsranchertroubleshootinstall" href="/docs/platforms/rancher/troubleshoot/install/">Installation</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsranchertroubleshootvolumes" href="/docs/platforms/rancher/troubleshoot/volumes/">Volume Provisioning</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsaws-eksvolumeguide" href="/v2/docs/platforms/aws-eks/volumeguide/">StorageOS Volume Guide</a>
       
       
     </li>
@@ -894,159 +566,29 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Operations</a>
+    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsoperations">
+    <li class="collapse " id="v2docsplatformsazure-aks">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsupdates" href="/docs/operations/updates/"></a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsazure-aksinstall" href="/v2/docs/platforms/azure-aks/install/">Install StorageOS</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsdecommission-nodes" href="/docs/operations/decommission-nodes/">Decommissioning of Nodes</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsazure-aksvolumeguide" href="/v2/docs/platforms/azure-aks/volumeguide/">StorageOS Volume Guide</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsencrypted-volumes" href="/docs/operations/encrypted-volumes/">Encryption</a>
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">ETCD</a>
-  </li>
-  <ul>
-    <li class="collapse show" id="docsoperationsexternal-etcd">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsexternal-etcdetcd-tls" href="/docs/operations/external-etcd/etcd-tls/">mTLS</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docsoperationsfencing" href="/docs/operations/fencing/">Fencing Pods</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationshealth" href="/docs/operations/health/">Health</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsmanaging-host-storage" href="/docs/operations/managing-host-storage/">Host Storage</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationslicensing" href="/docs/operations/licensing/">Licensing</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsmaintenance" href="/docs/operations/maintenance/">Maintenance</a>
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/monitoring/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Monitoring</a>
-  </li>
-  <ul>
-    <li class="collapse show" id="docsoperationsmonitoring">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsmonitoringprometheus-setup" href="/docs/operations/monitoring/prometheus-setup/">Prometheus Setup</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsnamespaces" href="/docs/operations/namespaces/">Namespaces</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationspolicies" href="/docs/operations/policies/">Policies</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsovercommitment" href="/docs/operations/overcommitment/">Pool Overcommitment</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsrules" href="/docs/operations/rules/">Rules</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationstroubleshooting" href="/docs/operations/troubleshooting/">Troubleshooting installation</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsupgrades" href="/docs/operations/upgrades/">Upgrade StorageOS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsusers" href="/docs/operations/users/">User Management</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsazure-aksbestpractices" href="/v2/docs/platforms/azure-aks/bestpractices/">Best Practices</a>
       
       
     </li>
@@ -1065,83 +607,29 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/usecases/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Use Cases</a>
+    <a  href="/v2/docs/platforms/dockeree/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">DockerEE</a>
   </li>
   <ul>
-    <li class="collapse " id="docsusecases">
+    <li class="collapse " id="v2docsplatformsdockeree">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesbackups" href="/docs/usecases/backups/">Backups</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsdockereeinstall" href="/v2/docs/platforms/dockeree/install/">Install StorageOS</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasescassandra" href="/docs/usecases/cassandra/">Cassandra</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsdockereevolumeguide" href="/v2/docs/platforms/dockeree/volumeguide/">StorageOS Volume Guide</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecaseselasticsearch" href="/docs/usecases/elasticsearch/">Elasticsearch</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesjenkins" href="/docs/usecases/jenkins/">Jenkins</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecaseskafka" href="/docs/usecases/kafka/">Kafka</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecaseskubevirt" href="/docs/usecases/kubevirt/">Kubevirt</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesmssql" href="/docs/usecases/mssql/">MS SQL</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesmysql" href="/docs/usecases/mysql/">MySQL</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesnginx" href="/docs/usecases/nginx/">Nginx</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasespostgres" href="/docs/usecases/postgres/">PostgreSQL</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesredis" href="/docs/usecases/redis/">Redis</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecaseszookeeper" href="/docs/usecases/zookeeper/">Zookeeper</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsdockereebestpractices" href="/v2/docs/platforms/dockeree/bestpractices/">Best Practices</a>
       
       
     </li>
@@ -1160,17 +648,11 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/reference/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Reference</a>
+    <a  href="/v2/docs/platforms/openshift/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">OpenShift</a>
   </li>
   <ul>
-    <li class="collapse " id="docsreference">
+    <li class="collapse " id="v2docsplatformsopenshift">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceapi" href="/docs/reference/api/">API Reference</a>
       
       
       
@@ -1183,77 +665,53 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/reference/cli/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">CLI</a>
+    <a  href="/v2/docs/platforms/openshift/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
   </li>
   <ul>
-    <li class="collapse " id="docsreferencecli">
+    <li class="collapse " id="v2docsplatformsopenshiftinstall">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclicluster" href="/docs/reference/cli/cluster/">Cluster</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshiftinstall42" href="/v2/docs/platforms/openshift/install/4.2/">4.2</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclilicence" href="/docs/reference/cli/licence/">Licence</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshiftinstall41" href="/v2/docs/platforms/openshift/install/4.1/">4.1</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclilogin" href="/docs/reference/cli/login/">Login</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshiftinstall311" href="/v2/docs/platforms/openshift/install/3.11/">3.11</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclilogs" href="/docs/reference/cli/logs/">Logs</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshiftinstall310" href="/v2/docs/platforms/openshift/install/3.10/">3.10</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclinamespace" href="/docs/reference/cli/namespace/">Namespaces</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshiftinstall39" href="/v2/docs/platforms/openshift/install/3.9/">3.9</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclinode" href="/docs/reference/cli/node/">Nodes</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshiftinstall38" href="/v2/docs/platforms/openshift/install/3.8/">3.8</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclipolicy" href="/docs/reference/cli/policy/">Policies</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclipool" href="/docs/reference/cli/pool/">Pools</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclirule" href="/docs/reference/cli/rule/">Rules</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencecliuser" href="/docs/reference/cli/user/">Users</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclivolume" href="/docs/reference/cli/volume/">Volumes</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshiftinstall37" href="/v2/docs/platforms/openshift/install/3.7/">3.7</a>
       
       
     </li>
@@ -1265,7 +723,13 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclusterdiscovery" href="/docs/reference/clusterdiscovery/">Cluster discovery</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshiftvolumeguide" href="/v2/docs/platforms/openshift/volumeguide/">Volume Guide</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshiftbestpractices" href="/v2/docs/platforms/openshift/bestpractices/">Best Practices</a>
       
       
       
@@ -1278,35 +742,81 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/reference/cluster-operator/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cluster Operator</a>
+    <a  href="/v2/docs/platforms/openshift/troubleshoot/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Troubleshoot</a>
   </li>
   <ul>
-    <li class="collapse " id="docsreferencecluster-operator">
+    <li class="collapse " id="v2docsplatformsopenshifttroubleshoot">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencecluster-operatorinstall" href="/docs/reference/cluster-operator/install/">Install</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshifttroubleshootinstall" href="/v2/docs/platforms/openshift/troubleshoot/install/">Installation</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencecluster-operatorconfiguration" href="/docs/reference/cluster-operator/configuration/">Configuration</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsopenshifttroubleshootvolumes" href="/v2/docs/platforms/openshift/troubleshoot/volumes/">Volume Provisioning</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/v2/docs/platforms/rancher/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Rancher</a>
+  </li>
+  <ul>
+    <li class="collapse " id="v2docsplatformsrancher">
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencecluster-operatorexamples" href="/docs/reference/cluster-operator/examples/">Examples</a>
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/v2/docs/platforms/rancher/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
+  </li>
+  <ul>
+    <li class="collapse " id="v2docsplatformsrancherinstall">
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencecluster-operatorupgrade" href="/docs/reference/cluster-operator/upgrade/">Operator upgrade</a>
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsrancherinstallrancher-catalog" href="/v2/docs/platforms/rancher/install/rancher-catalog/">Rancher Catalog</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsrancherinstallrancher-advanced" href="/v2/docs/platforms/rancher/install/rancher-advanced/">Advanced</a>
       
       
     </li>
@@ -1318,61 +828,118 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencecontributing" href="/docs/reference/contributing/">Contributing to the docs</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsranchervolumeguide" href="/v2/docs/platforms/rancher/volumeguide/">Volume Guide</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceenvvars" href="/docs/reference/envvars/">Environment Variables</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsrancherbestpractices" href="/v2/docs/platforms/rancher/bestpractices/">Best Practices</a>
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/v2/docs/platforms/rancher/troubleshoot/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Troubleshoot</a>
+  </li>
+  <ul>
+    <li class="collapse " id="v2docsplatformsranchertroubleshoot">
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencegui" href="/docs/reference/gui/">GUI</a>
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsranchertroubleshootinstall" href="/v2/docs/platforms/rancher/troubleshoot/install/">Installation</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceinit-container" href="/docs/reference/init-container/">Init container</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformsranchertroubleshootvolumes" href="/v2/docs/platforms/rancher/troubleshoot/volumes/">Volume Provisioning</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/v2/docs/operations/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Operations</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="v2docsoperations">
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencelabels" href="/docs/reference/labels/">Labels</a>
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsupdates" href="/v2/docs/operations/updates/"></a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceopen_source_attribution" href="/docs/reference/open_source_attribution/">Open Source Attribution</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsdecommission-nodes" href="/v2/docs/operations/decommission-nodes/">Decommissioning of Nodes</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceprometheus" href="/docs/reference/prometheus/">Prometheus Endpoint</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsencrypted-volumes" href="/v2/docs/operations/encrypted-volumes/">Encryption</a>
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/v2/docs/operations/external-etcd/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">ETCD</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="v2docsoperationsexternal-etcd">
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencerelease_notes" href="/docs/reference/release_notes/">Release notes</a>
       
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencetelemetry" href="/docs/reference/telemetry/">StorageOS Telemetry</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencefilesystems" href="/docs/reference/filesystems/">Supported File systems</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsexternal-etcdetcd-tls" href="/v2/docs/operations/external-etcd/etcd-tls/">mTLS</a>
       
       
     </li>
@@ -1384,13 +951,446 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docssupport" href="/docs/support/">Support</a>
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-v2docsoperationsfencing" href="/v2/docs/operations/fencing/">Fencing Pods</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsself-eval" href="/docs/self-eval/">Self Evaluation Guide</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationshealth" href="/v2/docs/operations/health/">Health</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsmanaging-host-storage" href="/v2/docs/operations/managing-host-storage/">Host Storage</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationslicensing" href="/v2/docs/operations/licensing/">Licensing</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsmaintenance" href="/v2/docs/operations/maintenance/">Maintenance</a>
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/v2/docs/operations/monitoring/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Monitoring</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="v2docsoperationsmonitoring">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsmonitoringprometheus-setup" href="/v2/docs/operations/monitoring/prometheus-setup/">Prometheus Setup</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsnamespaces" href="/v2/docs/operations/namespaces/">Namespaces</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationspolicies" href="/v2/docs/operations/policies/">Policies</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsovercommitment" href="/v2/docs/operations/overcommitment/">Pool Overcommitment</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsrules" href="/v2/docs/operations/rules/">Rules</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationstroubleshooting" href="/v2/docs/operations/troubleshooting/">Troubleshooting installation</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsupgrades" href="/v2/docs/operations/upgrades/">Upgrade StorageOS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsoperationsusers" href="/v2/docs/operations/users/">User Management</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/v2/docs/usecases/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Use Cases</a>
+  </li>
+  <ul>
+    <li class="collapse " id="v2docsusecases">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecasesbackups" href="/v2/docs/usecases/backups/">Backups</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecasescassandra" href="/v2/docs/usecases/cassandra/">Cassandra</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecaseselasticsearch" href="/v2/docs/usecases/elasticsearch/">Elasticsearch</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecasesjenkins" href="/v2/docs/usecases/jenkins/">Jenkins</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecaseskafka" href="/v2/docs/usecases/kafka/">Kafka</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecaseskubevirt" href="/v2/docs/usecases/kubevirt/">Kubevirt</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecasesmssql" href="/v2/docs/usecases/mssql/">MS SQL</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecasesmysql" href="/v2/docs/usecases/mysql/">MySQL</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecasesnginx" href="/v2/docs/usecases/nginx/">Nginx</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecasespostgres" href="/v2/docs/usecases/postgres/">PostgreSQL</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecasesredis" href="/v2/docs/usecases/redis/">Redis</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsusecaseszookeeper" href="/v2/docs/usecases/zookeeper/">Zookeeper</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/v2/docs/reference/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Reference</a>
+  </li>
+  <ul>
+    <li class="collapse " id="v2docsreference">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceapi" href="/v2/docs/reference/api/">API Reference</a>
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/v2/docs/reference/cli/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">CLI</a>
+  </li>
+  <ul>
+    <li class="collapse " id="v2docsreferencecli">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclicluster" href="/v2/docs/reference/cli/cluster/">Cluster</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclilicence" href="/v2/docs/reference/cli/licence/">Licence</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclilogin" href="/v2/docs/reference/cli/login/">Login</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclilogs" href="/v2/docs/reference/cli/logs/">Logs</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclinamespace" href="/v2/docs/reference/cli/namespace/">Namespaces</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclinode" href="/v2/docs/reference/cli/node/">Nodes</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclipolicy" href="/v2/docs/reference/cli/policy/">Policies</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclipool" href="/v2/docs/reference/cli/pool/">Pools</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclirule" href="/v2/docs/reference/cli/rule/">Rules</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencecliuser" href="/v2/docs/reference/cli/user/">Users</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclivolume" href="/v2/docs/reference/cli/volume/">Volumes</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceclusterdiscovery" href="/v2/docs/reference/clusterdiscovery/">Cluster discovery</a>
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/v2/docs/reference/cluster-operator/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cluster Operator</a>
+  </li>
+  <ul>
+    <li class="collapse " id="v2docsreferencecluster-operator">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencecluster-operatorinstall" href="/v2/docs/reference/cluster-operator/install/">Install</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencecluster-operatorconfiguration" href="/v2/docs/reference/cluster-operator/configuration/">Configuration</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencecluster-operatorexamples" href="/v2/docs/reference/cluster-operator/examples/">Examples</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencecluster-operatorupgrade" href="/v2/docs/reference/cluster-operator/upgrade/">Operator upgrade</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencecontributing" href="/v2/docs/reference/contributing/">Contributing to the docs</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceenvvars" href="/v2/docs/reference/envvars/">Environment Variables</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencegui" href="/v2/docs/reference/gui/">GUI</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceinit-container" href="/v2/docs/reference/init-container/">Init container</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencelabels" href="/v2/docs/reference/labels/">Labels</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceopen_source_attribution" href="/v2/docs/reference/open_source_attribution/">Open Source Attribution</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferenceprometheus" href="/v2/docs/reference/prometheus/">Prometheus Endpoint</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencerelease_notes" href="/v2/docs/reference/release_notes/">Release notes</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencetelemetry" href="/v2/docs/reference/telemetry/">StorageOS Telemetry</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsreferencefilesystems" href="/v2/docs/reference/filesystems/">Supported File systems</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docssupport" href="/v2/docs/support/">Support</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsself-eval" href="/v2/docs/self-eval/">Self Evaluation Guide</a>
       
       
     </li>
@@ -1459,21 +1459,21 @@ Enabling StorageOS to fence a pod In order to allow StorageOS to fence a pod sch
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/">Documentation V2</a>
+	<a href="/v2/docs/">Documentation V2</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/operations/">Operations</a>
+	<a href="/v2/docs/operations/">Operations</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/operations/fencing/">Fencing Pods</a>
+	<a href="/v2/docs/operations/fencing/">Fencing Pods</a>
 </li>
 
 	</ol>
@@ -1699,7 +1699,7 @@ fenced unless the conditions above are met.</p>
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+<script src="/v2/js/main.min.98ffb8095d82fbbbdd3752ad6576562bde43400704f50d623ec115f61eab32e5.js" integrity="sha256-mP&#43;4CV2C&#43;7vdN1KtZXZWK95DQAcE9Q1iPsEV9h6rMuU=" crossorigin="anonymous"></script>
 
 
 

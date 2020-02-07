@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Azure</title>
-    <link>/docs/platforms/azure-aks/</link>
+    <link>/v2/docs/platforms/azure-aks/</link>
     <description>Recent content in Azure on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/platforms/azure-aks/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/v2/docs/platforms/azure-aks/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Install StorageOS</title>
-      <link>/docs/platforms/azure-aks/install/</link>
+      <link>/v2/docs/platforms/azure-aks/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/azure-aks/install/</guid>
+      <guid>/v2/docs/platforms/azure-aks/install/</guid>
       <description>
         
         
@@ -26,7 +26,7 @@
 &lt;p&gt;&lt;strong&gt;Only installations of StorageOS with CSI are supported for AKS.&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;/docs/platforms/azure-aks/bestpractices/&#34;&gt;best practices page&lt;/a&gt; for production
+&lt;p&gt;Visit the &lt;a href=&#34;/v2/v2/docs/platforms/azure-aks/bestpractices/&#34;&gt;best practices page&lt;/a&gt; for production
 deployment advice.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -37,10 +37,10 @@ deployment advice.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS Volume Guide</title>
-      <link>/docs/platforms/azure-aks/volumeguide/</link>
+      <link>/v2/docs/platforms/azure-aks/volumeguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/azure-aks/volumeguide/</guid>
+      <guid>/v2/docs/platforms/azure-aks/volumeguide/</guid>
       <description>
         
         
@@ -51,10 +51,10 @@ deployment advice.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS with AKS Kubernetes best practices</title>
-      <link>/docs/platforms/azure-aks/bestpractices/</link>
+      <link>/v2/docs/platforms/azure-aks/bestpractices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/azure-aks/bestpractices/</guid>
+      <guid>/v2/docs/platforms/azure-aks/bestpractices/</guid>
       <description>
         
         

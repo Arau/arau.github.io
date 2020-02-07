@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Install StorageOS</title>
-    <link>/docs/platforms/openshift/install/</link>
+    <link>/v2/docs/platforms/openshift/install/</link>
     <description>Recent content in Install StorageOS on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/platforms/openshift/install/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/v2/docs/platforms/openshift/install/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Installing on OpenShift 4.2</title>
-      <link>/docs/platforms/openshift/install/4.2/</link>
+      <link>/v2/docs/platforms/openshift/install/4.2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/4.2/</guid>
+      <guid>/v2/docs/platforms/openshift/install/4.2/</guid>
       <description>
         
         
@@ -29,10 +29,10 @@
     
     <item>
       <title>Docs: Installing on OpenShift 4.1</title>
-      <link>/docs/platforms/openshift/install/4.1/</link>
+      <link>/v2/docs/platforms/openshift/install/4.1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/4.1/</guid>
+      <guid>/v2/docs/platforms/openshift/install/4.1/</guid>
       <description>
         
         
@@ -43,10 +43,10 @@
     
     <item>
       <title>Docs: Installing on OpenShift 3.11</title>
-      <link>/docs/platforms/openshift/install/3.11/</link>
+      <link>/v2/docs/platforms/openshift/install/3.11/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/3.11/</guid>
+      <guid>/v2/docs/platforms/openshift/install/3.11/</guid>
       <description>
         
         
@@ -57,10 +57,10 @@
     
     <item>
       <title>Docs: Installing on OpenShift 3.10</title>
-      <link>/docs/platforms/openshift/install/3.10/</link>
+      <link>/v2/docs/platforms/openshift/install/3.10/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/3.10/</guid>
+      <guid>/v2/docs/platforms/openshift/install/3.10/</guid>
       <description>
         
         
@@ -71,10 +71,10 @@
     
     <item>
       <title>Docs: Installing on OpenShift 3.9</title>
-      <link>/docs/platforms/openshift/install/3.9/</link>
+      <link>/v2/docs/platforms/openshift/install/3.9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/3.9/</guid>
+      <guid>/v2/docs/platforms/openshift/install/3.9/</guid>
       <description>
         
         
@@ -85,10 +85,10 @@
     
     <item>
       <title>Docs: Installing on OpenShift 3.8</title>
-      <link>/docs/platforms/openshift/install/3.8/</link>
+      <link>/v2/docs/platforms/openshift/install/3.8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/3.8/</guid>
+      <guid>/v2/docs/platforms/openshift/install/3.8/</guid>
       <description>
         
         
@@ -129,10 +129,10 @@ to mount a StorageOS volume in a Pod.&lt;/p&gt;
     
     <item>
       <title>Docs: Installing on OpenShift 3.7</title>
-      <link>/docs/platforms/openshift/install/3.7/</link>
+      <link>/v2/docs/platforms/openshift/install/3.7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/3.7/</guid>
+      <guid>/v2/docs/platforms/openshift/install/3.7/</guid>
       <description>
         
         

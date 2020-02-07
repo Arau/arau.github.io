@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Kubernetes</title>
-    <link>/docs/platforms/kubernetes/</link>
+    <link>/v2/docs/platforms/kubernetes/</link>
     <description>Recent content in Kubernetes on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/platforms/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/v2/docs/platforms/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Install StorageOS</title>
-      <link>/docs/platforms/kubernetes/install/</link>
+      <link>/v2/docs/platforms/kubernetes/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/install/</guid>
+      <guid>/v2/docs/platforms/kubernetes/install/</guid>
       <description>
         
         
@@ -52,7 +52,7 @@ complexity by detecting the version of the Kubernetes installed.&lt;/p&gt;
 &lt;p&gt;Check out the status of the CSI release cycle in relation with Kubernetes in
 the &lt;a href=&#34;https://kubernetes-csi.github.io/docs/&#34;&gt;CSI project&lt;/a&gt; page.&lt;/p&gt;
 &lt;p&gt;CSI communication is fully supported by StorageOS if the cluster is deployed
-with any &lt;a href=&#34;/docs/prerequisites/systemconfiguration#distribution-specifics&#34;&gt;supported Linux
+with any &lt;a href=&#34;/v2/docs/prerequisites/systemconfiguration#distribution-specifics&#34;&gt;supported Linux
 Distribution&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;MarkDown file &amp;quot;share/platforms/csi-note.md&amp;quot;&lt;/p&gt;
 &lt;p&gt;&amp;quot;share/platforms/csi-note.md&amp;quot;&lt;/p&gt;
@@ -62,10 +62,10 @@ Distribution&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Docs: Volume Guide</title>
-      <link>/docs/platforms/kubernetes/volumeguide/</link>
+      <link>/v2/docs/platforms/kubernetes/volumeguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/volumeguide/</guid>
+      <guid>/v2/docs/platforms/kubernetes/volumeguide/</guid>
       <description>
         
         
@@ -76,10 +76,10 @@ Distribution&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS with {{ page.platform }} best practices</title>
-      <link>/docs/platforms/kubernetes/bestpractices/</link>
+      <link>/v2/docs/platforms/kubernetes/bestpractices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/bestpractices/</guid>
+      <guid>/v2/docs/platforms/kubernetes/bestpractices/</guid>
       <description>
         
         
@@ -95,10 +95,10 @@ Distribution&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Docs: Install applications on Kubernetes</title>
-      <link>/docs/platforms/kubernetes/examples/</link>
+      <link>/v2/docs/platforms/kubernetes/examples/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/examples/</guid>
+      <guid>/v2/docs/platforms/kubernetes/examples/</guid>
       <description>
         
         
@@ -111,10 +111,10 @@ running in &lt;a href=&#34;https://kubernetes.io&#34;&gt;Kubernetes&lt;/a&gt;.&l
     
     <item>
       <title>Docs: Troubleshoot</title>
-      <link>/docs/platforms/kubernetes/troubleshoot/</link>
+      <link>/v2/docs/platforms/kubernetes/troubleshoot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/troubleshoot/</guid>
+      <guid>/v2/docs/platforms/kubernetes/troubleshoot/</guid>
       <description>
         
         

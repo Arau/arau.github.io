@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Command line interface</title>
-    <link>/docs/reference/cli/</link>
+    <link>/v2/docs/reference/cli/</link>
     <description>Recent content in Command line interface on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/reference/cli/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/v2/docs/reference/cli/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Cluster</title>
-      <link>/docs/reference/cli/cluster/</link>
+      <link>/v2/docs/reference/cli/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/cluster/</guid>
+      <guid>/v2/docs/reference/cli/cluster/</guid>
       <description>
         
         
@@ -93,7 +93,7 @@ storageos-nodes1  storageos-nodes3.etcd      10.0.12.253:5707  1.117382ms  OK
 storageos-nodes1  storageos-nodes3.nats      10.0.12.253:5708  1.15015ms   OK      
 storageos-nodes1  storageos-nodes3.serf      10.0.12.253:5711  1.075519ms  OK
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;storageos-cluster-create&#34;&gt;&lt;code&gt;storageos cluster create&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;To create a cluster token for &lt;a href=&#34;/docs/reference/clusterdiscovery/&#34;&gt;cluster discovery&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;To create a cluster token for &lt;a href=&#34;/v2/v2/docs/reference/clusterdiscovery/&#34;&gt;cluster discovery&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ storageos cluster create
 207f0026-3844-40e0-884b-729d79c124b8
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;storageos-cluster-health&#34;&gt;&lt;code&gt;storageos cluster health&lt;/code&gt;&lt;/h3&gt;
@@ -144,10 +144,10 @@ to see all the options for this command.&lt;/p&gt;
     
     <item>
       <title>Docs: Licence</title>
-      <link>/docs/reference/cli/licence/</link>
+      <link>/v2/docs/reference/cli/licence/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/licence/</guid>
+      <guid>/v2/docs/reference/cli/licence/</guid>
       <description>
         
         
@@ -197,10 +197,10 @@ Run &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos licence COMMAND
     
     <item>
       <title>Docs: Login</title>
-      <link>/docs/reference/cli/login/</link>
+      <link>/v2/docs/reference/cli/login/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/login/</guid>
+      <guid>/v2/docs/reference/cli/login/</guid>
       <description>
         
         
@@ -256,10 +256,10 @@ For user convenience, all credentials stored in the keychain by the storageos CL
     
     <item>
       <title>Docs: Logs</title>
-      <link>/docs/reference/cli/logs/</link>
+      <link>/v2/docs/reference/cli/logs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/logs/</guid>
+      <guid>/v2/docs/reference/cli/logs/</guid>
       <description>
         
         
@@ -333,10 +333,10 @@ storageos logs --follow
     
     <item>
       <title>Docs: Namespaces</title>
-      <link>/docs/reference/cli/namespace/</link>
+      <link>/v2/docs/reference/cli/namespace/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/namespace/</guid>
+      <guid>/v2/docs/reference/cli/namespace/</guid>
       <description>
         
         
@@ -386,10 +386,10 @@ legal
     
     <item>
       <title>Docs: Nodes</title>
-      <link>/docs/reference/cli/node/</link>
+      <link>/v2/docs/reference/cli/node/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/node/</guid>
+      <guid>/v2/docs/reference/cli/node/</guid>
       <description>
         
         
@@ -603,10 +603,10 @@ storageos-1
     
     <item>
       <title>Docs: Policies</title>
-      <link>/docs/reference/cli/policy/</link>
+      <link>/v2/docs/reference/cli/policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/policy/</guid>
+      <guid>/v2/docs/reference/cli/policy/</guid>
       <description>
         
         
@@ -669,10 +669,10 @@ f1e33492-aa9b-3922-7824-383941d37a5d        testers  staging
     
     <item>
       <title>Docs: Pools</title>
-      <link>/docs/reference/cli/pool/</link>
+      <link>/v2/docs/reference/cli/pool/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/pool/</guid>
+      <guid>/v2/docs/reference/cli/pool/</guid>
       <description>
         
         
@@ -817,10 +817,10 @@ no-ha
     
     <item>
       <title>Docs: Rules</title>
-      <link>/docs/reference/cli/rule/</link>
+      <link>/v2/docs/reference/cli/rule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/rule/</guid>
+      <guid>/v2/docs/reference/cli/rule/</guid>
       <description>
         
         
@@ -883,10 +883,10 @@ default/replicator
     
     <item>
       <title>Docs: Users</title>
-      <link>/docs/reference/cli/user/</link>
+      <link>/v2/docs/reference/cli/user/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/user/</guid>
+      <guid>/v2/docs/reference/cli/user/</guid>
       <description>
         
         
@@ -966,10 +966,10 @@ Confirm Password:
     
     <item>
       <title>Docs: Volumes</title>
-      <link>/docs/reference/cli/volume/</link>
+      <link>/v2/docs/reference/cli/volume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/volume/</guid>
+      <guid>/v2/docs/reference/cli/volume/</guid>
       <description>
         
         

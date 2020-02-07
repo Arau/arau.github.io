@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Docker Enterprise Edition</title>
-    <link>/docs/platforms/dockeree/</link>
+    <link>/v2/docs/platforms/dockeree/</link>
     <description>Recent content in Docker Enterprise Edition on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/platforms/dockeree/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/v2/docs/platforms/dockeree/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,17 +15,17 @@
     
     <item>
       <title>Docs: Install StorageOS</title>
-      <link>/docs/platforms/dockeree/install/</link>
+      <link>/v2/docs/platforms/dockeree/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/dockeree/install/</guid>
+      <guid>/v2/docs/platforms/dockeree/install/</guid>
       <description>
         
         
         &lt;p&gt;This section of documentation covers the use of StorageOS in Docker Enterprise Edition.&lt;/p&gt;
 &lt;p&gt;Docker EE and the Universal Control Plane can be executed in different Linux
 distributions. StorageOS supports RHEL, CentOS, Debian, and selected Ubuntu
-images. For more details, check out the supported OS in the &lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;prerequisites page&lt;/a&gt;.&lt;/p&gt;
+images. For more details, check out the supported OS in the &lt;a href=&#34;/v2/v2/docs/prerequisites/systemconfiguration/&#34;&gt;prerequisites page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;StorageOS only supports Kubernetes nodes managed by Docker Enterprise Edition,
 not those running Swarm. Mixed nodes (those running Kubernetes and Swarm
 workloads)  are also not supported.  As a consequence, StorageOS volumes can
@@ -34,7 +34,7 @@ for stateful workloads.&lt;/p&gt;
 &lt;h1 id=&#34;install-storageos&#34;&gt;Install StorageOS&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;{% include operator/install.md %}&lt;/p&gt;
@@ -44,10 +44,10 @@ satisfied before proceeding.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS Volume Guide</title>
-      <link>/docs/platforms/dockeree/volumeguide/</link>
+      <link>/v2/docs/platforms/dockeree/volumeguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/dockeree/volumeguide/</guid>
+      <guid>/v2/docs/platforms/dockeree/volumeguide/</guid>
       <description>
         
         
@@ -58,10 +58,10 @@ satisfied before proceeding.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS with {{ page.platform }} best practices</title>
-      <link>/docs/platforms/dockeree/bestpractices/</link>
+      <link>/v2/docs/platforms/dockeree/bestpractices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/dockeree/bestpractices/</guid>
+      <guid>/v2/docs/platforms/dockeree/bestpractices/</guid>
       <description>
         
         

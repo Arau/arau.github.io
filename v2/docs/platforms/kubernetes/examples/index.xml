@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Install applications on Kubernetes</title>
-    <link>/docs/platforms/kubernetes/examples/</link>
+    <link>/v2/docs/platforms/kubernetes/examples/</link>
     <description>Recent content in Install applications on Kubernetes on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/platforms/kubernetes/examples/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/v2/docs/platforms/kubernetes/examples/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,17 +15,17 @@
     
     <item>
       <title>Docs: Cassandra</title>
-      <link>/docs/platforms/kubernetes/examples/cassandra/</link>
+      <link>/v2/docs/platforms/kubernetes/examples/cassandra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/examples/cassandra/</guid>
+      <guid>/v2/docs/platforms/kubernetes/examples/cassandra/</guid>
       <description>
         
         
-        &lt;h1 id=&#34;imageimagesdocsexplorecassandralogopng-cassandra-with-storageos&#34;&gt;&lt;img src=&#34;/images/docs/explore/cassandralogo.png&#34; alt=&#34;image&#34;&gt; Cassandra with StorageOS&lt;/h1&gt;
+        &lt;h1 id=&#34;imageimagesdocsexplorecassandralogopng-cassandra-with-storageos&#34;&gt;&lt;img src=&#34;/v2/images/docs/explore/cassandralogo.png&#34; alt=&#34;image&#34;&gt; Cassandra with StorageOS&lt;/h1&gt;
 &lt;p&gt;Cassandra is a popular distributed NoSQL open source database.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;deploying-cassandra-on-kubernetes&#34;&gt;Deploying Cassandra on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -100,18 +100,18 @@ cqlsh&amp;gt; SELECT cluster_name, listen_address FROM system.local&lt;span styl
     
     <item>
       <title>Docs: MS SQL</title>
-      <link>/docs/platforms/kubernetes/examples/mssql/</link>
+      <link>/v2/docs/platforms/kubernetes/examples/mssql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/examples/mssql/</guid>
+      <guid>/v2/docs/platforms/kubernetes/examples/mssql/</guid>
       <description>
         
         
-        &lt;h1 id=&#34;imageimagesdocsexploremssqllogopng-ms-sql-with-storageos&#34;&gt;&lt;img src=&#34;/images/docs/explore/mssqllogo.png&#34; alt=&#34;image&#34;&gt; MS SQL with StorageOS&lt;/h1&gt;
+        &lt;h1 id=&#34;imageimagesdocsexploremssqllogopng-ms-sql-with-storageos&#34;&gt;&lt;img src=&#34;/v2/images/docs/explore/mssqllogo.png&#34; alt=&#34;image&#34;&gt; MS SQL with StorageOS&lt;/h1&gt;
 &lt;p&gt;Beginning with Microsoft SQL Server 2017, Microsoft has supported MSSQL on
 linux.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;deploying-ms-sql-on-kubernetes&#34;&gt;Deploying MS SQL on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -192,18 +192,18 @@ service&lt;/p&gt;
     
     <item>
       <title>Docs: MySQL</title>
-      <link>/docs/platforms/kubernetes/examples/mysql/</link>
+      <link>/v2/docs/platforms/kubernetes/examples/mysql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/examples/mysql/</guid>
+      <guid>/v2/docs/platforms/kubernetes/examples/mysql/</guid>
       <description>
         
         
-        &lt;h1 id=&#34;imageimagesdocsexploremysqllogopng-mysql-with-storageos&#34;&gt;&lt;img src=&#34;/images/docs/explore/mysqllogo.png&#34; alt=&#34;image&#34;&gt; MySQL with StorageOS&lt;/h1&gt;
+        &lt;h1 id=&#34;imageimagesdocsexploremysqllogopng-mysql-with-storageos&#34;&gt;&lt;img src=&#34;/v2/images/docs/explore/mysqllogo.png&#34; alt=&#34;image&#34;&gt; MySQL with StorageOS&lt;/h1&gt;
 &lt;p&gt;MySQL is a popular SQL open source database for a wide range of popular
 web-based applications including WordPress.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;deploying-mysql-on-kubernetes&#34;&gt;Deploying MySQL on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -279,14 +279,14 @@ performance_schema
     
     <item>
       <title>Docs: PostgreSQL</title>
-      <link>/docs/platforms/kubernetes/examples/postgres/</link>
+      <link>/v2/docs/platforms/kubernetes/examples/postgres/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/examples/postgres/</guid>
+      <guid>/v2/docs/platforms/kubernetes/examples/postgres/</guid>
       <description>
         
         
-        &lt;h1 id=&#34;imageimagesdocsexplorepostgresqllogopng-postgresql-with-storageos&#34;&gt;&lt;img src=&#34;/images/docs/explore/postgresqllogo.png&#34; alt=&#34;image&#34;&gt; PostgreSQL with StorageOS&lt;/h1&gt;
+        &lt;h1 id=&#34;imageimagesdocsexplorepostgresqllogopng-postgresql-with-storageos&#34;&gt;&lt;img src=&#34;/v2/images/docs/explore/postgresqllogo.png&#34; alt=&#34;image&#34;&gt; PostgreSQL with StorageOS&lt;/h1&gt;
 &lt;p&gt;PostgreSQL or &amp;ldquo;Postgres&amp;rdquo; is an open source object-relational database management
 system (ORDBMS).&lt;/p&gt;
 &lt;p&gt;Postgres is deployed across a wide variety of platforms with a mix of workloads
@@ -376,17 +376,17 @@ desired PostgreSQL configuration settings.
     
     <item>
       <title>Docs: Redis</title>
-      <link>/docs/platforms/kubernetes/examples/redis/</link>
+      <link>/v2/docs/platforms/kubernetes/examples/redis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/examples/redis/</guid>
+      <guid>/v2/docs/platforms/kubernetes/examples/redis/</guid>
       <description>
         
         
-        &lt;h1 id=&#34;imageimagesdocsexploreredislogopng-redis-with-storageos&#34;&gt;&lt;img src=&#34;/images/docs/explore/redislogo.png&#34; alt=&#34;image&#34;&gt; Redis with StorageOS&lt;/h1&gt;
+        &lt;h1 id=&#34;imageimagesdocsexploreredislogopng-redis-with-storageos&#34;&gt;&lt;img src=&#34;/v2/images/docs/explore/redislogo.png&#34; alt=&#34;image&#34;&gt; Redis with StorageOS&lt;/h1&gt;
 &lt;p&gt;Redis is a popular networked, in-memory, key-value data store with optional durability to disk.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;deploying-redis-on-kubernetes&#34;&gt;Deploying Redis on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;

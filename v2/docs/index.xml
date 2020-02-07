@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Documentation</title>
-    <link>/docs/</link>
+    <link>/v2/docs/</link>
     <description>Recent content in Documentation on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/v2/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Installing on OpenShift 4.2</title>
-      <link>/docs/platforms/openshift/install/4.2/</link>
+      <link>/v2/docs/platforms/openshift/install/4.2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/4.2/</guid>
+      <guid>/v2/docs/platforms/openshift/install/4.2/</guid>
       <description>
         
         
@@ -29,16 +29,16 @@
     
     <item>
       <title>Docs: Kubernetes {{ page.k8s-version }}</title>
-      <link>/docs/platforms/kubernetes/install/1.17/</link>
+      <link>/v2/docs/platforms/kubernetes/install/1.17/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/install/1.17/</guid>
+      <guid>/v2/docs/platforms/kubernetes/install/1.17/</guid>
       <description>
         
         
         &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -105,7 +105,7 @@ unique, strong password.&lt;/p&gt;
 The &lt;code&gt;echo -n&lt;/code&gt; ensures that a trailing new line is not appended to the string.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
+&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/v2/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
 Users&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;3-trigger-a-storageos-installation&#34;&gt;3. Trigger a StorageOS installation&lt;/h2&gt;
@@ -148,10 +148,10 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Docs: Installing on OpenShift 4.1</title>
-      <link>/docs/platforms/openshift/install/4.1/</link>
+      <link>/v2/docs/platforms/openshift/install/4.1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/4.1/</guid>
+      <guid>/v2/docs/platforms/openshift/install/4.1/</guid>
       <description>
         
         
@@ -162,16 +162,16 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Docs: Kubernetes {{ page.k8s-version }}</title>
-      <link>/docs/platforms/kubernetes/install/1.16/</link>
+      <link>/v2/docs/platforms/kubernetes/install/1.16/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/install/1.16/</guid>
+      <guid>/v2/docs/platforms/kubernetes/install/1.16/</guid>
       <description>
         
         
         &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -238,7 +238,7 @@ unique, strong password.&lt;/p&gt;
 The &lt;code&gt;echo -n&lt;/code&gt; ensures that a trailing new line is not appended to the string.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
+&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/v2/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
 Users&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;3-trigger-a-storageos-installation&#34;&gt;3. Trigger a StorageOS installation&lt;/h2&gt;
@@ -281,10 +281,10 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Docs: Installing on OpenShift 3.11</title>
-      <link>/docs/platforms/openshift/install/3.11/</link>
+      <link>/v2/docs/platforms/openshift/install/3.11/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/3.11/</guid>
+      <guid>/v2/docs/platforms/openshift/install/3.11/</guid>
       <description>
         
         
@@ -295,16 +295,16 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Docs: Kubernetes {{ page.k8s-version }}</title>
-      <link>/docs/platforms/kubernetes/install/1.15/</link>
+      <link>/v2/docs/platforms/kubernetes/install/1.15/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/install/1.15/</guid>
+      <guid>/v2/docs/platforms/kubernetes/install/1.15/</guid>
       <description>
         
         
         &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -371,7 +371,7 @@ unique, strong password.&lt;/p&gt;
 The &lt;code&gt;echo -n&lt;/code&gt; ensures that a trailing new line is not appended to the string.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
+&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/v2/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
 Users&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;3-trigger-a-storageos-installation&#34;&gt;3. Trigger a StorageOS installation&lt;/h2&gt;
@@ -414,10 +414,10 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Docs: Installing on OpenShift 3.10</title>
-      <link>/docs/platforms/openshift/install/3.10/</link>
+      <link>/v2/docs/platforms/openshift/install/3.10/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/3.10/</guid>
+      <guid>/v2/docs/platforms/openshift/install/3.10/</guid>
       <description>
         
         
@@ -428,16 +428,16 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Docs: Kubernetes {{ page.k8s-version }}</title>
-      <link>/docs/platforms/kubernetes/install/1.14/</link>
+      <link>/v2/docs/platforms/kubernetes/install/1.14/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/install/1.14/</guid>
+      <guid>/v2/docs/platforms/kubernetes/install/1.14/</guid>
       <description>
         
         
         &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -504,7 +504,7 @@ unique, strong password.&lt;/p&gt;
 The &lt;code&gt;echo -n&lt;/code&gt; ensures that a trailing new line is not appended to the string.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
+&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/v2/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
 Users&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;3-trigger-a-storageos-installation&#34;&gt;3. Trigger a StorageOS installation&lt;/h2&gt;
@@ -547,10 +547,10 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Docs: Installing on OpenShift 3.9</title>
-      <link>/docs/platforms/openshift/install/3.9/</link>
+      <link>/v2/docs/platforms/openshift/install/3.9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/3.9/</guid>
+      <guid>/v2/docs/platforms/openshift/install/3.9/</guid>
       <description>
         
         
@@ -561,16 +561,16 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Docs: Kubernetes {{ page.k8s-version }}</title>
-      <link>/docs/platforms/kubernetes/install/1.13/</link>
+      <link>/v2/docs/platforms/kubernetes/install/1.13/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/install/1.13/</guid>
+      <guid>/v2/docs/platforms/kubernetes/install/1.13/</guid>
       <description>
         
         
         &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -637,7 +637,7 @@ unique, strong password.&lt;/p&gt;
 The &lt;code&gt;echo -n&lt;/code&gt; ensures that a trailing new line is not appended to the string.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
+&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/v2/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
 Users&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;3-trigger-a-storageos-installation&#34;&gt;3. Trigger a StorageOS installation&lt;/h2&gt;
@@ -680,10 +680,10 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Docs: Installing on OpenShift 3.8</title>
-      <link>/docs/platforms/openshift/install/3.8/</link>
+      <link>/v2/docs/platforms/openshift/install/3.8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/3.8/</guid>
+      <guid>/v2/docs/platforms/openshift/install/3.8/</guid>
       <description>
         
         
@@ -724,16 +724,16 @@ to mount a StorageOS volume in a Pod.&lt;/p&gt;
     
     <item>
       <title>Docs: Kubernetes {{ page.k8s-version }}</title>
-      <link>/docs/platforms/kubernetes/install/1.12/</link>
+      <link>/v2/docs/platforms/kubernetes/install/1.12/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/install/1.12/</guid>
+      <guid>/v2/docs/platforms/kubernetes/install/1.12/</guid>
       <description>
         
         
         &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -800,7 +800,7 @@ unique, strong password.&lt;/p&gt;
 The &lt;code&gt;echo -n&lt;/code&gt; ensures that a trailing new line is not appended to the string.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
+&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/v2/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
 Users&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;3-trigger-a-storageos-installation&#34;&gt;3. Trigger a StorageOS installation&lt;/h2&gt;
@@ -843,10 +843,10 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Docs: Installing on OpenShift 3.7</title>
-      <link>/docs/platforms/openshift/install/3.7/</link>
+      <link>/v2/docs/platforms/openshift/install/3.7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/3.7/</guid>
+      <guid>/v2/docs/platforms/openshift/install/3.7/</guid>
       <description>
         
         
@@ -869,17 +869,17 @@ to mount a StorageOS volume in a Pod.&lt;/p&gt;
     
     <item>
       <title>Docs: Install</title>
-      <link>/docs/reference/cluster-operator/install/</link>
+      <link>/v2/docs/reference/cluster-operator/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cluster-operator/install/</guid>
+      <guid>/v2/docs/reference/cluster-operator/install/</guid>
       <description>
         
         
         &lt;p&gt;To install the operator follow the installation page for your orchestrator.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;Kubernetes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/platforms/openshift/install/&#34;&gt;OpenShift&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;Kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/v2/v2/docs/platforms/openshift/install/&#34;&gt;OpenShift&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
       </description>
@@ -887,10 +887,10 @@ to mount a StorageOS volume in a Pod.&lt;/p&gt;
     
     <item>
       <title>Docs: Install in EKS</title>
-      <link>/docs/platforms/aws-eks/install/</link>
+      <link>/v2/docs/platforms/aws-eks/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/aws-eks/install/</guid>
+      <guid>/v2/docs/platforms/aws-eks/install/</guid>
       <description>
         
         
@@ -899,7 +899,7 @@ to mount a StorageOS volume in a Pod.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Only installations of StorageOS with CSI are supported for EKS.&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;/docs/platforms/aws-eks/bestpractices/&#34;&gt;best practices page&lt;/a&gt; for production
+&lt;p&gt;Visit the &lt;a href=&#34;/v2/v2/docs/platforms/aws-eks/bestpractices/&#34;&gt;best practices page&lt;/a&gt; for production
 deployment advice.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -910,10 +910,10 @@ deployment advice.&lt;/p&gt;
     
     <item>
       <title>Docs: Install StorageOS</title>
-      <link>/docs/platforms/azure-aks/install/</link>
+      <link>/v2/docs/platforms/azure-aks/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/azure-aks/install/</guid>
+      <guid>/v2/docs/platforms/azure-aks/install/</guid>
       <description>
         
         
@@ -921,7 +921,7 @@ deployment advice.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Only installations of StorageOS with CSI are supported for AKS.&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;/docs/platforms/azure-aks/bestpractices/&#34;&gt;best practices page&lt;/a&gt; for production
+&lt;p&gt;Visit the &lt;a href=&#34;/v2/v2/docs/platforms/azure-aks/bestpractices/&#34;&gt;best practices page&lt;/a&gt; for production
 deployment advice.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -932,17 +932,17 @@ deployment advice.&lt;/p&gt;
     
     <item>
       <title>Docs: Install StorageOS</title>
-      <link>/docs/platforms/dockeree/install/</link>
+      <link>/v2/docs/platforms/dockeree/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/dockeree/install/</guid>
+      <guid>/v2/docs/platforms/dockeree/install/</guid>
       <description>
         
         
         &lt;p&gt;This section of documentation covers the use of StorageOS in Docker Enterprise Edition.&lt;/p&gt;
 &lt;p&gt;Docker EE and the Universal Control Plane can be executed in different Linux
 distributions. StorageOS supports RHEL, CentOS, Debian, and selected Ubuntu
-images. For more details, check out the supported OS in the &lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;prerequisites page&lt;/a&gt;.&lt;/p&gt;
+images. For more details, check out the supported OS in the &lt;a href=&#34;/v2/v2/docs/prerequisites/systemconfiguration/&#34;&gt;prerequisites page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;StorageOS only supports Kubernetes nodes managed by Docker Enterprise Edition,
 not those running Swarm. Mixed nodes (those running Kubernetes and Swarm
 workloads)  are also not supported.  As a consequence, StorageOS volumes can
@@ -951,7 +951,7 @@ for stateful workloads.&lt;/p&gt;
 &lt;h1 id=&#34;install-storageos&#34;&gt;Install StorageOS&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;{% include operator/install.md %}&lt;/p&gt;
@@ -961,16 +961,16 @@ satisfied before proceeding.&lt;/p&gt;
     
     <item>
       <title>Docs: Rancher Catalog</title>
-      <link>/docs/platforms/rancher/install/rancher-catalog/</link>
+      <link>/v2/docs/platforms/rancher/install/rancher-catalog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/rancher/install/rancher-catalog/</guid>
+      <guid>/v2/docs/platforms/rancher/install/rancher-catalog/</guid>
       <description>
         
         
         &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -980,22 +980,22 @@ StorageOS using the Rancher application install.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Select the &lt;code&gt;System&lt;/code&gt; project of your cluster&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/rancher-ui-green-bubbles/rancher-1.png&#34; alt=&#34;install-1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/v2/images/rancher-ui-green-bubbles/rancher-1.png&#34; alt=&#34;install-1&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Select the &lt;code&gt;Apps&lt;/code&gt; tab and click &lt;code&gt;Launch&lt;/code&gt;
-&lt;img src=&#34;/images/rancher-ui-green-bubbles/rancher-2.png&#34; alt=&#34;install-2&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;/v2/images/rancher-ui-green-bubbles/rancher-2.png&#34; alt=&#34;install-2&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Search for StorageOS and click on the App
-&lt;img src=&#34;/images/rancher-ui-green-bubbles/rancher-3.png&#34; alt=&#34;install-3&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;/v2/images/rancher-ui-green-bubbles/rancher-3.png&#34; alt=&#34;install-3&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Define the StorageOS cluster installation&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A generic configuration for StorageOS is preset using the default values in
 the form. The values in the form can be changed to customize the
-installation. To customize the installation further, set &lt;code&gt;Install StorageOS Cluster&lt;/code&gt; to false and use a &lt;a href=&#34;/docs/platforms/rancher/install/rancher-catalog#custom-resource-definition&#34;&gt;yaml definition for the StorageOSCluster
+installation. To customize the installation further, set &lt;code&gt;Install StorageOS Cluster&lt;/code&gt; to false and use a &lt;a href=&#34;/v2/docs/platforms/rancher/install/rancher-catalog#custom-resource-definition&#34;&gt;yaml definition for the StorageOSCluster
 Custom
 Resource&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1003,7 +1003,7 @@ Resource&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The following options are exposed by the form to allow some simple
 customization of the StorageOS installation.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;/docs/reference/cluster-operator/&#34;&gt;Cluster Operator&lt;/a&gt; namespace
+&lt;li&gt;&lt;a href=&#34;/v2/v2/docs/reference/cluster-operator/&#34;&gt;Cluster Operator&lt;/a&gt; namespace
 : The Kubernetes namespace where the StorageOS Cluster Operator controller
 and other resources will be created.&lt;/li&gt;
 &lt;li&gt;Container Images
@@ -1015,7 +1015,7 @@ Cluster Operator. If set to &lt;code&gt;false&lt;/code&gt;, the Operator will be
 Custom Resource will not be applied to the cluster. Launch the operator and
 proceed to the section &lt;a href=&#34;#custom-resource-definition&#34;&gt;Custom Resource
 definition&lt;/a&gt;. For more information check the
-Operator &lt;a href=&#34;/docs/reference/cluster-operator/configuration/&#34;&gt;documentation&lt;/a&gt; and &lt;a href=&#34;/docs/reference/cluster-operator/examples/&#34;&gt;CR
+Operator &lt;a href=&#34;/v2/v2/docs/reference/cluster-operator/configuration/&#34;&gt;documentation&lt;/a&gt; and &lt;a href=&#34;/v2/v2/docs/reference/cluster-operator/examples/&#34;&gt;CR
 examples&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;StorageOS namespace
 : The Kubernetes namespace where StorageOS will be installed. Installing
@@ -1027,7 +1027,7 @@ resource contention.&lt;/li&gt;
 : Default Username and Password for the admin account to be created at
 StorageOS bootstrap. A random password will be generated by leaving the
 field empty or clicking the &lt;code&gt;Generate&lt;/code&gt; button.&lt;/li&gt;
-&lt;li&gt;Key-value store &lt;a href=&#34;/docs/operations/external-etcd/&#34;&gt;setup&lt;/a&gt;
+&lt;li&gt;Key-value store &lt;a href=&#34;/v2/v2/docs/operations/external-etcd/&#34;&gt;setup&lt;/a&gt;
 : Connection and configuration details for an external Etcd cluster.
 StorageOS can use an external key-value store to hold configuration.
 Settings such as external etcd with TLS termination are available.&lt;/li&gt;
@@ -1036,12 +1036,12 @@ Settings such as external etcd with TLS termination are available.&lt;/li&gt;
 on the selected nodes. Can be used in conjunction with tolerations.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/rancher-ui-green-bubbles/rancher-4.png&#34; alt=&#34;install-4&#34;&gt;
-&lt;img src=&#34;/images/rancher-ui-green-bubbles/rancher-5.png&#34; alt=&#34;install-5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/v2/images/rancher-ui-green-bubbles/rancher-4.png&#34; alt=&#34;install-4&#34;&gt;
+&lt;img src=&#34;/v2/images/rancher-ui-green-bubbles/rancher-5.png&#34; alt=&#34;install-5&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Verify the cluster bootstrap has successfully completed&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/rancher-ui-green-bubbles/rancher-6.png&#34; alt=&#34;install-6&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/v2/images/rancher-ui-green-bubbles/rancher-6.png&#34; alt=&#34;install-6&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -1052,11 +1052,11 @@ now create a Custom Resource that describes the StorageOS cluster.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Select the &lt;code&gt;System Workloads&lt;/code&gt; and &lt;code&gt;Import YAML&lt;/code&gt;
-&lt;img src=&#34;/images/rancher-ui-green-bubbles/rancher-7.png&#34; alt=&#34;install-7&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;/v2/images/rancher-ui-green-bubbles/rancher-7.png&#34; alt=&#34;install-7&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Create the &lt;code&gt;Secret&lt;/code&gt; and &lt;code&gt;CustomResource&lt;/code&gt;
-&lt;img src=&#34;/images/rancher-ui-green-bubbles/rancher-8.png&#34; alt=&#34;install-8&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;/v2/images/rancher-ui-green-bubbles/rancher-8.png&#34; alt=&#34;install-8&#34;&gt;&lt;/p&gt;
 &lt;p&gt;{% include operator/cr-rancher-ui.md %}&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -1067,16 +1067,16 @@ now create a Custom Resource that describes the StorageOS cluster.&lt;/p&gt;
     
     <item>
       <title>Docs: Advanced installation on Rancher</title>
-      <link>/docs/platforms/rancher/install/rancher-advanced/</link>
+      <link>/v2/docs/platforms/rancher/install/rancher-advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/rancher/install/rancher-advanced/</guid>
+      <guid>/v2/docs/platforms/rancher/install/rancher-advanced/</guid>
       <description>
         
         
         &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -1088,10 +1088,10 @@ satisfied before proceeding.&lt;/p&gt;
     
     <item>
       <title>Docs: System Configuration</title>
-      <link>/docs/prerequisites/systemconfiguration/</link>
+      <link>/v2/docs/prerequisites/systemconfiguration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/prerequisites/systemconfiguration/</guid>
+      <guid>/v2/docs/prerequisites/systemconfiguration/</guid>
       <description>
         
         
@@ -1114,7 +1114,7 @@ of data. On startup, StorageOS will detect if other applications are using
 TCMU and fall back to FUSE. However if StorageOS is started first there is no
 mechanism for StorageOS to fallback to FUSE if another application begins to
 use TCMU. TCMU can be disabled using the
-&lt;a href=&#34;/docs/reference/cluster-operator/configuration&#34;&gt;DISABLE_TCMU&lt;/a&gt;
+&lt;a href=&#34;/v2/docs/reference/cluster-operator/configuration&#34;&gt;DISABLE_TCMU&lt;/a&gt;
 StorageOSCluster spec parameter.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Depending on the distribution, the modules are shipped as part of the
@@ -1132,7 +1132,7 @@ installed.&lt;/p&gt;
 &lt;p&gt;Ubuntu 16.04/18.04 requires the installation of additional packages.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;N.B. Ubuntu 16.04/18.04 AWS and Ubuntu 18.04 GCE do not provide the
-necessary linux-image-extra package - &lt;a href=&#34;/docs/prerequisites/systemconfiguration#ubuntu-on-aws-and-gce&#34;&gt;see
+necessary linux-image-extra package - &lt;a href=&#34;/v2/docs/prerequisites/systemconfiguration#ubuntu-on-aws-and-gce&#34;&gt;see
 below&lt;/a&gt; for more information&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;ubuntu-package-installation&#34;&gt;Ubuntu Package Installation&lt;/h2&gt;
@@ -1182,10 +1182,10 @@ the init container, perform the following steps:&lt;/p&gt;
     
     <item>
       <title>Docs: Volume Guide</title>
-      <link>/docs/platforms/openshift/volumeguide/</link>
+      <link>/v2/docs/platforms/openshift/volumeguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/volumeguide/</guid>
+      <guid>/v2/docs/platforms/openshift/volumeguide/</guid>
       <description>
         
         
@@ -1196,10 +1196,10 @@ the init container, perform the following steps:&lt;/p&gt;
     
     <item>
       <title>Docs: Volume Guide</title>
-      <link>/docs/platforms/rancher/volumeguide/</link>
+      <link>/v2/docs/platforms/rancher/volumeguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/rancher/volumeguide/</guid>
+      <guid>/v2/docs/platforms/rancher/volumeguide/</guid>
       <description>
         
         
@@ -1210,10 +1210,10 @@ the init container, perform the following steps:&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS with EKS Kubernetes best practices</title>
-      <link>/docs/platforms/aws-eks/bestpractices/</link>
+      <link>/v2/docs/platforms/aws-eks/bestpractices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/aws-eks/bestpractices/</guid>
+      <guid>/v2/docs/platforms/aws-eks/bestpractices/</guid>
       <description>
         
         
@@ -1229,10 +1229,10 @@ the init container, perform the following steps:&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS with {{ page.platform }} best practices</title>
-      <link>/docs/platforms/openshift/bestpractices/</link>
+      <link>/v2/docs/platforms/openshift/bestpractices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/bestpractices/</guid>
+      <guid>/v2/docs/platforms/openshift/bestpractices/</guid>
       <description>
         
         
@@ -1248,10 +1248,10 @@ the init container, perform the following steps:&lt;/p&gt;
     
     <item>
       <title>Docs: Configuration</title>
-      <link>/docs/reference/cluster-operator/configuration/</link>
+      <link>/v2/docs/reference/cluster-operator/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cluster-operator/configuration/</guid>
+      <guid>/v2/docs/reference/cluster-operator/configuration/</guid>
       <description>
         
         
@@ -1262,10 +1262,10 @@ the init container, perform the following steps:&lt;/p&gt;
     
     <item>
       <title>Docs: Firewalls</title>
-      <link>/docs/prerequisites/firewalls/</link>
+      <link>/v2/docs/prerequisites/firewalls/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/prerequisites/firewalls/</guid>
+      <guid>/v2/docs/prerequisites/firewalls/</guid>
       <description>
         
         
@@ -1375,10 +1375,10 @@ default DROP or REJECT rules.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS Volume Guide</title>
-      <link>/docs/platforms/azure-aks/volumeguide/</link>
+      <link>/v2/docs/platforms/azure-aks/volumeguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/azure-aks/volumeguide/</guid>
+      <guid>/v2/docs/platforms/azure-aks/volumeguide/</guid>
       <description>
         
         
@@ -1389,10 +1389,10 @@ default DROP or REJECT rules.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS Volume Guide</title>
-      <link>/docs/platforms/dockeree/volumeguide/</link>
+      <link>/v2/docs/platforms/dockeree/volumeguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/dockeree/volumeguide/</guid>
+      <guid>/v2/docs/platforms/dockeree/volumeguide/</guid>
       <description>
         
         
@@ -1403,10 +1403,10 @@ default DROP or REJECT rules.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS with AKS Kubernetes best practices</title>
-      <link>/docs/platforms/azure-aks/bestpractices/</link>
+      <link>/v2/docs/platforms/azure-aks/bestpractices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/azure-aks/bestpractices/</guid>
+      <guid>/v2/docs/platforms/azure-aks/bestpractices/</guid>
       <description>
         
         
@@ -1422,10 +1422,10 @@ default DROP or REJECT rules.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS with {{ page.platform }} best practices</title>
-      <link>/docs/platforms/dockeree/bestpractices/</link>
+      <link>/v2/docs/platforms/dockeree/bestpractices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/dockeree/bestpractices/</guid>
+      <guid>/v2/docs/platforms/dockeree/bestpractices/</guid>
       <description>
         
         
@@ -1442,10 +1442,10 @@ default DROP or REJECT rules.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS with {{ page.platform }} best practices</title>
-      <link>/docs/platforms/rancher/bestpractices/</link>
+      <link>/v2/docs/platforms/rancher/bestpractices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/rancher/bestpractices/</guid>
+      <guid>/v2/docs/platforms/rancher/bestpractices/</guid>
       <description>
         
         
@@ -1461,10 +1461,10 @@ default DROP or REJECT rules.&lt;/p&gt;
     
     <item>
       <title>Docs: Examples</title>
-      <link>/docs/reference/cluster-operator/examples/</link>
+      <link>/v2/docs/reference/cluster-operator/examples/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cluster-operator/examples/</guid>
+      <guid>/v2/docs/reference/cluster-operator/examples/</guid>
       <description>
         
         
@@ -1475,10 +1475,10 @@ default DROP or REJECT rules.&lt;/p&gt;
     
     <item>
       <title>Docs: Mount Propagation</title>
-      <link>/docs/prerequisites/mountpropagation/</link>
+      <link>/v2/docs/prerequisites/mountpropagation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/prerequisites/mountpropagation/</guid>
+      <guid>/v2/docs/prerequisites/mountpropagation/</guid>
       <description>
         
         
@@ -1514,10 +1514,10 @@ check and enable mount propagation where appropriate.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS Volume Guide</title>
-      <link>/docs/platforms/aws-eks/volumeguide/</link>
+      <link>/v2/docs/platforms/aws-eks/volumeguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/aws-eks/volumeguide/</guid>
+      <guid>/v2/docs/platforms/aws-eks/volumeguide/</guid>
       <description>
         
         
@@ -1528,10 +1528,10 @@ check and enable mount propagation where appropriate.&lt;/p&gt;
     
     <item>
       <title>Docs: Volume Guide</title>
-      <link>/docs/platforms/kubernetes/volumeguide/</link>
+      <link>/v2/docs/platforms/kubernetes/volumeguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/volumeguide/</guid>
+      <guid>/v2/docs/platforms/kubernetes/volumeguide/</guid>
       <description>
         
         
@@ -1542,10 +1542,10 @@ check and enable mount propagation where appropriate.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS with {{ page.platform }} best practices</title>
-      <link>/docs/platforms/kubernetes/bestpractices/</link>
+      <link>/v2/docs/platforms/kubernetes/bestpractices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/bestpractices/</guid>
+      <guid>/v2/docs/platforms/kubernetes/bestpractices/</guid>
       <description>
         
         
@@ -1561,10 +1561,10 @@ check and enable mount propagation where appropriate.&lt;/p&gt;
     
     <item>
       <title>Docs: Cluster Operator Upgrade</title>
-      <link>/docs/reference/cluster-operator/upgrade/</link>
+      <link>/v2/docs/reference/cluster-operator/upgrade/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cluster-operator/upgrade/</guid>
+      <guid>/v2/docs/reference/cluster-operator/upgrade/</guid>
       <description>
         
         
@@ -1576,10 +1576,10 @@ check and enable mount propagation where appropriate.&lt;/p&gt;
     
     <item>
       <title>Docs: Support</title>
-      <link>/docs/support/</link>
+      <link>/v2/docs/support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/support/</guid>
+      <guid>/v2/docs/support/</guid>
       <description>
         
         
@@ -1595,7 +1595,7 @@ information as possible when contacting us. The list below is a suggested
 starting point. Additionally, please include anything specific, such as log
 entries, that may help us debug your issue.&lt;/p&gt;
 &lt;p&gt;Information about the cluster can be automatically sent to StorageOS engineers
-as mentioned in the section &lt;a href=&#34;/docs/support/contactus#storageos-cluster-report&#34;&gt;StorageOS Cluster
+as mentioned in the section &lt;a href=&#34;/v2/docs/support/contactus#storageos-cluster-report&#34;&gt;StorageOS Cluster
 Report&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;platform&#34;&gt;Platform&lt;/h2&gt;
 &lt;ul&gt;
@@ -1642,7 +1642,7 @@ convenience the report can either be uploaded to StorageOS or downloaded to the
 machine running the browser. The report is uploaded from a StorageOS node to a
 StorageOS GCP encrypted bucket using a TLS encrypted connection. The upload
 takes place only after user confirmation.&lt;/p&gt;
-&lt;p&gt;You can generate a report through the StorageOS &lt;a href=&#34;/docs/reference/gui&#34;&gt;GUI&lt;/a&gt; by
+&lt;p&gt;You can generate a report through the StorageOS &lt;a href=&#34;/v2/docs/reference/gui&#34;&gt;GUI&lt;/a&gt; by
 navigating to the &lt;code&gt;Cluster&lt;/code&gt; menu. You can also directly connect to the cluster
 diagnostic API endpoint and retrieve the bundle. Note that only a user with the
 Admin role can create Diagnostic Bundles.&lt;/p&gt;
@@ -1653,10 +1653,10 @@ Admin role can create Diagnostic Bundles.&lt;/p&gt;
     
     <item>
       <title>Docs: Self Evaluation Guide</title>
-      <link>/docs/self-eval/</link>
+      <link>/v2/docs/self-eval/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/self-eval/</guid>
+      <guid>/v2/docs/self-eval/</guid>
       <description>
         
         
@@ -2273,10 +2273,10 @@ mysql-0   1/1     Running       &lt;span style=&#34;color:#0000cf;font-weight:bo
     
     <item>
       <title>Docs: </title>
-      <link>/docs/operations/updates/</link>
+      <link>/v2/docs/operations/updates/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/operations/updates/</guid>
+      <guid>/v2/docs/operations/updates/</guid>
       <description>
         
         
@@ -2286,10 +2286,10 @@ mysql-0   1/1     Running       &lt;span style=&#34;color:#0000cf;font-weight:bo
     
     <item>
       <title>Docs: API Reference</title>
-      <link>/docs/reference/api/</link>
+      <link>/v2/docs/reference/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/api/</guid>
+      <guid>/v2/docs/reference/api/</guid>
       <description>
         
         
@@ -2300,10 +2300,10 @@ mysql-0   1/1     Running       &lt;span style=&#34;color:#0000cf;font-weight:bo
     
     <item>
       <title>Docs: Architecture</title>
-      <link>/docs/concepts/architecture/</link>
+      <link>/v2/docs/concepts/architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/architecture/</guid>
+      <guid>/v2/docs/concepts/architecture/</guid>
       <description>
         
         
@@ -2316,7 +2316,7 @@ creates a virtual pool across nodes, and presents virtual volumes from the pool
 into containers.&lt;/p&gt;
 &lt;p&gt;It is agnostic to the underlying storage and runs equally on
 bare metal, in virtual machines or on cloud providers.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/docs/concepts/storageos-cluster.png&#34; alt=&#34;StorageOS architecture&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/v2/images/docs/concepts/storageos-cluster.png&#34; alt=&#34;StorageOS architecture&#34;&gt;&lt;/p&gt;
 &lt;p&gt;StorageOS is deployed as one container on each node that presents or consumes
 storage, available as &lt;code&gt;storageos/node&lt;/code&gt; on the Docker Hub. In Kubernetes,
 this is typically managed as a daemonset, next
@@ -2328,7 +2328,7 @@ features are controlled by Kubernetes-style labels and selectors, prefixed with
 &lt;p&gt;StorageOS uses the storage capacity from the nodes where it is installed to
 provide thinly-provisioned volumes. That space is selected from the mount point
 of &lt;code&gt;/var/lib/storageos/data&lt;/code&gt; on the host. It is recommended that disk devices
-are used exclusively for StorageOS, as described in &lt;a href=&#34;/docs/operations/managing-host-storage/&#34;&gt;Managing Host Storage
+are used exclusively for StorageOS, as described in &lt;a href=&#34;/v2/v2/docs/operations/managing-host-storage/&#34;&gt;Managing Host Storage
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Any container may mount a StorageOS virtual volume from any node, regardless of
 whether the container and volume are colocated on the same node or the volume is
@@ -2369,10 +2369,10 @@ reduce network traffic.&lt;/p&gt;
     
     <item>
       <title>Docs: Backing up files from StorageOS volumes</title>
-      <link>/docs/usecases/backups/</link>
+      <link>/v2/docs/usecases/backups/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/usecases/backups/</guid>
+      <guid>/v2/docs/usecases/backups/</guid>
       <description>
         
         
@@ -2385,7 +2385,7 @@ files written by the application are available for export. Files can be
 exported using Nginx as a web file server, transferred using rsync or accessed
 via SFTP.&lt;/p&gt;
 &lt;p&gt;The files create a stateful set that can be used &lt;em&gt;AFTER&lt;/em&gt; a StorageOS cluster
-has been created. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+has been created. &lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;clone-repository&#34;&gt;Clone Repository&lt;/h2&gt;
 &lt;p&gt;In order to deploy the examples, clone this repository and use kubectl to create the
@@ -2556,17 +2556,17 @@ date.txt    lost+found
     
     <item>
       <title>Docs: Cassandra</title>
-      <link>/docs/platforms/kubernetes/examples/cassandra/</link>
+      <link>/v2/docs/platforms/kubernetes/examples/cassandra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/examples/cassandra/</guid>
+      <guid>/v2/docs/platforms/kubernetes/examples/cassandra/</guid>
       <description>
         
         
-        &lt;h1 id=&#34;imageimagesdocsexplorecassandralogopng-cassandra-with-storageos&#34;&gt;&lt;img src=&#34;/images/docs/explore/cassandralogo.png&#34; alt=&#34;image&#34;&gt; Cassandra with StorageOS&lt;/h1&gt;
+        &lt;h1 id=&#34;imageimagesdocsexplorecassandralogopng-cassandra-with-storageos&#34;&gt;&lt;img src=&#34;/v2/images/docs/explore/cassandralogo.png&#34; alt=&#34;image&#34;&gt; Cassandra with StorageOS&lt;/h1&gt;
 &lt;p&gt;Cassandra is a popular distributed NoSQL open source database.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;deploying-cassandra-on-kubernetes&#34;&gt;Deploying Cassandra on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -2641,14 +2641,14 @@ cqlsh&amp;gt; SELECT cluster_name, listen_address FROM system.local&lt;span styl
     
     <item>
       <title>Docs: Cassandra</title>
-      <link>/docs/usecases/cassandra/</link>
+      <link>/v2/docs/usecases/cassandra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/usecases/cassandra/</guid>
+      <guid>/v2/docs/usecases/cassandra/</guid>
       <description>
         
         
-        &lt;h1 id=&#34;imageimagesdocsexplorecassandralogopng-cassandra-with-storageos&#34;&gt;&lt;img src=&#34;/images/docs/explore/cassandralogo.png&#34; alt=&#34;image&#34;&gt; Cassandra with StorageOS&lt;/h1&gt;
+        &lt;h1 id=&#34;imageimagesdocsexplorecassandralogopng-cassandra-with-storageos&#34;&gt;&lt;img src=&#34;/v2/images/docs/explore/cassandralogo.png&#34; alt=&#34;image&#34;&gt; Cassandra with StorageOS&lt;/h1&gt;
 &lt;p&gt;Cassandra is a popular distributed NoSQL open source database.&lt;/p&gt;
 &lt;p&gt;Using StorageOS persistent volumes with Cassandra means that if a Cassandra pod
 fails, the cluster is only in a degraded state for as long as it takes
@@ -2660,7 +2660,7 @@ irrespective of whether or not a StorageOS master is located on the same node.&l
 consideration of whether to allow StorageOS or Cassandra to handle replication
 is required.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;deploying-cassandra-on-kubernetes&#34;&gt;Deploying Cassandra on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -2741,10 +2741,10 @@ cqlsh&amp;gt; SELECT cluster_name, listen_address FROM system.local&lt;span styl
     
     <item>
       <title>Docs: Cluster</title>
-      <link>/docs/reference/cli/cluster/</link>
+      <link>/v2/docs/reference/cli/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/cluster/</guid>
+      <guid>/v2/docs/reference/cli/cluster/</guid>
       <description>
         
         
@@ -2819,7 +2819,7 @@ storageos-nodes1  storageos-nodes3.etcd      10.0.12.253:5707  1.117382ms  OK
 storageos-nodes1  storageos-nodes3.nats      10.0.12.253:5708  1.15015ms   OK      
 storageos-nodes1  storageos-nodes3.serf      10.0.12.253:5711  1.075519ms  OK
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;storageos-cluster-create&#34;&gt;&lt;code&gt;storageos cluster create&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;To create a cluster token for &lt;a href=&#34;/docs/reference/clusterdiscovery/&#34;&gt;cluster discovery&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;To create a cluster token for &lt;a href=&#34;/v2/v2/docs/reference/clusterdiscovery/&#34;&gt;cluster discovery&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ storageos cluster create
 207f0026-3844-40e0-884b-729d79c124b8
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;storageos-cluster-health&#34;&gt;&lt;code&gt;storageos cluster health&lt;/code&gt;&lt;/h3&gt;
@@ -2870,10 +2870,10 @@ to see all the options for this command.&lt;/p&gt;
     
     <item>
       <title>Docs: Cluster discovery</title>
-      <link>/docs/reference/clusterdiscovery/</link>
+      <link>/v2/docs/reference/clusterdiscovery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/clusterdiscovery/</guid>
+      <guid>/v2/docs/reference/clusterdiscovery/</guid>
       <description>
         
         
@@ -2919,16 +2919,16 @@ is to prevent non-obvious split-brain scenarios in multi-node clusters, where
     
     <item>
       <title>Docs: Clusters</title>
-      <link>/docs/concepts/clusters/</link>
+      <link>/v2/docs/concepts/clusters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/clusters/</guid>
+      <guid>/v2/docs/concepts/clusters/</guid>
       <description>
         
         
         &lt;p&gt;StorageOS clusters represent groups of nodes which run a common distributed
 control plane, and aggregate their storage into one or more
-&lt;a href=&#34;/docs/concepts/pools&#34;&gt;pools&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;/v2/docs/concepts/pools&#34;&gt;pools&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Typically, a StorageOS cluster maps one-to-one to a Kubernetes (or similar
 orchestrator) cluster, and we expect our container to run on all worker
 nodes within the cluster that will consume or present storage.&lt;/p&gt;
@@ -2943,21 +2943,21 @@ or production like workloads will be deployed on StorageOS.&lt;/p&gt;
     
     <item>
       <title>Docs: Compression</title>
-      <link>/docs/concepts/compression/</link>
+      <link>/v2/docs/concepts/compression/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/compression/</guid>
+      <guid>/v2/docs/concepts/compression/</guid>
       <description>
         
         
         &lt;p&gt;StorageOS compression is handled on a per volume basis and is enabled by
 default, as performance is generally increased when compression is enabled due
 to fewer read/write operations taking place on the backend store (the volumes&amp;rsquo;
-&lt;a href=&#34;/docs/concepts/volumes#blob-files&#34;&gt;blob files&lt;/a&gt;). Compression can be disabled
-by setting the &lt;a href=&#34;/docs/reference/labels&#34;&gt;label&lt;/a&gt; &lt;code&gt;storageos.com/nocompress=true&lt;/code&gt;
+&lt;a href=&#34;/v2/docs/concepts/volumes#blob-files&#34;&gt;blob files&lt;/a&gt;). Compression can be disabled
+by setting the &lt;a href=&#34;/v2/docs/reference/labels&#34;&gt;label&lt;/a&gt; &lt;code&gt;storageos.com/nocompress=true&lt;/code&gt;
 on a volume.&lt;/p&gt;
 &lt;p&gt;StorageOS utilises the &lt;a href=&#34;https://lz4.github.io/lz4/&#34;&gt;lz4 compression algorithm&lt;/a&gt;
-when writing to the backend store and when compressing &lt;a href=&#34;/docs/concepts/replication&#34;&gt;replication
+when writing to the backend store and when compressing &lt;a href=&#34;/v2/docs/concepts/replication&#34;&gt;replication
 traffic&lt;/a&gt; before it is sent across the network.
 Compression is granular per 4k block and data will remain
 compressed/uncompressed once written to a volume. Therefore, compression can be
@@ -2973,7 +2973,7 @@ increased and CPU resources are not wasted on attempts to compress
 uncompressible blocks. StorageOS&amp;rsquo; patented on disk format is used to tell
 whether individual blocks are compressed without overhead. As such volume
 compression can be dynamically enabled/disabled even while a volume is in use.&lt;/p&gt;
-&lt;p&gt;When compression and &lt;a href=&#34;/docs/concepts/encryption&#34;&gt;encryption&lt;/a&gt; are both enabled
+&lt;p&gt;When compression and &lt;a href=&#34;/v2/docs/concepts/encryption&#34;&gt;encryption&lt;/a&gt; are both enabled
 for a volume, blocks are compressed then encrypted.&lt;/p&gt;
 
       </description>
@@ -2981,10 +2981,10 @@ for a volume, blocks are compressed then encrypted.&lt;/p&gt;
     
     <item>
       <title>Docs: Contributing to the docs</title>
-      <link>/docs/reference/contributing/</link>
+      <link>/v2/docs/reference/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/contributing/</guid>
+      <guid>/v2/docs/reference/contributing/</guid>
       <description>
         
         

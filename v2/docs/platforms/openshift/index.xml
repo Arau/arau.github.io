@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – OpenShift</title>
-    <link>/docs/platforms/openshift/</link>
+    <link>/v2/docs/platforms/openshift/</link>
     <description>Recent content in OpenShift on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/platforms/openshift/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/v2/docs/platforms/openshift/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Install StorageOS</title>
-      <link>/docs/platforms/openshift/install/</link>
+      <link>/v2/docs/platforms/openshift/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/install/</guid>
+      <guid>/v2/docs/platforms/openshift/install/</guid>
       <description>
         
         
@@ -47,10 +47,10 @@ active project might contain breaking changes.&lt;/p&gt;
     
     <item>
       <title>Docs: Volume Guide</title>
-      <link>/docs/platforms/openshift/volumeguide/</link>
+      <link>/v2/docs/platforms/openshift/volumeguide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/volumeguide/</guid>
+      <guid>/v2/docs/platforms/openshift/volumeguide/</guid>
       <description>
         
         
@@ -61,10 +61,10 @@ active project might contain breaking changes.&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS with {{ page.platform }} best practices</title>
-      <link>/docs/platforms/openshift/bestpractices/</link>
+      <link>/v2/docs/platforms/openshift/bestpractices/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/bestpractices/</guid>
+      <guid>/v2/docs/platforms/openshift/bestpractices/</guid>
       <description>
         
         
@@ -80,10 +80,10 @@ active project might contain breaking changes.&lt;/p&gt;
     
     <item>
       <title>Docs: Troubleshoot</title>
-      <link>/docs/platforms/openshift/troubleshoot/</link>
+      <link>/v2/docs/platforms/openshift/troubleshoot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/troubleshoot/</guid>
+      <guid>/v2/docs/platforms/openshift/troubleshoot/</guid>
       <description>
         
         

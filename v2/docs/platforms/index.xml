@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Platforms</title>
-    <link>/docs/platforms/</link>
+    <link>/v2/docs/platforms/</link>
     <description>Recent content in Platforms on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/platforms/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/v2/docs/platforms/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Kubernetes</title>
-      <link>/docs/platforms/kubernetes/</link>
+      <link>/v2/docs/platforms/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/kubernetes/</guid>
+      <guid>/v2/docs/platforms/kubernetes/</guid>
       <description>
         
         
@@ -32,17 +32,17 @@ agnostic.&lt;/p&gt;
 standard PVC definitions and StorageOS will dynamically provision them.
 StorageOS presents volumes to containers with standard POSIX mount targets.
 This enables the Kubelet to mount StorageOS
-volumes using standard linux device files. Checkout &lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;device presentation&lt;/a&gt; for more details.&lt;/p&gt;
+volumes using standard linux device files. Checkout &lt;a href=&#34;/v2/v2/docs/prerequisites/systemconfiguration/&#34;&gt;device presentation&lt;/a&gt; for more details.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: AWS</title>
-      <link>/docs/platforms/aws-eks/</link>
+      <link>/v2/docs/platforms/aws-eks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/aws-eks/</guid>
+      <guid>/v2/docs/platforms/aws-eks/</guid>
       <description>
         
         
@@ -50,7 +50,7 @@ volumes using standard linux device files. Checkout &lt;a href=&#34;/docs/prereq
 &lt;p&gt;This section of documentation covers the use of the managed Kubernetes AWS
 service &lt;a href=&#34;https://aws.amazon.com/eks/&#34;&gt;EKS&lt;/a&gt;. For information on the installation
 of StorageOS with vanilla Kubernetes in AWS VMs, please refer to the
-&lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;Kubernetes standard installation&lt;/a&gt; procedure.&lt;/p&gt;
+&lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;Kubernetes standard installation&lt;/a&gt; procedure.&lt;/p&gt;
 &lt;h2 id=&#34;eks-and-storageos&#34;&gt;EKS and StorageOS&lt;/h2&gt;
 &lt;p&gt;EKS deployment of Kubernetes uses AWS Linux by default with an optimized
 kernel. As the requisite kernel modules are not available for StorageOS to use
@@ -64,10 +64,10 @@ TCMU, FUSE will be used as a fallback.&lt;/p&gt;
     
     <item>
       <title>Docs: Azure</title>
-      <link>/docs/platforms/azure-aks/</link>
+      <link>/v2/docs/platforms/azure-aks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/azure-aks/</guid>
+      <guid>/v2/docs/platforms/azure-aks/</guid>
       <description>
         
         
@@ -75,7 +75,7 @@ TCMU, FUSE will be used as a fallback.&lt;/p&gt;
 &lt;p&gt;This section of documentation covers the use of the managed Kubernetes Azure
 service &lt;a href=&#34;https://azure.microsoft.com/en-gb/services/kubernetes-service/&#34;&gt;AKS&lt;/a&gt;.
 For information on the installation of StorageOS with vanilla Kubernetes in Azure
-VMs, please refer to the &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;Kubernetes standard installation&lt;/a&gt; procedure.&lt;/p&gt;
+VMs, please refer to the &lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;Kubernetes standard installation&lt;/a&gt; procedure.&lt;/p&gt;
 &lt;h2 id=&#34;aks-and-storageos&#34;&gt;AKS and StorageOS&lt;/h2&gt;
 &lt;p&gt;AKS deployment of Kubernetes uses Ubuntu by default with an optimized kernel.
 All versions of Ubuntu with a kernel version later than&lt;code&gt;4.15.0-1029-azure&lt;/code&gt;
@@ -90,10 +90,10 @@ meet the StorageOS prerequisites.&lt;/p&gt;
     
     <item>
       <title>Docs: Docker Enterprise Edition</title>
-      <link>/docs/platforms/dockeree/</link>
+      <link>/v2/docs/platforms/dockeree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/dockeree/</guid>
+      <guid>/v2/docs/platforms/dockeree/</guid>
       <description>
         
         
@@ -101,7 +101,7 @@ meet the StorageOS prerequisites.&lt;/p&gt;
 &lt;p&gt;Docker EE and the Universal Control Plane can run on different Linux
 distributions. StorageOS supports RHEL, CentOS, Debian, and selected Ubuntu
 images. For more details, check out the supported OS in the
-&lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;prerequisites page&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;/v2/v2/docs/prerequisites/systemconfiguration/&#34;&gt;prerequisites page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;StorageOS only supports Kubernetes nodes managed by Docker Enterprise Edition,
 not those running Swarm. Mixed nodes (those running Kubernetes and Swarm
 workloads)  are also not supported.  As a consequence, StorageOS volumes can
@@ -113,10 +113,10 @@ for stateful workloads.&lt;/p&gt;
     
     <item>
       <title>Docs: OpenShift</title>
-      <link>/docs/platforms/openshift/</link>
+      <link>/v2/docs/platforms/openshift/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/openshift/</guid>
+      <guid>/v2/docs/platforms/openshift/</guid>
       <description>
         
         
@@ -130,32 +130,32 @@ section are version agnostic.&lt;/p&gt;
 standard PVC definitions and StorageOS will dynamically provision them.
 StorageOS presents volumes to containers with standard POSIX mount targets.
 This enables the Kubelet to mount StorageOS volumes using standard linux device
-files. Checkout &lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;device presentation&lt;/a&gt; for more details.&lt;/p&gt;
+files. Checkout &lt;a href=&#34;/v2/v2/docs/prerequisites/systemconfiguration/&#34;&gt;device presentation&lt;/a&gt; for more details.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Rancher</title>
-      <link>/docs/platforms/rancher/</link>
+      <link>/v2/docs/platforms/rancher/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/platforms/rancher/</guid>
+      <guid>/v2/docs/platforms/rancher/</guid>
       <description>
         
         
         &lt;p&gt;This section of documentation covers use of StorageOS in
 &lt;a href=&#34;https://www.rancher.com/&#34;&gt;Rancher&lt;/a&gt;. StorageOS can be deployed in any Rancher cluster
-that meets the &lt;a href=&#34;/docs/prerequisites/&#34;&gt;StorageOS prerequisites&lt;/a&gt;.&lt;/p&gt;
+that meets the &lt;a href=&#34;/v2/v2/docs/prerequisites/&#34;&gt;StorageOS prerequisites&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;StorageOS transparently supports Rancher deployments using CentOS, RHEL, Debian
 or RancherOS (CSI is not supported on RancherOS) and can support other
-Linux distributions detailed in the &lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;systems supported page&lt;/a&gt; if the appropriate kernel
+Linux distributions detailed in the &lt;a href=&#34;/v2/v2/docs/prerequisites/systemconfiguration/&#34;&gt;systems supported page&lt;/a&gt; if the appropriate kernel
 modules are present.&lt;/p&gt;
 &lt;p&gt;StorageOS integrates transparently with Kubernetes. The user can provide
 standard PVC definitions and StorageOS will dynamically provision them.
 StorageOS presents volumes to containers with standard POSIX mount targets.
 This enables the Kubelet to mount StorageOS volumes using standard linux device
-files. Checkout &lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;device presentation&lt;/a&gt; for more details.&lt;/p&gt;
+files. Checkout &lt;a href=&#34;/v2/v2/docs/prerequisites/systemconfiguration/&#34;&gt;device presentation&lt;/a&gt; for more details.&lt;/p&gt;
 
       </description>
     </item>
