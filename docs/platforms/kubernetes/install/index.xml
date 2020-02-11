@@ -14,7 +14,7 @@
     
     
     <item>
-      <title>Docs: Kubernetes {{ page.k8s-version }}</title>
+      <title>Docs: Kubernetes 1.17</title>
       <link>/docs/platforms/kubernetes/install/1.17/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -28,6 +28,104 @@
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt; &lt;/p&gt;
+&lt;p&gt;kubectl&lt;/p&gt;
+&lt;p&gt;The StorageOS Cluster Operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
+application&lt;/a&gt;
+developed to deploy and configure StorageOS clusters, and assist with
+maintenance operations. We recommend its use for standard installations.&lt;/p&gt;
+&lt;p&gt;The operator is a Kubernetes controller that watches the &lt;code&gt;StorageOSCluster&lt;/code&gt;
+CRD. Once the controller is ready, a StorageOS cluster definition can be
+created. The operator will deploy a StorageOS cluster based on the
+configuration specified in the cluster definition.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Helm Note:&lt;/strong&gt; If you want to use &lt;a href=&#34;https://helm.sh/docs/&#34;&gt;Helm&lt;/a&gt; to install StorageOS, follow
+the &lt;a href=&#34;https://github.com/storageos/charts/tree/master/stable/storageos-operator#installing-the-chart&#34;&gt;StorageOS Operator Helm
+Chart&lt;/a&gt;
+documentation.&lt;/p&gt;
+&lt;h2 id=&#34;__steps-to-install-storageos__&#34;&gt;&lt;strong&gt;Steps to install StorageOS:&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-install-storageos-operator&#34;&gt;Install StorageOS Operator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-create-a-secret&#34;&gt;Create a Secret for default username and password&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-trigger-a-storageos-installation&#34;&gt;Trigger bootstrap using a CustomResource&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
+&lt;p&gt;Install the StorageOS operator using the following yaml manifest.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download//storageos-operator.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos-operator get pod&lt;/span&gt;
+NAME                                         READY     STATUS    RESTARTS   AGE
+storageoscluster-operator-68678798ff-f28zw   1/1       Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;The READY 1/1 indicates that &lt;code&gt;storageoscluster&lt;/code&gt; resources can be created.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;2-create-a-secret&#34;&gt;2. Create a Secret&lt;/h2&gt;
+&lt;p&gt;Before deploying a StorageOS cluster, create a Secret defining the StorageOS
+API Username and Password in base64 encoding.&lt;/p&gt;
+&lt;p&gt;The API username and password are used to create the default StorageOS admin
+account which can be used with the StorageOS CLI and to login to the StorageOS
+GUI. The account defined in the secret is also used by Kubernetes to
+authenticate against the StorageOS API when installing with the native driver.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt; .Page.Params.cmd &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt; create -f - &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt;END
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;apiVersion: v1
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;kind: Secret
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;metadata:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  name: &amp;#34;storageos-api&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  namespace: &amp;#34;storageos-operator&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  labels:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    app: &amp;#34;storageos&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;type: &amp;#34;kubernetes.io/storageos&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;data:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  # echo -n &amp;#39;&amp;lt;secret&amp;gt;&amp;#39; | base64
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  apiUsername: c3RvcmFnZW9z
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  apiPassword: c3RvcmFnZW9z
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;END&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This example contains a default password, for production installations, use a
+unique, strong password.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can define a base64 value by &lt;code&gt;echo -n &amp;quot;mystring&amp;quot; | base64&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Make sure that the encoding of the credentials doesn&amp;rsquo;t have special characters such as &amp;lsquo;\n&amp;rsquo;.
+The &lt;code&gt;echo -n&lt;/code&gt; ensures that a trailing new line is not appended to the string.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
+Users&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3-trigger-a-storageos-installation&#34;&gt;3. Trigger a StorageOS installation&lt;/h2&gt;
+&lt;p&gt;{% if page.platform == &amp;ldquo;azure-aks&amp;rdquo; %}
+{% include operator/cr-csi-example.md %}
+{% elsif page.platform == &amp;ldquo;rancher&amp;rdquo; or page.platform == &amp;ldquo;dockeree&amp;rdquo; %}
+{% include operator/cr-csi-shareddir.md %}
+{% elsif page.oc-version contains &amp;lsquo;4.&amp;rsquo; %}
+{% include operator/cr-csi-openshift4.md %}
+{% elsif page.platform == &amp;ldquo;kubernetes&amp;rdquo; %}
+{% assign k8s-version = page.k8s-version | plus: 0 %}
+{% if k8s-version &amp;gt;= 1.13 %}
+{% include operator/cr-csi-example.md %}
+{% else %}
+{% include operator/cr-basic-example.md %}
+{% endif %}
+{% else %}
+{% include operator/cr-basic-example.md %}
+{% endif %}&lt;/p&gt;
+&lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos get pods -w&lt;/span&gt;
+NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+storageos-daemonset-czbqx               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+storageos-daemonset-zv4tq               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;          3m
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;{% if page.oc-version contains &amp;lsquo;4.&amp;rsquo; %}&lt;/p&gt;
+&lt;h2 id=&#34;4-set-selinux-permissions&#34;&gt;4. Set SELinux Permissions&lt;/h2&gt;
+&lt;p&gt;{% include platforms/openshift4-selinux.md %}
+{% endif %}&lt;/p&gt;
+&lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
 &lt;p&gt;The StorageOS Cluster Operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
 application&lt;/a&gt;
 developed to deploy and configure StorageOS clusters, and assist with
@@ -126,14 +224,12 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Docs: Kubernetes {{ page.k8s-version }}</title>
+      <title>Docs: Kubernetes 1.16</title>
       <link>/docs/platforms/kubernetes/install/1.16/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -245,14 +341,12 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Docs: Kubernetes {{ page.k8s-version }}</title>
+      <title>Docs: Kubernetes 1.15</title>
       <link>/docs/platforms/kubernetes/install/1.15/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -364,14 +458,12 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Docs: Kubernetes {{ page.k8s-version }}</title>
+      <title>Docs: Kubernetes 1.14</title>
       <link>/docs/platforms/kubernetes/install/1.14/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -483,14 +575,12 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Docs: Kubernetes {{ page.k8s-version }}</title>
+      <title>Docs: Kubernetes 1.13</title>
       <link>/docs/platforms/kubernetes/install/1.13/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -602,14 +692,12 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Docs: Kubernetes {{ page.k8s-version }}</title>
+      <title>Docs: Kubernetes 1.12</title>
       <link>/docs/platforms/kubernetes/install/1.12/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -721,8 +809,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>

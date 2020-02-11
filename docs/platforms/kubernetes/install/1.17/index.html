@@ -20,26 +20,29 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Kubernetes {{ page.k8s-version }} | </title><meta property="og:title" content="Kubernetes {{ page.k8s-version }}" />
+<title>Kubernetes 1.17 | </title><meta property="og:title" content="Kubernetes 1.17" />
 <meta property="og:description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding.
-  The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. We recommend its use for standard installations.
+  kubectl
+The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. We recommend its use for standard installations.
 The operator is a Kubernetes controller that watches the StorageOSCluster CRD. Once the controller is ready, a StorageOS cluster definition can be created. The operator will deploy a StorageOS cluster based on the configuration specified in the cluster definition." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/platforms/kubernetes/install/1.17/" />
-<meta property="article:modified_time" content="2020-02-07T17:01:25+00:00" />
-<meta itemprop="name" content="Kubernetes {{ page.k8s-version }}">
+<meta property="article:modified_time" content="2020-02-11T10:56:05+00:00" />
+<meta itemprop="name" content="Kubernetes 1.17">
 <meta itemprop="description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding.
-  The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. We recommend its use for standard installations.
+  kubectl
+The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. We recommend its use for standard installations.
 The operator is a Kubernetes controller that watches the StorageOSCluster CRD. Once the controller is ready, a StorageOS cluster definition can be created. The operator will deploy a StorageOS cluster based on the configuration specified in the cluster definition.">
-<meta itemprop="dateModified" content="2020-02-07T17:01:25&#43;00:00" />
-<meta itemprop="wordCount" content="530">
+<meta itemprop="dateModified" content="2020-02-11T10:56:05&#43;00:00" />
+<meta itemprop="wordCount" content="1023">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kubernetes {{ page.k8s-version }}"/>
+<meta name="twitter:title" content="Kubernetes 1.17"/>
 <meta name="twitter:description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding.
-  The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. We recommend its use for standard installations.
+  kubectl
+The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. We recommend its use for standard installations.
 The operator is a Kubernetes controller that watches the StorageOSCluster CRD. Once the controller is ready, a StorageOS cluster definition can be created. The operator will deploy a StorageOS cluster based on the configuration specified in the cluster definition."/>
 
 
@@ -57,7 +60,7 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
 
 <link href="/storageos.css" rel="stylesheet">
 
-    <title>Kubernetes {{ page.k8s-version }} | </title>
+    <title>Kubernetes 1.17 | </title>
   </head>
   <body class="td-page">
     <header>
@@ -1419,7 +1422,7 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
 
 
 <a href="https://github.com/google/docsy-example/edit/master/content/en/docs/platforms/kubernetes/install/1.17.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/google/docsy-example/issues/new?title=Kubernetes%20%7b%7b%20page.k8s-version%20%7d%7d" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/google/docsy-example/issues/new?title=Kubernetes%201.17" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 
 
 <a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
@@ -1429,6 +1432,25 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
 
 
 
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#__steps-to-install-storageos__">Steps to install StorageOS:</a></li>
+    <li><a href="#1-install-storageos-operator">1. Install StorageOS operator</a>
+      <ul>
+        <li><a href="#verify-the-cluster-operator-pod-status">Verify the Cluster Operator Pod Status</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-create-a-secret">2. Create a Secret</a></li>
+    <li><a href="#3-trigger-a-storageos-installation">3. Trigger a StorageOS installation</a>
+      <ul>
+        <li><a href="#verify-storageos-installation">Verify StorageOS Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-set-selinux-permissions">4. Set SELinux Permissions</a></li>
+  </ul>
+</nav>
 
 
 
@@ -1494,7 +1516,7 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
 
             
 <div class="td-content">
-	<h1>Kubernetes {{ page.k8s-version }}</h1>
+	<h1>Kubernetes 1.17</h1>
 	
 	<blockquote>
 <p>Make sure the
@@ -1502,6 +1524,104 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
 satisfied before proceeding.</p>
 </blockquote>
 <p> </p>
+<p>kubectl</p>
+<p>The StorageOS Cluster Operator is a <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/">Kubernetes native
+application</a>
+developed to deploy and configure StorageOS clusters, and assist with
+maintenance operations. We recommend its use for standard installations.</p>
+<p>The operator is a Kubernetes controller that watches the <code>StorageOSCluster</code>
+CRD. Once the controller is ready, a StorageOS cluster definition can be
+created. The operator will deploy a StorageOS cluster based on the
+configuration specified in the cluster definition.</p>
+<p> </p>
+<p><strong>Helm Note:</strong> If you want to use <a href="https://helm.sh/docs/">Helm</a> to install StorageOS, follow
+the <a href="https://github.com/storageos/charts/tree/master/stable/storageos-operator#installing-the-chart">StorageOS Operator Helm
+Chart</a>
+documentation.</p>
+<h2 id="__steps-to-install-storageos__"><strong>Steps to install StorageOS:</strong></h2>
+<ul>
+<li><a href="#1-install-storageos-operator">Install StorageOS Operator</a></li>
+<li><a href="#2-create-a-secret">Create a Secret for default username and password</a></li>
+<li><a href="#3-trigger-a-storageos-installation">Trigger bootstrap using a CustomResource</a></li>
+</ul>
+<h2 id="1-install-storageos-operator">1. Install StorageOS operator</h2>
+<p>Install the StorageOS operator using the following yaml manifest.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create -f https://github.com/storageos/cluster-operator/releases/download//storageos-operator.yaml
+</code></pre></div><h3 id="verify-the-cluster-operator-pod-status">Verify the Cluster Operator Pod Status</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos-operator get pod</span>
+NAME                                         READY     STATUS    RESTARTS   AGE
+storageoscluster-operator-68678798ff-f28zw   1/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
+</code></pre></div><blockquote>
+<p>The READY 1/1 indicates that <code>storageoscluster</code> resources can be created.</p>
+</blockquote>
+<h2 id="2-create-a-secret">2. Create a Secret</h2>
+<p>Before deploying a StorageOS cluster, create a Secret defining the StorageOS
+API Username and Password in base64 encoding.</p>
+<p>The API username and password are used to create the default StorageOS admin
+account which can be used with the StorageOS CLI and to login to the StorageOS
+GUI. The account defined in the secret is also used by Kubernetes to
+authenticate against the StorageOS API when installing with the native driver.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#ce5c00;font-weight:bold">{</span> .Page.Params.cmd <span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#ce5c00;font-weight:bold">}</span> create -f - <span style="color:#4e9a06">&lt;&lt;END
+</span><span style="color:#4e9a06">apiVersion: v1
+</span><span style="color:#4e9a06">kind: Secret
+</span><span style="color:#4e9a06">metadata:
+</span><span style="color:#4e9a06">  name: &#34;storageos-api&#34;
+</span><span style="color:#4e9a06">  namespace: &#34;storageos-operator&#34;
+</span><span style="color:#4e9a06">  labels:
+</span><span style="color:#4e9a06">    app: &#34;storageos&#34;
+</span><span style="color:#4e9a06">type: &#34;kubernetes.io/storageos&#34;
+</span><span style="color:#4e9a06">data:
+</span><span style="color:#4e9a06">  # echo -n &#39;&lt;secret&gt;&#39; | base64
+</span><span style="color:#4e9a06">  apiUsername: c3RvcmFnZW9z
+</span><span style="color:#4e9a06">  apiPassword: c3RvcmFnZW9z
+</span><span style="color:#4e9a06">END</span>
+</code></pre></div>
+<p>This example contains a default password, for production installations, use a
+unique, strong password.</p>
+<blockquote>
+<p>You can define a base64 value by <code>echo -n &quot;mystring&quot; | base64</code>.</p>
+</blockquote>
+<blockquote>
+<p>Make sure that the encoding of the credentials doesn&rsquo;t have special characters such as &lsquo;\n&rsquo;.
+The <code>echo -n</code> ensures that a trailing new line is not appended to the string.</p>
+</blockquote>
+<blockquote>
+<p>If you wish to change the default accounts details post-install please see <a href="/docs/operations/users#altering-the-storageos-api-account">Managing
+Users</a></p>
+</blockquote>
+<h2 id="3-trigger-a-storageos-installation">3. Trigger a StorageOS installation</h2>
+<p>{% if page.platform == &ldquo;azure-aks&rdquo; %}
+{% include operator/cr-csi-example.md %}
+{% elsif page.platform == &ldquo;rancher&rdquo; or page.platform == &ldquo;dockeree&rdquo; %}
+{% include operator/cr-csi-shareddir.md %}
+{% elsif page.oc-version contains &lsquo;4.&rsquo; %}
+{% include operator/cr-csi-openshift4.md %}
+{% elsif page.platform == &ldquo;kubernetes&rdquo; %}
+{% assign k8s-version = page.k8s-version | plus: 0 %}
+{% if k8s-version &gt;= 1.13 %}
+{% include operator/cr-csi-example.md %}
+{% else %}
+{% include operator/cr-basic-example.md %}
+{% endif %}
+{% else %}
+{% include operator/cr-basic-example.md %}
+{% endif %}</p>
+<h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
+NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-daemonset-75f6c               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
+storageos-daemonset-czbqx               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
+storageos-daemonset-zv4tq               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
+storageos-scheduler-6d67b46f67-5c46j    1/1     Running   <span style="color:#0000cf;font-weight:bold">6</span>          3m
+
+</code></pre></div><blockquote>
+<p>The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.</p>
+</blockquote>
+<p>{% if page.oc-version contains &lsquo;4.&rsquo; %}</p>
+<h2 id="4-set-selinux-permissions">4. Set SELinux Permissions</h2>
+<p>{% include platforms/openshift4-selinux.md %}
+{% endif %}</p>
+<p>{% include operator/first-volume.md %}</p>
 <p>The StorageOS Cluster Operator is a <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/">Kubernetes native
 application</a>
 developed to deploy and configure StorageOS clusters, and assist with
@@ -1600,8 +1720,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   <span style="color:#00
 <p>{% include platforms/openshift4-selinux.md %}
 {% endif %}</p>
 <p>{% include operator/first-volume.md %}</p>
-<p>MarkDown file &quot;share/operator/install.md&quot;</p>
-<p>&quot;share/operator/install.md&quot;</p>
 
 	
 		<style>
@@ -1665,7 +1783,7 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   <span style="color:#00
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/028cef0b615d286fee4c88aa2c03c02e87f67e88">&#39;include&#39; shortcode for shared content (028cef0)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 11, 2020: <a  href="https://github.com/google/docsy-example/commit/2bf8fad9092d07b1c6f2c53231139ddd04fea920">Set proper title (2bf8fad)</a>
 </div>
 </div>
 

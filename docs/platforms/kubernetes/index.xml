@@ -38,8 +38,6 @@ For this platform the &lt;strong&gt;only supported&lt;/strong&gt; setup for comm
 The former communication procedure, although still in use, uses REST API calls.
 StorageOS still maintains support for it.
 {% endif %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/platforms/kubernetes-with-storageos.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/platforms/kubernetes-with-storageos.md&amp;quot;&lt;/p&gt;
 &lt;h2 id=&#34;csi-container-storage-interface-note&#34;&gt;CSI (Container Storage Interface) Note&lt;/h2&gt;
 &lt;p&gt;CSI is the standard method of communication that enables storage drivers to
 release on their own schedule. This allows storage vendors to upgrade, update,
@@ -54,8 +52,6 @@ the &lt;a href=&#34;https://kubernetes-csi.github.io/docs/&#34;&gt;CSI project&l
 &lt;p&gt;CSI communication is fully supported by StorageOS if the cluster is deployed
 with any &lt;a href=&#34;/docs/prerequisites/systemconfiguration#distribution-specifics&#34;&gt;supported Linux
 Distribution&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/platforms/csi-note.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/platforms/csi-note.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
