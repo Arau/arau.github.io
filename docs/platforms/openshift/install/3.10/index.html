@@ -21,20 +21,26 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Installing on OpenShift 3.10 | </title><meta property="og:title" content="Installing on OpenShift 3.10" />
-<meta property="og:description" content="{% include platforms/openshift-install.md %}" />
+<meta property="og:description" content="The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. We recommend its use for standard installations.
+The operator is a Kubernetes controller that watches the StorageOSCluster CRD. Once the controller is ready, a StorageOS cluster definition can be created. The operator will deploy a StorageOS cluster based on the configuration specified in the cluster definition.
+ Helm Note: If you want to use Helm to install StorageOS, follow the StorageOS Operator Helm Chart documentation." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/platforms/openshift/install/3.10/" />
-<meta property="article:modified_time" content="2020-02-06T15:46:42+00:00" />
+<meta property="article:modified_time" content="2020-02-14T15:50:30+00:00" />
 <meta itemprop="name" content="Installing on OpenShift 3.10">
-<meta itemprop="description" content="{% include platforms/openshift-install.md %}">
-<meta itemprop="dateModified" content="2020-02-06T15:46:42&#43;00:00" />
-<meta itemprop="wordCount" content="4">
+<meta itemprop="description" content="The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. We recommend its use for standard installations.
+The operator is a Kubernetes controller that watches the StorageOSCluster CRD. Once the controller is ready, a StorageOS cluster definition can be created. The operator will deploy a StorageOS cluster based on the configuration specified in the cluster definition.
+ Helm Note: If you want to use Helm to install StorageOS, follow the StorageOS Operator Helm Chart documentation.">
+<meta itemprop="dateModified" content="2020-02-14T15:50:30&#43;00:00" />
+<meta itemprop="wordCount" content="499">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Installing on OpenShift 3.10"/>
-<meta name="twitter:description" content="{% include platforms/openshift-install.md %}"/>
+<meta name="twitter:description" content="The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations. We recommend its use for standard installations.
+The operator is a Kubernetes controller that watches the StorageOSCluster CRD. Once the controller is ready, a StorageOS cluster definition can be created. The operator will deploy a StorageOS cluster based on the configuration specified in the cluster definition.
+ Helm Note: If you want to use Helm to install StorageOS, follow the StorageOS Operator Helm Chart documentation."/>
 
 
 
@@ -47,6 +53,11 @@
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
 
 <link href="/storageos.css" rel="stylesheet">
@@ -83,7 +94,18 @@
 		</ul>
 	</div>
 	<div class="navbar-nav d-none d-lg-block">
-<input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-base-href="/"
+>
 
 </div>
 </nav>
@@ -102,7 +124,18 @@
   
   <form class="td-sidebar__search d-flex align-items-center">
     
-<input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-base-href="/"
+>
 
 
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
@@ -188,7 +221,7 @@
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsarchitecture" href="/docs/concepts/architecture/">Architecture</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-conceptsarchitecture" href="/concepts/architecture/">Architecture</a>
       
       
       
@@ -1425,6 +1458,23 @@
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#__steps-to-install-storageos__">Steps to install StorageOS:</a></li>
+    <li><a href="#1-install-storageos-operator">1. Install StorageOS operator</a>
+      <ul>
+        <li><a href="#verify-the-cluster-operator-pod-status">Verify the Cluster Operator Pod Status</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-create-a-secret">2. Create a Secret</a></li>
+    <li><a href="#3-trigger-a-storageos-installation">3 Trigger a StorageOS installation</a>
+      <ul>
+        <li><a href="#verify-storageos-installation">Verify StorageOS Installation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
 
 
@@ -1491,7 +1541,111 @@
 <div class="td-content">
 	<h1>Installing on OpenShift 3.10</h1>
 	
-	<p>{% include platforms/openshift-install.md %}</p>
+	<p>The StorageOS Cluster Operator is a <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/">Kubernetes native
+application</a>
+developed to deploy and configure StorageOS clusters, and assist with
+maintenance operations. We recommend its use for standard installations.</p>
+<p>The operator is a Kubernetes controller that watches the <code>StorageOSCluster</code>
+CRD. Once the controller is ready, a StorageOS cluster definition can be
+created. The operator will deploy a StorageOS cluster based on the
+configuration specified in the cluster definition.</p>
+<p> </p>
+<p><strong>Helm Note:</strong> If you want to use <a href="https://helm.sh/docs/">Helm</a> to install StorageOS, follow
+the <a href="https://github.com/storageos/charts/tree/master/stable/storageos-operator#installing-the-chart">StorageOS Operator Helm
+Chart</a>
+documentation.</p>
+<h2 id="__steps-to-install-storageos__"><strong>Steps to install StorageOS:</strong></h2>
+<ul>
+<li><a href="#1-install-storageos-operator">Install StorageOS Operator</a></li>
+<li><a href="#2-create-a-secret">Create a Secret for default username and password</a></li>
+<li><a href="#3-trigger-a-storageos-installation">Trigger bootstrap using a CustomResource</a></li>
+</ul>
+<h2 id="1-install-storageos-operator">1. Install StorageOS operator</h2>
+<p>Install the StorageOS operator using the following yaml manifest.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc create -f https://github.com/storageos/cluster-operator/releases/download/1.5.3/storageos-operator.yaml
+</code></pre></div><h3 id="verify-the-cluster-operator-pod-status">Verify the Cluster Operator Pod Status</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># oc -n storageos-operator get pod</span>
+NAME                                         READY     STATUS    RESTARTS   AGE
+storageoscluster-operator-68678798ff-f28zw   1/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
+</code></pre></div><blockquote>
+<p>The READY 1/1 indicates that <code>storageoscluster</code> resources can be created.</p>
+</blockquote>
+<h2 id="2-create-a-secret">2. Create a Secret</h2>
+<p>Before deploying a StorageOS cluster, create a Secret defining the StorageOS
+API Username and Password in base64 encoding.</p>
+<p>The API username and password are used to create the default StorageOS admin
+account which can be used with the StorageOS CLI and to login to the StorageOS
+GUI. The account defined in the secret is also used by Kubernetes to
+authenticate against the StorageOS API when installing with the native driver.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apiVersion: v1
+kind: Secret
+metadata:
+  name: <span style="color:#4e9a06">&#34;storageos-api&#34;</span>
+  namespace: <span style="color:#4e9a06">&#34;storageos-operator&#34;</span>
+  labels:
+    app: <span style="color:#4e9a06">&#34;storageos&#34;</span>
+type: <span style="color:#4e9a06">&#34;kubernetes.io/storageos&#34;</span>
+data:
+  <span style="color:#8f5902;font-style:italic"># echo -n &#39;&lt;secret&gt;&#39; | base64</span>
+  apiUsername: c3RvcmFnZW9z
+  apiPassword: c3RvcmFnZW9z
+</code></pre></div>
+<p>This example contains a default password, for production installations, use a
+unique, strong password.</p>
+<blockquote>
+<p>You can define a base64 value by <code>echo -n &quot;mystring&quot; | base64</code>.</p>
+</blockquote>
+<blockquote>
+<p>Make sure that the encoding of the credentials doesn&rsquo;t have special characters such as &lsquo;\n&rsquo;.
+The <code>echo -n</code> ensures that a trailing new line is not appended to the string.</p>
+</blockquote>
+<blockquote>
+<p>If you wish to change the default accounts details post-install please see <a href="/docs/operations/users#altering-the-storageos-api-account">Managing
+Users</a></p>
+</blockquote>
+<h2 id="3-trigger-a-storageos-installation">3 Trigger a StorageOS installation</h2>
+<p>This is a Cluster Definition example.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apiVersion: <span style="color:#4e9a06">&#34;storageos.com/v1&#34;</span>
+kind: StorageOSCluster
+metadata:
+  name: <span style="color:#4e9a06">&#34;example-storageos&#34;</span>
+  namespace: <span style="color:#4e9a06">&#34;storageos-operator&#34;</span>
+spec:
+  secretRefName: <span style="color:#4e9a06">&#34;storageos-api&#34;</span> <span style="color:#8f5902;font-style:italic"># Reference from the Secret created in the previous step</span>
+  secretRefNamespace: <span style="color:#4e9a06">&#34;storageos-operator&#34;</span>  <span style="color:#8f5902;font-style:italic"># Namespace of the Secret</span>
+  k8sDistro: <span style="color:#4e9a06">&#34;openshift&#34;</span>
+  images:
+    nodeContainer: <span style="color:#4e9a06">&#34;storageos/node:1.5.3&#34;</span> <span style="color:#8f5902;font-style:italic"># StorageOS version</span>
+  resources:
+    requests:
+    memory: <span style="color:#4e9a06">&#34;512Mi&#34;</span>
+<span style="color:#8f5902;font-style:italic">#  nodeSelectorTerms:</span>
+<span style="color:#8f5902;font-style:italic">#    - matchExpressions:</span>
+<span style="color:#8f5902;font-style:italic">#      - key: &#34;node-role.kubernetes.io/worker&#34; # Compute node label will vary according to your installation</span>
+<span style="color:#8f5902;font-style:italic">#        operator: In</span>
+<span style="color:#8f5902;font-style:italic">#        values:</span>
+<span style="color:#8f5902;font-style:italic">#        - &#34;true&#34;</span>
+</code></pre></div><blockquote>
+<p>Additional <code>spec</code> parameters are available on the <a href="/docs/reference/cluster-operator/configuration/">Cluster Operator
+configuration</a>
+page.</p>
+</blockquote>
+<blockquote>
+<p>You can find more examples such as deployments referencing a external etcd kv
+store for StorageOS in the <a href="/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
+</blockquote>
+<h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># oc -n storageos get pods -w</span>
+NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-daemonset-75f6c               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
+storageos-daemonset-czbqx               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
+storageos-daemonset-zv4tq               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
+storageos-scheduler-6d67b46f67-5c46j    1/1     Running   <span style="color:#0000cf;font-weight:bold">6</span>          3m
+
+</code></pre></div><blockquote>
+<p>The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.</p>
+</blockquote>
+<p>{% include operator/first-volume.md %}</p>
 
 	
 		<style>
@@ -1555,7 +1709,7 @@
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 6, 2020: <a  href="https://github.com/google/docsy-example/commit/131b65ea3e2e4586868a5582651d9be4cae0c528">StorageOS Docs init (131b65e)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 14, 2020: <a  href="https://github.com/google/docsy-example/commit/44c3dc343e464cad499fcf646a256ebbfb830e1e">Use page parms to form the operator install page (44c3dc3)</a>
 </div>
 </div>
 
@@ -1648,7 +1802,9 @@
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+
+
+<script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
 
 
 

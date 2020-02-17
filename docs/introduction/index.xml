@@ -24,7 +24,7 @@
         
         &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Start by &lt;a href=&#34;/docs/concepts/architecture/&#34;&gt;understanding the architecture&lt;/a&gt; and &lt;a href=&#34;http://play.storageos.com/main&#34;&gt;playing with a demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Start by &lt;a href=&#34;/concepts/architecture/&#34;&gt;understanding the architecture&lt;/a&gt; and &lt;a href=&#34;http://play.storageos.com/main&#34;&gt;playing with a demo&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;For production deployments, follow our installation guides for

@@ -22,22 +22,22 @@
 
 <title></title><meta property="og:title" content="" />
 <meta property="og:description" content="This is a Cluster Definition example.
-{{ page.cmd }} create -f - &lt;&lt;END apiVersion: &#34;storageos.com/v1&#34; kind: StorageOSCluster metadata: name: &#34;example-storageos&#34; namespace: &#34;storageos-operator&#34; spec: secretRefName: &#34;storageos-api&#34; # Reference from the Secret created in the previous step secretRefNamespace: &#34;storageos-operator&#34; # Namespace of the Secret k8sDistro: &#34;{{ page.platform }}&#34; images: nodeContainer: &#34;storageos/node:{{ site.latest_node_version }}&#34; # StorageOS version csi: enable: true deploymentStrategy: deployment resources: requests: memory: &#34;512Mi&#34; END  Additional spec parameters are available on the [Cluster Operator configuration]( {%link _docs/reference/cluster-operator/configuration." />
+apiVersion: &#34;storageos.com/v1&#34; kind: StorageOSCluster metadata: name: &#34;example-storageos&#34; namespace: &#34;storageos-operator&#34; spec: secretRefName: &#34;storageos-api&#34; # Reference from the Secret created in the previous step secretRefNamespace: &#34;storageos-operator&#34; # Namespace of the Secret k8sDistro: &#34;{{ page.platform }}&#34; images: nodeContainer: &#34;storageos/node:{{ site.latest_node_version }}&#34; # StorageOS version csi: enable: true deploymentStrategy: deployment resources: requests: memory: &#34;512Mi&#34;  Additional spec parameters are available on the [Cluster Operator configuration]( {%link _docs/reference/cluster-operator/configuration.md %}) page." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/share/operator/cr-csi-example/" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="This is a Cluster Definition example.
-{{ page.cmd }} create -f - &lt;&lt;END apiVersion: &#34;storageos.com/v1&#34; kind: StorageOSCluster metadata: name: &#34;example-storageos&#34; namespace: &#34;storageos-operator&#34; spec: secretRefName: &#34;storageos-api&#34; # Reference from the Secret created in the previous step secretRefNamespace: &#34;storageos-operator&#34; # Namespace of the Secret k8sDistro: &#34;{{ page.platform }}&#34; images: nodeContainer: &#34;storageos/node:{{ site.latest_node_version }}&#34; # StorageOS version csi: enable: true deploymentStrategy: deployment resources: requests: memory: &#34;512Mi&#34; END  Additional spec parameters are available on the [Cluster Operator configuration]( {%link _docs/reference/cluster-operator/configuration.">
+apiVersion: &#34;storageos.com/v1&#34; kind: StorageOSCluster metadata: name: &#34;example-storageos&#34; namespace: &#34;storageos-operator&#34; spec: secretRefName: &#34;storageos-api&#34; # Reference from the Secret created in the previous step secretRefNamespace: &#34;storageos-operator&#34; # Namespace of the Secret k8sDistro: &#34;{{ page.platform }}&#34; images: nodeContainer: &#34;storageos/node:{{ site.latest_node_version }}&#34; # StorageOS version csi: enable: true deploymentStrategy: deployment resources: requests: memory: &#34;512Mi&#34;  Additional spec parameters are available on the [Cluster Operator configuration]( {%link _docs/reference/cluster-operator/configuration.md %}) page.">
 
-<meta itemprop="wordCount" content="103">
+<meta itemprop="wordCount" content="95">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="This is a Cluster Definition example.
-{{ page.cmd }} create -f - &lt;&lt;END apiVersion: &#34;storageos.com/v1&#34; kind: StorageOSCluster metadata: name: &#34;example-storageos&#34; namespace: &#34;storageos-operator&#34; spec: secretRefName: &#34;storageos-api&#34; # Reference from the Secret created in the previous step secretRefNamespace: &#34;storageos-operator&#34; # Namespace of the Secret k8sDistro: &#34;{{ page.platform }}&#34; images: nodeContainer: &#34;storageos/node:{{ site.latest_node_version }}&#34; # StorageOS version csi: enable: true deploymentStrategy: deployment resources: requests: memory: &#34;512Mi&#34; END  Additional spec parameters are available on the [Cluster Operator configuration]( {%link _docs/reference/cluster-operator/configuration."/>
+apiVersion: &#34;storageos.com/v1&#34; kind: StorageOSCluster metadata: name: &#34;example-storageos&#34; namespace: &#34;storageos-operator&#34; spec: secretRefName: &#34;storageos-api&#34; # Reference from the Secret created in the previous step secretRefNamespace: &#34;storageos-operator&#34; # Namespace of the Secret k8sDistro: &#34;{{ page.platform }}&#34; images: nodeContainer: &#34;storageos/node:{{ site.latest_node_version }}&#34; # StorageOS version csi: enable: true deploymentStrategy: deployment resources: requests: memory: &#34;512Mi&#34;  Additional spec parameters are available on the [Cluster Operator configuration]( {%link _docs/reference/cluster-operator/configuration.md %}) page."/>
 
 
 
@@ -50,6 +50,11 @@
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
 
 <link href="/storageos.css" rel="stylesheet">
@@ -85,7 +90,18 @@
 		</ul>
 	</div>
 	<div class="navbar-nav d-none d-lg-block">
-<input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-base-href="/"
+>
 
 </div>
 </nav>
@@ -96,25 +112,23 @@
         
 
 <p>This is a Cluster Definition example.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">{</span><span style="color:#ce5c00;font-weight:bold">{</span> page.cmd <span style="color:#ce5c00;font-weight:bold">}</span><span style="color:#ce5c00;font-weight:bold">}</span> create -f - <span style="color:#4e9a06">&lt;&lt;END
-</span><span style="color:#4e9a06">apiVersion: &#34;storageos.com/v1&#34;
-</span><span style="color:#4e9a06">kind: StorageOSCluster
-</span><span style="color:#4e9a06">metadata:
-</span><span style="color:#4e9a06">  name: &#34;example-storageos&#34;
-</span><span style="color:#4e9a06">  namespace: &#34;storageos-operator&#34;
-</span><span style="color:#4e9a06">spec:
-</span><span style="color:#4e9a06">  secretRefName: &#34;storageos-api&#34; # Reference from the Secret created in the previous step
-</span><span style="color:#4e9a06">  secretRefNamespace: &#34;storageos-operator&#34;  # Namespace of the Secret
-</span><span style="color:#4e9a06">  k8sDistro: &#34;{{ page.platform }}&#34;
-</span><span style="color:#4e9a06">  images:
-</span><span style="color:#4e9a06">    nodeContainer: &#34;storageos/node:{{ site.latest_node_version }}&#34; # StorageOS version
-</span><span style="color:#4e9a06">  csi:
-</span><span style="color:#4e9a06">    enable: true
-</span><span style="color:#4e9a06">    deploymentStrategy: deployment
-</span><span style="color:#4e9a06">  resources:
-</span><span style="color:#4e9a06">    requests:
-</span><span style="color:#4e9a06">    memory: &#34;512Mi&#34;
-</span><span style="color:#4e9a06">END</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apiVersion: <span style="color:#4e9a06">&#34;storageos.com/v1&#34;</span>
+kind: StorageOSCluster
+metadata:
+  name: <span style="color:#4e9a06">&#34;example-storageos&#34;</span>
+  namespace: <span style="color:#4e9a06">&#34;storageos-operator&#34;</span>
+spec:
+  secretRefName: <span style="color:#4e9a06">&#34;storageos-api&#34;</span> <span style="color:#8f5902;font-style:italic"># Reference from the Secret created in the previous step</span>
+  secretRefNamespace: <span style="color:#4e9a06">&#34;storageos-operator&#34;</span>  <span style="color:#8f5902;font-style:italic"># Namespace of the Secret</span>
+  k8sDistro: <span style="color:#4e9a06">&#34;{{ page.platform }}&#34;</span>
+  images:
+    nodeContainer: <span style="color:#4e9a06">&#34;storageos/node:{{ site.latest_node_version }}&#34;</span> <span style="color:#8f5902;font-style:italic"># StorageOS version</span>
+  csi:
+    enable: <span style="color:#204a87">true</span>
+    deploymentStrategy: deployment
+  resources:
+    requests:
+    memory: <span style="color:#4e9a06">&#34;512Mi&#34;</span>
 </code></pre></div><blockquote>
 <p>Additional <code>spec</code> parameters are available on the [Cluster Operator
 configuration]( {%link _docs/reference/cluster-operator/configuration.md %})
@@ -214,7 +228,9 @@ store for StorageOS in the [Cluster Operator examples](
 
 
 
-<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+
+
+<script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
 
 
 

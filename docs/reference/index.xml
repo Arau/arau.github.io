@@ -6570,7 +6570,7 @@ improvements, many to help with running on low-memory or heavily loaded servers.
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Cache allocation has been adjusted for lower memory systems.  Allocation sizes
-are described in &lt;a href=&#34;/docs/concepts/architecture/&#34;&gt;architecture&lt;/a&gt;.
+are described in &lt;a href=&#34;/concepts/architecture/&#34;&gt;architecture&lt;/a&gt;.
 The cache size will never be set to more than 1/3rd of free memory.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;

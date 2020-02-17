@@ -4,52 +4,52 @@
   
   <url>
     <loc>/docs/platforms/openshift/install/4.2/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/kubernetes/install/1.17/</loc>
-    <lastmod>2020-02-11T10:56:05+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/openshift/install/4.1/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/kubernetes/install/1.16/</loc>
-    <lastmod>2020-02-11T10:56:05+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/openshift/install/3.11/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/kubernetes/install/1.15/</loc>
-    <lastmod>2020-02-11T10:56:05+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/openshift/install/3.10/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/kubernetes/install/1.14/</loc>
-    <lastmod>2020-02-11T10:56:05+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/openshift/install/3.9/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/kubernetes/install/1.13/</loc>
-    <lastmod>2020-02-11T10:56:05+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
@@ -59,7 +59,7 @@
   
   <url>
     <loc>/docs/platforms/kubernetes/install/1.12/</loc>
-    <lastmod>2020-02-11T10:56:05+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
@@ -74,17 +74,17 @@
   
   <url>
     <loc>/docs/platforms/aws-eks/install/</loc>
-    <lastmod>2020-02-07T11:49:52+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/azure-aks/install/</loc>
-    <lastmod>2020-02-07T11:49:52+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/dockeree/install/</loc>
-    <lastmod>2020-02-07T11:49:52+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
@@ -114,12 +114,12 @@
   
   <url>
     <loc>/docs/platforms/rancher/install/rancher-catalog/</loc>
-    <lastmod>2020-02-07T11:49:52+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/platforms/rancher/install/rancher-advanced/</loc>
-    <lastmod>2020-02-07T11:49:52+00:00</lastmod>
+    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
   </url>
   
   <url>
@@ -408,7 +408,7 @@
   </url>
   
   <url>
-    <loc>/docs/concepts/architecture/</loc>
+    <loc>/concepts/architecture/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   

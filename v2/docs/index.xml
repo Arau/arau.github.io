@@ -140,8 +140,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
@@ -273,8 +271,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
@@ -406,8 +402,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
@@ -539,8 +533,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
@@ -672,8 +664,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
@@ -835,8 +825,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}
 {% endif %}&lt;/p&gt;
 &lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
-&lt;p&gt;MarkDown file &amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
-&lt;p&gt;&amp;quot;share/operator/install.md&amp;quot;&lt;/p&gt;
 
       </description>
     </item>
@@ -2300,10 +2288,10 @@ mysql-0   1/1     Running       &lt;span style=&#34;color:#0000cf;font-weight:bo
     
     <item>
       <title>Docs: Architecture</title>
-      <link>/v2/docs/concepts/architecture/</link>
+      <link>/v2/concepts/architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/v2/docs/concepts/architecture/</guid>
+      <guid>/v2/concepts/architecture/</guid>
       <description>
         
         
