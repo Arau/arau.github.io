@@ -28,7 +28,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;For production deployments, follow our installation guides for
-&lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/1.17/&#34;&gt;Kubernetes&lt;/a&gt;,
+&lt;a href=&#34;/v2/v2/docs/platforms/kubernetes/install/&#34;&gt;Kubernetes&lt;/a&gt;,
 &lt;a href=&#34;/v2/v2/docs/platforms/openshift/install/3.11/&#34;&gt;OpenShift&lt;/a&gt; or
 &lt;a href=&#34;/v2/v2/docs/platforms/azure-aks/install/&#34;&gt;Azure AKS&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;

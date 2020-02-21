@@ -22,21 +22,11 @@
       <description>
         
         
-        &lt;p&gt;This section of documentation covers the use of StorageOS in Docker Enterprise Edition.&lt;/p&gt;
-&lt;p&gt;Docker EE and the Universal Control Plane can be executed in different Linux
-distributions. StorageOS supports RHEL, CentOS, Debian, and selected Ubuntu
-images. For more details, check out the supported OS in the &lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;prerequisites page&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;StorageOS only supports Kubernetes nodes managed by Docker Enterprise Edition,
-not those running Swarm. Mixed nodes (those running Kubernetes and Swarm
-workloads)  are also not supported.  As a consequence, StorageOS volumes can
-only be provisioned on Kubernetes nodes, and only these nodes should be used
-for stateful workloads.&lt;/p&gt;
-&lt;h1 id=&#34;install-storageos&#34;&gt;Install StorageOS&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Make sure the
-&lt;a href=&#34;/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
-satisfied before proceeding.&lt;/p&gt;
+        &lt;blockquote&gt;
+&lt;p&gt;Visit the &lt;a href=&#34;/docs/platforms/azure-aks/bestpractices/&#34;&gt;best practices page&lt;/a&gt; for production
+deployment advice.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;p&gt;The StorageOS Cluster Operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
 application&lt;/a&gt;
 developed to deploy and configure StorageOS clusters, and assist with
@@ -112,6 +102,9 @@ spec:
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;dockeree&amp;#34;&lt;/span&gt;
   images:
     nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:1.5.3&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+  csi:
+    enable: &lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;
+    deploymentStrategy: deployment
     sharedDir: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;/var/lib/kubelet/plugins/kubernetes.io~storageos&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Needed when Kubelet as a container&lt;/span&gt;
   resources:
     requests:
@@ -142,7 +135,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
 
       </description>
     </item>

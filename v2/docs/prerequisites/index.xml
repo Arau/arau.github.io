@@ -244,7 +244,7 @@ cat &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt;EOF &amp;gt; /etc/
 
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# systemctl daemon-reload&lt;/span&gt;
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# systemctl restart docker.service&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To confirm behaviour, the following command should run without error&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To confirm behaviour, the following command should run without error.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docker run -it --rm -v /mnt:/mnt:shared busybox sh -c /bin/date
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Orchestrators such as Kubernetes or OpenShift have their own ways of exposing
 this setting. Kubernetes 1.10 and OpenShift 3.10 have mount propagation enabled by

@@ -22,7 +22,22 @@
       <description>
         
         
-        &lt;p&gt;StorageOS Control plane API is accessible either through port 80 or 8000.&lt;/p&gt;
+        
+&lt;div id=&#34;ohpen_swagger_ui&#34;&gt;&lt;/div&gt;	
+&lt;script&gt;
+window.onload = function() {
+  const ui = SwaggerUIBundle({
+    url: &#34;/api-swagger.yaml&#34;,
+    dom_id: &#39;#ohpen_swagger_ui&#39;,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ]
+  })
+
+  window.ui = ui
+}
+&lt;/script&gt;		
 
       </description>
     </item>
@@ -222,7 +237,23 @@ is to prevent non-obvious split-brain scenarios in multi-node clusters, where
       <description>
         
         
-        &lt;p&gt;{% include operator/reference.md %}&lt;/p&gt;
+        &lt;p&gt;Our cluster operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
+application&lt;/a&gt;
+developed to deploy and configure StorageOS clusters, and assist with
+maintenance operations. We recommend its use for standard installations.&lt;/p&gt;
+&lt;p&gt;The operator acts as a Kubernetes controller that watches the &lt;code&gt;StorageOSCluster&lt;/code&gt;
+CR (Custom Resource). Once the controller is ready, a StorageOS cluster definition can be
+created. The operator will deploy a StorageOS cluster based on the
+configuration specified in the cluster definition.&lt;/p&gt;
+&lt;p&gt;You can find the source code in the &lt;a href=&#34;https://github.com/storageos/cluster-operator&#34;&gt;cluster-operator
+repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Install the operator following orchestrator specific procedure.&lt;/p&gt;
+&lt;p&gt;To deploy a StorageOS cluster you will need to fulfil the following steps.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install operator&lt;/li&gt;
+&lt;li&gt;Create &lt;code&gt;storageos-api&lt;/code&gt; Secret&lt;/li&gt;
+&lt;li&gt;Create a CR (Custom Resource) to deploy StorageOS&lt;/li&gt;
+&lt;/ol&gt;
 
       </description>
     </item>
@@ -559,7 +590,7 @@ be used:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For more details, check the
 &lt;a href=&#34;https://github.com/storageos/init&#34;&gt;StorageOS init container project&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;scripts-executed&#34;&gt;Scripts executed&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;storageos-init&lt;/code&gt; container executes the following scripts, as of {{ site.latest_node_version }}:&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;storageos-init&lt;/code&gt; container executes the following scripts.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/storageos/init/tree/master/scripts/01-lio&#34;&gt;enable-lio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/storageos/init/tree/master/scripts/10-dbupgrade-v1v2&#34;&gt;dbupgrade&lt;/a&gt;&lt;/li&gt;
@@ -584,10 +615,9 @@ labels triggers compression, replication and other storage features. No feature
 labels are present by default.&lt;/p&gt;
 &lt;h2 id=&#34;storageos-node-labels&#34;&gt;StorageOS Node labels&lt;/h2&gt;
 &lt;p&gt;Nodes do not have any feature labels present by default.  When StorageOS is run
-within Kubernetes with the [Cluster Operator]({% link
-&amp;ldquo;docs/reference/cluster-operator/_index.md&amp;rdquo; &amp;gt;}}), any node labels set on Kubernetes
-nodes are available within StorageOS.  Node labels may also be set with the CLI
-or UI.&lt;/p&gt;
+within Kubernetes with the &lt;a href=&#34;/v2/v2/docs/reference/cluster-operator/&#34;&gt;Cluster Operator&lt;/a&gt;, any node labels set on
+Kubernetes nodes are available within StorageOS.  Node labels may also be set
+with the CLI or UI.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6141,10 +6171,10 @@ provide them during a support engagement.&lt;/p&gt;
         
         &lt;p&gt;We recommend always using &amp;ldquo;tagged&amp;rdquo; versions of StorageOS rather than &amp;ldquo;latest&amp;rdquo;,
 and to perform upgrades only after reading the release notes.&lt;/p&gt;
-&lt;p&gt;The latest tagged release is &lt;code&gt;{{ site.latest_node_version }}&lt;/code&gt;, available from
-&lt;a href=&#34;https://hub.docker.com/r/storageos/node/&#34;&gt;Docker Hub&lt;/a&gt; as &lt;code&gt;storageos/node:{{ site.latest_node_version }}&lt;/code&gt;, or via the &lt;a href=&#34;https://github.com/storageos/charts&#34;&gt;Helm
+&lt;p&gt;The latest tagged release is &lt;code&gt;2.0.0&lt;/code&gt;, available from
+&lt;a href=&#34;https://hub.docker.com/r/storageos/node/&#34;&gt;Docker Hub&lt;/a&gt; as &lt;code&gt;storageos/node:2.0.0&lt;/code&gt;, or via the &lt;a href=&#34;https://github.com/storageos/charts&#34;&gt;Helm
 Chart&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The latest CLI release is &lt;code&gt;{{ site.latest_cli_version }}&lt;/code&gt;, available from
+&lt;p&gt;The latest CLI release is &lt;code&gt;2.0.0&lt;/code&gt;, available from
 &lt;a href=&#34;https://github.com/storageos/go-cli/releases&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;upgrading&#34;&gt;Upgrading&lt;/h1&gt;
 &lt;p&gt;See &lt;a href=&#34;/v2/v2/docs/operations/upgrades/&#34;&gt;upgrades&lt;/a&gt; for upgrade strategies.&lt;/p&gt;
@@ -7747,16 +7777,16 @@ StorageOS&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;StorageOS provides a block device on which a file system can be created. The
 creation of the filesystem is either handled by StorageOS or by Kubernetes
 which affects what filesystems can be created.&lt;/p&gt;
+&lt;h3 id=&#34;csi-driver&#34;&gt;CSI Driver&lt;/h3&gt;
+&lt;p&gt;When using StorageOS with the CSI driver, StorageOS is responsible for running
+mkfs against the block device that pods mount. StorageOS is able to create
+ext2, ext3, ext4 and xfs file systems.&lt;/p&gt;
 &lt;h3 id=&#34;native-driver&#34;&gt;Native Driver&lt;/h3&gt;
 &lt;p&gt;When using StorageOS with the native driver, Kubernetes is responsible for running mkfs
 against the StorageOS block device. This means that any file system that Kubernetes can create
 can be used.&lt;/p&gt;
 &lt;p&gt;However if the StorageOS CLI is used to mount a device then an ext4 filesystem
 will be created by default.&lt;/p&gt;
-&lt;h3 id=&#34;csi-driver&#34;&gt;CSI Driver&lt;/h3&gt;
-&lt;p&gt;When using StorageOS with the CSI driver, StorageOS is responsible for running
-mkfs against the block device that pods mount. StorageOS is able to create
-ext2, ext3, ext4 and xfs file systems.&lt;/p&gt;
 
       </description>
     </item>

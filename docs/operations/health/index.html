@@ -63,7 +63,8 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
   integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Cluster health | </title>
   </head>
@@ -106,7 +107,7 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -136,7 +137,7 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -382,61 +383,8 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall117" href="/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall116" href="/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall115" href="/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall114" href="/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall113" href="/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall112" href="/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall" href="/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -596,7 +544,7 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="docsplatformsazure-aks">
@@ -959,10 +907,10 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">ETCD</a>
+    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">ETCD</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsoperationsexternal-etcd">
+    <li class="collapse " id="docsoperationsexternal-etcd">
       
       
       
@@ -1018,10 +966,10 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/monitoring/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Monitoring</a>
+    <a  href="/docs/operations/monitoring/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Monitoring</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsoperationsmonitoring">
+    <li class="collapse " id="docsoperationsmonitoring">
       
       
       
@@ -1455,7 +1403,6 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
 <a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
 
 </div>
-
 
 
 

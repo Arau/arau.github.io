@@ -23,15 +23,15 @@
 <title>Mount Propagation | </title><meta property="og:title" content="Mount Propagation" />
 <meta property="og:description" content="StorageOS requires mount propagation enabled to present devices as volumes for containers (see linux kernel documentation here).
 Certain versions of docker ship with a systemd manifest with MountFlags set to &lsquo;slave&rsquo;, thus preventing StorageOS from working. This can be removed or set to &lsquo;shared&rsquo; with a systemd drop in:
-mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd/system/docker.service.d/mount_propagation_flags.conf [Service] MountFlags=shared EOF # systemctl daemon-reload # systemctl restart docker.service To confirm behaviour, the following command should run without error" />
+mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd/system/docker.service.d/mount_propagation_flags.conf [Service] MountFlags=shared EOF # systemctl daemon-reload # systemctl restart docker.service To confirm behaviour, the following command should run without error." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/v2/docs/prerequisites/mountpropagation/" />
-<meta property="article:modified_time" content="2020-02-07T17:01:25+00:00" />
+<meta property="article:modified_time" content="2020-02-21T12:03:52+00:00" />
 <meta itemprop="name" content="Mount Propagation">
 <meta itemprop="description" content="StorageOS requires mount propagation enabled to present devices as volumes for containers (see linux kernel documentation here).
 Certain versions of docker ship with a systemd manifest with MountFlags set to &lsquo;slave&rsquo;, thus preventing StorageOS from working. This can be removed or set to &lsquo;shared&rsquo; with a systemd drop in:
-mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd/system/docker.service.d/mount_propagation_flags.conf [Service] MountFlags=shared EOF # systemctl daemon-reload # systemctl restart docker.service To confirm behaviour, the following command should run without error">
-<meta itemprop="dateModified" content="2020-02-07T17:01:25&#43;00:00" />
+mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd/system/docker.service.d/mount_propagation_flags.conf [Service] MountFlags=shared EOF # systemctl daemon-reload # systemctl restart docker.service To confirm behaviour, the following command should run without error.">
+<meta itemprop="dateModified" content="2020-02-21T12:03:52&#43;00:00" />
 <meta itemprop="wordCount" content="169">
 
 
@@ -40,7 +40,7 @@ mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd
 <meta name="twitter:title" content="Mount Propagation"/>
 <meta name="twitter:description" content="StorageOS requires mount propagation enabled to present devices as volumes for containers (see linux kernel documentation here).
 Certain versions of docker ship with a systemd manifest with MountFlags set to &lsquo;slave&rsquo;, thus preventing StorageOS from working. This can be removed or set to &lsquo;shared&rsquo; with a systemd drop in:
-mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd/system/docker.service.d/mount_propagation_flags.conf [Service] MountFlags=shared EOF # systemctl daemon-reload # systemctl restart docker.service To confirm behaviour, the following command should run without error"/>
+mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd/system/docker.service.d/mount_propagation_flags.conf [Service] MountFlags=shared EOF # systemctl daemon-reload # systemctl restart docker.service To confirm behaviour, the following command should run without error."/>
 
 
 
@@ -55,7 +55,8 @@ mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Mount Propagation | </title>
   </head>
@@ -352,61 +353,8 @@ mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="v2docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall117" href="/v2/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall116" href="/v2/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall115" href="/v2/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall114" href="/v2/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall113" href="/v2/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall112" href="/v2/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall" href="/v2/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -566,7 +514,7 @@ mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="v2docsplatformsazure-aks">
@@ -1433,7 +1381,6 @@ mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd
 
 
 
-
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -1492,7 +1439,7 @@ cat <span style="color:#4e9a06">&lt;&lt;EOF &gt; /etc/systemd/system/docker.serv
 
 <span style="color:#8f5902;font-style:italic"># systemctl daemon-reload</span>
 <span style="color:#8f5902;font-style:italic"># systemctl restart docker.service</span>
-</code></pre></div><p>To confirm behaviour, the following command should run without error</p>
+</code></pre></div><p>To confirm behaviour, the following command should run without error.</p>
 <pre><code>docker run -it --rm -v /mnt:/mnt:shared busybox sh -c /bin/date
 </code></pre><p>Orchestrators such as Kubernetes or OpenShift have their own ways of exposing
 this setting. Kubernetes 1.10 and OpenShift 3.10 have mount propagation enabled by
@@ -1566,7 +1513,7 @@ check and enable mount propagation where appropriate.</p>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/028cef0b615d286fee4c88aa2c03c02e87f67e88">&#39;include&#39; shortcode for shared content (028cef0)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 21, 2020: <a  href="https://github.com/google/docsy-example/commit/ca3fa41afd8e8311f2d4c9667ea146d641c8cca4">apply changes to second version test (ca3fa41)</a>
 </div>
 </div>
 

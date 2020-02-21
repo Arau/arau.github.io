@@ -25,12 +25,12 @@
 Using StorageOS persistent volumes with ElasticSearch (ES) means that if a pod fails, the cluster is only in a degraded state for as long as it takes Kubernetes to restart the pod. When the pod comes back up, the pod data is immediately available." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/usecases/elasticsearch/" />
-<meta property="article:modified_time" content="2020-02-07T11:49:52+00:00" />
+<meta property="article:modified_time" content="2020-02-20T17:09:48+00:00" />
 <meta itemprop="name" content="Elasticsearch">
 <meta itemprop="description" content="Elasticsearch with StorageOS Elasticsearch is a distributed, RESTful search and analytics engine, most popularly used to aggregate logs, but also to serve as a search backend to a number of different applications.
 Using StorageOS persistent volumes with ElasticSearch (ES) means that if a pod fails, the cluster is only in a degraded state for as long as it takes Kubernetes to restart the pod. When the pod comes back up, the pod data is immediately available.">
-<meta itemprop="dateModified" content="2020-02-07T11:49:52&#43;00:00" />
-<meta itemprop="wordCount" content="766">
+<meta itemprop="dateModified" content="2020-02-20T17:09:48&#43;00:00" />
+<meta itemprop="wordCount" content="673">
 
 
 
@@ -57,7 +57,8 @@ Using StorageOS persistent volumes with ElasticSearch (ES) means that if a pod f
   integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Elasticsearch | </title>
   </head>
@@ -100,7 +101,7 @@ Using StorageOS persistent volumes with ElasticSearch (ES) means that if a pod f
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -130,7 +131,7 @@ Using StorageOS persistent volumes with ElasticSearch (ES) means that if a pod f
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -376,61 +377,8 @@ Using StorageOS persistent volumes with ElasticSearch (ES) means that if a pod f
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall117" href="/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall116" href="/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall115" href="/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall114" href="/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall113" href="/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall112" href="/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall" href="/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -590,7 +538,7 @@ Using StorageOS persistent volumes with ElasticSearch (ES) means that if a pod f
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="docsplatformsazure-aks">
@@ -1460,20 +1408,18 @@ Using StorageOS persistent volumes with ElasticSearch (ES) means that if a pod f
     <li><a href="#deploying-elasticsearch-on-kubernetes">Deploying Elasticsearch on Kubernetes</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#deployment-of-the-application">Deployment of the application</a></li>
       </ul>
     </li>
-    <li><a href="#prerequisites-1">Prerequisites</a>
+    <li><a href="#installation">Installation</a>
       <ul>
         <li></li>
       </ul>
     </li>
-    <li><a href="#installation">Installation</a></li>
     <li><a href="#kibana-optional">Kibana (optional)</a></li>
     <li><a href="#monitoring-optional">Monitoring (optional)</a></li>
   </ul>
 </nav>
-
 
 
 
@@ -1550,76 +1496,58 @@ to ensure it persists over a reboot. See ElasicSearch reference
 that there may be collisions with other application settings. Administrators
 are advised to centrally collate sysctl settings using the tooling of their
 choice.</p>
-<h3 id="deployment">Deployment</h3>
-<p> </p>
+<h3 id="deployment-of-the-application">Deployment of the application</h3>
 <h4 id="statefulset-defintion">StatefulSet defintion</h4>
-<p> </p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---<span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">apiVersion</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>apps/v1<span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>StatefulSet<span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>esdata<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>esdata<span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">[</span>...<span style="color:#000;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">serviceAccountName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>elasticsearch<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">      </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>data<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>elasticsearch<span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">6.7</span><span style="color:#0000cf;font-weight:bold">.0</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">imagePullPolicy</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>IfNotPresent<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">[</span>...<span style="color:#000;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">volumeMounts</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">          </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>data<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">mountPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>/usr/share/elasticsearch/data/data<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">[</span>...<span style="color:#000;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">volumeClaimTemplates</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">  </span>- <span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;data&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">accessModes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;ReadWriteOnce&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">storageClassName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;fast&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># &lt;--- default StorageOS storage class name</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">requests</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>10Gi<span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#8f5902;font-style:italic"># &lt;--- change this to the appropriate value</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">serviceAccountName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>elasticsearch<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">containers</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">        </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>data<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">image</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>elasticsearch<span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">6.7</span><span style="color:#0000cf;font-weight:bold">.0</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">imagePullPolicy</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>IfNotPresent<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">[</span>...<span style="color:#000;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">volumeMounts</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">            </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>data<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#204a87;font-weight:bold">mountPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>/usr/share/elasticsearch/data/data<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">[</span>...<span style="color:#000;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#204a87;font-weight:bold">volumeClaimTemplates</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">    </span>- <span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;data&#34;</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">accessModes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;ReadWriteOnce&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">storageClassName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;fast&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># &lt;--- default StorageOS storage class name</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">          </span><span style="color:#204a87;font-weight:bold">requests</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>10Gi<span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#8f5902;font-style:italic"># &lt;--- change this to the appropriate value</span><span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>This excerpt is from the StatefulSet definition
 (<code>/elasticsearch/10-es-data.yaml</code>). The file contains the
 PersistentVolumeClaim template that will dynamically
 provision the necessary storage, using the StorageOS storage class.</p>
 <p>Dynamic provisioning occurs as a volumeMount has been declared with the same
 name as a VolumeClaimTemplate.</p>
-<h2 id="prerequisites-1">Prerequisites</h2>
-<p>Some OS tuning is required, which is done automatically when using our example
-from the <a href="//github.com/storageos/deploy">deploy</a> repository.</p>
-<p>Elasticsearch requires <code>vm.max_map_count</code> to be increased to a minimum of
-<code>262144</code>, which is a system wide setting. One way to achieve this is to
-run <code>sysctl -w vm.max_map_count=262144</code> and update <code>/etc/sysctl.conf</code>
-to ensure it persists over a reboot. See ElasicSearch reference
-<a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.0/vm-max-map-count.html">here</a></p>
-<p>Administrators should be aware that this impacts the behaviour of nodes and
-that there may be collisions with other application settings. Administrators
-are advised to centrally collate sysctl settings using the tooling of their
-choice.</p>
+<h2 id="installation">Installation</h2>
 <h4 id="clone-the-use-cases-repo">Clone the use cases repo</h4>
-<p> </p>
 <p>You can find the latest files in the StorageOS use cases repostiory
 in <code>/elasticsearch/</code></p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/storageos/use-cases.git storageos-usecases
 <span style="color:#204a87">cd</span> storageos-usecases
-</code></pre></div><p> </p>
-<h2 id="installation">Installation</h2>
-<ol>
+</code></pre></div><ol>
 <li>
 <p>Create the kubernetes objects</p>
-<blockquote>
-<p>NOTE: this will install an ES cluster with 3 master, 3 data and 3
-coordinator nodes. Combined they will require ~ 14 GiB of available memory in
-your cluster, however, more may be used as the application is being used</p>
-</blockquote>
+<p>This will install an ES cluster with 3 master, 3 data and 3 coordinator
+nodes. Combined they will require ~ 14 GiB of available memory in your
+cluster, however, more may be used as the application is being used</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply -f ./elasticsearch/
 </code></pre></div><p>Once completed, an internal service object will have been created making the
 cluster available as <code>http://elasticsearch:9200/</code> which is the default Kibana
@@ -1628,7 +1556,7 @@ cluster available as <code>http://elasticsearch:9200/</code> which is the defaul
 <li>
 <p>Confirm Elasticsearch is up and running</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl get pods -l <span style="color:#000">component</span><span style="color:#ce5c00;font-weight:bold">=</span>elasticsearch
-   
+
 NAME                                    READY   STATUS    RESTARTS   AGE
 elasticsearch-exporter-d86ffd94-zw45l   1/1     Running   <span style="color:#0000cf;font-weight:bold">0</span>          5m44s
 es-coordinator-b7b984dd4-7wlz5          1/1     Running   <span style="color:#0000cf;font-weight:bold">0</span>          5m44s
@@ -1734,7 +1662,7 @@ example of how this is done to monitor StorageOS, please see <a href="/docs/oper
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/cdb5f88a326b5098eac005317cbbc3524caf0e84">Fix reference and links (cdb5f88)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 20, 2020: <a  href="https://github.com/google/docsy-example/commit/32f3bb7849846191da14631a8019c8e512214b44">Fix use case indentations and broken pages (32f3bb7)</a>
 </div>
 </div>
 

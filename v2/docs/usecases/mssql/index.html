@@ -23,17 +23,19 @@
 <title>MS SQL | </title><meta property="og:title" content="MS SQL" />
 <meta property="og:description" content="MS SQL with StorageOS Beginning with Microsoft SQL Server 2017, Microsoft has supported MSSQL on linux.
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes cluster. See our guide on how to install StorageOS on Kubernetes for more information.
-Deploying MS SQL on Kubernetes  You can find the latest files in the StorageOS use cases repository git clone https://github.com/storageos/use-cases.git storageos-usecases StatefulSet defintion
-  kind:StatefulSetmetadata:name:mssqlspec:selector:matchLabels:app:mssqlenv:prodserviceName:mssqlreplicas:1...spec:serviceAccountName:mssql...volumeMounts:- name:datamountPath:/var/opt/mssql." />
+Deploying MS SQL on Kubernetes   You can find the latest files in the StorageOS use cases repository
+git clone https://github.com/storageos/use-cases.git storageos-usecases StatefulSet defintion
+kind:StatefulSetmetadata:name:mssqlspec:selector:matchLabels:app:mssqlenv:prodserviceName:mssqlreplicas:1...spec:serviceAccountName:mssql...volumeMounts:- name:datamountPath:/var/opt/mssql...volumeClaimTemplates:- metadata:name:datalabels:env:prodspec:accessModes:[&#34;ReadWriteOnce&#34;]storageClassName:&#34;fast&#34;# StorageOS storageClass resources:requests:storage:5GiThis excerpt is from the StatefulSet definition." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/v2/docs/usecases/mssql/" />
-<meta property="article:modified_time" content="2020-02-07T17:01:25+00:00" />
+<meta property="article:modified_time" content="2020-02-21T12:03:52+00:00" />
 <meta itemprop="name" content="MS SQL">
 <meta itemprop="description" content="MS SQL with StorageOS Beginning with Microsoft SQL Server 2017, Microsoft has supported MSSQL on linux.
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes cluster. See our guide on how to install StorageOS on Kubernetes for more information.
-Deploying MS SQL on Kubernetes  You can find the latest files in the StorageOS use cases repository git clone https://github.com/storageos/use-cases.git storageos-usecases StatefulSet defintion
-  kind:StatefulSetmetadata:name:mssqlspec:selector:matchLabels:app:mssqlenv:prodserviceName:mssqlreplicas:1...spec:serviceAccountName:mssql...volumeMounts:- name:datamountPath:/var/opt/mssql.">
-<meta itemprop="dateModified" content="2020-02-07T17:01:25&#43;00:00" />
+Deploying MS SQL on Kubernetes   You can find the latest files in the StorageOS use cases repository
+git clone https://github.com/storageos/use-cases.git storageos-usecases StatefulSet defintion
+kind:StatefulSetmetadata:name:mssqlspec:selector:matchLabels:app:mssqlenv:prodserviceName:mssqlreplicas:1...spec:serviceAccountName:mssql...volumeMounts:- name:datamountPath:/var/opt/mssql...volumeClaimTemplates:- metadata:name:datalabels:env:prodspec:accessModes:[&#34;ReadWriteOnce&#34;]storageClassName:&#34;fast&#34;# StorageOS storageClass resources:requests:storage:5GiThis excerpt is from the StatefulSet definition.">
+<meta itemprop="dateModified" content="2020-02-21T12:03:52&#43;00:00" />
 <meta itemprop="wordCount" content="247">
 
 
@@ -42,8 +44,9 @@ Deploying MS SQL on Kubernetes  You can find the latest files in the StorageOS u
 <meta name="twitter:title" content="MS SQL"/>
 <meta name="twitter:description" content="MS SQL with StorageOS Beginning with Microsoft SQL Server 2017, Microsoft has supported MSSQL on linux.
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes cluster. See our guide on how to install StorageOS on Kubernetes for more information.
-Deploying MS SQL on Kubernetes  You can find the latest files in the StorageOS use cases repository git clone https://github.com/storageos/use-cases.git storageos-usecases StatefulSet defintion
-  kind:StatefulSetmetadata:name:mssqlspec:selector:matchLabels:app:mssqlenv:prodserviceName:mssqlreplicas:1...spec:serviceAccountName:mssql...volumeMounts:- name:datamountPath:/var/opt/mssql."/>
+Deploying MS SQL on Kubernetes   You can find the latest files in the StorageOS use cases repository
+git clone https://github.com/storageos/use-cases.git storageos-usecases StatefulSet defintion
+kind:StatefulSetmetadata:name:mssqlspec:selector:matchLabels:app:mssqlenv:prodserviceName:mssqlreplicas:1...spec:serviceAccountName:mssql...volumeMounts:- name:datamountPath:/var/opt/mssql...volumeClaimTemplates:- metadata:name:datalabels:env:prodspec:accessModes:[&#34;ReadWriteOnce&#34;]storageClassName:&#34;fast&#34;# StorageOS storageClass resources:requests:storage:5GiThis excerpt is from the StatefulSet definition."/>
 
 
 
@@ -58,7 +61,8 @@ Deploying MS SQL on Kubernetes  You can find the latest files in the StorageOS u
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>MS SQL | </title>
   </head>
@@ -355,61 +359,8 @@ Deploying MS SQL on Kubernetes  You can find the latest files in the StorageOS u
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="v2docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall117" href="/v2/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall116" href="/v2/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall115" href="/v2/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall114" href="/v2/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall113" href="/v2/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall112" href="/v2/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall" href="/v2/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -569,7 +520,7 @@ Deploying MS SQL on Kubernetes  You can find the latest files in the StorageOS u
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="v2docsplatformsazure-aks">
@@ -1436,7 +1387,6 @@ Deploying MS SQL on Kubernetes  You can find the latest files in the StorageOS u
 
 
 
-
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -1488,45 +1438,44 @@ cluster. <a href="/v2/docs/platforms/kubernetes/install/">See our guide on how t
 information</a>.</p>
 <h2 id="deploying-ms-sql-on-kubernetes">Deploying MS SQL on Kubernetes</h2>
 <ol>
-<li>You can find the latest files in the StorageOS use cases repository
+<li>
+<p>You can find the latest files in the StorageOS use cases repository</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/storageos/use-cases.git storageos-usecases
 </code></pre></div><p>StatefulSet defintion</p>
-</li>
-</ol>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#204a87;font-weight:bold">kind</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>StatefulSet<span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mssql<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mssql<span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">selector</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">matchLabels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">app</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mssql<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">env</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>prod<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">serviceName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mssql<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">replicas</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span>...<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">serviceAccountName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mssql<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span>...<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">volumeMounts</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">     </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>data<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">       </span><span style="color:#204a87;font-weight:bold">mountPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>/var/opt/mssql<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">selector</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">matchLabels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">app</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mssql<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">env</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>prod<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">serviceName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mssql<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">replicas</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline"> </span>...<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">volumeClaimTemplates</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span>- <span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>data<span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">labels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">env</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>prod<span style="color:#f8f8f8;text-decoration:underline">
 </span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">accessModes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;ReadWriteOnce&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">storageClassName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;fast&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># StorageOS storageClass </span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">requests</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
-</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">       </span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>5Gi<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">serviceAccountName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>mssql<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span>...<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">      </span><span style="color:#204a87;font-weight:bold">volumeMounts</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">       </span>- <span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>data<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">         </span><span style="color:#204a87;font-weight:bold">mountPath</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>/var/opt/mssql<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">   </span>...<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">volumeClaimTemplates</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline"> </span>- <span style="color:#204a87;font-weight:bold">metadata</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">name</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>data<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">labels</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">       </span><span style="color:#204a87;font-weight:bold">env</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>prod<span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">   </span><span style="color:#204a87;font-weight:bold">spec</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">accessModes</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;ReadWriteOnce&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">storageClassName</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#34;fast&#34;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic"># StorageOS storageClass </span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline">     </span><span style="color:#204a87;font-weight:bold">resources</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">       </span><span style="color:#204a87;font-weight:bold">requests</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">
+</span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#f8f8f8;text-decoration:underline">         </span><span style="color:#204a87;font-weight:bold">storage</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span>5Gi<span style="color:#f8f8f8;text-decoration:underline">
 </span></code></pre></div><p>This excerpt is from the StatefulSet definition. This file contains the
 VolumeClaim template that will dynamically provision storage, using the
 StorageOS storage class. Dynamic provisioning occurs as a volumeMount has
 been declared with the same name as a VolumeClaim.</p>
-<ol>
+</li>
 <li>
 <p>Move into the MS SQL examples folder and create the objects</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> storageos-usecases
@@ -1624,7 +1573,7 @@ with your desired MS SQL configuration settings.</p>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/028cef0b615d286fee4c88aa2c03c02e87f67e88">&#39;include&#39; shortcode for shared content (028cef0)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 21, 2020: <a  href="https://github.com/google/docsy-example/commit/ca3fa41afd8e8311f2d4c9667ea146d641c8cca4">apply changes to second version test (ca3fa41)</a>
 </div>
 </div>
 

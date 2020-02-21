@@ -49,7 +49,8 @@
   integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>ETCD | </title>
   </head>
@@ -92,7 +93,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -122,7 +123,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -368,61 +369,8 @@
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall117" href="/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall116" href="/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall115" href="/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall114" href="/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall113" href="/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall112" href="/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall" href="/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -582,7 +530,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="docsplatformsazure-aks">
@@ -1450,11 +1398,10 @@
 <nav id="TableOfContents">
   <ul>
     <li><a href="#suggested-deployment-models">Suggested Deployment Models</a></li>
-    <li><a href="#etcd-cluster-operator">Etcd cluster-operator</a></li>
     <li><a href="#external-etcd">External etcd</a></li>
+    <li><a href="#etcd-cluster-operator">Etcd cluster-operator</a></li>
   </ul>
 </nav>
-
 
 
 
@@ -1513,7 +1460,6 @@ establish
 rest of the nodes act as etcd clients, keeping consistency of the cluster by
 communicating with the etcd servers. Whether a StorageOS node acts as an etcd server
 or client cannot be changed once a StorageOS container has started.</p>
-<p>  <!-- this is a blank line --></p>
 <p><strong>It is recommended to use an external etcd cluster for production deployments</strong>. To
 use an etcd cluster provisioned and maintained outside the scope of StorageOS,
 StorageOS will locate the etcd endpoint using environment variables. When
@@ -1522,15 +1468,6 @@ set in the <a href="/docs/reference/cluster-operator/configuration">StorageOSClu
 chart can set the variables in the <a href="https://github.com/storageos/charts/blob/master/stable/storageos/values.yaml">values.yaml
 </a>
 file.</p>
-<p>Manual installations with the yaml manifests found in our <code>deploy</code>
-<a href="https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/standard">repository</a>
-requires that two specific environment variables are set in the
-<a href="https://github.com/storageos/deploy/blob/master/k8s/deploy-storageos/standard/manifests/040_daemonset.yaml_template">daemonset</a>.</p>
-<ul>
-<li><code>KV_BACKEND</code>: Set to <code>etcd</code></li>
-<li><code>KV_ADDR</code>: Comma separated list of etcd targets, in the form host[:port].</li>
-</ul>
-<p>  <!-- this is a blank line --></p>
 <p>Etcd availability is mandatory for proper functioning of StorageOS. In
 particular, changes to the cluster; creation/deletion of volumes,
 adding/removing replicas e.g., require access to the etcd cluster. In the event
@@ -1543,28 +1480,26 @@ of its data. It is also important to keep the latency between StorageOS nodes
 and the etcd replicas low. Deploying an etcd cluster in a different data center
 or region can make StorageOS detect etcd nodes as unavailable because of latency.</p>
 <p><em>StorageOS cannot be held responsible for supporting an external etcd cluster.</em></p>
-<p>  <!-- this is a blank line --></p>
 <h2 id="suggested-deployment-models">Suggested Deployment Models</h2>
 <blockquote>
 <p>Depending on the orchestrator used, methods of passing environment variables
 to StorageOS containers differ. The following examples work with both
 Kubernetes and Openshift.</p>
 </blockquote>
-<h2 id="etcd-cluster-operator">Etcd cluster-operator</h2>
-<p>Etcd can be deployed in Kubernetes using the official <a href="https://github.com/coreos/etcd-operator">etcd-operator</a>.</p>
-<p>Examples of deploying etcd clusters using the etcd-operator on
-<a href="https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-as-svc">Kubernetes</a>
-and
-<a href="https://github.com/storageos/deploy/tree/master/openshift/deploy-storageos/etcd-as-svc">OpenShift</a>
-are available.</p>
-<p>The official etcd-operator repository also has a backup deployment operator
-that can help backup etcd data. Make sure you take frequent backups of
-the etcd cluster as it holds all the StorageOS cluster metadata.</p>
 <h2 id="external-etcd">External etcd</h2>
 <p>To deploy StorageOS on a Kubernetes cluster using an etcd cluster running
 outside Kubernetes, you can look at the following
-<a href="https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/external-etcd">repository</a>,
+<a href="https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-helpers/etcd-ansible-systemd">repository</a>,
 where etcd endpoints are referenced using a Kubernetes external service.</p>
+<h2 id="etcd-cluster-operator">Etcd cluster-operator</h2>
+<p>Etcd can be deployed in Kubernetes using the official <a href="https://github.com/coreos/etcd-operator">etcd-operator</a>.</p>
+<p>Examples of deploying etcd clusters using the etcd-operator on <a href="https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-helpers/etcd-operator-example">Kubernetes</a>
+and
+<a href="https://github.com/storageos/deploy/tree/master/openshift/deploy-storageos/etcd-helpers/etcd-operator-example">OpenShift</a>
+are available.</p>
+<p>The official etcd-operator repository also has a backup deployment operator
+that can help backup etcd data. Make sure you take frequent backups of the etcd
+cluster as it holds all the StorageOS cluster metadata.</p>
 
         <div class="section-index">
     
@@ -1572,18 +1507,6 @@ where etcd endpoints are referenced using a Kubernetes external service.</p>
     
     
     <hr class="panel-line">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
         
             
         
@@ -1931,7 +1854,7 @@ where etcd endpoints are referenced using a Kubernetes external service.</p>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 6, 2020: <a  href="https://github.com/google/docsy-example/commit/131b65ea3e2e4586868a5582651d9be4cae0c528">StorageOS Docs init (131b65e)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 20, 2020: <a  href="https://github.com/google/docsy-example/commit/44f74215c2ae6aace3cf9533c3e1a6a353d7e695">Fix ETCD deprecated links and references (44f7421)</a>
 </div>
 </div>
 

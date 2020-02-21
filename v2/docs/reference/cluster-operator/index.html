@@ -44,7 +44,8 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Cluster Operator | </title>
   </head>
@@ -341,61 +342,8 @@
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="v2docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall117" href="/v2/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall116" href="/v2/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall115" href="/v2/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall114" href="/v2/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall113" href="/v2/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall112" href="/v2/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall" href="/v2/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -555,7 +503,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="v2docsplatformsazure-aks">
@@ -1422,7 +1370,6 @@
 
 
 
-
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -1466,7 +1413,23 @@
 <div class="td-content">
 	<h1>Cluster Operator</h1>
 	
-	<p>{% include operator/reference.md %}</p>
+	<p>Our cluster operator is a <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/">Kubernetes native
+application</a>
+developed to deploy and configure StorageOS clusters, and assist with
+maintenance operations. We recommend its use for standard installations.</p>
+<p>The operator acts as a Kubernetes controller that watches the <code>StorageOSCluster</code>
+CR (Custom Resource). Once the controller is ready, a StorageOS cluster definition can be
+created. The operator will deploy a StorageOS cluster based on the
+configuration specified in the cluster definition.</p>
+<p>You can find the source code in the <a href="https://github.com/storageos/cluster-operator">cluster-operator
+repository</a>.</p>
+<p>Install the operator following orchestrator specific procedure.</p>
+<p>To deploy a StorageOS cluster you will need to fulfil the following steps.</p>
+<ol>
+<li>Install operator</li>
+<li>Create <code>storageos-api</code> Secret</li>
+<li>Create a CR (Custom Resource) to deploy StorageOS</li>
+</ol>
 
         <div class="section-index">
     
@@ -1474,18 +1437,6 @@
     
     
     <hr class="panel-line">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
         
             
         
@@ -1564,7 +1515,7 @@
             
                 <div class="entry">
                     <h5>
-                        <a href="/v2/docs/reference/cluster-operator/examples/">Examples</a>
+                        <a href="/v2/docs/reference/cluster-operator/examples/">Cluster Operator examples</a>
                     </h5>
                     <p></p>
                 </div>
@@ -1854,7 +1805,7 @@
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/028cef0b615d286fee4c88aa2c03c02e87f67e88">&#39;include&#39; shortcode for shared content (028cef0)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 21, 2020: <a  href="https://github.com/google/docsy-example/commit/ca3fa41afd8e8311f2d4c9667ea146d641c8cca4">apply changes to second version test (ca3fa41)</a>
 </div>
 </div>
 

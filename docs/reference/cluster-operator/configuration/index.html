@@ -21,20 +21,23 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Configuration | </title><meta property="og:title" content="Configuration" />
-<meta property="og:description" content="{% include operator/cr-config-table.md %}" />
+<meta property="og:description" content="The following table lists the configurable spec parameters of the StorageOSCluster custom resource and their default values.
+   Parameter Description Default     csi.deploymentStrategy CSI helper deployment strategy (statefulset or deployment) statefulset   csi.enable Enable CSI setup false   csi.enableControllerPublishCreds Enable CSI controller publish credentials false   csi.enableNodePublishCreds Enable CSI node publish credentials false   csi.enableProvisionCreds Enable CSI provision credentials false   debug Enable debug mode for all the cluster nodes false   disableFencing Disable Pod fencing false   disableScheduler Disable StorageOS scheduler false   disableTCMU Disable TCMU to allow co-existence with other TCMU users." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/reference/cluster-operator/configuration/" />
-<meta property="article:modified_time" content="2020-02-06T15:46:42+00:00" />
+<meta property="article:modified_time" content="2020-02-20T14:39:29+00:00" />
 <meta itemprop="name" content="Configuration">
-<meta itemprop="description" content="{% include operator/cr-config-table.md %}">
-<meta itemprop="dateModified" content="2020-02-06T15:46:42&#43;00:00" />
-<meta itemprop="wordCount" content="4">
+<meta itemprop="description" content="The following table lists the configurable spec parameters of the StorageOSCluster custom resource and their default values.
+   Parameter Description Default     csi.deploymentStrategy CSI helper deployment strategy (statefulset or deployment) statefulset   csi.enable Enable CSI setup false   csi.enableControllerPublishCreds Enable CSI controller publish credentials false   csi.enableNodePublishCreds Enable CSI node publish credentials false   csi.enableProvisionCreds Enable CSI provision credentials false   debug Enable debug mode for all the cluster nodes false   disableFencing Disable Pod fencing false   disableScheduler Disable StorageOS scheduler false   disableTCMU Disable TCMU to allow co-existence with other TCMU users.">
+<meta itemprop="dateModified" content="2020-02-20T14:39:29&#43;00:00" />
+<meta itemprop="wordCount" content="356">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Configuration"/>
-<meta name="twitter:description" content="{% include operator/cr-config-table.md %}"/>
+<meta name="twitter:description" content="The following table lists the configurable spec parameters of the StorageOSCluster custom resource and their default values.
+   Parameter Description Default     csi.deploymentStrategy CSI helper deployment strategy (statefulset or deployment) statefulset   csi.enable Enable CSI setup false   csi.enableControllerPublishCreds Enable CSI controller publish credentials false   csi.enableNodePublishCreds Enable CSI node publish credentials false   csi.enableProvisionCreds Enable CSI provision credentials false   debug Enable debug mode for all the cluster nodes false   disableFencing Disable Pod fencing false   disableScheduler Disable StorageOS scheduler false   disableTCMU Disable TCMU to allow co-existence with other TCMU users."/>
 
 
 
@@ -54,7 +57,8 @@
   integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Configuration | </title>
   </head>
@@ -97,7 +101,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -127,7 +131,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -373,61 +377,8 @@
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall117" href="/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall116" href="/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall115" href="/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall114" href="/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall113" href="/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall112" href="/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall" href="/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -587,7 +538,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="docsplatformsazure-aks">
@@ -1454,7 +1405,6 @@
 
 
 
-
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -1508,7 +1458,218 @@
 <div class="td-content">
 	<h1>Configuration</h1>
 	
-	<p>{% include operator/cr-config-table.md %}</p>
+	<p>The following table lists the configurable spec parameters of the StorageOSCluster custom resource and their default values.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>csi.deploymentStrategy</code></td>
+<td align="left">CSI helper deployment strategy (<code>statefulset</code> or <code>deployment</code>)</td>
+<td align="left"><code>statefulset</code></td>
+</tr>
+<tr>
+<td align="left"><code>csi.enable</code></td>
+<td align="left">Enable CSI setup</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>csi.enableControllerPublishCreds</code></td>
+<td align="left">Enable CSI controller publish credentials</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>csi.enableNodePublishCreds</code></td>
+<td align="left">Enable CSI node publish credentials</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>csi.enableProvisionCreds</code></td>
+<td align="left">Enable CSI provision credentials</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>debug</code></td>
+<td align="left">Enable debug mode for all the cluster nodes</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>disableFencing</code></td>
+<td align="left">Disable Pod fencing</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>disableScheduler</code></td>
+<td align="left">Disable StorageOS scheduler</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>disableTCMU</code></td>
+<td align="left">Disable TCMU to allow co-existence with other TCMU users. Disabling TCMU degrades performance</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>disableTelemetry</code></td>
+<td align="left">Disable telemetry reports</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>forceTCMU</code></td>
+<td align="left">Forces TCMU to be enabled or causes StorageOS to abort startup</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>images.csiClusterDriverRegistrarContainer</code></td>
+<td align="left">CSI Cluster Driver Registrar Container image</td>
+<td align="left"><code>quay.io/k8scsi/csi-cluster-driver-registrar:v1.0.1</code></td>
+</tr>
+<tr>
+<td align="left"><code>images.csiExternalAttacherContainer</code></td>
+<td align="left">CSI External Attacher Container image</td>
+<td align="left"><code>quay.io/k8scsi/csi-attacher:v1.0.1</code></td>
+</tr>
+<tr>
+<td align="left"><code>images.csiExternalProvisionerContainer</code></td>
+<td align="left">CSI External Provisioner Container image</td>
+<td align="left"><code>storageos/csi-provisioner:v1.0.1</code></td>
+</tr>
+<tr>
+<td align="left"><code>ìmages.csiLivenessProbeContainer</code></td>
+<td align="left">CSI Liveness Probe Container Image</td>
+<td align="left"><code>quay.io/k8scsi/livenessprobe:v1.0.1</code></td>
+</tr>
+<tr>
+<td align="left"><code>images.csiNodeDriverRegistrarContainer</code></td>
+<td align="left">CSI Node Driver Registrar Container image</td>
+<td align="left"><code>quay.io/k8scsi/csi-node-driver-registrar:v1.0.1</code></td>
+</tr>
+<tr>
+<td align="left"><code>images.initContainer</code></td>
+<td align="left">StorageOS init container image</td>
+<td align="left"><code>storageos/init:1.0.0</code></td>
+</tr>
+<tr>
+<td align="left"><code>images.nodeContainer</code></td>
+<td align="left">StorageOS node container image</td>
+<td align="left"><code>storageos/node:{{ site.latest_node_version  }}</code></td>
+</tr>
+<tr>
+<td align="left"><code>ingress.annotations</code></td>
+<td align="left">Annotations of the ingress used by the cluster</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>ingress.enable</code></td>
+<td align="left">Enable ingress for the cluster</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>ingress.hostname</code></td>
+<td align="left">Hostname to be used in cluster ingress</td>
+<td align="left"><code>storageos.local</code></td>
+</tr>
+<tr>
+<td align="left"><code>ingress.tls</code></td>
+<td align="left">Enable TLS for the ingress</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>k8sDistro</code></td>
+<td align="left">The name of the Kubernetes distribution is use, e.g. <code>rancher</code> or <code>eks</code></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>kvBackend.address</code></td>
+<td align="left">Comma-separated list of addresses of external key-value store. (<code>1.2.3.4:2379,2.3.4.5:2379</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>kvBackend.backend</code></td>
+<td align="left">Name of the key-value store to use. Set to <code>etcd</code> for external key-value store.</td>
+<td align="left"><code>embedded</code></td>
+</tr>
+<tr>
+<td align="left"><code>namespace</code></td>
+<td align="left">Namespace where storageos cluster resources are created</td>
+<td align="left"><code>storageos</code></td>
+</tr>
+<tr>
+<td align="left"><code>nodeSelectorTerms</code></td>
+<td align="left">Set node selector for storageos pod placement</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>pause</code></td>
+<td align="left">Pause the operator for cluster maintenance</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>resources</code></td>
+<td align="left">Set resource requirements for the containers</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>secretRefName</code></td>
+<td align="left">Reference name of storageos secret</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>secretRefNamespace</code></td>
+<td align="left">Namespace of storageos secret</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>service.annotations</code></td>
+<td align="left">Annotations of the Service used by the cluster</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>service.externalPort</code></td>
+<td align="left">External port of the Service used by the cluster</td>
+<td align="left"><code>5705</code></td>
+</tr>
+<tr>
+<td align="left"><code>service.internalPort</code></td>
+<td align="left">Internal port of the Service used by the cluster</td>
+<td align="left"><code>5705</code></td>
+</tr>
+<tr>
+<td align="left"><code>service.name</code></td>
+<td align="left">Name of the Service used by the cluster</td>
+<td align="left"><code>storageos</code></td>
+</tr>
+<tr>
+<td align="left"><code>service.type</code></td>
+<td align="left">Type of the Service used by the cluster</td>
+<td align="left"><code>ClusterIP</code></td>
+</tr>
+<tr>
+<td align="left"><code>sharedDir</code></td>
+<td align="left">Path to be shared with kubelet container when deployed as a pod</td>
+<td align="left"><code>/var/lib/kubelet/plugins/kubernetes.io~storageos</code></td>
+</tr>
+<tr>
+<td align="left"><code>tlsEtcdSecretRefName</code></td>
+<td align="left">Secret containing etcd client certificates</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>tlsEtcdSecretRefNamespace</code></td>
+<td align="left">Namespace of the tlsEtcdSecretRefName</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><code>tolerations</code></td>
+<td align="left">Set pod tolerations for storageos pod placement</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 	
 		<style>
@@ -1572,7 +1733,7 @@
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 6, 2020: <a  href="https://github.com/google/docsy-example/commit/131b65ea3e2e4586868a5582651d9be4cae0c528">StorageOS Docs init (131b65e)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 20, 2020: <a  href="https://github.com/google/docsy-example/commit/905d87c16d0328477ae8116147e22ebb11ecdf58">Fix operator reference pages (905d87c)</a>
 </div>
 </div>
 

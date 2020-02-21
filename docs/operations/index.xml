@@ -39,9 +39,7 @@
 StorageOS CLI.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This functionality is only available when StorageOS is deployed with
-&lt;code&gt;KV_BACKEND=etcd&lt;/code&gt;, so the KV store is external to StorageOS. Please see the
-&lt;a href=&#34;https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-as-svc&#34;&gt;deploy etc-as-svc example for more information&lt;/a&gt;
-for more information.&lt;/p&gt;
+&lt;code&gt;KV_BACKEND=etcd&lt;/code&gt;, so the KV store is external to StorageOS.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;There are safeguards to make sure data is not lost unintentionally. Only nodes
 in state &lt;code&gt;Offline&lt;/code&gt; can be removed from the StorageOS cluster. Note that once
@@ -137,16 +135,16 @@ in the format &lt;code&gt;ns-key.{namespace}&lt;/code&gt;. A &lt;code&gt;vol-key
 volume. The vol-keys are named &lt;code&gt;vol-key.{volume-id}&lt;/code&gt;. The volume id can be
 retrieved by inspecting the volume.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;title: Find the PVC name
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Find the PVC name&lt;/span&gt;
 $ kubectl get pvc --show-labels
 NAME      STATUS   VOLUME                                     STORAGECLASS   AGE   LABELS
 pvc0002   Bound    pvc-1c68f013-40dd-11e9-91ad-0a57700a78b4   fast           10m   storageos.com/encryption&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;
 
-title: Inspect the volume and find the volume ID
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Inspect the volume and find the volume ID&lt;/span&gt;
 $ storageos volume inspect default/pvc-1c68f013-40dd-11e9-91ad-0a57700a78b4 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep -m1 id
         &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;4276fc07-7d85-70bf-35a0-f0b005e55e0f&amp;#34;&lt;/span&gt;,
 
-title: Find the secret &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; PVC pvc0002
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Find the secret for PVC pvc0002&lt;/span&gt;
 $ kubectl get secret vol-key.4276fc07-7d85-70bf-35a0-f0b005e55e0f
 NAME                                           TYPE     DATA   AGE
 vol-key.4276fc07-7d85-70bf-35a0-f0b005e55e0f   Opaque   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;      12m
@@ -188,7 +186,6 @@ establish
 rest of the nodes act as etcd clients, keeping consistency of the cluster by
 communicating with the etcd servers. Whether a StorageOS node acts as an etcd server
 or client cannot be changed once a StorageOS container has started.&lt;/p&gt;
-&lt;p&gt;  &lt;!-- this is a blank line --&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;It is recommended to use an external etcd cluster for production deployments&lt;/strong&gt;. To
 use an etcd cluster provisioned and maintained outside the scope of StorageOS,
 StorageOS will locate the etcd endpoint using environment variables. When
@@ -197,15 +194,6 @@ set in the &lt;a href=&#34;/docs/reference/cluster-operator/configuration&#34;&g
 chart can set the variables in the &lt;a href=&#34;https://github.com/storageos/charts/blob/master/stable/storageos/values.yaml&#34;&gt;values.yaml
 &lt;/a&gt;
 file.&lt;/p&gt;
-&lt;p&gt;Manual installations with the yaml manifests found in our &lt;code&gt;deploy&lt;/code&gt;
-&lt;a href=&#34;https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/standard&#34;&gt;repository&lt;/a&gt;
-requires that two specific environment variables are set in the
-&lt;a href=&#34;https://github.com/storageos/deploy/blob/master/k8s/deploy-storageos/standard/manifests/040_daemonset.yaml_template&#34;&gt;daemonset&lt;/a&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;KV_BACKEND&lt;/code&gt;: Set to &lt;code&gt;etcd&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;KV_ADDR&lt;/code&gt;: Comma separated list of etcd targets, in the form host[:port].&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;  &lt;!-- this is a blank line --&gt;&lt;/p&gt;
 &lt;p&gt;Etcd availability is mandatory for proper functioning of StorageOS. In
 particular, changes to the cluster; creation/deletion of volumes,
 adding/removing replicas e.g., require access to the etcd cluster. In the event
@@ -218,28 +206,26 @@ of its data. It is also important to keep the latency between StorageOS nodes
 and the etcd replicas low. Deploying an etcd cluster in a different data center
 or region can make StorageOS detect etcd nodes as unavailable because of latency.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;StorageOS cannot be held responsible for supporting an external etcd cluster.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;  &lt;!-- this is a blank line --&gt;&lt;/p&gt;
 &lt;h2 id=&#34;suggested-deployment-models&#34;&gt;Suggested Deployment Models&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Depending on the orchestrator used, methods of passing environment variables
 to StorageOS containers differ. The following examples work with both
 Kubernetes and Openshift.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;etcd-cluster-operator&#34;&gt;Etcd cluster-operator&lt;/h2&gt;
-&lt;p&gt;Etcd can be deployed in Kubernetes using the official &lt;a href=&#34;https://github.com/coreos/etcd-operator&#34;&gt;etcd-operator&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Examples of deploying etcd clusters using the etcd-operator on
-&lt;a href=&#34;https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-as-svc&#34;&gt;Kubernetes&lt;/a&gt;
-and
-&lt;a href=&#34;https://github.com/storageos/deploy/tree/master/openshift/deploy-storageos/etcd-as-svc&#34;&gt;OpenShift&lt;/a&gt;
-are available.&lt;/p&gt;
-&lt;p&gt;The official etcd-operator repository also has a backup deployment operator
-that can help backup etcd data. Make sure you take frequent backups of
-the etcd cluster as it holds all the StorageOS cluster metadata.&lt;/p&gt;
 &lt;h2 id=&#34;external-etcd&#34;&gt;External etcd&lt;/h2&gt;
 &lt;p&gt;To deploy StorageOS on a Kubernetes cluster using an etcd cluster running
 outside Kubernetes, you can look at the following
-&lt;a href=&#34;https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/external-etcd&#34;&gt;repository&lt;/a&gt;,
+&lt;a href=&#34;https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-helpers/etcd-ansible-systemd&#34;&gt;repository&lt;/a&gt;,
 where etcd endpoints are referenced using a Kubernetes external service.&lt;/p&gt;
+&lt;h2 id=&#34;etcd-cluster-operator&#34;&gt;Etcd cluster-operator&lt;/h2&gt;
+&lt;p&gt;Etcd can be deployed in Kubernetes using the official &lt;a href=&#34;https://github.com/coreos/etcd-operator&#34;&gt;etcd-operator&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Examples of deploying etcd clusters using the etcd-operator on &lt;a href=&#34;https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-helpers/etcd-operator-example&#34;&gt;Kubernetes&lt;/a&gt;
+and
+&lt;a href=&#34;https://github.com/storageos/deploy/tree/master/openshift/deploy-storageos/etcd-helpers/etcd-operator-example&#34;&gt;OpenShift&lt;/a&gt;
+are available.&lt;/p&gt;
+&lt;p&gt;The official etcd-operator repository also has a backup deployment operator
+that can help backup etcd data. Make sure you take frequent backups of the etcd
+cluster as it holds all the StorageOS cluster metadata.&lt;/p&gt;
 
       </description>
     </item>
@@ -407,7 +393,7 @@ xvda    202:0    0  128G  0 disk
 `-xvda1 202:1    0  128G  0 part /
 xvdf    202:80   0  100G  0 disk
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check StorageOS cluster&amp;rsquo;s available capacity.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;root@ip-172-20-58-239:~# storageos node ls --format=&amp;quot;table {{ &amp;quot;{{.Name&amp;quot;}}}}\t{{ &amp;quot;{{.Capacity&amp;quot;}}}}&amp;quot;
+&lt;pre&gt;&lt;code&gt;root@ip-172-20-58-239:~# storageos node ls --format=&amp;quot;table {{.Name}}\t{{.Capacity}}&amp;quot;
 NAME                                          TOTAL
 ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
 ip-172-20-58-239.eu-west-1.compute.internal   128.7GB
@@ -437,7 +423,7 @@ root@ip-172-20-58-239:~# mount /dev/xvdf /var/lib/storageos/data/dev2
 &lt;li&gt;
 &lt;p&gt;Verify available storage&lt;/p&gt;
 &lt;p&gt;In less than 30 seconds, StorageOS will see the new available capacity.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;root@ip-172-20-58-239:~# storageos node ls --format=&amp;quot;table {{ &amp;quot;{{.Name&amp;quot;}}}}\t{{ &amp;quot;{{.Capacity&amp;quot;}}}}&amp;quot;
+&lt;pre&gt;&lt;code&gt;root@ip-172-20-58-239:~# storageos node ls --format=&amp;quot;table {{.Name}}\t{{.Capacity}}&amp;quot;
 NAME                                          TOTAL
 ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
 ip-172-20-58-239.eu-west-1.compute.internal   227.3GB
@@ -473,7 +459,7 @@ xvdf             202:80   0  100G  0 disk
 `-storageos-data 254:0    0   99G  0 lvm  /var/lib/storageos
 xvdg             202:96   0  100G  0 disk
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check StorageOS cluster&amp;rsquo;s available capacity.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;root@ip-172-20-84-11:~# storageos node ls --format=&amp;quot;table {{ &amp;quot;{{.Name&amp;quot;}}}}\t{{ &amp;quot;{{.Capacity&amp;quot;}}}}&amp;quot;
+&lt;pre&gt;&lt;code&gt;root@ip-172-20-84-11:~# storageos node ls --format=&amp;quot;table {{.Name}}\t{{.Capacity}}&amp;quot;
 NAME                                          TOTAL
 ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
 ip-172-20-58-239.eu-west-1.compute.internal   128.7GB
@@ -514,7 +500,7 @@ The filesystem on /dev/storageos/data is now 51118080 (4k) blocks long.
 Filesystem                  Size  Used Avail Use% Mounted on
 /dev/mapper/storageos-data  192G   60M  183G   1% /var/lib/storageos
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;StorageOS available storage has increased too.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;root@ip-172-20-84-11:~# storageos node ls --format=&amp;quot;table {{ &amp;quot;{{.Name&amp;quot;}}}}\t{{ &amp;quot;{{.Capacity&amp;quot;}}}}&amp;quot;
+&lt;pre&gt;&lt;code&gt;root@ip-172-20-84-11:~# storageos node ls --format=&amp;quot;table {{.Name}}\t{{.Capacity}}&amp;quot;
 NAME                                          TOTAL
 ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
 ip-172-20-58-239.eu-west-1.compute.internal   128.7GB
@@ -1063,12 +1049,14 @@ stateful applications.&lt;/p&gt;
 &lt;p&gt;Execute the following instructions:&lt;/p&gt;
 &lt;p&gt;Prepare upgrade:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Prepare an etcd backup if using external etcd.&lt;/li&gt;
-&lt;li&gt;Optionally make sure all nodes have the new StorageOS image pulled, so the new
-containers will start promptly.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;
+&lt;p&gt;Prepare an etcd backup if using external etcd.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optionally make sure all nodes have the new StorageOS image pulled, so the new
+containers will start promptly.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;docker pull storageos/node:&lt;span style=&#34;color:#000&#34;&gt;$NEW_VERSION&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Downscale any applications using StorageOS volumes to 0.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1087,19 +1075,18 @@ disabled.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Execute the StorageOS Upgrade cluster helper&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;curl -Ls &lt;a href=&#34;https://raw.githubusercontent.com/storageos/deploy/master/k8s/deploy-storageos/upgrade-helper/prepare-upgrade.sh&#34;&gt;https://raw.githubusercontent.com/storageos/deploy/master/k8s/deploy-storageos/upgrade-helper/prepare-upgrade.sh&lt;/a&gt; -o prepare-upgrade.sh
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -Ls https://raw.githubusercontent.com/storageos/deploy/master/k8s/deploy-storageos/upgrade-helper/prepare-upgrade.sh -o prepare-upgrade.sh
 chmod +x ./prepare-upgrade.sh
 ./prepare-upgrade.sh
-```&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; The upgrade helper patches the StorageOS DaemonSet and sets the latest
-&amp;gt; version of the containers among other tasks.
-
-&amp;gt; The `prepare-upgrade.sh` script can be executed as many times as needed
-&amp;gt; to verify that your cluster is ready to be upgraded.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;The upgrade helper patches the StorageOS DaemonSet and sets the latest
+version of the containers among other tasks.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;prepare-upgrade.sh&lt;/code&gt; script can be executed as many times as needed
+to verify that your cluster is ready to be upgraded.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Delete StorageOS Pods.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n &lt;span style=&#34;color:#000&#34;&gt;$NAMESPACE&lt;/span&gt; delete pods --selector &lt;span style=&#34;color:#000&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;storageos,kind&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;daemonset
@@ -1147,49 +1134,52 @@ containers will start promptly (optional).&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Make sure that all volumes have at least one replica&lt;/p&gt;
-&lt;p&gt;{% raw %}&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Save what volumes had 0 replicas to restore to that state later&lt;/span&gt;
-$ storageos volume ls --format &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;table {{.Name}}\t{{.Replicas}}&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;0/0&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;{ print $1  }&amp;#39;&lt;/span&gt; &amp;gt; /var/tmp/volume-0-replicas.txt
+$ storageos volume ls --format &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;table {{.Name}}\t{{.Replicas}}&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;0/0&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;{ print $1  }&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;    &amp;gt; /var/tmp/volume-0-replicas.txt
 
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Update volumes to enable 1 replica&lt;/span&gt;
-$ storageos volume ls --format &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;table {{.Name}}\t{{.Replicas}}&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;0/0&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;{ print $1  }&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; xargs -I&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt; storageos volume update --label-add storageos.com/replicas&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;{% endraw %}&lt;/p&gt;
-&lt;/li&gt;
+$ storageos volume ls --format &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;table {{.Name}}\t{{.Replicas}}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;0/0&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;{ print $1  }&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; xargs -I&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt; storageos volume update --label-add storageos.com/replicas&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Wait until all replicas are synced (1/1)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;% raw %&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
-$ storageos volume ls --format &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;table {{.Name}}\t{{.Replicas}}&amp;#34;&lt;/span&gt; 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ storageos volume ls --format &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;table {{.Name}}\t{{.Replicas}}&amp;#34;&lt;/span&gt; 
 NAMESPACE/NAME                                      REPLICAS
 default/pvc-166ba271-e75c-11e8-8a20-0683b54ab438    0/1
 mysql/pvc-2b38b2e2-e75c-11e8-8a20-0683b54ab438      0/1
 postgress/pvc-3b39f530-e75c-11e8-8a20-0683b54ab438  0/1
 redis/pvc-8b8b37eb-e75d-11e8-8a20-0683b54ab438      0/1
 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;...&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+
 $ storageos volume ls --format &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;table {{.Name}}\t{{.Replicas}}&amp;#34;&lt;/span&gt; 
 NAMESPACE/NAME                                      REPLICAS
 default/pvc-166ba271-e75c-11e8-8a20-0683b54ab438    1/1
 mysql/pvc-2b38b2e2-e75c-11e8-8a20-0683b54ab438      1/1
 postgress/pvc-3b39f530-e75c-11e8-8a20-0683b54ab438  1/1
 redis/pvc-8b8b37eb-e75d-11e8-8a20-0683b54ab438      1/1
-&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;% endraw %&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Execute the upgrade:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Execute the StorageOS Upgrade cluster helper
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;curl -Ls &lt;a href=&#34;https://raw.githubusercontent.com/storageos/deploy/master/k8s/deploy-storageos/upgrade-helper/prepare-upgrade.sh&#34;&gt;https://raw.githubusercontent.com/storageos/deploy/master/k8s/deploy-storageos/upgrade-helper/prepare-upgrade.sh&lt;/a&gt; -o prepare-upgrade.sh
+&lt;li&gt;
+&lt;p&gt;Execute the StorageOS Upgrade cluster helper&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -Ls https://raw.githubusercontent.com/storageos/deploy/master/k8s/deploy-storageos/upgrade-helper/prepare-upgrade.sh -o prepare-upgrade.sh
 chmod +x ./prepare-upgrade.sh
 ./prepare-upgrade.sh
-```&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; The upgrade helper patches the StorageOS DaemonSet and sets the latest
-&amp;gt; version of the containers among other tasks.
-
-&amp;gt; The `prepare-upgrade.sh` script can be executed as many times as needed
-&amp;gt; to verify that your cluster is ready to be upgraded.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;The upgrade helper patches the StorageOS DaemonSet and sets the latest
+version of the containers among other tasks.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;code&gt;prepare-upgrade.sh&lt;/code&gt; script can be executed as many times as needed
+to verify that your cluster is ready to be upgraded.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Cordon and drain node&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Select what node is being manipulated&lt;/span&gt; 

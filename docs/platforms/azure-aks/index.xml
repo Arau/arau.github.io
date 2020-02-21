@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> – Azure</title>
+    <title> – AKS</title>
     <link>/docs/platforms/azure-aks/</link>
-    <description>Recent content in Azure on </description>
+    <description>Recent content in AKS on </description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/docs/platforms/azure-aks/index.xml" rel="self" type="application/rss+xml" />
@@ -29,8 +29,8 @@
 &lt;p&gt;Visit the &lt;a href=&#34;/docs/platforms/azure-aks/bestpractices/&#34;&gt;best practices page&lt;/a&gt; for production
 deployment advice.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt; 
-The StorageOS Cluster Operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;The StorageOS Cluster Operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
 application&lt;/a&gt;
 developed to deploy and configure StorageOS clusters, and assist with
 maintenance operations. We recommend its use for standard installations.&lt;/p&gt;
@@ -137,7 +137,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
 
       </description>
     </item>

@@ -32,7 +32,7 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
 The operator is a Kubernetes controller that watches the StorageOSCluster CRD. Once the controller is ready, a StorageOS cluster definition can be created. The operator will deploy a StorageOS cluster based on the configuration specified in the cluster definition.
  Helm Note: If you want to use Helm to install StorageOS, follow the StorageOS Operator Helm Chart documentation.">
 <meta itemprop="dateModified" content="2020-02-14T15:50:30&#43;00:00" />
-<meta itemprop="wordCount" content="499">
+<meta itemprop="wordCount" content="492">
 
 
 
@@ -60,7 +60,8 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
   integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Installing on OpenShift 3.10 | </title>
   </head>
@@ -103,7 +104,7 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -133,7 +134,7 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -379,61 +380,8 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall117" href="/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall116" href="/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall115" href="/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall114" href="/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall113" href="/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall112" href="/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall" href="/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -593,7 +541,7 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="docsplatformsazure-aks">
@@ -1477,7 +1425,6 @@ The operator is a Kubernetes controller that watches the StorageOSCluster CRD. O
 
 
 
-
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -1562,9 +1509,9 @@ documentation.</p>
 </ul>
 <h2 id="1-install-storageos-operator">1. Install StorageOS operator</h2>
 <p>Install the StorageOS operator using the following yaml manifest.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc create -f https://github.com/storageos/cluster-operator/releases/download/1.5.3/storageos-operator.yaml
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> create -f https://github.com/storageos/cluster-operator/releases/download/1.5.3/storageos-operator.yaml
 </code></pre></div><h3 id="verify-the-cluster-operator-pod-status">Verify the Cluster Operator Pod Status</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># oc -n storageos-operator get pod</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic">#  -n storageos-operator get pod</span>
 NAME                                         READY     STATUS    RESTARTS   AGE
 storageoscluster-operator-68678798ff-f28zw   1/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 </code></pre></div><blockquote>
@@ -1613,7 +1560,7 @@ metadata:
 spec:
   secretRefName: <span style="color:#4e9a06">&#34;storageos-api&#34;</span> <span style="color:#8f5902;font-style:italic"># Reference from the Secret created in the previous step</span>
   secretRefNamespace: <span style="color:#4e9a06">&#34;storageos-operator&#34;</span>  <span style="color:#8f5902;font-style:italic"># Namespace of the Secret</span>
-  k8sDistro: <span style="color:#4e9a06">&#34;openshift&#34;</span>
+  k8sDistro: <span style="color:#4e9a06">&#34;&#34;</span>
   images:
     nodeContainer: <span style="color:#4e9a06">&#34;storageos/node:1.5.3&#34;</span> <span style="color:#8f5902;font-style:italic"># StorageOS version</span>
   resources:
@@ -1635,7 +1582,7 @@ page.</p>
 store for StorageOS in the <a href="/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
 </blockquote>
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># oc -n storageos get pods -w</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic">#  -n storageos get pods -w</span>
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-daemonset-75f6c               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-czbqx               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
@@ -1645,7 +1592,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   <span style="color:#00
 </code></pre></div><blockquote>
 <p>The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.</p>
 </blockquote>
-<p>{% include operator/first-volume.md %}</p>
 
 	
 		<style>

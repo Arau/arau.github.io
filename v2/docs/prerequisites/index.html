@@ -47,7 +47,8 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Prerequisites | </title>
   </head>
@@ -344,61 +345,8 @@
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="v2docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall117" href="/v2/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall116" href="/v2/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall115" href="/v2/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall114" href="/v2/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall113" href="/v2/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall112" href="/v2/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall" href="/v2/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -558,7 +506,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="v2docsplatformsazure-aks">
@@ -1425,7 +1373,6 @@
 
 
 
-
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -1464,10 +1411,9 @@
 <ol>
 <li>Minimum two core with 4GB RAM.</li>
 <li>Linux with a 64-bit architecture.</li>
-<li>Docker 1.10 or later, with <a href="/v2/docs/prerequisites/mountpropagation/">mount propagation</a> enabled and preferably <code>CHANNEL=stable</code></li>
-<li>The necessary ports should be open. See the <a href="/v2/docs/prerequisites/firewalls/">ports and firewall settings</a></li>
-<li>A mechanism for [device presentation]({% link
-&ldquo;docs/prerequisites/systemconfiguration.md&rdquo; &gt;}})</li>
+<li>Docker 1.10 or later, with <a href="/v2/docs/prerequisites/mountpropagation/">mount propagation</a> enabled and preferably <code>CHANNEL=stable</code>.</li>
+<li>The necessary ports should be open. See the <a href="/v2/docs/prerequisites/firewalls/">ports and firewall settings</a>.</li>
+<li>A mechanism for <a href="/v2/docs/prerequisites/systemconfiguration/">device presentation</a>.</li>
 </ol>
 <h2 id="recommended">Recommended:</h2>
 <ol>
@@ -1487,18 +1433,6 @@ does help to more easily correlate logs across multiple nodes.</li>
     
     
     <hr class="panel-line">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
         
             
         
@@ -1860,7 +1794,7 @@ does help to more easily correlate logs across multiple nodes.</li>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/028cef0b615d286fee4c88aa2c03c02e87f67e88">&#39;include&#39; shortcode for shared content (028cef0)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 21, 2020: <a  href="https://github.com/google/docsy-example/commit/ca3fa41afd8e8311f2d4c9667ea146d641c8cca4">apply changes to second version test (ca3fa41)</a>
 </div>
 </div>
 

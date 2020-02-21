@@ -22,35 +22,103 @@
       <description>
         
         
-        &lt;p&gt;{% include platforms/openshift-install-4.x.md %}&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Installing on OpenShift 4.1</title>
-      <link>/docs/platforms/openshift/install/4.1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/platforms/openshift/install/4.1/</guid>
-      <description>
-        
-        
-        &lt;p&gt;{% include platforms/openshift-install-4.x.md %}&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Installing on OpenShift 3.11</title>
-      <link>/docs/platforms/openshift/install/3.11/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/platforms/openshift/install/3.11/</guid>
-      <description>
-        
-        
-        &lt;p&gt;The StorageOS Cluster Operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
+        &lt;blockquote&gt;
+&lt;p&gt;Make sure the
+&lt;a href=&#34;/docs/prerequisites/overview&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+satisfied before proceeding.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you have installed OpenShift 4.2 in AWS ensure that the
+requisite ports are opened for the worker nodes&amp;rsquo; security group.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Installing StorageOS on OpenShift 4.2 has fewer prerequisites
+as compared to previous OpenShift 3.x versions.&lt;/p&gt;
+&lt;p&gt;The recommended way to run StorageOS on OpenShift 4.2 is to
+deploy the StorageOS Cluster Operator using the OperatorHub and bootstrap
+StorageOS using a Custom Resource.&lt;/p&gt;
+&lt;p&gt;Options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#operatorhub-install&#34;&gt;OperatorHub (Recommended)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#manual-install&#34;&gt;Manual install&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;operatorhub-install&#34;&gt;OperatorHub install&lt;/h2&gt;
+&lt;p&gt;StorageOS has a RedHat OpenShift certified operator in the OpenShift
+OperatorHub. You can install the StorageOS operator through the OperatorHub.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Select the &lt;code&gt;OperatorHub&lt;/code&gt; from the Catalog sub menu and search for StorageOS&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/operatorhub.png&#34; alt=&#34;install-1&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select StorageOS and click install&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/install-storageos-operator.png&#34; alt=&#34;install-2&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create the Operator subscription by clicking subscribe&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/create-operator-subscription.png&#34; alt=&#34;install-3&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wait until the Upgrade Status shows 1 installed&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/install-complete.png&#34; alt=&#34;install-4&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a secret containing an &lt;code&gt;apiUsername&lt;/code&gt; and an &lt;code&gt;apiPassword&lt;/code&gt; key. The
+username and password defined in the secret will be used to authenticate
+when using the StorageOS CLI and GUI. Take note of which project you created
+the secret in.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/create-secret.png&#34; alt=&#34;install-5&#34;&gt;
+ 
+&lt;img src=&#34;/images/openshift4/secret-inputs.png&#34; alt=&#34;install-6&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to &lt;code&gt;Installed Operators&lt;/code&gt; and select the StorageOS operator. Select
+StorageOS Cluster and create a StorageOS cluster.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/create-stos.png&#34; alt=&#34;install-7&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The StorageOS cluster resource describes the StorageOS cluster that will be
+created. The &lt;code&gt;secretRefName&lt;/code&gt; and &lt;code&gt;secretRefNamespace&lt;/code&gt; should reference the secret
+containing the &lt;code&gt;apiUsername&lt;/code&gt; and &lt;code&gt;apiPassword&lt;/code&gt; that was previously created.&lt;/p&gt;
+&lt;p&gt;Additional &lt;code&gt;spec&lt;/code&gt; parameters are available on the &lt;a href=&#34;/docs/reference/cluster-operator/configuration&#34;&gt;Cluster Operator
+configuration&lt;/a&gt; page.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; apiVersion: storageos.com/v1
+ kind: StorageOSCluster
+ metadata:
+   name: storageos
+   namespace: openshift-operators
+ spec:
+   secretRefName: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Reference the Secret created in the previous step&lt;/span&gt;
+   secretRefNamespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift-operators&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace of the Secret created in the previous step&lt;/span&gt;
+   namespace: kube-system
+   csi:
+     enable: &lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;
+     deploymentStrategy: deployment
+   resources:
+     requests:
+     memory: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;512Mi&amp;#34;&lt;/span&gt;
+   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;/images/openshift4/stos-specs.png&#34; alt=&#34;install-8&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verify that the StorageOS Resource enters a running state.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/stos-running.png&#34; alt=&#34;install-9&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;{% include platforms/openshift4-selinux.md %}&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt; 
+If this is your first installation you may wish to follow the &lt;a href=&#34;/docs/platforms/openshift/firstvolume/&#34;&gt;StorageOS
+Volume guide&lt;/a&gt; for an example of how
+to mount a StorageOS volume in a Pod.&lt;/p&gt;
+&lt;h2 id=&#34;manual-install&#34;&gt;Manual install&lt;/h2&gt;
+&lt;p&gt;This installation procedure is available in case of the default method is not
+suited to your requirements. The following procedure requires a higher
+number of actions to fulfil the installation of the StorageOS cluster in
+comparison with the default procedure. There is also a higher number of
+configuration parameters to be tuned.&lt;/p&gt;
+&lt;p&gt;The StorageOS Cluster Operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
 application&lt;/a&gt;
 developed to deploy and configure StorageOS clusters, and assist with
 maintenance operations. We recommend its use for standard installations.&lt;/p&gt;
@@ -68,6 +136,7 @@ documentation.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;#1-install-storageos-operator&#34;&gt;Install StorageOS Operator&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#2-create-a-secret&#34;&gt;Create a Secret for default username and password&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#3-trigger-a-storageos-installation&#34;&gt;Trigger bootstrap using a CustomResource&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-set-selinux-permissions&#34;&gt;Set SELinux Permissions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
 &lt;p&gt;Install the StorageOS operator using the following yaml manifest.&lt;/p&gt;
@@ -154,7 +223,347 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
+&lt;h2 id=&#34;4-set-selinux-permissions&#34;&gt;4. Set SELinux Permissions&lt;/h2&gt;
+&lt;p&gt;The StorageOS CSI helper needs to mount a CSI Socket into the container so
+on each node add the &lt;code&gt;svirt_sandbox_file_t&lt;/code&gt; flag to the CSI socket directory
+and CSI socket.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chcon -Rt svirt_sandbox_file_t /var/lib/kubelet/plugins_registry/storageos
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Installing on OpenShift 4.1</title>
+      <link>/docs/platforms/openshift/install/4.1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/openshift/install/4.1/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;Make sure the
+&lt;a href=&#34;/docs/prerequisites/overview&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+satisfied before proceeding.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you have installed OpenShift 4.1 in AWS ensure that the
+requisite ports are opened for the worker nodes&amp;rsquo; security group.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Installing StorageOS on OpenShift 4.1 has fewer prerequisites
+as compared to previous OpenShift 3.x versions.&lt;/p&gt;
+&lt;p&gt;The recommended way to run StorageOS on OpenShift 4.1 is to
+deploy the StorageOS Cluster Operator using the OperatorHub and bootstrap
+StorageOS using a Custom Resource.&lt;/p&gt;
+&lt;p&gt;Options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#operatorhub-install&#34;&gt;OperatorHub (Recommended)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#manual-install&#34;&gt;Manual install&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;operatorhub-install&#34;&gt;OperatorHub install&lt;/h2&gt;
+&lt;p&gt;StorageOS has a RedHat OpenShift certified operator in the OpenShift
+OperatorHub. You can install the StorageOS operator through the OperatorHub.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Select the &lt;code&gt;OperatorHub&lt;/code&gt; from the Catalog sub menu and search for StorageOS&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/operatorhub.png&#34; alt=&#34;install-1&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select StorageOS and click install&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/install-storageos-operator.png&#34; alt=&#34;install-2&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create the Operator subscription by clicking subscribe&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/create-operator-subscription.png&#34; alt=&#34;install-3&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wait until the Upgrade Status shows 1 installed&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/install-complete.png&#34; alt=&#34;install-4&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a secret containing an &lt;code&gt;apiUsername&lt;/code&gt; and an &lt;code&gt;apiPassword&lt;/code&gt; key. The
+username and password defined in the secret will be used to authenticate
+when using the StorageOS CLI and GUI. Take note of which project you created
+the secret in.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/create-secret.png&#34; alt=&#34;install-5&#34;&gt;
+ 
+&lt;img src=&#34;/images/openshift4/secret-inputs.png&#34; alt=&#34;install-6&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to &lt;code&gt;Installed Operators&lt;/code&gt; and select the StorageOS operator. Select
+StorageOS Cluster and create a StorageOS cluster.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/create-stos.png&#34; alt=&#34;install-7&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The StorageOS cluster resource describes the StorageOS cluster that will be
+created. The &lt;code&gt;secretRefName&lt;/code&gt; and &lt;code&gt;secretRefNamespace&lt;/code&gt; should reference the secret
+containing the &lt;code&gt;apiUsername&lt;/code&gt; and &lt;code&gt;apiPassword&lt;/code&gt; that was previously created.&lt;/p&gt;
+&lt;p&gt;Additional &lt;code&gt;spec&lt;/code&gt; parameters are available on the &lt;a href=&#34;/docs/reference/cluster-operator/configuration&#34;&gt;Cluster Operator
+configuration&lt;/a&gt; page.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; apiVersion: storageos.com/v1
+ kind: StorageOSCluster
+ metadata:
+   name: storageos
+   namespace: openshift-operators
+ spec:
+   secretRefName: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Reference the Secret created in the previous step&lt;/span&gt;
+   secretRefNamespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift-operators&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace of the Secret created in the previous step&lt;/span&gt;
+   namespace: kube-system
+   csi:
+     enable: &lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;
+     deploymentStrategy: deployment
+   resources:
+     requests:
+     memory: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;512Mi&amp;#34;&lt;/span&gt;
+   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;/images/openshift4/stos-specs.png&#34; alt=&#34;install-8&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verify that the StorageOS Resource enters a running state.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/openshift4/stos-running.png&#34; alt=&#34;install-9&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;{% include platforms/openshift4-selinux.md %}&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt; 
+If this is your first installation you may wish to follow the &lt;a href=&#34;/docs/platforms/openshift/firstvolume/&#34;&gt;StorageOS
+Volume guide&lt;/a&gt; for an example of how
+to mount a StorageOS volume in a Pod.&lt;/p&gt;
+&lt;h2 id=&#34;manual-install&#34;&gt;Manual install&lt;/h2&gt;
+&lt;p&gt;This installation procedure is available in case of the default method is not
+suited to your requirements. The following procedure requires a higher
+number of actions to fulfil the installation of the StorageOS cluster in
+comparison with the default procedure. There is also a higher number of
+configuration parameters to be tuned.&lt;/p&gt;
+&lt;p&gt;The StorageOS Cluster Operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
+application&lt;/a&gt;
+developed to deploy and configure StorageOS clusters, and assist with
+maintenance operations. We recommend its use for standard installations.&lt;/p&gt;
+&lt;p&gt;The operator is a Kubernetes controller that watches the &lt;code&gt;StorageOSCluster&lt;/code&gt;
+CRD. Once the controller is ready, a StorageOS cluster definition can be
+created. The operator will deploy a StorageOS cluster based on the
+configuration specified in the cluster definition.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Helm Note:&lt;/strong&gt; If you want to use &lt;a href=&#34;https://helm.sh/docs/&#34;&gt;Helm&lt;/a&gt; to install StorageOS, follow
+the &lt;a href=&#34;https://github.com/storageos/charts/tree/master/stable/storageos-operator#installing-the-chart&#34;&gt;StorageOS Operator Helm
+Chart&lt;/a&gt;
+documentation.&lt;/p&gt;
+&lt;h2 id=&#34;__steps-to-install-storageos__&#34;&gt;&lt;strong&gt;Steps to install StorageOS:&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-install-storageos-operator&#34;&gt;Install StorageOS Operator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-create-a-secret&#34;&gt;Create a Secret for default username and password&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-trigger-a-storageos-installation&#34;&gt;Trigger bootstrap using a CustomResource&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-set-selinux-permissions&#34;&gt;Set SELinux Permissions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
+&lt;p&gt;Install the StorageOS operator using the following yaml manifest.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;oc create -f https://github.com/storageos/cluster-operator/releases/download/1.5.3/storageos-operator.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# oc -n storageos-operator get pod&lt;/span&gt;
+NAME                                         READY     STATUS    RESTARTS   AGE
+storageoscluster-operator-68678798ff-f28zw   1/1       Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;The READY 1/1 indicates that &lt;code&gt;storageoscluster&lt;/code&gt; resources can be created.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;2-create-a-secret&#34;&gt;2. Create a Secret&lt;/h2&gt;
+&lt;p&gt;Before deploying a StorageOS cluster, create a Secret defining the StorageOS
+API Username and Password in base64 encoding.&lt;/p&gt;
+&lt;p&gt;The API username and password are used to create the default StorageOS admin
+account which can be used with the StorageOS CLI and to login to the StorageOS
+GUI. The account defined in the secret is also used by Kubernetes to
+authenticate against the StorageOS API when installing with the native driver.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apiVersion: v1
+kind: Secret
+metadata:
+  name: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt;
+  namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;
+  labels:
+    app: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos&amp;#34;&lt;/span&gt;
+type: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kubernetes.io/storageos&amp;#34;&lt;/span&gt;
+data:
+  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# echo -n &amp;#39;&amp;lt;secret&amp;gt;&amp;#39; | base64&lt;/span&gt;
+  apiUsername: c3RvcmFnZW9z
+  apiPassword: c3RvcmFnZW9z
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This example contains a default password, for production installations, use a
+unique, strong password.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can define a base64 value by &lt;code&gt;echo -n &amp;quot;mystring&amp;quot; | base64&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Make sure that the encoding of the credentials doesn&amp;rsquo;t have special characters such as &amp;lsquo;\n&amp;rsquo;.
+The &lt;code&gt;echo -n&lt;/code&gt; ensures that a trailing new line is not appended to the string.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
+Users&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3-trigger-a-storageos-installation&#34;&gt;3 Trigger a StorageOS installation&lt;/h2&gt;
+&lt;p&gt;This is a Cluster Definition example.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apiVersion: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos.com/v1&amp;#34;&lt;/span&gt;
+kind: StorageOSCluster
+metadata:
+  name: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;example-storageos&amp;#34;&lt;/span&gt;
+  namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;
+spec:
+  secretRefName: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Reference from the Secret created in the previous step&lt;/span&gt;
+  secretRefNamespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace of the Secret&lt;/span&gt;
+  k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift&amp;#34;&lt;/span&gt;
+  images:
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:1.5.3&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+  resources:
+    requests:
+    memory: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;512Mi&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#  nodeSelectorTerms:&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#    - matchExpressions:&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#      - key: &amp;#34;node-role.kubernetes.io/worker&amp;#34; # Compute node label will vary according to your installation&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#        operator: In&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#        values:&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#        - &amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Additional &lt;code&gt;spec&lt;/code&gt; parameters are available on the &lt;a href=&#34;/docs/reference/cluster-operator/configuration/&#34;&gt;Cluster Operator
+configuration&lt;/a&gt;
+page.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can find more examples such as deployments referencing a external etcd kv
+store for StorageOS in the &lt;a href=&#34;/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# oc -n storageos get pods -w&lt;/span&gt;
+NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+storageos-daemonset-czbqx               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+storageos-daemonset-zv4tq               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;          3m
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;4-set-selinux-permissions&#34;&gt;4. Set SELinux Permissions&lt;/h2&gt;
+&lt;p&gt;The StorageOS CSI helper needs to mount a CSI Socket into the container so
+on each node add the &lt;code&gt;svirt_sandbox_file_t&lt;/code&gt; flag to the CSI socket directory
+and CSI socket.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chcon -Rt svirt_sandbox_file_t /var/lib/kubelet/plugins_registry/storageos
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Installing on OpenShift 3.11</title>
+      <link>/docs/platforms/openshift/install/3.11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/platforms/openshift/install/3.11/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The StorageOS Cluster Operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
+application&lt;/a&gt;
+developed to deploy and configure StorageOS clusters, and assist with
+maintenance operations. We recommend its use for standard installations.&lt;/p&gt;
+&lt;p&gt;The operator is a Kubernetes controller that watches the &lt;code&gt;StorageOSCluster&lt;/code&gt;
+CRD. Once the controller is ready, a StorageOS cluster definition can be
+created. The operator will deploy a StorageOS cluster based on the
+configuration specified in the cluster definition.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Helm Note:&lt;/strong&gt; If you want to use &lt;a href=&#34;https://helm.sh/docs/&#34;&gt;Helm&lt;/a&gt; to install StorageOS, follow
+the &lt;a href=&#34;https://github.com/storageos/charts/tree/master/stable/storageos-operator#installing-the-chart&#34;&gt;StorageOS Operator Helm
+Chart&lt;/a&gt;
+documentation.&lt;/p&gt;
+&lt;h2 id=&#34;__steps-to-install-storageos__&#34;&gt;&lt;strong&gt;Steps to install StorageOS:&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-install-storageos-operator&#34;&gt;Install StorageOS Operator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-create-a-secret&#34;&gt;Create a Secret for default username and password&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-trigger-a-storageos-installation&#34;&gt;Trigger bootstrap using a CustomResource&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
+&lt;p&gt;Install the StorageOS operator using the following yaml manifest.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; create -f https://github.com/storageos/cluster-operator/releases/download/1.5.3/storageos-operator.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#  -n storageos-operator get pod&lt;/span&gt;
+NAME                                         READY     STATUS    RESTARTS   AGE
+storageoscluster-operator-68678798ff-f28zw   1/1       Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;The READY 1/1 indicates that &lt;code&gt;storageoscluster&lt;/code&gt; resources can be created.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;2-create-a-secret&#34;&gt;2. Create a Secret&lt;/h2&gt;
+&lt;p&gt;Before deploying a StorageOS cluster, create a Secret defining the StorageOS
+API Username and Password in base64 encoding.&lt;/p&gt;
+&lt;p&gt;The API username and password are used to create the default StorageOS admin
+account which can be used with the StorageOS CLI and to login to the StorageOS
+GUI. The account defined in the secret is also used by Kubernetes to
+authenticate against the StorageOS API when installing with the native driver.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apiVersion: v1
+kind: Secret
+metadata:
+  name: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt;
+  namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;
+  labels:
+    app: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos&amp;#34;&lt;/span&gt;
+type: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kubernetes.io/storageos&amp;#34;&lt;/span&gt;
+data:
+  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# echo -n &amp;#39;&amp;lt;secret&amp;gt;&amp;#39; | base64&lt;/span&gt;
+  apiUsername: c3RvcmFnZW9z
+  apiPassword: c3RvcmFnZW9z
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This example contains a default password, for production installations, use a
+unique, strong password.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can define a base64 value by &lt;code&gt;echo -n &amp;quot;mystring&amp;quot; | base64&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Make sure that the encoding of the credentials doesn&amp;rsquo;t have special characters such as &amp;lsquo;\n&amp;rsquo;.
+The &lt;code&gt;echo -n&lt;/code&gt; ensures that a trailing new line is not appended to the string.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
+Users&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3-trigger-a-storageos-installation&#34;&gt;3 Trigger a StorageOS installation&lt;/h2&gt;
+&lt;p&gt;This is a Cluster Definition example.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apiVersion: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos.com/v1&amp;#34;&lt;/span&gt;
+kind: StorageOSCluster
+metadata:
+  name: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;example-storageos&amp;#34;&lt;/span&gt;
+  namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;
+spec:
+  secretRefName: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Reference from the Secret created in the previous step&lt;/span&gt;
+  secretRefNamespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace of the Secret&lt;/span&gt;
+  k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+  images:
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:1.5.3&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+  resources:
+    requests:
+    memory: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;512Mi&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#  nodeSelectorTerms:&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#    - matchExpressions:&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#      - key: &amp;#34;node-role.kubernetes.io/worker&amp;#34; # Compute node label will vary according to your installation&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#        operator: In&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#        values:&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#        - &amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Additional &lt;code&gt;spec&lt;/code&gt; parameters are available on the &lt;a href=&#34;/docs/reference/cluster-operator/configuration/&#34;&gt;Cluster Operator
+configuration&lt;/a&gt;
+page.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can find more examples such as deployments referencing a external etcd kv
+store for StorageOS in the &lt;a href=&#34;/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#  -n storageos get pods -w&lt;/span&gt;
+NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+storageos-daemonset-czbqx               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+storageos-daemonset-zv4tq               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
+storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;6&lt;/span&gt;          3m
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.&lt;/p&gt;
+&lt;/blockquote&gt;
 
       </description>
     </item>
@@ -189,9 +598,9 @@ documentation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
 &lt;p&gt;Install the StorageOS operator using the following yaml manifest.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;oc create -f https://github.com/storageos/cluster-operator/releases/download/1.5.3/storageos-operator.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; create -f https://github.com/storageos/cluster-operator/releases/download/1.5.3/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# oc -n storageos-operator get pod&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#  -n storageos-operator get pod&lt;/span&gt;
 NAME                                         READY     STATUS    RESTARTS   AGE
 storageoscluster-operator-68678798ff-f28zw   1/1       Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
@@ -240,7 +649,7 @@ metadata:
 spec:
   secretRefName: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Reference from the Secret created in the previous step&lt;/span&gt;
   secretRefNamespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace of the Secret&lt;/span&gt;
-  k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift&amp;#34;&lt;/span&gt;
+  k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
   images:
     nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:1.5.3&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   resources:
@@ -262,7 +671,7 @@ page.&lt;/p&gt;
 store for StorageOS in the &lt;a href=&#34;/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# oc -n storageos get pods -w&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#  -n storageos get pods -w&lt;/span&gt;
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 storageos-daemonset-czbqx               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
@@ -272,7 +681,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
 
       </description>
     </item>
@@ -307,9 +715,9 @@ documentation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
 &lt;p&gt;Install the StorageOS operator using the following yaml manifest.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;oc create -f https://github.com/storageos/cluster-operator/releases/download/1.5.3/storageos-operator.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; create -f https://github.com/storageos/cluster-operator/releases/download/1.5.3/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# oc -n storageos-operator get pod&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#  -n storageos-operator get pod&lt;/span&gt;
 NAME                                         READY     STATUS    RESTARTS   AGE
 storageoscluster-operator-68678798ff-f28zw   1/1       Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
@@ -358,7 +766,7 @@ metadata:
 spec:
   secretRefName: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Reference from the Secret created in the previous step&lt;/span&gt;
   secretRefNamespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace of the Secret&lt;/span&gt;
-  k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift&amp;#34;&lt;/span&gt;
+  k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
   images:
     nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:1.5.3&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   resources:
@@ -380,7 +788,7 @@ page.&lt;/p&gt;
 store for StorageOS in the &lt;a href=&#34;/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# oc -n storageos get pods -w&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#  -n storageos get pods -w&lt;/span&gt;
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 storageos-daemonset-czbqx               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
@@ -390,7 +798,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
 
       </description>
     </item>

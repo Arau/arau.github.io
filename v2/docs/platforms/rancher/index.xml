@@ -22,11 +22,7 @@
       <description>
         
         
-        &lt;p&gt;This section of documentation covers use of the
-&lt;a href=&#34;https://www.rancher.com/&#34;&gt;Rancher&lt;/a&gt; orchestrator as a Kubernetes provisioner.&lt;/p&gt;
-&lt;p&gt;{% include platforms/kubernetes-with-storageos.md %}
-{% include platforms/csi-note.md %}&lt;/p&gt;
-
+        
       </description>
     </item>
     

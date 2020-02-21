@@ -397,7 +397,7 @@ multiple projects.&lt;/p&gt;
 &lt;p&gt;It is not necessary to create StorageOS namespaces manually, as StorageOS maps
 Kubernetes namespaces on a one-to-one basis when PersistentVolumeClaims using
 the StorageOS StorageClass are created.&lt;/p&gt;
-&lt;p&gt;Access to Namespaces is controlled through user or group level &lt;a href=&#34;/docs/concepts/policies/&#34;&gt;policies&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Access to Namespaces is controlled through user or group level &lt;a href=&#34;/docs/concepts/policies/&#34;&gt;policies&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
@@ -436,7 +436,7 @@ to the namespace.&lt;/p&gt;
 &lt;p&gt;Note: Users always have access to the default namespace&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;For more information on how to use policies, see the
-&lt;a href=&#34;/docs/operations/policies/&#34;&gt;Policies operations&lt;/a&gt; page&lt;/p&gt;
+&lt;a href=&#34;/docs/operations/policies/&#34;&gt;Policies operations&lt;/a&gt; page.&lt;/p&gt;
 
       </description>
     </item>
@@ -599,8 +599,7 @@ compression defined on the volume.&lt;/p&gt;
 node. In situations where &lt;a href=&#34;/docs/operations/overcommitment/&#34;&gt;overcommit&lt;/a&gt; is applied, a scaling factor is applied when determining whether to place a
 volume on a node.&lt;/p&gt;
 &lt;p&gt;We present various metrics regarding StorageOS volumes, including used capacity
-and throughput, via our [Prometheus Endpoint]({% link
-&amp;ldquo;docs/reference/prometheus.md&amp;rdquo; &amp;gt;}}).&lt;/p&gt;
+and throughput, via our &lt;a href=&#34;/docs/reference/prometheus/&#34;&gt;Prometheus Endpoint&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>

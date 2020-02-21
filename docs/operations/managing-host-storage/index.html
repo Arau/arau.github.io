@@ -26,13 +26,13 @@ In order to mitigate against problems caused by filling the host root disk, we r
 Extending Available Storage StorageOS uses subdirectories of /var/lib/storageos/data to hold user data. By default, the directory /var/lib/storageos/data/dev1 will be created when a node is bootstrapped, and used for pool data." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/operations/managing-host-storage/" />
-<meta property="article:modified_time" content="2020-02-06T15:46:42+00:00" />
+<meta property="article:modified_time" content="2020-02-20T14:07:24+00:00" />
 <meta itemprop="name" content="Managing Host Storage">
 <meta itemprop="description" content="StorageOS uses the storage available on the nodes where it is installed to present as available for volumes.
 In order to mitigate against problems caused by filling the host root disk, we recommend mounting a separate device into the /var/lib/storageos directory. StorageOS is agnostic to the type of filesystem mounted in /var/lib/storageos.
 Extending Available Storage StorageOS uses subdirectories of /var/lib/storageos/data to hold user data. By default, the directory /var/lib/storageos/data/dev1 will be created when a node is bootstrapped, and used for pool data.">
-<meta itemprop="dateModified" content="2020-02-06T15:46:42&#43;00:00" />
-<meta itemprop="wordCount" content="793">
+<meta itemprop="dateModified" content="2020-02-20T14:07:24&#43;00:00" />
+<meta itemprop="wordCount" content="785">
 
 
 
@@ -60,7 +60,8 @@ Extending Available Storage StorageOS uses subdirectories of /var/lib/storageos/
   integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Managing Host Storage | </title>
   </head>
@@ -103,7 +104,7 @@ Extending Available Storage StorageOS uses subdirectories of /var/lib/storageos/
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -133,7 +134,7 @@ Extending Available Storage StorageOS uses subdirectories of /var/lib/storageos/
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8d0ab3a109087660016fa6e49dbb7f4ef0690016561f1e5f8c65e2d6f70cf2a9a62b45b64df2ffbe24fb39b8f34b5dd46c3c74574b5762d2db9909f3c852d65a.json"
+  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
   data-offline-search-base-href="/"
 >
 
@@ -379,61 +380,8 @@ Extending Available Storage StorageOS uses subdirectories of /var/lib/storageos/
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall117" href="/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall116" href="/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall115" href="/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall114" href="/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall113" href="/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall112" href="/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall" href="/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -593,7 +541,7 @@ Extending Available Storage StorageOS uses subdirectories of /var/lib/storageos/
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="docsplatformsazure-aks">
@@ -956,10 +904,10 @@ Extending Available Storage StorageOS uses subdirectories of /var/lib/storageos/
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">ETCD</a>
+    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">ETCD</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsoperationsexternal-etcd">
+    <li class="collapse " id="docsoperationsexternal-etcd">
       
       
       
@@ -1015,10 +963,10 @@ Extending Available Storage StorageOS uses subdirectories of /var/lib/storageos/
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/monitoring/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Monitoring</a>
+    <a  href="/docs/operations/monitoring/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Monitoring</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsoperationsmonitoring">
+    <li class="collapse " id="docsoperationsmonitoring">
       
       
       
@@ -1468,7 +1416,6 @@ Extending Available Storage StorageOS uses subdirectories of /var/lib/storageos/
 
 
 
-
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -1553,7 +1500,7 @@ xvda    202:0    0  128G  0 disk
 `-xvda1 202:1    0  128G  0 part /
 xvdf    202:80   0  100G  0 disk
 </code></pre><p>Check StorageOS cluster&rsquo;s available capacity.</p>
-<pre><code>root@ip-172-20-58-239:~# storageos node ls --format=&quot;table {{ &quot;{{.Name&quot;}}}}\t{{ &quot;{{.Capacity&quot;}}}}&quot;
+<pre><code>root@ip-172-20-58-239:~# storageos node ls --format=&quot;table {{.Name}}\t{{.Capacity}}&quot;
 NAME                                          TOTAL
 ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
 ip-172-20-58-239.eu-west-1.compute.internal   128.7GB
@@ -1583,7 +1530,7 @@ root@ip-172-20-58-239:~# mount /dev/xvdf /var/lib/storageos/data/dev2
 <li>
 <p>Verify available storage</p>
 <p>In less than 30 seconds, StorageOS will see the new available capacity.</p>
-<pre><code>root@ip-172-20-58-239:~# storageos node ls --format=&quot;table {{ &quot;{{.Name&quot;}}}}\t{{ &quot;{{.Capacity&quot;}}}}&quot;
+<pre><code>root@ip-172-20-58-239:~# storageos node ls --format=&quot;table {{.Name}}\t{{.Capacity}}&quot;
 NAME                                          TOTAL
 ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
 ip-172-20-58-239.eu-west-1.compute.internal   227.3GB
@@ -1619,7 +1566,7 @@ xvdf             202:80   0  100G  0 disk
 `-storageos-data 254:0    0   99G  0 lvm  /var/lib/storageos
 xvdg             202:96   0  100G  0 disk
 </code></pre><p>Check StorageOS cluster&rsquo;s available capacity.</p>
-<pre><code>root@ip-172-20-84-11:~# storageos node ls --format=&quot;table {{ &quot;{{.Name&quot;}}}}\t{{ &quot;{{.Capacity&quot;}}}}&quot;
+<pre><code>root@ip-172-20-84-11:~# storageos node ls --format=&quot;table {{.Name}}\t{{.Capacity}}&quot;
 NAME                                          TOTAL
 ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
 ip-172-20-58-239.eu-west-1.compute.internal   128.7GB
@@ -1660,7 +1607,7 @@ The filesystem on /dev/storageos/data is now 51118080 (4k) blocks long.
 Filesystem                  Size  Used Avail Use% Mounted on
 /dev/mapper/storageos-data  192G   60M  183G   1% /var/lib/storageos
 </code></pre><p>StorageOS available storage has increased too.</p>
-<pre><code>root@ip-172-20-84-11:~# storageos node ls --format=&quot;table {{ &quot;{{.Name&quot;}}}}\t{{ &quot;{{.Capacity&quot;}}}}&quot;
+<pre><code>root@ip-172-20-84-11:~# storageos node ls --format=&quot;table {{.Name}}\t{{.Capacity}}&quot;
 NAME                                          TOTAL
 ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
 ip-172-20-58-239.eu-west-1.compute.internal   128.7GB
@@ -1734,7 +1681,7 @@ ip-172-20-84-11.eu-west-1.compute.internal    201GB # --&gt; 100G more available
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 6, 2020: <a  href="https://github.com/google/docsy-example/commit/131b65ea3e2e4586868a5582651d9be4cae0c528">StorageOS Docs init (131b65e)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 20, 2020: <a  href="https://github.com/google/docsy-example/commit/baa682142ba1d9932cdbd48c4fbeabe20fe9d8d5">Fix CLI formatting output (baa6821)</a>
 </div>
 </div>
 

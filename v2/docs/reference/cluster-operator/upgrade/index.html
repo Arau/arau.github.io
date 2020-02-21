@@ -21,23 +21,23 @@
 <link rel="icon" type="image/png" href="/v2/favicons/android-192x192.png" sizes="192x192">
 
 <title>Cluster Operator Upgrade | </title><meta property="og:title" content="Cluster Operator Upgrade" />
-<meta property="og:description" content="{% include operator/upgrade-uber-yaml.md %}
-{% include operator/upgrade-helm.md %}" />
+<meta property="og:description" content="Upgrade StorageOS operator from yaml manifest Upgrade the StorageOS operator using the following yaml manifest.
+kubectl apply -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml  When you run the above command StorageOS Operator resources will be updated. Since, the Update Strategy of the StorageOS Operator Deployment is set to rolling update, a new StorageOS Operator Pod will be created. Only when the new Pod enters the Running Phase will the old Pod be deleted. Your StorageOS Cluster will not be affected while the StorageOS Operator is upgrading." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/v2/docs/reference/cluster-operator/upgrade/" />
-<meta property="article:modified_time" content="2020-02-07T17:01:25+00:00" />
+<meta property="article:modified_time" content="2020-02-21T12:03:52+00:00" />
 <meta itemprop="name" content="Cluster Operator Upgrade">
-<meta itemprop="description" content="{% include operator/upgrade-uber-yaml.md %}
-{% include operator/upgrade-helm.md %}">
-<meta itemprop="dateModified" content="2020-02-07T17:01:25&#43;00:00" />
-<meta itemprop="wordCount" content="8">
+<meta itemprop="description" content="Upgrade StorageOS operator from yaml manifest Upgrade the StorageOS operator using the following yaml manifest.
+kubectl apply -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml  When you run the above command StorageOS Operator resources will be updated. Since, the Update Strategy of the StorageOS Operator Deployment is set to rolling update, a new StorageOS Operator Pod will be created. Only when the new Pod enters the Running Phase will the old Pod be deleted. Your StorageOS Cluster will not be affected while the StorageOS Operator is upgrading.">
+<meta itemprop="dateModified" content="2020-02-21T12:03:52&#43;00:00" />
+<meta itemprop="wordCount" content="194">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cluster Operator Upgrade"/>
-<meta name="twitter:description" content="{% include operator/upgrade-uber-yaml.md %}
-{% include operator/upgrade-helm.md %}"/>
+<meta name="twitter:description" content="Upgrade StorageOS operator from yaml manifest Upgrade the StorageOS operator using the following yaml manifest.
+kubectl apply -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml  When you run the above command StorageOS Operator resources will be updated. Since, the Update Strategy of the StorageOS Operator Deployment is set to rolling update, a new StorageOS Operator Pod will be created. Only when the new Pod enters the Running Phase will the old Pod be deleted. Your StorageOS Cluster will not be affected while the StorageOS Operator is upgrading."/>
 
 
 
@@ -52,7 +52,8 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Cluster Operator Upgrade | </title>
   </head>
@@ -349,61 +350,8 @@
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="v2docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall117" href="/v2/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall116" href="/v2/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall115" href="/v2/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall114" href="/v2/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall113" href="/v2/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall112" href="/v2/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall" href="/v2/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -563,7 +511,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="v2docsplatformsazure-aks">
@@ -1428,6 +1376,12 @@
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#upgrade-storageos-operator-from-yaml-manifest">Upgrade StorageOS operator from yaml manifest</a></li>
+    <li><a href="#upgrade-storageos-operator-using-helm">Upgrade StorageOS Operator using Helm</a></li>
+  </ul>
+</nav>
 
 
 
@@ -1484,8 +1438,33 @@
 <div class="td-content">
 	<h1>Cluster Operator Upgrade</h1>
 	
-	<p>{% include operator/upgrade-uber-yaml.md %}</p>
-<p>{% include operator/upgrade-helm.md %}</p>
+	<h2 id="upgrade-storageos-operator-from-yaml-manifest">Upgrade StorageOS operator from yaml manifest</h2>
+<p>Upgrade the StorageOS operator using the following yaml manifest.</p>
+<pre><code>kubectl apply -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
+</code></pre><blockquote>
+<p>When you run the above command StorageOS Operator resources will be updated.
+Since, the Update Strategy of the StorageOS Operator Deployment is set to
+rolling update, a new StorageOS Operator Pod will be created. Only when
+the new Pod enters the Running Phase will the old Pod be deleted.
+Your StorageOS Cluster will not be affected while the StorageOS
+Operator is upgrading.</p>
+</blockquote>
+<h2 id="upgrade-storageos-operator-using-helm">Upgrade StorageOS Operator using Helm</h2>
+<p>If you have installed the StorageOS Operator using the <a href="https://github.com/storageos/charts/tree/master/stable/storageos-operator#installing-the-chart">Helm Chart</a>, then you can upgrade the operator using the following commands.</p>
+<pre><code>$ helm list
+
+NAME            REVISION        STATUS          CHART                           APP VERSION     NAMESPACE   
+storageos-v1   4               DEPLOYED        storageos-operator-0.2.11       1.3.0           storageos-operator
+</code></pre><pre><code>$ helm repo update
+$ helm upgrade $NAME storageos/storageos-operator
+</code></pre><blockquote>
+<p>When you run the above command StorageOS Operator resources will be updated.
+Since, the Update Strategy of the StorageOS Operator Deployment is set to
+rolling update, a new StorageOS Operator Pod will be created. Only when
+the new Pod enters the Running Phase will the old Pod be deleted.
+Your StorageOS Cluster will not be affected while the StorageOS
+Operator is upgrading.</p>
+</blockquote>
 
 	
 		<style>
@@ -1549,7 +1528,7 @@
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/028cef0b615d286fee4c88aa2c03c02e87f67e88">&#39;include&#39; shortcode for shared content (028cef0)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 21, 2020: <a  href="https://github.com/google/docsy-example/commit/ca3fa41afd8e8311f2d4c9667ea146d641c8cca4">apply changes to second version test (ca3fa41)</a>
 </div>
 </div>
 

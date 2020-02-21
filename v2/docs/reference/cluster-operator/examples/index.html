@@ -20,21 +20,27 @@
 <link rel="icon" type="image/png" href="/v2/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/v2/favicons/android-192x192.png" sizes="192x192">
 
-<title>Examples | </title><meta property="og:title" content="Examples" />
-<meta property="og:description" content="{% include operator/examples.md %}" />
+<title>Cluster Operator examples | </title><meta property="og:title" content="Cluster Operator examples" />
+<meta property="og:description" content="Before deploying a StorageOS cluster, create a Secret to define the StorageOS API Username and Password in base64 encoding.
+kubectl create -f - &lt;&lt;END apiVersion: v1 kind: Secret metadata: name: &#34;storageos-api&#34; namespace: &#34;storageos-operator&#34; labels: app: &#34;storageos&#34; type: &#34;kubernetes.io/storageos&#34; data: # echo -n &#39;&lt;secret&gt;&#39; | base64 apiUsername: c3RvcmFnZW9z apiPassword: c3RvcmFnZW9z END This example contains a default password, for production installations, use a unique, strong password.
+ Make sure that the encoding of the credentials doesn&rsquo;t have special characters such as &lsquo;\n&rsquo;." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/v2/docs/reference/cluster-operator/examples/" />
-<meta property="article:modified_time" content="2020-02-07T17:01:25+00:00" />
-<meta itemprop="name" content="Examples">
-<meta itemprop="description" content="{% include operator/examples.md %}">
-<meta itemprop="dateModified" content="2020-02-07T17:01:25&#43;00:00" />
-<meta itemprop="wordCount" content="4">
+<meta property="article:modified_time" content="2020-02-21T12:03:52+00:00" />
+<meta itemprop="name" content="Cluster Operator examples">
+<meta itemprop="description" content="Before deploying a StorageOS cluster, create a Secret to define the StorageOS API Username and Password in base64 encoding.
+kubectl create -f - &lt;&lt;END apiVersion: v1 kind: Secret metadata: name: &#34;storageos-api&#34; namespace: &#34;storageos-operator&#34; labels: app: &#34;storageos&#34; type: &#34;kubernetes.io/storageos&#34; data: # echo -n &#39;&lt;secret&gt;&#39; | base64 apiUsername: c3RvcmFnZW9z apiPassword: c3RvcmFnZW9z END This example contains a default password, for production installations, use a unique, strong password.
+ Make sure that the encoding of the credentials doesn&rsquo;t have special characters such as &lsquo;\n&rsquo;.">
+<meta itemprop="dateModified" content="2020-02-21T12:03:52&#43;00:00" />
+<meta itemprop="wordCount" content="442">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Examples"/>
-<meta name="twitter:description" content="{% include operator/examples.md %}"/>
+<meta name="twitter:title" content="Cluster Operator examples"/>
+<meta name="twitter:description" content="Before deploying a StorageOS cluster, create a Secret to define the StorageOS API Username and Password in base64 encoding.
+kubectl create -f - &lt;&lt;END apiVersion: v1 kind: Secret metadata: name: &#34;storageos-api&#34; namespace: &#34;storageos-operator&#34; labels: app: &#34;storageos&#34; type: &#34;kubernetes.io/storageos&#34; data: # echo -n &#39;&lt;secret&gt;&#39; | base64 apiUsername: c3RvcmFnZW9z apiPassword: c3RvcmFnZW9z END This example contains a default password, for production installations, use a unique, strong password.
+ Make sure that the encoding of the credentials doesn&rsquo;t have special characters such as &lsquo;\n&rsquo;."/>
 
 
 
@@ -49,9 +55,10 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
-    <title>Examples | </title>
+    <title>Cluster Operator examples | </title>
   </head>
   <body class="td-page">
     <header>
@@ -346,61 +353,8 @@
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="v2docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall117" href="/v2/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall116" href="/v2/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall115" href="/v2/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall114" href="/v2/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall113" href="/v2/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall112" href="/v2/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall" href="/v2/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -560,7 +514,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="v2docsplatformsazure-aks">
@@ -1413,7 +1367,7 @@
 
 
 <a href="https://github.com/google/docsy-example/edit/master/content/en/docs/reference/cluster-operator/examples.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/google/docsy-example/issues/new?title=Examples" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/google/docsy-example/issues/new?title=Cluster%20Operator%20examples" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 
 
 <a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
@@ -1425,6 +1379,15 @@
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#installing-with-an-external-etcd">Installing with an external etcd</a></li>
+    <li><a href="#installing-to-a-subset-of-nodes">Installing to a subset of nodes</a></li>
+    <li><a href="#enabling-csi">Enabling CSI</a></li>
+    <li><a href="#specifying-a-shared-directory-for-use-with-kubelet-as-a-container">Specifying a shared directory for use with kubelet as a container</a></li>
+    <li><a href="#defining-pod-resource-requests-and-reservations">Defining pod resource requests and reservations</a></li>
+  </ul>
+</nav>
 
 
 
@@ -1479,9 +1442,119 @@
 
             
 <div class="td-content">
-	<h1>Examples</h1>
+	<h1>Cluster Operator examples</h1>
 	
-	<p>{% include operator/examples.md %}</p>
+	<p>Before deploying a StorageOS cluster, create a Secret to define the StorageOS
+API Username and Password in base64 encoding.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create -f - <span style="color:#4e9a06">&lt;&lt;END
+</span><span style="color:#4e9a06">apiVersion: v1
+</span><span style="color:#4e9a06">kind: Secret
+</span><span style="color:#4e9a06">metadata:
+</span><span style="color:#4e9a06">  name: &#34;storageos-api&#34;
+</span><span style="color:#4e9a06">  namespace: &#34;storageos-operator&#34;
+</span><span style="color:#4e9a06">  labels:
+</span><span style="color:#4e9a06">    app: &#34;storageos&#34;
+</span><span style="color:#4e9a06">type: &#34;kubernetes.io/storageos&#34;
+</span><span style="color:#4e9a06">data:
+</span><span style="color:#4e9a06">  # echo -n &#39;&lt;secret&gt;&#39; | base64
+</span><span style="color:#4e9a06">  apiUsername: c3RvcmFnZW9z
+</span><span style="color:#4e9a06">  apiPassword: c3RvcmFnZW9z
+</span><span style="color:#4e9a06">END</span>
+</code></pre></div><p>This example contains a default password, for production installations, use a
+unique, strong password.</p>
+<blockquote>
+<p>Make sure that the encoding of the credentials doesn&rsquo;t have special characters such as &lsquo;\n&rsquo;.</p>
+</blockquote>
+<blockquote>
+<p>You can define a base64 value by <code>echo -n &quot;mystring&quot; | base64</code>.</p>
+</blockquote>
+<p>Create a <code>cluster-config.yaml</code> according to your needs from the examples below.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create -f cluster-config.yaml
+</code></pre></div><p>Note that StorageOS will be deployed in <code>spec.namespace</code> (storageos by
+default), irrespective of what NameSpace the CR is defined in.</p>
+<p>  <!-- this is a blank line --></p>
+<h1 id="examples">Examples</h1>
+<blockquote>
+<p>You can checkout all the parameters configurable in the
+<a href="/v2/docs/reference/cluster-operator/configuration/">configuration</a>
+page.</p>
+</blockquote>
+<p>All examples must reference the <code>storageos-api</code> Secret.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">spec:
+  secretRefName: <span style="color:#4e9a06">&#34;storageos-api&#34;</span> <span style="color:#8f5902;font-style:italic"># Reference to the Secret created in the previous step</span>
+  secretRefNamespace: <span style="color:#4e9a06">&#34;storageos-operator&#34;</span>  <span style="color:#8f5902;font-style:italic"># Namespace of the Secret</span>
+</code></pre></div><p>Check out <a href="https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/cluster-operator/examples">Cluster Definition
+examples</a> for full CR files.</p>
+<h2 id="installing-with-an-external-etcd">Installing with an external etcd</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">spec:
+  kvBackend:
+    address: <span style="color:#4e9a06">&#39;10.43.93.95:2379&#39;</span> <span style="color:#8f5902;font-style:italic"># IP of the SVC that exposes ETCD</span>
+  <span style="color:#8f5902;font-style:italic"># address: &#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&#39; # You can specify individual IPs of the etcd servers</span>
+    backend: <span style="color:#4e9a06">&#39;etcd&#39;</span>
+</code></pre></div><h2 id="installing-to-a-subset-of-nodes">Installing to a subset of nodes</h2>
+<p>In this case we select nodes that are workers. To make sure that StorageOS doesn&rsquo;t start in Master nodes.</p>
+<p>You can see the labels in the nodes by <code>kubectl get node --show-labels</code>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">spec:
+  nodeSelectorTerms:
+    - matchExpressions:
+      - key: <span style="color:#4e9a06">&#34;node-role.kubernetes.io/worker&#34;</span>
+        operator: In
+        values:
+        - <span style="color:#4e9a06">&#34;true&#34;</span>
+
+<span style="color:#8f5902;font-style:italic"># OpenShift uses &#34;node-role.kubernetes.io/compute=true&#34;</span>
+<span style="color:#8f5902;font-style:italic"># Rancher uses &#34;node-role.kubernetes.io/worker=true&#34;</span>
+<span style="color:#8f5902;font-style:italic"># Kops uses &#34;node-role.kubernetes.io/node=&#34;</span>
+</code></pre></div><blockquote>
+<p>Different provisioners and Kubernetes distributions use node labels
+differently to specify master vs workers. Node Taints are not enough to
+make sure StorageOS doesn&rsquo;t start in a node. The
+<a href="https://docs.storageos.com/docs/reference/clusterdiscovery">JOIN</a>
+variable is defined by the operator by selecting all the nodes that match the
+<code>nodeSelectorTerms</code>.</p>
+</blockquote>
+<h2 id="enabling-csi">Enabling CSI</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">spec:
+  csi:
+    enable: <span style="color:#204a87">true</span>
+    deploymentStrategy: deployment
+  <span style="color:#8f5902;font-style:italic"># enableProvisionCreds: false</span>
+  <span style="color:#8f5902;font-style:italic"># enableControllerPublishCreds: false</span>
+  <span style="color:#8f5902;font-style:italic"># enableNodePublishCreds: false</span>
+</code></pre></div><p>The credentials must be defined in the <code>storageos-api</code> Secret</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apiVersion: v1
+kind: Secret
+metadata:
+  name: <span style="color:#4e9a06">&#34;storageos-api&#34;</span>
+  namespace: <span style="color:#4e9a06">&#34;default&#34;</span>
+  labels:
+    app: <span style="color:#4e9a06">&#34;storageos&#34;</span>
+type: <span style="color:#4e9a06">&#34;kubernetes.io/storageos&#34;</span>
+data:
+  <span style="color:#8f5902;font-style:italic"># echo -n &#39;&lt;secret&gt;&#39; | base64</span>
+  apiUsername: c3RvcmFnZW9z
+  apiPassword: c3RvcmFnZW9z
+  <span style="color:#8f5902;font-style:italic"># Add base64 encoded creds below for CSI credentials.</span>
+  <span style="color:#8f5902;font-style:italic"># csiProvisionUsername:</span>
+  <span style="color:#8f5902;font-style:italic"># csiProvisionPassword:</span>
+  <span style="color:#8f5902;font-style:italic"># csiControllerPublishUsername:</span>
+  <span style="color:#8f5902;font-style:italic"># csiControllerPublishPassword:</span>
+  <span style="color:#8f5902;font-style:italic"># csiNodePublishUsername:</span>
+  <span style="color:#8f5902;font-style:italic"># csiNodePublishPassword:</span>
+</code></pre></div><h2 id="specifying-a-shared-directory-for-use-with-kubelet-as-a-container">Specifying a shared directory for use with kubelet as a container</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">spec:
+  sharedDir: <span style="color:#4e9a06">&#39;/var/lib/kubelet/plugins/kubernetes.io~storageos&#39;</span>
+</code></pre></div><h2 id="defining-pod-resource-requests-and-reservations">Defining pod resource requests and reservations</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">spec:
+  resources:
+    requests:
+      memory: <span style="color:#4e9a06">&#34;256Mi&#34;</span>
+  <span style="color:#8f5902;font-style:italic">#   cpu: &#34;1&#34;</span>
+  <span style="color:#8f5902;font-style:italic"># limits:</span>
+  <span style="color:#8f5902;font-style:italic">#   memory: &#34;4Gi&#34;</span>
+</code></pre></div><p>Limiting StorageOS can cause malfunction for IO to StorageOS volumes, therefore
+we do not currently recommend applying upper limits to resources for StorageOS
+pods.</p>
 
 	
 		<style>
@@ -1545,7 +1618,7 @@
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/028cef0b615d286fee4c88aa2c03c02e87f67e88">&#39;include&#39; shortcode for shared content (028cef0)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 21, 2020: <a  href="https://github.com/google/docsy-example/commit/ca3fa41afd8e8311f2d4c9667ea146d641c8cca4">apply changes to second version test (ca3fa41)</a>
 </div>
 </div>
 

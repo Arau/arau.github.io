@@ -27,13 +27,13 @@ Deploying Cassandra on Kubernetes  You can find the latest files in the StorageO
   apiVersion:apps/v1kind:StatefulSetmetadata:name:cassandraspec:selector:matchLabels:app:cassandraserviceName:cassandrareplicas:3...spec:...volumeMounts:- name:cassandra-datamountPath:/var/lib/cassandra...volumeClaimTemplates:- metadata:name:cassandra-dataspec:accessModes:[&#34;ReadWriteOnce&#34;]storageClassName:&#34;fast&#34;# StorageOS storageClass resources:requests:storage:5GiThis excerpt is from the StatefulSet definition." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/v2/docs/platforms/kubernetes/examples/cassandra/" />
-<meta property="article:modified_time" content="2020-02-07T17:01:25+00:00" />
+<meta property="article:modified_time" content="2020-02-21T12:03:52+00:00" />
 <meta itemprop="name" content="Cassandra">
 <meta itemprop="description" content="Cassandra with StorageOS Cassandra is a popular distributed NoSQL open source database.
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes cluster. See our guide on how to install StorageOS on Kubernetes for more information
 Deploying Cassandra on Kubernetes  You can find the latest files in the StorageOS example deployment repostiory git clone https://github.com/storageos/deploy.git storageos StatefulSet defintion
   apiVersion:apps/v1kind:StatefulSetmetadata:name:cassandraspec:selector:matchLabels:app:cassandraserviceName:cassandrareplicas:3...spec:...volumeMounts:- name:cassandra-datamountPath:/var/lib/cassandra...volumeClaimTemplates:- metadata:name:cassandra-dataspec:accessModes:[&#34;ReadWriteOnce&#34;]storageClassName:&#34;fast&#34;# StorageOS storageClass resources:requests:storage:5GiThis excerpt is from the StatefulSet definition.">
-<meta itemprop="dateModified" content="2020-02-07T17:01:25&#43;00:00" />
+<meta itemprop="dateModified" content="2020-02-21T12:03:52&#43;00:00" />
 <meta itemprop="wordCount" content="214">
 
 
@@ -58,7 +58,8 @@ Deploying Cassandra on Kubernetes  You can find the latest files in the StorageO
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Cassandra | </title>
   </head>
@@ -355,61 +356,8 @@ Deploying Cassandra on Kubernetes  You can find the latest files in the StorageO
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="v2docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall117" href="/v2/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall116" href="/v2/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall115" href="/v2/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall114" href="/v2/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall113" href="/v2/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall112" href="/v2/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall" href="/v2/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -569,7 +517,7 @@ Deploying Cassandra on Kubernetes  You can find the latest files in the StorageO
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="v2docsplatformsazure-aks">
@@ -1436,7 +1384,6 @@ Deploying Cassandra on Kubernetes  You can find the latest files in the StorageO
 
 
 
-
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -1635,7 +1582,7 @@ cqlsh&gt; SELECT cluster_name, listen_address FROM system.local<span style="colo
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/028cef0b615d286fee4c88aa2c03c02e87f67e88">&#39;include&#39; shortcode for shared content (028cef0)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 21, 2020: <a  href="https://github.com/google/docsy-example/commit/ca3fa41afd8e8311f2d4c9667ea146d641c8cca4">apply changes to second version test (ca3fa41)</a>
 </div>
 </div>
 

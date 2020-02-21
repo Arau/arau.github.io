@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> – AWS</title>
+    <title> – EKS</title>
     <link>/docs/platforms/aws-eks/</link>
-    <description>Recent content in AWS on </description>
+    <description>Recent content in EKS on </description>
     <generator>Hugo -- gohugo.io</generator>
     
 	  <atom:link href="/docs/platforms/aws-eks/index.xml" rel="self" type="application/rss+xml" />
@@ -22,8 +22,7 @@
       <description>
         
         
-        &lt;h1 id=&#34;eks-kubernetes&#34;&gt;EKS Kubernetes&lt;/h1&gt;
-&lt;blockquote&gt;
+        &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Only installations of StorageOS with CSI are supported for EKS.&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
@@ -138,7 +137,6 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;{% include operator/first-volume.md %}&lt;/p&gt;
 
       </description>
     </item>

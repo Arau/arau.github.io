@@ -338,25 +338,23 @@ store for StorageOS in the [Cluster Operator examples]({%link _docs/reference/cl
         
         
         &lt;p&gt;This is a Cluster Definition example.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt; page.cmd &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt; create -f - &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt;END
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;apiVersion: &amp;#34;storageos.com/v1&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;kind: StorageOSCluster
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;metadata:
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  name: &amp;#34;example-storageos&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  namespace: &amp;#34;storageos-operator&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;spec:
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  secretRefName: &amp;#34;storageos-api&amp;#34; # Reference from the Secret created in the previous step
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  secretRefNamespace: &amp;#34;storageos-operator&amp;#34;  # Namespace of the Secret
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  k8sDistro: &amp;#34;{{ page.platform }}&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  images:
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    nodeContainer: &amp;#34;storageos/node:{{ site.latest_node_version }}&amp;#34; # StorageOS version
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  csi:
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    enable: true
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    deploymentStrategy: deployment
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  resources:
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    requests:
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    memory: &amp;#34;512Mi&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;END&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apiVersion: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos.com/v1&amp;#34;&lt;/span&gt;
+kind: StorageOSCluster
+metadata:
+  name: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;example-storageos&amp;#34;&lt;/span&gt;
+  namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;
+spec:
+  secretRefName: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Reference from the Secret created in the previous step&lt;/span&gt;
+  secretRefNamespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace of the Secret&lt;/span&gt;
+  k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{{ page.platform }}&amp;#34;&lt;/span&gt;
+  images:
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:{{ site.latest_node_version }}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+  csi:
+    enable: &lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;
+    deploymentStrategy: deployment
+  resources:
+    requests:
+    memory: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;512Mi&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Additional &lt;code&gt;spec&lt;/code&gt; parameters are available on the [Cluster Operator
 configuration]( {%link _docs/reference/cluster-operator/configuration.md %})
@@ -827,6 +825,31 @@ repository&lt;/a&gt;.&lt;/p&gt;
 &lt;li&gt;Create a CR (Custom Resource) to deploy StorageOS&lt;/li&gt;
 &lt;/ol&gt;
 
+      </description>
+    </item>
+    
+    <item>
+      <title>Share: </title>
+      <link>/v2/share/operator/secret/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/v2/share/operator/secret/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apiVersion: v1
+kind: Secret
+metadata:
+  name: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt;
+  namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;
+  labels:
+    app: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos&amp;#34;&lt;/span&gt;
+type: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kubernetes.io/storageos&amp;#34;&lt;/span&gt;
+data:
+  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# echo -n &amp;#39;&amp;lt;secret&amp;gt;&amp;#39; | base64&lt;/span&gt;
+  apiUsername: c3RvcmFnZW9z
+  apiPassword: c3RvcmFnZW9z
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     

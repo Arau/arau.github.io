@@ -26,13 +26,13 @@ Conceptually, StorageOS volumes have a frontend presentation, which is the side 
 Volumes are formatted using the linux standard ext4 filesystem by default." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/v2/docs/concepts/volumes/" />
-<meta property="article:modified_time" content="2020-02-07T17:01:25+00:00" />
+<meta property="article:modified_time" content="2020-02-21T12:03:52+00:00" />
 <meta itemprop="name" content="Volumes">
 <meta itemprop="description" content="StorageOS volumes are a logical construct which represent a writeable volume and exhibit standard POSIX semantics. We present volumes as mounts into containers via the Linux LIO subsystem.
 Conceptually, StorageOS volumes have a frontend presentation, which is the side the application sees, and a backend presentation, which is the actual on-disk format. Depending on the configuration, frontend and backend components may be on the same or different hosts.
 Volumes are formatted using the linux standard ext4 filesystem by default.">
-<meta itemprop="dateModified" content="2020-02-07T17:01:25&#43;00:00" />
-<meta itemprop="wordCount" content="383">
+<meta itemprop="dateModified" content="2020-02-21T12:03:52&#43;00:00" />
+<meta itemprop="wordCount" content="380">
 
 
 
@@ -55,7 +55,8 @@ Volumes are formatted using the linux standard ext4 filesystem by default."/>
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-<link href="/storageos.css" rel="stylesheet">
+<link href="/css/storageos.css" rel="stylesheet">
+<script src="/js/enable-link-tab.js"></script>
 
     <title>Volumes | </title>
   </head>
@@ -352,61 +353,8 @@ Volumes are formatted using the linux standard ext4 filesystem by default."/>
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/kubernetes/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="v2docsplatformskubernetesinstall">
       
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall117" href="/v2/docs/platforms/kubernetes/install/1.17/">1.17</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall116" href="/v2/docs/platforms/kubernetes/install/1.16/">1.16</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall115" href="/v2/docs/platforms/kubernetes/install/1.15/">1.15</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall114" href="/v2/docs/platforms/kubernetes/install/1.14/">1.14</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall113" href="/v2/docs/platforms/kubernetes/install/1.13/">1.13</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall112" href="/v2/docs/platforms/kubernetes/install/1.12/">1.12</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-v2docsplatformskubernetesinstall" href="/v2/docs/platforms/kubernetes/install/">Install StorageOS</a>
       
       
       
@@ -566,7 +514,7 @@ Volumes are formatted using the linux standard ext4 filesystem by default."/>
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure</a>
+    <a  href="/v2/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
   </li>
   <ul>
     <li class="collapse " id="v2docsplatformsazure-aks">
@@ -1433,7 +1381,6 @@ Volumes are formatted using the linux standard ext4 filesystem by default."/>
 
 
 
-
           </div>
           <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
@@ -1514,8 +1461,7 @@ compression defined on the volume.</p>
 node. In situations where <a href="/v2/docs/operations/overcommitment/">overcommit</a> is applied, a scaling factor is applied when determining whether to place a
 volume on a node.</p>
 <p>We present various metrics regarding StorageOS volumes, including used capacity
-and throughput, via our [Prometheus Endpoint]({% link
-&ldquo;docs/reference/prometheus.md&rdquo; &gt;}}).</p>
+and throughput, via our <a href="/v2/docs/reference/prometheus/">Prometheus Endpoint</a>.</p>
 
 	
 		<style>
@@ -1579,7 +1525,7 @@ and throughput, via our [Prometheus Endpoint]({% link
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/028cef0b615d286fee4c88aa2c03c02e87f67e88">&#39;include&#39; shortcode for shared content (028cef0)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 21, 2020: <a  href="https://github.com/google/docsy-example/commit/ca3fa41afd8e8311f2d4c9667ea146d641c8cca4">apply changes to second version test (ca3fa41)</a>
 </div>
 </div>
 
