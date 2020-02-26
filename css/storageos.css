@@ -69,6 +69,7 @@ footer {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
+  min-height: inherit !Important;
   background-color: #f5f5f5;
 }
 
@@ -800,6 +801,7 @@ footer {
   background-color: #585B6B;
   padding: 50px 0;
   font-size: 0.8em;
+  min-height: auto;
 }
 
 footer h3 {
@@ -2180,7 +2182,6 @@ a.readmore {
   padding: 0px;
   font-size: 18px;
   line-height: 20px;
-  margin-top: 15px;
 }
 
 .logo-tag {
