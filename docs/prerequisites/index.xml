@@ -229,7 +229,11 @@ default DROP or REJECT rules.&lt;/p&gt;
       <description>
         
         
-        &lt;p&gt;StorageOS requires mount propagation enabled to present devices as volumes for
+        &lt;blockquote&gt;
+&lt;p&gt;Modern versions of Kubernetes, Docker or other Container Runtimes enable
+mount propagation by default.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;StorageOS requires mount propagation enabled to present devices as volumes for
 containers (see linux kernel documentation
 &lt;a href=&#34;http://man7.org/linux/man-pages/man2/mount.2.html&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Certain versions of docker ship with a systemd manifest with

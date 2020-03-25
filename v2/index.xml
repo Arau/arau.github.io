@@ -1,0 +1,16 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> – StorageOS</title>
+    <link>http://0.0.0.0/v2/</link>
+    <description>Recent content in StorageOS on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="http://0.0.0.0/v2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+      
+    
+    
+  </channel>
+</rss>

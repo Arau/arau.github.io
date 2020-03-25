@@ -24,13 +24,13 @@
         
         &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Start by &lt;a href=&#34;/concepts/architecture/&#34;&gt;understanding the architecture&lt;/a&gt; and &lt;a href=&#34;http://play.storageos.com/main&#34;&gt;playing with a demo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Start by &lt;a href=&#34;/docs/concepts/architecture/&#34;&gt;understanding the architecture&lt;/a&gt; and &lt;a href=&#34;http://play.storageos.com/main&#34;&gt;playing with a demo&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;For production deployments, follow our installation guides for
-&lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;Kubernetes&lt;/a&gt;,
-&lt;a href=&#34;/docs/platforms/openshift/install/3.11/&#34;&gt;OpenShift&lt;/a&gt; or
-&lt;a href=&#34;/docs/platforms/azure-aks/install/&#34;&gt;Azure AKS&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;Kubernetes&lt;/a&gt;,
+&lt;a href=&#34;/docs/install/openshift/&#34;&gt;OpenShift&lt;/a&gt; or
+&lt;a href=&#34;/docs/install/rancher/&#34;&gt;Rancher&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Dive into our Use Case documentation for Workloads deployed in &lt;a href=&#34;/docs/usecases/&#34;&gt;Kubernetes&lt;/a&gt;.&lt;/p&gt;

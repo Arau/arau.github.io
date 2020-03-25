@@ -21,33 +21,36 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Troubleshooting | </title><meta property="og:title" content="Troubleshooting" />
-<meta property="og:description" content="We provide platform specific troubleshooting information in the following sections:
- Kubernetes Openshift  Common Platform Agnostic Issues {% include troubleshoot/issues/newcluster-old-nodes.md %}
-Getting Help If our troubleshooting guides do not help resolve your issue, please see our support section for details on how to get in touch with us." />
+<meta property="og:description" content="This section is aimed to help you troubleshoot issues in your cluster, whether they are related to the StorageOS installation, integration with orchestrators or common misconfigurations.
+Tools To be able to troubleshoot issues the StorageOS cli is required.
+Pod in pending because of mount error Issue: The output of kubectl describe pod $POD_ID contains no such file or directory and references the StorageOS volume device file.
+root@node1:~# kubectl -n storageos describe $POD_ID (." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/operations/troubleshooting/" />
-<meta property="article:modified_time" content="2020-02-07T11:49:52+00:00" />
+<meta property="article:modified_time" content="2020-03-24T14:08:15+00:00" />
 <meta itemprop="name" content="Troubleshooting">
-<meta itemprop="description" content="We provide platform specific troubleshooting information in the following sections:
- Kubernetes Openshift  Common Platform Agnostic Issues {% include troubleshoot/issues/newcluster-old-nodes.md %}
-Getting Help If our troubleshooting guides do not help resolve your issue, please see our support section for details on how to get in touch with us.">
-<meta itemprop="dateModified" content="2020-02-07T11:49:52&#43;00:00" />
-<meta itemprop="wordCount" content="47">
+<meta itemprop="description" content="This section is aimed to help you troubleshoot issues in your cluster, whether they are related to the StorageOS installation, integration with orchestrators or common misconfigurations.
+Tools To be able to troubleshoot issues the StorageOS cli is required.
+Pod in pending because of mount error Issue: The output of kubectl describe pod $POD_ID contains no such file or directory and references the StorageOS volume device file.
+root@node1:~# kubectl -n storageos describe $POD_ID (.">
+<meta itemprop="dateModified" content="2020-03-24T14:08:15&#43;00:00" />
+<meta itemprop="wordCount" content="2174">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Troubleshooting"/>
-<meta name="twitter:description" content="We provide platform specific troubleshooting information in the following sections:
- Kubernetes Openshift  Common Platform Agnostic Issues {% include troubleshoot/issues/newcluster-old-nodes.md %}
-Getting Help If our troubleshooting guides do not help resolve your issue, please see our support section for details on how to get in touch with us."/>
+<meta name="twitter:description" content="This section is aimed to help you troubleshoot issues in your cluster, whether they are related to the StorageOS installation, integration with orchestrators or common misconfigurations.
+Tools To be able to troubleshoot issues the StorageOS cli is required.
+Pod in pending because of mount error Issue: The output of kubectl describe pod $POD_ID contains no such file or directory and references the StorageOS volume device file.
+root@node1:~# kubectl -n storageos describe $POD_ID (."/>
 
 
 
 
 
-<link rel="preload" href="/scss/main.min.f9f86ae8a314b3be3a9c4b4b22ab697786c29a83761b23be4b362b9334d32510.css" as="style">
-<link href="/scss/main.min.f9f86ae8a314b3be3a9c4b4b22ab697786c29a83761b23be4b362b9334d32510.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" as="style">
+<link href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -74,48 +77,63 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
-			
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				<a class="nav-link" href="/" ><span>Product</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				<a class="nav-link" href="/" ><span>Solutions</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				<a class="nav-link" href="/" ><span>Docs</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				<a class="nav-link" href="/" ><span>Company</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				<a class="nav-link" href="/" ><span>Learn</span></a>
-			</li>
-			
+            <li class="nav-item dropdown d-none d-lg-block">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Product
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="https://storageos.com/product">Overview</a>
+        <a class="dropdown-item" href="https://storageos.com/features">Features</a>
+        <a class="dropdown-item" href="https://storageos.com/use-cases">Use cases</a>
+        <a class="dropdown-item" href="https://storageos.com/why-storageos">Why StorageOS</a>
+        <a class="dropdown-item" href="https://storageos.com/how-it-works">How it works</a>
+    </div>
+</li>
+
+<li class="nav-item dropdown d-none d-lg-block">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Solutions
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="https://storageos.com/developers">Developers</a>
+        <a class="dropdown-item" href="https://storageos.com/infrastructure-managers">Infrastructure Managers</a>
+        <a class="dropdown-item" href="https://storageos.com/cloud">Cloud</a>
+    </div>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="#">
+        Docs
+    </a>
+</li>
+
+<li class="nav-item dropdown d-none d-lg-block">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Company
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="https://storageos.com/company">About us</a>
+        <a class="dropdown-item" href="https://storageos.com/leadership">Leadership</a>
+        <a class="dropdown-item" href="https://storageos.com/news">News</a>
+        <a class="dropdown-item" href="https://storageos.com/events">Events</a>
+        <a class="dropdown-item" href="https://storageos.com/contact">Contact</a>
+    </div>
+</li>
+
+<li class="nav-item dropdown d-none d-lg-block">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Learn
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="https://storageos.com/blog">Blog</a>
+        <a class="dropdown-item" href="https://play.storageos.com/main">Play with StorageOS</a>
+        <a class="dropdown-item" href="https://storageos.com/resources/">Resources</a>
+        <a class="dropdown-item" href="https://resources.storageos.com/demo-request">Get a demo</a>
+    </div>
+</li>
+
+
+
 			
 			<li class="nav-item dropdown d-none d-lg-block">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -124,8 +142,6 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	
 	<a class="dropdown-item" href="/">v1.x</a>
-	
-	<a class="dropdown-item" href="/v2">v2.0</a>
 	
 </div>
 
@@ -144,7 +160,7 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.a34d879d4c18bb308aaff4ddcca8efe26fbccb591dbcf9ab5007e4e903543b8aa9e806737713af568cee6ff9280ea4c80a94e84dcd013cae614aa0d23a939a12.json"
+  data-offline-search-index-json-src="/offline-search-index.ae2e2fe8eedc0953d578611d99f6ddf3fc2e7768a06980ee16d1b991e3481a50b2e38cb0214327fa4487efa7b71b9eaa5aaad704a341a3a61c180568f332e815.json"
   data-offline-search-base-href="/"
 >
 
@@ -242,7 +258,7 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-conceptsarchitecture" href="/concepts/architecture/">Architecture</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsarchitecture" href="/docs/concepts/architecture/">Architecture</a>
       
       
       
@@ -374,339 +390,29 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Platforms</a>
+    <a  href="/docs/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install</a>
   </li>
   <ul>
-    <li class="collapse " id="docsplatforms">
+    <li class="collapse " id="docsinstall">
       
       
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Kubernetes</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformskubernetes">
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsinstallkubernetes" href="/docs/install/kubernetes/">Kubernetes</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesinstall" href="/docs/platforms/kubernetes/install/">Install StorageOS</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsinstallopenshift" href="/docs/install/openshift/">OpenShift</a>
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesvolumeguide" href="/docs/platforms/kubernetes/volumeguide/">Volume Guide</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesbestpractices" href="/docs/platforms/kubernetes/bestpractices/">Best Practices</a>
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/examples/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install applications on Kubernetes</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformskubernetesexamples">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesexamplescassandra" href="/docs/platforms/kubernetes/examples/cassandra/">Cassandra</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesexamplesmssql" href="/docs/platforms/kubernetes/examples/mssql/">MS SQL</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesexamplesmysql" href="/docs/platforms/kubernetes/examples/mysql/">MySQL</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesexamplespostgres" href="/docs/platforms/kubernetes/examples/postgres/">PostgreSQL</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetesexamplesredis" href="/docs/platforms/kubernetes/examples/redis/">Redis</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/kubernetes/troubleshoot/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Troubleshoot</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformskubernetestroubleshoot">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetestroubleshootinstall" href="/docs/platforms/kubernetes/troubleshoot/install/">Kubernetes troubleshoot</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformskubernetestroubleshootvolumes" href="/docs/platforms/kubernetes/troubleshoot/volumes/">Kubernetes troubleshoot</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/aws-eks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">AWS-EKS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsaws-eks">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsaws-eksinstall" href="/docs/platforms/aws-eks/install/">Install StorageOS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsaws-eksbestpractices" href="/docs/platforms/aws-eks/bestpractices/">Best Practices</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsaws-eksvolumeguide" href="/docs/platforms/aws-eks/volumeguide/">StorageOS Volume Guide</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/azure-aks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Azure AKS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsazure-aks">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsazure-aksinstall" href="/docs/platforms/azure-aks/install/">Install StorageOS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsazure-aksvolumeguide" href="/docs/platforms/azure-aks/volumeguide/">StorageOS Volume Guide</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsazure-aksbestpractices" href="/docs/platforms/azure-aks/bestpractices/">Best Practices</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/dockeree/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">DockerEE</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsdockeree">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsdockereeinstall" href="/docs/platforms/dockeree/install/">Install StorageOS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsdockereevolumeguide" href="/docs/platforms/dockeree/volumeguide/">StorageOS Volume Guide</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsdockereebestpractices" href="/docs/platforms/dockeree/bestpractices/">Best Practices</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/openshift/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">OpenShift</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsopenshift">
-      
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/openshift/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsopenshiftinstall">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall42" href="/docs/platforms/openshift/install/4.2/">4.2</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall41" href="/docs/platforms/openshift/install/4.1/">4.1</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall311" href="/docs/platforms/openshift/install/3.11/">3.11</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall310" href="/docs/platforms/openshift/install/3.10/">3.10</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall39" href="/docs/platforms/openshift/install/3.9/">3.9</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall38" href="/docs/platforms/openshift/install/3.8/">3.8</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftinstall37" href="/docs/platforms/openshift/install/3.7/">3.7</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsinstallrancher" href="/docs/install/rancher/">Rancher</a>
       
       
     </li>
@@ -718,165 +424,7 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftvolumeguide" href="/docs/platforms/openshift/volumeguide/">Volume Guide</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshiftbestpractices" href="/docs/platforms/openshift/bestpractices/">Best Practices</a>
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/openshift/troubleshoot/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Troubleshoot</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsopenshifttroubleshoot">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshifttroubleshootinstall" href="/docs/platforms/openshift/troubleshoot/install/">Installation</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshifttroubleshootvolumes" href="/docs/platforms/openshift/troubleshoot/volumes/">Volume Provisioning</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/rancher/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Rancher</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsrancher">
-      
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/rancher/install/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Install StorageOS</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsrancherinstall">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsrancherinstallrancher-catalog" href="/docs/platforms/rancher/install/rancher-catalog/">Rancher Catalog</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsrancherinstallrancher-advanced" href="/docs/platforms/rancher/install/rancher-advanced/">Advanced</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsranchervolumeguide" href="/docs/platforms/rancher/volumeguide/">Volume Guide</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsrancherbestpractices" href="/docs/platforms/rancher/bestpractices/">Best Practices</a>
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/platforms/rancher/troubleshoot/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Troubleshoot</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsplatformsranchertroubleshoot">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsranchertroubleshootinstall" href="/docs/platforms/rancher/troubleshoot/install/">Installation</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsranchertroubleshootvolumes" href="/docs/platforms/rancher/troubleshoot/volumes/">Volume Provisioning</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-    </li>
-  </ul>
-</ul>
-
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsbest-practices" href="/docs/best-practices/">Best Practices</a>
       
       
       
@@ -947,6 +495,12 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsfencing" href="/docs/operations/fencing/">Fencing Pods</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsfirstpvc" href="/docs/operations/firstpvc/">First PVC</a>
       
       
       
@@ -1029,7 +583,7 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docsoperationstroubleshooting" href="/docs/operations/troubleshooting/">Troubleshooting installation</a>
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docsoperationstroubleshooting" href="/docs/operations/troubleshooting/">Troubleshooting</a>
       
       
       
@@ -1348,6 +902,59 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
       
       
       
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/reference/platforms/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Platforms</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferenceplatforms">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsaws-eks" href="/docs/reference/platforms/aws-eks/">AWS EKS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsazure-aks" href="/docs/reference/platforms/azure-aks/">Azure AKS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsdockeree" href="/docs/reference/platforms/dockeree/">DockerEE</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsopenshift" href="/docs/reference/platforms/openshift/">OpenShift</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsrancher" href="/docs/reference/platforms/rancher/">Rancher</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceprometheus" href="/docs/reference/prometheus/">Prometheus Endpoint</a>
       
@@ -1413,11 +1020,11 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
 
 
 
-<a href="https://github.com/google/docsy-example/edit/master/content/en/docs/operations/troubleshooting.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/google/docsy-example/issues/new?title=Troubleshooting" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/storageos/storageos.github.io/edit/master/content/en/docs/operations/troubleshooting.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/storageos/storageos.github.io/issues/new?title=Troubleshooting" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
 
 
-<a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+<a href="https://github.com/storageos/storageos.github.io/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
 
 </div>
 
@@ -1425,6 +1032,71 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
 
 
 
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#pod-in-pending-because-of-mount-error">Pod in pending because of mount error</a>
+      <ul>
+        <li><a href="#issue">Issue:</a></li>
+        <li><a href="#reason">Reason:</a></li>
+        <li><a href="#assert">Assert:</a></li>
+        <li><a href="#solution">Solution:</a></li>
+        <li><a href="#assert-1">Assert:</a></li>
+        <li><a href="#solution-1">Solution:</a></li>
+      </ul>
+    </li>
+    <li><a href="#pvc-pending-state---failed-to-dial-storageos">PVC pending state - Failed to dial StorageOS</a>
+      <ul>
+        <li><a href="#issue-1">Issue:</a></li>
+        <li><a href="#reason-1">Reason:</a></li>
+        <li><a href="#assert-2">Assert:</a></li>
+        <li><a href="#solution-2">Solution:</a></li>
+      </ul>
+    </li>
+    <li><a href="#pvc-pending-state---secret-missing">PVC pending state - Secret Missing</a>
+      <ul>
+        <li><a href="#issue-2">Issue:</a></li>
+        <li><a href="#reason-2">Reason:</a></li>
+        <li><a href="#assert-3">Assert:</a></li>
+        <li><a href="#solution-3">Solution:</a></li>
+      </ul>
+    </li>
+    <li><a href="#peer-discovery---pod-allocation">Peer discovery - Pod allocation</a>
+      <ul>
+        <li><a href="#issue-3">Issue:</a></li>
+        <li><a href="#reason-3">Reason:</a></li>
+        <li><a href="#assert-4">Assert:</a></li>
+        <li><a href="#solution-4">Solution:</a></li>
+      </ul>
+    </li>
+    <li><a href="#lio-initerror">LIO Init:Error</a>
+      <ul>
+        <li><a href="#issue-4">Issue:</a></li>
+        <li><a href="#reason-4">Reason:</a></li>
+        <li><a href="#assert-5">Assert</a></li>
+        <li><a href="#solution-5">Solution:</a></li>
+      </ul>
+    </li>
+    <li><a href="#lio-not-enabled">LIO not enabled</a>
+      <ul>
+        <li><a href="#issue-5">Issue:</a></li>
+        <li><a href="#reason-5">Reason:</a></li>
+        <li><a href="#assert-6">Assert</a></li>
+        <li><a href="#solution-6">Solution:</a></li>
+      </ul>
+    </li>
+    <li><a href="#openshift-storageos-pods-missing----daemonset-error">(OpenShift) StorageOS pods missing &ndash; DaemonSet error</a>
+      <ul>
+        <li><a href="#issue-6">Issue:</a></li>
+        <li><a href="#reason-6">Reason:</a></li>
+        <li><a href="#assert-7">Assert:</a></li>
+        <li><a href="#solution-7">Solution:</a></li>
+      </ul>
+    </li>
+    <li><a href="#getting-help">Getting Help</a></li>
+  </ul>
+</nav>
 
 
 
@@ -1461,7 +1133,7 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/operations/troubleshooting/">Troubleshooting installation</a>
+	<a href="/docs/operations/troubleshooting/">Troubleshooting</a>
 </li>
 
 	</ol>
@@ -1471,81 +1143,320 @@ Getting Help If our troubleshooting guides do not help resolve your issue, pleas
 <div class="td-content">
 	<h1>Troubleshooting</h1>
 	
-	<p>We provide platform specific troubleshooting information in the following sections:</p>
+	<p>This section is aimed to help you troubleshoot issues in your cluster, whether
+they are related to the StorageOS installation, integration with
+orchestrators or common misconfigurations.</p>
+<h2 id="tools">Tools</h2>
+<p>To be able to troubleshoot issues the <a href="https://github.com/storageos/go-cli">StorageOS
+cli</a> is required.</p>
+<h2 id="pod-in-pending-because-of-mount-error">Pod in pending because of mount error</h2>
+<h3 id="issue">Issue:</h3>
+<p>The output of <code>kubectl describe pod $POD_ID</code> contains <code>no such file or directory</code> and references the StorageOS volume device file.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~# kubectl -n storageos describe <span style="color:#000">$POD_ID</span>
+<span style="color:#ce5c00;font-weight:bold">(</span>...<span style="color:#ce5c00;font-weight:bold">)</span>
+Events:
+  <span style="color:#ce5c00;font-weight:bold">(</span>...<span style="color:#ce5c00;font-weight:bold">)</span>
+  Normal   Scheduled         11s                default-scheduler  Successfully assigned default/d1 to node3
+  Warning  FailedMount       4s <span style="color:#ce5c00;font-weight:bold">(</span>x4 over 9s<span style="color:#ce5c00;font-weight:bold">)</span>    kubelet, node3     MountVolume.SetUp failed <span style="color:#204a87;font-weight:bold">for</span> volume <span style="color:#4e9a06">&#34;pvc-f2a49198-c00c-11e8-ba01-0800278dc04d&#34;</span> : stat /var/lib/storageos/volumes/d9df3549-26c0-4cfc-62b4-724b443069a1: no such file or directory
+</code></pre></div><h3 id="reason">Reason:</h3>
+<p>There are two main reasons this issue may arise:</p>
 <ul>
-<li><a href="/docs/platforms/kubernetes/troubleshoot/">Kubernetes</a></li>
-<li><a href="/docs/platforms/openshift/troubleshoot/">Openshift</a></li>
+<li>The StorageOS <code>DEVICE_DIR</code> location is wrongly configured when using Kubelet
+as a container</li>
+<li>Mount Propagation is not enabled</li>
 </ul>
-<h2 id="common-platform-agnostic-issues">Common Platform Agnostic Issues</h2>
-<p>{% include troubleshoot/issues/newcluster-old-nodes.md %}</p>
-<h2 id="getting-help">Getting Help</h2>
+<p>(Option 1) Misconfiguration of the DeviceDir/SharedDir</p>
+<p>Some Kubernetes distributions such as Rancher, DockerEE or some installations
+of OpenShift deploy the Kubelet as a container, because of this, the device
+files that StorageOS creates to mount into the containers need to be visible to
+the kubelet. StorageOS can be configured to share the device directory.</p>
+<p>Modern installations use CSI, which handles the complexity internally.</p>
+<h3 id="assert">Assert:</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~# kubectl -n default describe stos <span style="color:#000;font-weight:bold">|</span> grep <span style="color:#4e9a06">&#34;Shared Dir&#34;</span>
+  Shared Dir:      <span style="color:#8f5902;font-style:italic"># &amp;lt;-- Shouldn&#39;t be blank</span>
+</code></pre></div><h3 id="solution">Solution:</h3>
+<p>The Cluster Operator Custom Definition should specify the SharedDir option as follows.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">spec:
+  sharedDir: <span style="color:#4e9a06">&#39;/var/lib/kubelet/plugins/kubernetes.io~storageos&#39;</span> <span style="color:#8f5902;font-style:italic"># Needed when Kubelet as a container</span>
+  ...
+</code></pre></div><blockquote>
+<p>See example on how to configure the <a href="/docs/reference/cluster-operator/examples/#specifying-a-shared-directory-for-use-with-kubelet-as-a-container">StorageOS Custom
+Resource</a>.</p>
+</blockquote>
+<p> </p>
+<p>(Option 2) Mount propagation is not enabled.</p>
+<blockquote>
+<p>Applies only if Option 1 is configured properly.</p>
+</blockquote>
+<h3 id="assert-1">Assert:</h3>
+<p><strong>If not using the Kubelet as a container</strong>, SSH into one of the nodes and check if
+<code>/var/lib/storageos/volumes</code> is empty. If so, exec into any StorageOS pod and
+check the same directory.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~# ls /var/lib/storageos/volumes/
+root@node1:~#     <span style="color:#8f5902;font-style:italic"># &amp;lt;-- Shouldn&#39;t be blank</span>
+root@node1:~# kubectl <span style="color:#204a87">exec</span> <span style="color:#000">$POD_ID</span> -c storageos -- ls -l /var/lib/storageos/volumes
+bst-196004
+d529b340-0189-15c7-f8f3-33bfc4cf03fa
+ff537c5b-e295-e518-a340-0b6308b69f74
+</code></pre></div><p>If the directory inside the container and the device files are visible,
+disabled mount propagation is the cause.</p>
+<p><strong>If using the Kubelet as a container</strong>, SSH into one of the nodes and check if
+<code>/var/lib/kubelet/plugins/kubernetes.io~storageos/devices</code> is empty. If
+so, exec into any StorageOS pod and check the same directory.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~# ls /var/lib/kubelet/plugins/kubernetes.io~storageos/devices
+root@node1:~#      <span style="color:#8f5902;font-style:italic"># &amp;lt;-- Shouldn&#39;t be blank</span>
+root@node1:~# kubectl <span style="color:#204a87">exec</span> <span style="color:#000">$POD_ID</span> -c storageos -- ls -l /var/lib/kubelet/plugins/kubernetes.io~storageos/devices
+bst-196004
+d529b340-0189-15c7-f8f3-33bfc4cf03fa
+ff537c5b-e295-e518-a340-0b6308b69f74
+</code></pre></div><p>If the directory inside the container and the device files are visible,
+disabled mount propagation is the cause.</p>
+<h3 id="solution-1">Solution:</h3>
+<p>Older versions of Kubernetes need to enable mount propagation as it is not
+enabled by default. Most Kubernetes distributions allow MountPropagation to be
+enabled using FeatureGates. Rancher specifically, needs to enable it in the
+&ldquo;View in API&rdquo; section of your cluster. You need to edit the section
+&ldquo;rancherKubernetesEngineConfig&rdquo; to enable the Kubelet feature gate.</p>
+<h2 id="pvc-pending-state---failed-to-dial-storageos">PVC pending state - Failed to dial StorageOS</h2>
+<p>A created PVC remains in pending state making pods that need to mount that PVC
+unable to start.</p>
+<h3 id="issue-1">Issue:</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~/# kubectl get pvc
+NAME      STATUS        VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+vol-1     Pending                                                                            fast           7s
+
+kubectl describe pvc <span style="color:#000">$PVC</span>
+<span style="color:#ce5c00;font-weight:bold">(</span>...<span style="color:#ce5c00;font-weight:bold">)</span>
+Events:
+  Type     Reason              Age               From                         Message
+  ----     ------              ----              ----                         -------
+  Warning  ProvisioningFailed  7s <span style="color:#ce5c00;font-weight:bold">(</span>x2 over 18s<span style="color:#ce5c00;font-weight:bold">)</span>  persistentvolume-controller  Failed to provision volume with StorageClass <span style="color:#4e9a06">&#34;fast&#34;</span>: Get http://storageos-cluster/version: failed to dial all known cluster members, <span style="color:#ce5c00;font-weight:bold">(</span>10.233.59.206:5705<span style="color:#ce5c00;font-weight:bold">)</span>
+</code></pre></div><h3 id="reason-1">Reason:</h3>
+<p>For non CSI installations of StorageOS, Kubernetes uses the StorageOS
+API endpoint to communicate. If that communication fails, relevant actions such
+as create or mount volume can&rsquo;t be transmitted to StorageOS, hence the PVC
+will remain in pending state. StorageOS never received the action to perform,
+so it never sent back an acknowledgement.</p>
+<p>In this case, the Event message indicates that StorageOS API is not responding,
+implying that StorageOS is not running. For Kubernetes to define StorageOS pods
+ready, the health check must pass.</p>
+<h3 id="assert-2">Assert:</h3>
+<p>Check the status of StorageOS pods.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~/# kubectl -n storageos get pod --selector <span style="color:#000">app</span><span style="color:#ce5c00;font-weight:bold">=</span>storageos <span style="color:#8f5902;font-style:italic"># for CSI add --selector kind=daemonset</span>
+NAME              READY     STATUS    RESTARTS   AGE
+storageos-qrqkj   0/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          1m
+storageos-s4bfv   0/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          1m
+storageos-vcpfx   0/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          1m
+storageos-w98f5   0/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          1m
+</code></pre></div><p>If the pods are not READY, the service will not forward traffic to the API they
+serve hence PVC will remain in pending state until StorageOS pods are
+available.</p>
+<blockquote>
+<p>Kubernetes keeps trying to execute the action until it succeeds. If
+a PVC is created before StorageOS finish starting, the PVC will be created
+eventually.</p>
+</blockquote>
+<h3 id="solution-2">Solution:</h3>
+<ul>
+<li>StorageOS health check takes 60 seconds of grace before reporting as READY.
+If StorageOS is starting properly after that period, the volume will be
+created when StorageOS finishes its bootstrap.</li>
+<li>If StorageOS is not running or is not starting properly, the solution would
+be to troubleshoot the installation.</li>
+</ul>
+<h2 id="pvc-pending-state---secret-missing">PVC pending state - Secret Missing</h2>
+<p>A created PVC remains in pending state making pods that need to mount that PVC
+unable to start.</p>
+<h3 id="issue-2">Issue:</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl describe pvc <span style="color:#000">$PVC</span>
+<span style="color:#ce5c00;font-weight:bold">(</span>...<span style="color:#ce5c00;font-weight:bold">)</span>
+Events:
+  Type     Reason              Age                From                         Message
+  ----     ------              ----               ----                         -------
+  Warning  ProvisioningFailed  13s <span style="color:#ce5c00;font-weight:bold">(</span>x2 over 28s<span style="color:#ce5c00;font-weight:bold">)</span>  persistentvolume-controller  Failed to provision volume with StorageClass <span style="color:#4e9a06">&#34;fast&#34;</span>: failed to get secret from <span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;storageos&#34;</span>/<span style="color:#4e9a06">&#34;storageos-api&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span>
+
+</code></pre></div><h3 id="reason-2">Reason:</h3>
+<p>For non CSI installations of StorageOS, Kubernetes uses the StorageOS
+API endpoint to communicate. If that communication fails, relevant actions such
+as create or mount a volume can&rsquo;t be transmitted to StorageOS, and the PVC
+will remain in pending state. StorageOS never received the action to perform,
+so it never sent back an acknowledgement.</p>
+<p>The StorageClass provisioned for StorageOS references a Secret from where it
+retrieves the API endpoint and the authentication parameters. If that secret is
+incorrect or missing, the connections won&rsquo;t be established. It is common to see
+that the Secret has been deployed in a different namespace where the
+StorageClass expects it or that is has been deployed with a different name.</p>
+<h3 id="assert-3">Assert:</h3>
+<ol>
+<li>
+<p>Check the StorageClass parameters to know where the Secret is expected to be found.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl get storageclass fast -o yaml
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  creationTimestamp: 2018-09-25T08:44:57Z
+  labels:
+    app: storageos
+  name: fast
+  resourceVersion: <span style="color:#4e9a06">&#34;108853&#34;</span>
+  selfLink: /apis/storage.k8s.io/v1/storageclasses/fast
+  uid: 48490a9b-c09f-11e8-ba01-0800278dc04d
+parameters:
+  adminSecretName: storageos-api
+  adminSecretNamespace: storageos
+  description: Kubernetes volume
+  fsType: ext4
+  pool: default
+provisioner: kubernetes.io/storageos
+reclaimPolicy: Delete
+</code></pre></div><blockquote>
+<p>Note that the parameters specify <code>adminSecretName</code> and <code>adminSecretNamespace</code>.</p>
+</blockquote>
+</li>
+<li>
+<p>Check if the secret exists according to those parameters</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n storageos get secret storageos-api
+No resources found.
+Error from server <span style="color:#ce5c00;font-weight:bold">(</span>NotFound<span style="color:#ce5c00;font-weight:bold">)</span>: secrets <span style="color:#4e9a06">&#34;storageos-api&#34;</span> not found
+</code></pre></div><p>If no resources are found, it is clear that the Secret doesn&rsquo;t exist or it is not deployed in
+the right location.</p>
+</li>
+</ol>
+<h3 id="solution-3">Solution:</h3>
+<p>Deploy StorageOS following the <a href="/docs/introduction/quickstart/">installation procedures</a>. If you are using the manifests
+provided for Kubernetes to deploy StorageOS rather than using automated
+provisioners, make sure that the StorageClass parameters and the Secret
+reference match.</p>
+<p>{% include troubleshoot/issues/nodename-vs-nodehostname.md %}
+{% include troubleshoot/issues/one-node-multiple-clusters.md %}
+{% include troubleshoot/issues/ports-closed.md %}</p>
+<h2 id="peer-discovery---pod-allocation">Peer discovery - Pod allocation</h2>
+<h3 id="issue-3">Issue:</h3>
+<p>StorageOS nodes can&rsquo;t join the cluster and show the following log entries.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>info <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;not first cluster node, joining first node&#34;</span> <span style="color:#000">action</span><span style="color:#ce5c00;font-weight:bold">=</span>create <span style="color:#000">address</span><span style="color:#ce5c00;font-weight:bold">=</span>172.28.128.5 <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>etcd <span style="color:#000">host</span><span style="color:#ce5c00;font-weight:bold">=</span>node3 <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>cp <span style="color:#000">target</span><span style="color:#ce5c00;font-weight:bold">=</span>172.28.128.6
+<span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;could not retrieve cluster config from api&#34;</span> <span style="color:#000">status_code</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">503</span>
+<span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;failed to join existing cluster&#34;</span> <span style="color:#000">action</span><span style="color:#ce5c00;font-weight:bold">=</span>create <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>etcd <span style="color:#000">endpoint</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;172.28.128.3,172.28.128.4,172.28.128.5,172.28.128.6&#34;</span> <span style="color:#000">error</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;503 Service Unavailable&#34;</span> <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>cp
+<span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>info <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;retrying cluster join in 5 seconds...&#34;</span> <span style="color:#000">action</span><span style="color:#ce5c00;font-weight:bold">=</span>create <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>etcd <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>cp
+</code></pre></div><h3 id="reason-3">Reason:</h3>
+<p>StorageOS uses a gossip protocol to discover the nodes in the cluster. When
+StorageOS starts, one or more active nodes must be referenced so new nodes can
+query existing nodes for the list of members. This error indicates that the node
+can&rsquo;t connect to any of the nodes in the known list. The known list is defined
+in the <code>JOIN</code> variable.</p>
+<p>If there are no active StorageOS nodes, the bootstrap process will elect the
+first node in the <code>JOIN</code> variable as master, and the rest will try to
+discover from it. In case of that node not starting, the whole cluster will
+remain unable to bootstrap.</p>
+<p>Installations of StorageOS use a DaemonSet, and by default do not schedule
+StorageOS pods to master nodes, due to the presence of the
+<code>node-role.kubernetes.io/master:NoSchedule</code> taint that is typically present. In
+such cases the <code>JOIN</code> variable must not contain master nodes or the StorageOS
+cluster will remain unable to start.</p>
+<h3 id="assert-4">Assert:</h3>
+<p>Check that the first node of the <code>JOIN</code> variable started properly.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~/# kubectl -n storageos describe ds/storageos <span style="color:#000;font-weight:bold">|</span> grep JOIN
+    JOIN:          172.28.128.3,172.28.128.4,172.28.128.5
+root@node1:~/# kubectl -n storageos get pod -o wide <span style="color:#000;font-weight:bold">|</span> grep 172.28.128.3
+storageos-8zqxl   1/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          2m        172.28.128.3   node1
+</code></pre></div><h3 id="solution-4">Solution:</h3>
+<p>Make sure that the <code>JOIN</code> variable doesn&rsquo;t specify the master nodes. In case
+you are using the discovery service, it is necessary to ensure that the
+DaemonSet won&rsquo;t allocate Pods on the masters. This can be achieved with taints,
+node selectors or labels.</p>
+<p>For installations with the StorageOS operator you can specify which nodes to
+deploy StorageOS on using nodeSelectors. See examples in the <a href="docs/reference/cluster-operator/examples/#installing-to-a-subset-of-nodes">Cluster Operator
+Examples
+page</a>.</p>
+<p>For more advanced installations using compute-only and storage nodes, check the
+<code>storageos.com/deployment=computeonly</code> label that can be added to the nodes
+through Kubernetes node labels, or StorageOS in the <a href="/docs/reference/labels/">Labels</a> page.</p>
+<h2 id="lio-initerror">LIO Init:Error</h2>
+<h3 id="issue-4">Issue:</h3>
+<p>StorageOS pods not starting with <code>Init:Error</code></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n storageos get pod
+NAME              READY     STATUS              RESTARTS   AGE
+storageos-2kwqx   0/3       Init:Err             <span style="color:#0000cf;font-weight:bold">0</span>          6s
+storageos-cffcr   0/3       Init:Err             <span style="color:#0000cf;font-weight:bold">0</span>          6s
+storageos-d4f69   0/3       Init:Err             <span style="color:#0000cf;font-weight:bold">0</span>          6s
+storageos-nhq7m   0/3       Init:Err             <span style="color:#0000cf;font-weight:bold">0</span>          6s
+</code></pre></div><h3 id="reason-4">Reason:</h3>
+<p>This indicates that since the Linux open source SCSI drivers are not enabled,
+StorageOS cannot start. The StorageOS DaemonSet enables the required kernel
+modules on the host system. If you are seeing these errors it is because that
+container couldn&rsquo;t load the modules.</p>
+<h3 id="assert-5">Assert</h3>
+<p>Check the logs of the init container.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n storageos logs <span style="color:#000">$ANY_STORAGEOS_POD</span> -c storageos-init
+</code></pre></div><p>In case of failure, it will show the following output, indicating which kernel
+modules couldn&rsquo;t be loaded or that they are not properly configured:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Checking configfs
+configfs mounted on sys/kernel/config
+Module target_core_mod is not running
+executing modprobe -b target_core_mod
+Module tcm_loop is not running
+executing modprobe -b tcm_loop
+modprobe: FATAL: Module tcm_loop not found.
+</code></pre></div><h3 id="solution-5">Solution:</h3>
+<p>Install the required kernel modules (usually found in the
+<code>linux-image-extra-$(uname -r)</code> package of your distribution) on your nodes
+following this <a href="/docs/prerequisites/systemconfiguration/">prerequisites page</a> and delete StorageOS
+pods, allowing the DaemonSet to create the pods again.</p>
+<h2 id="lio-not-enabled">LIO not enabled</h2>
+<h3 id="issue-5">Issue:</h3>
+<p>StorageOS node can&rsquo;t start and shows the following log entries.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T14:34:40Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;liocheck returned error&#34;</span> <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>liocheck <span style="color:#000">error</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;exit status 1&#34;</span> <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>dataplane <span style="color:#000">stderr</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Sysfs root &#39;/sys/kernel/config/target&#39; is missing, is kernel configfs present and target_core_mod loaded? category=fslio level=warn\nRuntime error checking stage &#39;target_core_mod&#39;: SysFs root missing category=fslio level=warn\nliocheck: FAIL (lio_capable_system() returns failure) category=fslio level=fatal\n&#34;</span> <span style="color:#000">stdout</span><span style="color:#ce5c00;font-weight:bold">=</span>
+<span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T14:34:40Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;failed to start dataplane services&#34;</span> <span style="color:#000">error</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;system dependency check failed: exit status 1&#34;</span> <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">command</span>
+</code></pre></div><h3 id="reason-5">Reason:</h3>
+<p>This indicates that one or more kernel modules required for StorageOS are
+not loaded.</p>
+<h3 id="assert-6">Assert</h3>
+<p>The following kernel modules must be enabled in the host.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lsmod  <span style="color:#000;font-weight:bold">|</span> egrep <span style="color:#4e9a06">&#34;^tcm_loop|^target_core_mod|^target_core_file|^configfs&#34;</span>
+</code></pre></div><h3 id="solution-6">Solution:</h3>
+<p>Install the required kernel modules (usually found in the
+<code>linux-image-extra-$(uname -r)</code> package of your distribution) on your nodes
+following this <a href="/docs/prerequisites/systemconfiguration/">prerequisites page</a> and restart the container.</p>
+<h2 id="openshift-storageos-pods-missing----daemonset-error">(OpenShift) StorageOS pods missing &ndash; DaemonSet error</h2>
+<p>StorageOS DaemonSet doesn&rsquo;t have any pod replicas. The DaemonSet couldn&rsquo;t
+allocate any Pod due to security issues.</p>
+<h3 id="issue-6">Issue:</h3>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master02 standard<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># oc get pod</span>
+No resources found.
+<span style="color:#ce5c00;font-weight:bold">[</span>root@master02 standard<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># oc describe daemonset storageos</span>
+<span style="color:#ce5c00;font-weight:bold">(</span>...<span style="color:#ce5c00;font-weight:bold">)</span>
+Events:
+  Type     Reason        Age                From                  Message
+  ----     ------        ----               ----                  -------
+  Warning  FailedCreate  0s <span style="color:#ce5c00;font-weight:bold">(</span>x12 over 10s<span style="color:#ce5c00;font-weight:bold">)</span>  daemonset-controller  Error creating: pods <span style="color:#4e9a06">&#34;storageos-&#34;</span> is forbidden: unable to validate against any security context constraint: <span style="color:#ce5c00;font-weight:bold">[</span>provider restricted: .spec.securityContext.hostNetwork: Invalid value: true: Host network is not allowed to be used provider restricted: .spec.securityContext.hostPID: Invalid value: true: Host PID is not allowed to be used spec.volumes<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>: Invalid value: <span style="color:#4e9a06">&#34;hostPath&#34;</span>: hostPath volumes are not allowed to be used spec.volumes<span style="color:#ce5c00;font-weight:bold">[</span>1<span style="color:#ce5c00;font-weight:bold">]</span>: Invalid value: <span style="color:#4e9a06">&#34;hostPath&#34;</span>: hostPath volumes are not allowed to be used spec.volumes<span style="color:#ce5c00;font-weight:bold">[</span>2<span style="color:#ce5c00;font-weight:bold">]</span>: Invalid value: <span style="color:#4e9a06">&#34;hostPath&#34;</span>: hostPath volumes are not allowed to be used spec.volumes<span style="color:#ce5c00;font-weight:bold">[</span>3<span style="color:#ce5c00;font-weight:bold">]</span>: Invalid value: <span style="color:#4e9a06">&#34;hostPath&#34;</span>: hostPath volumes are not allowed to be used spec.initContainers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.privileged: Invalid value: true: Privileged containers are not allowed capabilities.add: Invalid value: <span style="color:#4e9a06">&#34;SYS_ADMIN&#34;</span>: capability may not be added spec.initContainers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.hostNetwork: Invalid value: true: Host network is not allowed to be used spec.initContainers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.hostPort: Invalid value: 5705: Host ports are not allowed to be used spec.initContainers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.hostPID: Invalid value: true: Host PID is not allowed to be used spec.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.privileged: Invalid value: true: Privileged containers are not allowed capabilities.add: Invalid value: <span style="color:#4e9a06">&#34;SYS_ADMIN&#34;</span>: capability may not be added spec.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.hostNetwork: Invalid value: true: Host network is not allowed to be used spec.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.hostPort: Invalid value: 5705: Host ports are not allowed to be used spec.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.hostPID: Invalid value: true: Host PID is not allowed to be used<span style="color:#ce5c00;font-weight:bold">]</span>
+</code></pre></div><h3 id="reason-6">Reason:</h3>
+<p>The OpenShift cluster has security context constraint policies enabled that
+forbid any pod, without an explicitly set policy for the service account, to
+be allocated.</p>
+<h3 id="assert-7">Assert:</h3>
+<p>Check if the StorageOS ServiceAccount can create pods with enough permissions</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc get scc privileged -o yaml <span style="color:#8f5902;font-style:italic"># Or custom scc with enough privileges</span>
+<span style="color:#ce5c00;font-weight:bold">(</span>...<span style="color:#ce5c00;font-weight:bold">)</span>
+users:
+- system:admin
+- system:serviceaccount:openshift-infra:build-controller
+- system:serviceaccount:management-infra:management-admin
+- system:serviceaccount:management-infra:inspector-admin
+- system:serviceaccount:storageos:storageos                       <span style="color:#000;font-weight:bold">&amp;</span>lt<span style="color:#000;font-weight:bold">;</span>--
+- system:serviceaccount:tiller:tiller
+</code></pre></div><p>If the StorageOS sa system:serviceaccount:storageos:storageos is in the
+privileged scc it will be able to create pods.</p>
+<h3 id="solution-7">Solution:</h3>
+<p>Add the ServiceAccount system:serviceaccount:storageos:storageos to a scc with
+enough privileges.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc adm policy add-scc-to-user privileged system:serviceaccount:storageos:storageos
+</code></pre></div><h2 id="getting-help">Getting Help</h2>
 <p>If our troubleshooting guides do not help resolve your issue, please see our
 <a href="/docs/support/">support section</a> for details on how
 to get in touch with us.</p>
 
 	
-		<style>
-  .feedback--answer {
-    display: inline-block;
-  }
-  .feedback--answer-no {
-    margin-left: 1em;
-  }
-  .feedback--response {
-    display: none;
-    margin-top: 1em;
-  }
-  .feedback--response__visible {
-    display: block;
-  }
-</style>
-<h2 class="feedback--title">Feedback</h2>
-<p class="feedback--question">Was this page helpful?</p>
-<button class="feedback--answer feedback--answer-yes">Yes</button>
-<button class="feedback--answer feedback--answer-no">No</button>
-<p class="feedback--response feedback--response-yes">
-  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-<p class="feedback--response feedback--response-no">
-  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-<script>
-  const yesButton = document.querySelector('.feedback--answer-yes');
-  const noButton = document.querySelector('.feedback--answer-no');
-  const yesResponse = document.querySelector('.feedback--response-yes');
-  const noResponse = document.querySelector('.feedback--response-no');
-  const disableButtons = () => {
-    yesButton.disabled = true;
-    noButton.disabled = true;
-  };
-  const sendFeedback = (value) => {
-    if (typeof ga !== 'function') return;
-    const args = {
-      command: 'send',
-      hitType: 'event',
-      category: 'Helpful',
-      action: 'click',
-      label: window.location.pathname,
-      value: value
-    };
-    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
-  };
-  yesButton.addEventListener('click', () => {
-    yesResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback(1);
-  });
-  noButton.addEventListener('click', () => {
-    noResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback(0);
-  });
-</script>
-
-		<br />
 	
-	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 7, 2020: <a  href="https://github.com/google/docsy-example/commit/cdb5f88a326b5098eac005317cbbc3524caf0e84">Fix reference and links (cdb5f88)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified March 24, 2020: <a  href="https://github.com/storageos/storageos.github.io/commit/ea22d32b37dae864a900115133d3150028e28a43">Language changes (ea22d32)</a>
 </div>
 </div>
 

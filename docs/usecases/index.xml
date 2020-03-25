@@ -31,7 +31,7 @@ files written by the application are available for export. Files can be
 exported using Nginx as a web file server, transferred using rsync or accessed
 via SFTP.&lt;/p&gt;
 &lt;p&gt;The files create a stateful set that can be used &lt;em&gt;AFTER&lt;/em&gt; a StorageOS cluster
-has been created. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+has been created. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;clone-repository&#34;&gt;Clone Repository&lt;/h2&gt;
 &lt;p&gt;In order to deploy the examples, clone this repository and use kubectl to create the
@@ -221,7 +221,7 @@ irrespective of whether or not a StorageOS master is located on the same node.&l
 consideration of whether to allow StorageOS or Cassandra to handle replication
 is required.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;deploying-cassandra-on-kubernetes&#34;&gt;Deploying Cassandra on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -317,7 +317,7 @@ is located on the same node.&lt;/p&gt;
 careful consideration of whether to allow StorageOS or Elasticsearch to handle
 replication is required.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;deploying-elasticsearch-on-kubernetes&#34;&gt;Deploying Elasticsearch on Kubernetes&lt;/h2&gt;
 &lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
@@ -327,7 +327,7 @@ from the &lt;a href=&#34;https//github.com/storageos/use-cases.git&#34;&gt;use c
 &lt;code&gt;262144&lt;/code&gt;, which is a system wide setting. One way to achieve this is to
 run &lt;code&gt;sysctl -w vm.max_map_count=262144&lt;/code&gt; and update &lt;code&gt;/etc/sysctl.conf&lt;/code&gt;
 to ensure it persists over a reboot. See ElasicSearch reference
-&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/7.0/vm-max-map-count.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://www.elastic.co/guide/en/elasticsearch/reference/7.0/vm-max-map-count.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Administrators should be aware that this impacts the behaviour of nodes and
 that there may be collisions with other application settings. Administrators
 are advised to centrally collate sysctl settings using the tooling of their
@@ -462,7 +462,7 @@ Lastly by enabling &lt;a href=&#34;https://docs.storageos.com/docs/concepts/fenc
 fencing &lt;/a&gt; Jenkins time to
 recover, in case of node failures, is greatly reduced.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;deploying-jenkins-on-kubernetes&#34;&gt;Deploying Jenkins on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -536,7 +536,7 @@ is located on the same node.&lt;/p&gt;
 consideration of whether to allow StorageOS or Kafka to handle replication
 is required.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;ul&gt;
@@ -669,7 +669,7 @@ automatically prepared with the disk image.&lt;/p&gt;
 Kubernetes cluster, and create a VM. By the end of the guide you&amp;rsquo;ll be able to
 launch a shell inside the KubeVirt VM that&amp;rsquo;s running as a Kubernetes pod.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;p&gt;Please ensure you have met the Kubevirt prerequisites, please see the &lt;a href=&#34;https://kubevirt.io/user-guide/docs/latest/administration/intro.html&#34;&gt;
@@ -801,7 +801,7 @@ the original volume to it.&lt;/p&gt;
 &lt;p&gt;Beginning with Microsoft SQL Server 2017, Microsoft has supported MSSQL on
 linux.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;deploying-ms-sql-on-kubernetes&#34;&gt;Deploying MS SQL on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -894,7 +894,7 @@ with your desired MS SQL configuration settings.&lt;/p&gt;
 &lt;p&gt;MySQL is a popular SQL open source database for a wide range of popular
 web-based applications including WordPress.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;deploying-mysql-on-kubernetes&#34;&gt;Deploying MySQL on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -983,7 +983,7 @@ with your desired MySQL configuration settings.&lt;/p&gt;
 balancer or even as a
 &lt;a href=&#34;https://github.com/kubernetes/ingress-nginx&#34;&gt;Kubernetes ingress controller.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;deploying-nginx-on-kubernetes&#34;&gt;Deploying Nginx on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -1092,7 +1092,7 @@ with many concurrent users.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. If you need to setup StorageOS on Kubernetes then please see our guide
 to [installing StorageOS on Kubernetes]({% link
-&amp;ldquo;docs/platforms/kubernetes/install.md&amp;rdquo; &amp;gt;}}).&lt;/p&gt;
+&amp;ldquo;docs/install/kubernetes.md&amp;rdquo; &amp;gt;}}).&lt;/p&gt;
 &lt;h2 id=&#34;deploying-postgresql-on-kubernetes&#34;&gt;Deploying PostgreSQL on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -1182,7 +1182,7 @@ with your desired PostgreSQL configuration settings.&lt;/p&gt;
         &lt;h1 id=&#34;imageimagesdocsexploreredislogopng-redis-with-storageos&#34;&gt;&lt;img src=&#34;/images/docs/explore/redislogo.png&#34; alt=&#34;image&#34;&gt; Redis with StorageOS&lt;/h1&gt;
 &lt;p&gt;Redis is a popular networked, in-memory, key-value data store with optional durability to disk.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;deploying-redis-on-kubernetes&#34;&gt;Deploying Redis on Kubernetes&lt;/h2&gt;
 &lt;ol&gt;
@@ -1275,7 +1275,7 @@ is located on the same node.&lt;/p&gt;
 &lt;p&gt;As Zookeeper has features to allow it to handle replication, and as such
 careful consideration of whether to allow StorageOS or Zookeeper to handle replication is required.&lt;/p&gt;
 &lt;p&gt;Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. &lt;a href=&#34;/docs/platforms/kubernetes/install/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
+cluster. &lt;a href=&#34;/docs/install/kubernetes/&#34;&gt;See our guide on how to install StorageOS on Kubernetes for more
 information&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;deploying-zookeeper-on-kubernetes&#34;&gt;Deploying Zookeeper on Kubernetes&lt;/h2&gt;
 &lt;h3 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h3&gt;

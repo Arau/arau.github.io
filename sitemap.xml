@@ -3,73 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/docs/platforms/openshift/install/4.2/</loc>
-    <lastmod>2020-02-20T16:13:35+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/install/4.1/</loc>
-    <lastmod>2020-02-20T16:13:35+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/install/3.11/</loc>
-    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/install/3.10/</loc>
-    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/install/3.9/</loc>
-    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/install/3.8/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/install/3.7/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/docs/reference/cluster-operator/install/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/aws-eks/install/</loc>
-    <lastmod>2020-02-20T15:35:01+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/azure-aks/install/</loc>
-    <lastmod>2020-02-20T15:35:01+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/dockeree/install/</loc>
-    <lastmod>2020-02-20T15:35:01+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/kubernetes/install/</loc>
-    <lastmod>2020-02-21T11:56:45+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/install/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/rancher/install/</loc>
-    <lastmod>2020-02-20T16:14:07+00:00</lastmod>
+    <lastmod>2020-03-18T23:39:58+00:00</lastmod>
   </url>
   
   <url>
@@ -78,42 +13,12 @@
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/</loc>
-    <lastmod>2020-02-20T15:35:01+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/rancher/install/rancher-catalog/</loc>
-    <lastmod>2020-02-14T15:50:30+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/rancher/install/rancher-advanced/</loc>
-    <lastmod>2020-02-20T16:14:07+00:00</lastmod>
+    <loc>/docs/install/kubernetes/</loc>
+    <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/prerequisites/systemconfiguration/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/volumeguide/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/rancher/volumeguide/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/aws-eks/bestpractices/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/bestpractices/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
@@ -123,32 +28,12 @@
   </url>
   
   <url>
+    <loc>/docs/install/openshift/</loc>
+    <lastmod>2020-03-25T16:13:20+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/docs/prerequisites/firewalls/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/azure-aks/volumeguide/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/dockeree/volumeguide/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/azure-aks/bestpractices/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/dockeree/bestpractices/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/rancher/bestpractices/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
@@ -159,37 +44,17 @@
   
   <url>
     <loc>/docs/prerequisites/mountpropagation/</loc>
-    <lastmod>2020-02-20T17:13:50+00:00</lastmod>
+    <lastmod>2020-03-18T19:31:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/aws-eks/volumeguide/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/kubernetes/volumeguide/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/kubernetes/bestpractices/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
+    <loc>/docs/install/rancher/</loc>
+    <lastmod>2020-03-25T16:13:20+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/reference/cluster-operator/upgrade/</loc>
     <lastmod>2020-02-20T14:39:29+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/troubleshoot/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/rancher/troubleshoot/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
@@ -203,8 +68,13 @@
   </url>
   
   <url>
-    <loc>/docs/platforms/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
+    <loc>/docs/install/</loc>
+    <lastmod>2020-03-18T18:12:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/best-practices/</loc>
+    <lastmod>2020-03-18T18:14:56+00:00</lastmod>
   </url>
   
   <url>
@@ -378,33 +248,28 @@
   </url>
   
   <url>
-    <loc>/concepts/architecture/</loc>
-    <lastmod>2020-02-17T14:47:22+00:00</lastmod>
+    <loc>/docs/concepts/architecture/</loc>
+    <lastmod>2020-03-24T09:53:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/aws-eks/</loc>
-    <lastmod>2020-02-20T15:35:01+00:00</lastmod>
+    <loc>/docs/reference/platforms/aws-eks/</loc>
+    <lastmod>2020-03-24T14:43:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/azure-aks/</loc>
-    <lastmod>2020-02-20T15:35:01+00:00</lastmod>
+    <loc>/docs/reference/platforms/azure-aks/</loc>
+    <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/usecases/backups/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/kubernetes/examples/cassandra/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/usecases/cassandra/</loc>
-    <lastmod>2020-02-20T17:09:48+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
@@ -448,8 +313,8 @@
   </url>
   
   <url>
-    <loc>/docs/platforms/dockeree/</loc>
-    <lastmod>2020-02-20T15:35:01+00:00</lastmod>
+    <loc>/docs/reference/platforms/dockeree/</loc>
+    <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
@@ -459,7 +324,7 @@
   
   <url>
     <loc>/docs/usecases/elasticsearch/</loc>
-    <lastmod>2020-02-20T17:09:48+00:00</lastmod>
+    <lastmod>2020-03-18T22:56:26+00:00</lastmod>
   </url>
   
   <url>
@@ -493,6 +358,11 @@
   </url>
   
   <url>
+    <loc>/docs/operations/firstpvc/</loc>
+    <lastmod>2020-03-24T14:08:15+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/docs/reference/gui/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
@@ -513,43 +383,18 @@
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/examples/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/troubleshoot/install/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/rancher/troubleshoot/install/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/docs/usecases/jenkins/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/usecases/kafka/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/kubernetes/troubleshoot/install/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/kubernetes/troubleshoot/volumes/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/usecases/kubevirt/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
@@ -593,13 +438,8 @@
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/examples/mssql/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/docs/usecases/mssql/</loc>
-    <lastmod>2020-02-20T17:09:48+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
@@ -608,13 +448,8 @@
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/examples/mysql/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/docs/usecases/mysql/</loc>
-    <lastmod>2020-02-20T17:09:48+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
@@ -634,7 +469,7 @@
   
   <url>
     <loc>/docs/usecases/nginx/</loc>
-    <lastmod>2020-02-20T17:09:48+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
@@ -653,8 +488,13 @@
   </url>
   
   <url>
-    <loc>/docs/platforms/openshift/</loc>
-    <lastmod>2020-02-07T11:49:52+00:00</lastmod>
+    <loc>/docs/reference/platforms/openshift/</loc>
+    <lastmod>2020-03-24T14:08:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/platforms/</loc>
+    <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
@@ -688,13 +528,8 @@
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/examples/postgres/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/docs/usecases/postgres/</loc>
-    <lastmod>2020-02-20T17:09:48+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
@@ -709,22 +544,17 @@
   
   <url>
     <loc>/docs/introduction/quickstart/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
+    <lastmod>2020-03-18T23:39:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/docs/platforms/rancher/</loc>
-    <lastmod>2020-02-20T16:14:07+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/kubernetes/examples/redis/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
+    <loc>/docs/reference/platforms/rancher/</loc>
+    <lastmod>2020-03-19T00:20:38+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/usecases/redis/</loc>
-    <lastmod>2020-02-20T17:09:48+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
@@ -782,13 +612,8 @@
   </url>
   
   <url>
-    <loc>/docs/platforms/kubernetes/troubleshoot/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/docs/operations/troubleshooting/</loc>
-    <lastmod>2020-02-07T11:49:52+00:00</lastmod>
+    <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
@@ -803,21 +628,11 @@
   
   <url>
     <loc>/docs/operations/users/</loc>
-    <lastmod>2020-02-07T11:49:52+00:00</lastmod>
+    <lastmod>2020-03-15T10:03:20+00:00</lastmod>
   </url>
   
   <url>
     <loc>/docs/reference/cli/user/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/openshift/troubleshoot/volumes/</loc>
-    <lastmod>2020-02-06T15:46:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/docs/platforms/rancher/troubleshoot/volumes/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
@@ -833,7 +648,7 @@
   
   <url>
     <loc>/docs/usecases/zookeeper/</loc>
-    <lastmod>2020-02-20T13:37:08+00:00</lastmod>
+    <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
 </urlset>
