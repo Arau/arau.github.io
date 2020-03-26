@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Shares</title>
-    <link>arau.github.com/share/</link>
+    <link>https://arau.github.io/share/</link>
     <description>Recent content in Shares on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="arau.github.com/share/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://arau.github.io/share/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/cr-basic-example/</link>
+      <link>https://arau.github.io/share/operator/cr-basic-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/cr-basic-example/</guid>
+      <guid>https://arau.github.io/share/operator/cr-basic-example/</guid>
       <description>
         
         
@@ -105,10 +105,10 @@ store for StorageOS in the [Cluster Operator examples]({%link _docs/reference/cl
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/cr-config-table/</link>
+      <link>https://arau.github.io/share/operator/cr-config-table/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/cr-config-table/</guid>
+      <guid>https://arau.github.io/share/operator/cr-config-table/</guid>
       <description>
         
         
@@ -330,10 +330,10 @@ store for StorageOS in the [Cluster Operator examples]({%link _docs/reference/cl
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/cr-csi-example/</link>
+      <link>https://arau.github.io/share/operator/cr-csi-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/cr-csi-example/</guid>
+      <guid>https://arau.github.io/share/operator/cr-csi-example/</guid>
       <description>
         
         
@@ -371,10 +371,10 @@ store for StorageOS in the [Cluster Operator examples](
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/cr-csi-openshift4/</link>
+      <link>https://arau.github.io/share/operator/cr-csi-openshift4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/cr-csi-openshift4/</guid>
+      <guid>https://arau.github.io/share/operator/cr-csi-openshift4/</guid>
       <description>
         
         
@@ -413,10 +413,10 @@ store for StorageOS in the [Cluster Operator examples](
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/cr-csi-shareddir/</link>
+      <link>https://arau.github.io/share/operator/cr-csi-shareddir/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/cr-csi-shareddir/</guid>
+      <guid>https://arau.github.io/share/operator/cr-csi-shareddir/</guid>
       <description>
         
         
@@ -463,10 +463,10 @@ store for StorageOS in the [Cluster Operator examples](
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/cr-rancher-ui/</link>
+      <link>https://arau.github.io/share/operator/cr-rancher-ui/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/cr-rancher-ui/</guid>
+      <guid>https://arau.github.io/share/operator/cr-rancher-ui/</guid>
       <description>
         
         
@@ -527,10 +527,10 @@ nodeContainer: &amp;ldquo;storageos/node:{{ site.latest_node_version }}&amp;rdqu
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/examples/</link>
+      <link>https://arau.github.io/share/operator/examples/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/examples/</guid>
+      <guid>https://arau.github.io/share/operator/examples/</guid>
       <description>
         
         
@@ -652,10 +652,10 @@ pods.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/first-volume/</link>
+      <link>https://arau.github.io/share/operator/first-volume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/first-volume/</guid>
+      <guid>https://arau.github.io/share/operator/first-volume/</guid>
       <description>
         
         
@@ -669,10 +669,10 @@ to mount a StorageOS volume in a Pod.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/install/</link>
+      <link>https://arau.github.io/share/operator/install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/install/</guid>
+      <guid>https://arau.github.io/share/operator/install/</guid>
       <description>
         
         
@@ -739,7 +739,7 @@ unique, strong password.&lt;/p&gt;
 The &lt;code&gt;echo -n&lt;/code&gt; ensures that a trailing new line is not appended to the string.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;arau.github.com/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
+&lt;p&gt;If you wish to change the default accounts details post-install please see &lt;a href=&#34;https://arau.github.io/docs/operations/users#altering-the-storageos-api-account&#34;&gt;Managing
 Users&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;3-trigger-a-storageos-installation&#34;&gt;3. Trigger a StorageOS installation&lt;/h2&gt;
@@ -781,10 +781,10 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   &lt;span style=&#34;co
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/manual-install-disclaimer/</link>
+      <link>https://arau.github.io/share/operator/manual-install-disclaimer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/manual-install-disclaimer/</guid>
+      <guid>https://arau.github.io/share/operator/manual-install-disclaimer/</guid>
       <description>
         
         
@@ -799,10 +799,10 @@ configuration parameters to be tuned.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/reference/</link>
+      <link>https://arau.github.io/share/operator/reference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/reference/</guid>
+      <guid>https://arau.github.io/share/operator/reference/</guid>
       <description>
         
         
@@ -830,10 +830,10 @@ repository&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/secret/</link>
+      <link>https://arau.github.io/share/operator/secret/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/secret/</guid>
+      <guid>https://arau.github.io/share/operator/secret/</guid>
       <description>
         
         
@@ -855,10 +855,10 @@ data:
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/upgrade-helm/</link>
+      <link>https://arau.github.io/share/operator/upgrade-helm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/upgrade-helm/</guid>
+      <guid>https://arau.github.io/share/operator/upgrade-helm/</guid>
       <description>
         
         
@@ -884,10 +884,10 @@ Operator is upgrading.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/operator/upgrade-uber-yaml/</link>
+      <link>https://arau.github.io/share/operator/upgrade-uber-yaml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/operator/upgrade-uber-yaml/</guid>
+      <guid>https://arau.github.io/share/operator/upgrade-uber-yaml/</guid>
       <description>
         
         
@@ -908,10 +908,10 @@ Operator is upgrading.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/csi-note/</link>
+      <link>https://arau.github.io/share/platforms/csi-note/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/csi-note/</guid>
+      <guid>https://arau.github.io/share/platforms/csi-note/</guid>
       <description>
         
         
@@ -927,7 +927,7 @@ complexity by detecting the version of the Kubernetes installed.&lt;/p&gt;
 &lt;p&gt;Check out the status of the CSI release cycle in relation with Kubernetes in
 the &lt;a href=&#34;https://kubernetes-csi.github.io/docs/&#34;&gt;CSI project&lt;/a&gt; page.&lt;/p&gt;
 &lt;p&gt;CSI communication is fully supported by StorageOS if the cluster is deployed
-with any &lt;a href=&#34;arau.github.com/docs/prerequisites/systemconfiguration#distribution-specifics&#34;&gt;supported Linux
+with any &lt;a href=&#34;https://arau.github.io/docs/prerequisites/systemconfiguration#distribution-specifics&#34;&gt;supported Linux
 Distribution&lt;/a&gt;.&lt;/p&gt;
 
       </description>
@@ -935,10 +935,10 @@ Distribution&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/csi-pvc/</link>
+      <link>https://arau.github.io/share/platforms/csi-pvc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/csi-pvc/</guid>
+      <guid>https://arau.github.io/share/platforms/csi-pvc/</guid>
       <description>
         
         
@@ -959,10 +959,10 @@ Distribution&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/csi-sc/</link>
+      <link>https://arau.github.io/share/platforms/csi-sc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/csi-sc/</guid>
+      <guid>https://arau.github.io/share/platforms/csi-sc/</guid>
       <description>
         
         
@@ -981,10 +981,10 @@ Distribution&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/firstuse/</link>
+      <link>https://arau.github.io/share/platforms/firstuse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/firstuse/</guid>
+      <guid>https://arau.github.io/share/platforms/firstuse/</guid>
       <description>
         
         
@@ -1087,10 +1087,10 @@ If you wish to see more use cases with actual applications please see our
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/kubernetes-with-storageos/</link>
+      <link>https://arau.github.io/share/platforms/kubernetes-with-storageos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/kubernetes-with-storageos/</guid>
+      <guid>https://arau.github.io/share/platforms/kubernetes-with-storageos/</guid>
       <description>
         
         
@@ -1111,10 +1111,10 @@ StorageOS still maintains support for it.
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/managedservices-docker/</link>
+      <link>https://arau.github.io/share/platforms/managedservices-docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/managedservices-docker/</guid>
+      <guid>https://arau.github.io/share/platforms/managedservices-docker/</guid>
       <description>
         
         
@@ -1155,10 +1155,10 @@ environment&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/managedservices-upgrades/</link>
+      <link>https://arau.github.io/share/platforms/managedservices-upgrades/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/managedservices-upgrades/</guid>
+      <guid>https://arau.github.io/share/platforms/managedservices-upgrades/</guid>
       <description>
         
         
@@ -1174,17 +1174,17 @@ upgrade process to create a better user experience.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/openshift-install-4.x/</link>
+      <link>https://arau.github.io/share/platforms/openshift-install-4.x/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/openshift-install-4.x/</guid>
+      <guid>https://arau.github.io/share/platforms/openshift-install-4.x/</guid>
       <description>
         
         
         &lt;h1 id=&#34;openshift--pageoc-version-&#34;&gt;OpenShift {{ page.oc-version }}&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;arau.github.com/docs/prerequisites/overview&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;https://arau.github.io/docs/prerequisites/overview&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
@@ -1208,39 +1208,39 @@ OperatorHub. You can install the StorageOS operator through the OperatorHub.&lt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Select the &lt;code&gt;OperatorHub&lt;/code&gt; from the Catalog sub menu and search for StorageOS&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;arau.github.com/images/openshift4/operatorhub.png&#34; alt=&#34;install-1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/openshift4/operatorhub.png&#34; alt=&#34;install-1&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Select StorageOS and click install&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;arau.github.com/images/openshift4/install-storageos-operator.png&#34; alt=&#34;install-2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/openshift4/install-storageos-operator.png&#34; alt=&#34;install-2&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Create the Operator subscription by clicking subscribe&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;arau.github.com/images/openshift4/create-operator-subscription.png&#34; alt=&#34;install-3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/openshift4/create-operator-subscription.png&#34; alt=&#34;install-3&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Wait until the Upgrade Status shows 1 installed&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;arau.github.com/images/openshift4/install-complete.png&#34; alt=&#34;install-4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/openshift4/install-complete.png&#34; alt=&#34;install-4&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Create a secret containing an &lt;code&gt;apiUsername&lt;/code&gt; and an &lt;code&gt;apiPassword&lt;/code&gt; key. The
 username and password defined in the secret will be used to authenticate
 when using the StorageOS CLI and GUI. Take note of which project you created
 the secret in.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;arau.github.com/images/openshift4/create-secret.png&#34; alt=&#34;install-5&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/openshift4/create-secret.png&#34; alt=&#34;install-5&#34;&gt;
  
-&lt;img src=&#34;arau.github.com/images/openshift4/secret-inputs.png&#34; alt=&#34;install-6&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://arau.github.io/images/openshift4/secret-inputs.png&#34; alt=&#34;install-6&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Go to &lt;code&gt;Installed Operators&lt;/code&gt; and select the StorageOS operator. Select
 StorageOS Cluster and create a StorageOS cluster.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;arau.github.com/images/openshift4/create-stos.png&#34; alt=&#34;install-7&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/openshift4/create-stos.png&#34; alt=&#34;install-7&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The StorageOS cluster resource describes the StorageOS cluster that will be
 created. The &lt;code&gt;secretRefName&lt;/code&gt; and &lt;code&gt;secretRefNamespace&lt;/code&gt; should reference the secret
 containing the &lt;code&gt;apiUsername&lt;/code&gt; and &lt;code&gt;apiPassword&lt;/code&gt; that was previously created.&lt;/p&gt;
-&lt;p&gt;Additional &lt;code&gt;spec&lt;/code&gt; parameters are available on the &lt;a href=&#34;arau.github.com/docs/reference/cluster-operator/configuration&#34;&gt;Cluster Operator
+&lt;p&gt;Additional &lt;code&gt;spec&lt;/code&gt; parameters are available on the &lt;a href=&#34;https://arau.github.io/docs/reference/cluster-operator/configuration&#34;&gt;Cluster Operator
 configuration&lt;/a&gt; page.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; apiVersion: storageos.com/v1
  kind: StorageOSCluster
@@ -1258,11 +1258,11 @@ configuration&lt;/a&gt; page.&lt;/p&gt;
      requests:
      memory: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;512Mi&amp;#34;&lt;/span&gt;
    k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;arau.github.com/images/openshift4/stos-specs.png&#34; alt=&#34;install-8&#34;&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/openshift4/stos-specs.png&#34; alt=&#34;install-8&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Verify that the StorageOS Resource enters a running state.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;arau.github.com/images/openshift4/stos-running.png&#34; alt=&#34;install-9&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/openshift4/stos-running.png&#34; alt=&#34;install-9&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;{% include platforms/openshift4-selinux.md %}&lt;/p&gt;
@@ -1282,10 +1282,10 @@ to mount a StorageOS volume in a Pod.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/openshift-install/</link>
+      <link>https://arau.github.io/share/platforms/openshift-install/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/openshift-install/</guid>
+      <guid>https://arau.github.io/share/platforms/openshift-install/</guid>
       <description>
         
         
@@ -1375,10 +1375,10 @@ systemctl restart atomic-openshift-node.service
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/openshift4-selinux/</link>
+      <link>https://arau.github.io/share/platforms/openshift4-selinux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/openshift4-selinux/</guid>
+      <guid>https://arau.github.io/share/platforms/openshift4-selinux/</guid>
       <description>
         
         
@@ -1393,10 +1393,10 @@ and CSI socket.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/pvc-replica/</link>
+      <link>https://arau.github.io/share/platforms/pvc-replica/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/pvc-replica/</guid>
+      <guid>https://arau.github.io/share/platforms/pvc-replica/</guid>
       <description>
         
         
@@ -1419,10 +1419,10 @@ and CSI socket.&lt;/p&gt;
     
     <item>
       <title>Share: </title>
-      <link>arau.github.com/share/platforms/pvc/</link>
+      <link>https://arau.github.io/share/platforms/pvc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>arau.github.com/share/platforms/pvc/</guid>
+      <guid>https://arau.github.io/share/platforms/pvc/</guid>
       <description>
         
         
