@@ -3,646 +3,646 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cluster-operator/install/</loc>
+    <loc>arau.github.com/docs/reference/cluster-operator/install/</loc>
     <lastmod>2020-03-18T23:39:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/introduction/</loc>
+    <loc>arau.github.com/docs/introduction/</loc>
     <lastmod>2020-02-07T17:01:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/install/kubernetes/</loc>
+    <loc>arau.github.com/docs/install/kubernetes/</loc>
     <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/prerequisites/systemconfiguration/</loc>
+    <loc>arau.github.com/docs/prerequisites/systemconfiguration/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cluster-operator/configuration/</loc>
+    <loc>arau.github.com/docs/reference/cluster-operator/configuration/</loc>
     <lastmod>2020-02-20T14:39:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/install/openshift/</loc>
+    <loc>arau.github.com/docs/install/openshift/</loc>
     <lastmod>2020-03-25T16:13:20+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/prerequisites/firewalls/</loc>
+    <loc>arau.github.com/docs/prerequisites/firewalls/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cluster-operator/examples/</loc>
+    <loc>arau.github.com/docs/reference/cluster-operator/examples/</loc>
     <lastmod>2020-02-20T14:39:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/prerequisites/mountpropagation/</loc>
+    <loc>arau.github.com/docs/prerequisites/mountpropagation/</loc>
     <lastmod>2020-03-18T19:31:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/install/rancher/</loc>
+    <loc>arau.github.com/docs/install/rancher/</loc>
     <lastmod>2020-03-25T16:13:20+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cluster-operator/upgrade/</loc>
+    <loc>arau.github.com/docs/reference/cluster-operator/upgrade/</loc>
     <lastmod>2020-02-20T14:39:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/</loc>
+    <loc>arau.github.com/docs/concepts/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/prerequisites/</loc>
+    <loc>arau.github.com/docs/prerequisites/</loc>
     <lastmod>2020-02-20T17:13:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/install/</loc>
+    <loc>arau.github.com/docs/install/</loc>
     <lastmod>2020-03-18T18:12:36+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/best-practices/</loc>
+    <loc>arau.github.com/docs/best-practices/</loc>
     <lastmod>2020-03-18T18:14:56+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/</loc>
+    <loc>arau.github.com/docs/operations/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/</loc>
+    <loc>arau.github.com/docs/usecases/</loc>
     <lastmod>2020-02-07T09:25:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/</loc>
+    <loc>arau.github.com/docs/reference/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/support/</loc>
+    <loc>arau.github.com/docs/support/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/self-eval/</loc>
+    <loc>arau.github.com/docs/self-eval/</loc>
     <lastmod>2020-03-26T15:36:07+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/updates/</loc>
+    <loc>arau.github.com/docs/operations/updates/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/index.json</loc>
+    <loc>arau.github.com/index.json</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/cr-basic-example/</loc>
+    <loc>arau.github.com/share/operator/cr-basic-example/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/cr-config-table/</loc>
+    <loc>arau.github.com/share/operator/cr-config-table/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/cr-csi-example/</loc>
+    <loc>arau.github.com/share/operator/cr-csi-example/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/cr-csi-openshift4/</loc>
+    <loc>arau.github.com/share/operator/cr-csi-openshift4/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/cr-csi-shareddir/</loc>
+    <loc>arau.github.com/share/operator/cr-csi-shareddir/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/cr-rancher-ui/</loc>
+    <loc>arau.github.com/share/operator/cr-rancher-ui/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/examples/</loc>
+    <loc>arau.github.com/share/operator/examples/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/first-volume/</loc>
+    <loc>arau.github.com/share/operator/first-volume/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/install/</loc>
+    <loc>arau.github.com/share/operator/install/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/manual-install-disclaimer/</loc>
+    <loc>arau.github.com/share/operator/manual-install-disclaimer/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/reference/</loc>
+    <loc>arau.github.com/share/operator/reference/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/secret/</loc>
+    <loc>arau.github.com/share/operator/secret/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/upgrade-helm/</loc>
+    <loc>arau.github.com/share/operator/upgrade-helm/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/operator/upgrade-uber-yaml/</loc>
+    <loc>arau.github.com/share/operator/upgrade-uber-yaml/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/csi-note/</loc>
+    <loc>arau.github.com/share/platforms/csi-note/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/csi-pvc/</loc>
+    <loc>arau.github.com/share/platforms/csi-pvc/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/csi-sc/</loc>
+    <loc>arau.github.com/share/platforms/csi-sc/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/firstuse/</loc>
+    <loc>arau.github.com/share/platforms/firstuse/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/kubernetes-with-storageos/</loc>
+    <loc>arau.github.com/share/platforms/kubernetes-with-storageos/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/managedservices-docker/</loc>
+    <loc>arau.github.com/share/platforms/managedservices-docker/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/managedservices-upgrades/</loc>
+    <loc>arau.github.com/share/platforms/managedservices-upgrades/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/openshift-install-4.x/</loc>
+    <loc>arau.github.com/share/platforms/openshift-install-4.x/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/openshift-install/</loc>
+    <loc>arau.github.com/share/platforms/openshift-install/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/openshift4-selinux/</loc>
+    <loc>arau.github.com/share/platforms/openshift4-selinux/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/pvc-replica/</loc>
+    <loc>arau.github.com/share/platforms/pvc-replica/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/platforms/pvc/</loc>
+    <loc>arau.github.com/share/platforms/pvc/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/api/</loc>
+    <loc>arau.github.com/docs/reference/api/</loc>
     <lastmod>2020-02-20T16:31:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/architecture/</loc>
+    <loc>arau.github.com/docs/concepts/architecture/</loc>
     <lastmod>2020-03-24T09:53:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/platforms/aws-eks/</loc>
+    <loc>arau.github.com/docs/reference/platforms/aws-eks/</loc>
     <lastmod>2020-03-24T14:43:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/platforms/azure-aks/</loc>
+    <loc>arau.github.com/docs/reference/platforms/azure-aks/</loc>
     <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/backups/</loc>
+    <loc>arau.github.com/docs/usecases/backups/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/cassandra/</loc>
+    <loc>arau.github.com/docs/usecases/cassandra/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/</loc>
+    <loc>arau.github.com/docs/reference/cli/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/cluster/</loc>
+    <loc>arau.github.com/docs/reference/cli/cluster/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/clusterdiscovery/</loc>
+    <loc>arau.github.com/docs/reference/clusterdiscovery/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cluster-operator/</loc>
+    <loc>arau.github.com/docs/reference/cluster-operator/</loc>
     <lastmod>2020-02-20T14:39:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/clusters/</loc>
+    <loc>arau.github.com/docs/concepts/clusters/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/compression/</loc>
+    <loc>arau.github.com/docs/concepts/compression/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/contributing/</loc>
+    <loc>arau.github.com/docs/reference/contributing/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/decommission-nodes/</loc>
+    <loc>arau.github.com/docs/operations/decommission-nodes/</loc>
     <lastmod>2020-02-20T13:45:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/platforms/dockeree/</loc>
+    <loc>arau.github.com/docs/reference/platforms/dockeree/</loc>
     <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/</loc>
+    <loc>arau.github.com/docs/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/elasticsearch/</loc>
+    <loc>arau.github.com/docs/usecases/elasticsearch/</loc>
     <lastmod>2020-03-18T22:56:26+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/encryption/</loc>
+    <loc>arau.github.com/docs/concepts/encryption/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/encrypted-volumes/</loc>
+    <loc>arau.github.com/docs/operations/encrypted-volumes/</loc>
     <lastmod>2020-02-20T13:47:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/envvars/</loc>
+    <loc>arau.github.com/docs/reference/envvars/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/external-etcd/</loc>
+    <loc>arau.github.com/docs/operations/external-etcd/</loc>
     <lastmod>2020-02-20T14:07:13+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/fencing/</loc>
+    <loc>arau.github.com/docs/concepts/fencing/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/fencing/</loc>
+    <loc>arau.github.com/docs/operations/fencing/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/firstpvc/</loc>
+    <loc>arau.github.com/docs/operations/firstpvc/</loc>
     <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/gui/</loc>
+    <loc>arau.github.com/docs/reference/gui/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/health/</loc>
+    <loc>arau.github.com/docs/operations/health/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/managing-host-storage/</loc>
+    <loc>arau.github.com/docs/operations/managing-host-storage/</loc>
     <lastmod>2020-02-20T14:07:24+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/init-container/</loc>
+    <loc>arau.github.com/docs/reference/init-container/</loc>
     <lastmod>2020-02-20T14:41:56+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/jenkins/</loc>
+    <loc>arau.github.com/docs/usecases/jenkins/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/kafka/</loc>
+    <loc>arau.github.com/docs/usecases/kafka/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/kubevirt/</loc>
+    <loc>arau.github.com/docs/usecases/kubevirt/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/labels/</loc>
+    <loc>arau.github.com/docs/reference/labels/</loc>
     <lastmod>2020-02-20T14:45:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/licence/</loc>
+    <loc>arau.github.com/docs/reference/cli/licence/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/licensing/</loc>
+    <loc>arau.github.com/docs/operations/licensing/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/login/</loc>
+    <loc>arau.github.com/docs/reference/cli/login/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/logs/</loc>
+    <loc>arau.github.com/docs/reference/cli/logs/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/maintenance/</loc>
+    <loc>arau.github.com/docs/operations/maintenance/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/metrics/</loc>
+    <loc>arau.github.com/docs/concepts/metrics/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/monitoring/</loc>
+    <loc>arau.github.com/docs/operations/monitoring/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/mssql/</loc>
+    <loc>arau.github.com/docs/usecases/mssql/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/external-etcd/etcd-tls/</loc>
+    <loc>arau.github.com/docs/operations/external-etcd/etcd-tls/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/mysql/</loc>
+    <loc>arau.github.com/docs/usecases/mysql/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/namespaces/</loc>
+    <loc>arau.github.com/docs/concepts/namespaces/</loc>
     <lastmod>2020-02-20T17:13:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/namespaces/</loc>
+    <loc>arau.github.com/docs/operations/namespaces/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/namespace/</loc>
+    <loc>arau.github.com/docs/reference/cli/namespace/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/nginx/</loc>
+    <loc>arau.github.com/docs/usecases/nginx/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/nodes/</loc>
+    <loc>arau.github.com/docs/concepts/nodes/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/node/</loc>
+    <loc>arau.github.com/docs/reference/cli/node/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/open_source_attribution/</loc>
+    <loc>arau.github.com/docs/reference/open_source_attribution/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/platforms/openshift/</loc>
+    <loc>arau.github.com/docs/reference/platforms/openshift/</loc>
     <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/platforms/</loc>
+    <loc>arau.github.com/docs/reference/platforms/</loc>
     <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/policies/</loc>
+    <loc>arau.github.com/docs/concepts/policies/</loc>
     <lastmod>2020-02-20T17:13:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/policies/</loc>
+    <loc>arau.github.com/docs/operations/policies/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/policy/</loc>
+    <loc>arau.github.com/docs/reference/cli/policy/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/overcommitment/</loc>
+    <loc>arau.github.com/docs/operations/overcommitment/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/pools/</loc>
+    <loc>arau.github.com/docs/concepts/pools/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/pool/</loc>
+    <loc>arau.github.com/docs/reference/cli/pool/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/postgres/</loc>
+    <loc>arau.github.com/docs/usecases/postgres/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/prometheus/</loc>
+    <loc>arau.github.com/docs/reference/prometheus/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/monitoring/prometheus-setup/</loc>
+    <loc>arau.github.com/docs/operations/monitoring/prometheus-setup/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/introduction/quickstart/</loc>
+    <loc>arau.github.com/docs/introduction/quickstart/</loc>
     <lastmod>2020-03-18T23:39:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/platforms/rancher/</loc>
+    <loc>arau.github.com/docs/reference/platforms/rancher/</loc>
     <lastmod>2020-03-19T00:20:38+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/redis/</loc>
+    <loc>arau.github.com/docs/usecases/redis/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/release_notes/</loc>
+    <loc>arau.github.com/docs/reference/release_notes/</loc>
     <lastmod>2020-02-20T14:30:55+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/replication/</loc>
+    <loc>arau.github.com/docs/concepts/replication/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/rules/</loc>
+    <loc>arau.github.com/docs/concepts/rules/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/rules/</loc>
+    <loc>arau.github.com/docs/operations/rules/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/rule/</loc>
+    <loc>arau.github.com/docs/reference/cli/rule/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/search/</loc>
+    <loc>arau.github.com/search/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/share/</loc>
+    <loc>arau.github.com/share/</loc>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/</loc>
+    <loc>arau.github.com/</loc>
     <lastmod>2020-02-07T17:59:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/telemetry/</loc>
+    <loc>arau.github.com/docs/reference/telemetry/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/filesystems/</loc>
+    <loc>arau.github.com/docs/reference/filesystems/</loc>
     <lastmod>2020-02-20T14:45:47+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/introduction/platforms/</loc>
+    <loc>arau.github.com/docs/introduction/platforms/</loc>
     <lastmod>2020-02-07T11:49:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/troubleshooting/</loc>
+    <loc>arau.github.com/docs/operations/troubleshooting/</loc>
     <lastmod>2020-03-24T14:08:15+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/upgrades/</loc>
+    <loc>arau.github.com/docs/operations/upgrades/</loc>
     <lastmod>2020-02-20T14:21:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/operations/users/</loc>
+    <loc>arau.github.com/docs/operations/users/</loc>
     <lastmod>2020-03-15T10:03:20+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/user/</loc>
+    <loc>arau.github.com/docs/reference/cli/user/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/concepts/volumes/</loc>
+    <loc>arau.github.com/docs/concepts/volumes/</loc>
     <lastmod>2020-02-20T17:13:50+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/reference/cli/volume/</loc>
+    <loc>arau.github.com/docs/reference/cli/volume/</loc>
     <lastmod>2020-02-06T15:46:42+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://ferran.storageos.net:1313/docs/usecases/zookeeper/</loc>
+    <loc>arau.github.com/docs/usecases/zookeeper/</loc>
     <lastmod>2020-03-18T18:23:47+00:00</lastmod>
   </url>
   
