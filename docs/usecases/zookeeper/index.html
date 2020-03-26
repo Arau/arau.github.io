@@ -24,7 +24,7 @@
 <meta property="og:description" content="Apache Zookeeper with StorageOS ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services.
 Using StorageOS persistent volumes with Apache Zookeeper means that if a pod fails, the cluster is only in a degraded state for as long as it takes Kubernetes to restart the pod. When the pod comes back up, the pod data is immediately available. Should Kubernetes schedule the Zookeeper pod on a new node, StorageOS allows for the data to be available to the pod, irrespective of whether or not the original StorageOS master volume is located on the same node." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/docs/usecases/zookeeper/" />
+<meta property="og:url" content="http://ferran.storageos.net:1313/docs/usecases/zookeeper/" />
 <meta property="article:modified_time" content="2020-03-18T18:23:47+00:00" />
 <meta itemprop="name" content="Zookeeper">
 <meta itemprop="description" content="Apache Zookeeper with StorageOS ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services.
@@ -43,8 +43,8 @@ Using StorageOS persistent volumes with Apache Zookeeper means that if a pod fai
 
 
 
-<link rel="preload" href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" as="style">
-<link href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" rel="stylesheet" integrity="">
+
+<link href="/scss/main.css" rel="stylesheet">
 
 
 <script
@@ -155,7 +155,7 @@ Using StorageOS persistent volumes with Apache Zookeeper means that if a pod fai
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.c8e72a02e1285791461beae6ac8f0760921333b214c4e33bde3604eb83907e9e06d46dc8fd76b449937676d9745586d55d24cef7f98a2952b643599ecd42c02d.json"
+  data-offline-search-index-json-src="/offline-search-index.04ca88613e935c2ddbfa8718811d62691c3bdb8f8bff1107da7135a8ae7673ebd10de08d0c19f3cc67bb3a4310e126e0ee081b727521d208dd83e072ae37f18a.json"
   data-offline-search-base-href="/"
 >
 
@@ -1055,21 +1055,21 @@ Using StorageOS persistent volumes with Apache Zookeeper means that if a pod fai
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/">Documentation</a>
+	<a href="http://ferran.storageos.net:1313/docs/">Documentation</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/usecases/">Use Cases</a>
+	<a href="http://ferran.storageos.net:1313/docs/usecases/">Use Cases</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/usecases/zookeeper/">Zookeeper</a>
+	<a href="http://ferran.storageos.net:1313/docs/usecases/zookeeper/">Zookeeper</a>
 </li>
 
 	</ol>
@@ -1092,13 +1092,13 @@ is located on the same node.</p>
 <p>As Zookeeper has features to allow it to handle replication, and as such
 careful consideration of whether to allow StorageOS or Zookeeper to handle replication is required.</p>
 <p>Before you start, ensure you have StorageOS installed and ready on a Kubernetes
-cluster. <a href="/docs/install/kubernetes/">See our guide on how to install StorageOS on Kubernetes for more
+cluster. <a href="http://ferran.storageos.net:1313/docs/install/kubernetes/">See our guide on how to install StorageOS on Kubernetes for more
 information</a>.</p>
 <h2 id="deploying-zookeeper-on-kubernetes">Deploying Zookeeper on Kubernetes</h2>
 <h3 id="pre-requisites">Pre-requisites</h3>
 <ul>
 <li>StorageOS is assumed to have been installed; please check for the latest
-available version <a href="/docs/reference/release_notes/">here</a>.</li>
+available version <a href="http://ferran.storageos.net:1313/docs/reference/release_notes/">here</a>.</li>
 </ul>
 <h3 id="helm">Helm</h3>
 <p>To simplify the deployment of Zookeeper, we&rsquo;ve used this <a href="https://github.com/helm/charts/tree/master/incubator/zookeeper">Zookeeper helm chart
@@ -1253,10 +1253,9 @@ service endpoint</p>
 
 
 
-
-<script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
-
+<script src="/js/main.js"></script>
 
 
-  </body>
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
 </html>

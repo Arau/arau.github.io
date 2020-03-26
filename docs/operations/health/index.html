@@ -26,7 +26,7 @@ The StorageOS CLI displays the status of the components on nodes in the cluster.
 $ storageos cluster health NODE ADDRESS CP_STATUS DP_STATUS storageos-1 192.168.50.100 Healthy Healthy storageos-2 192.168.50.101 Healthy Healthy storageos-3 192.168.50.102 Healthy Healthy The API server reports its status at the /v1/health endpoint.
 $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localhost (::1) port 5705 (#0) &gt; GET /v1/health HTTP/1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/docs/operations/health/" />
+<meta property="og:url" content="http://ferran.storageos.net:1313/docs/operations/health/" />
 <meta property="article:modified_time" content="2020-02-07T11:49:52+00:00" />
 <meta itemprop="name" content="Cluster health">
 <meta itemprop="description" content="Various tools are available for checking on the status of a cluster.
@@ -49,8 +49,8 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
 
 
 
-<link rel="preload" href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" as="style">
-<link href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" rel="stylesheet" integrity="">
+
+<link href="/scss/main.css" rel="stylesheet">
 
 
 <script
@@ -161,7 +161,7 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.c8e72a02e1285791461beae6ac8f0760921333b214c4e33bde3604eb83907e9e06d46dc8fd76b449937676d9745586d55d24cef7f98a2952b643599ecd42c02d.json"
+  data-offline-search-index-json-src="/offline-search-index.04ca88613e935c2ddbfa8718811d62691c3bdb8f8bff1107da7135a8ae7673ebd10de08d0c19f3cc67bb3a4310e126e0ee081b727521d208dd83e072ae37f18a.json"
   data-offline-search-base-href="/"
 >
 
@@ -1049,21 +1049,21 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/">Documentation</a>
+	<a href="http://ferran.storageos.net:1313/docs/">Documentation</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/operations/">Operations</a>
+	<a href="http://ferran.storageos.net:1313/docs/operations/">Operations</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/operations/health/">Health</a>
+	<a href="http://ferran.storageos.net:1313/docs/operations/health/">Health</a>
 </li>
 
 	</ol>
@@ -1074,7 +1074,7 @@ $ curl -v http://localhost:5705/v1/health * Trying ::1... * Connected to localho
 	<h1>Cluster health</h1>
 	
 	<p>Various tools are available for checking on the status of a cluster.</p>
-<p>The <a href="/docs/reference/cli/">StorageOS CLI</a> displays the status
+<p>The <a href="http://ferran.storageos.net:1313/docs/reference/cli/">StorageOS CLI</a> displays the status
 of the components on nodes in the cluster.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ storageos cluster health
 NODE         ADDRESS         CP_STATUS  DP_STATUS
@@ -1192,10 +1192,9 @@ storageos-3  192.168.50.102  Healthy    Healthy
 
 
 
-
-<script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
-
+<script src="/js/main.js"></script>
 
 
-  </body>
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
 </html>

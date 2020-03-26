@@ -24,7 +24,7 @@
 <meta property="og:description" content="A newly installed StorageOS cluster includes an unregistered Basic licence, which caps usable storage space at 100GB. To utilise more storage space, we offer either a Developer (free with registration - 500GB) licence or an Enterprise (unlimited capacity - see below) licence. This document explains how to upgrade your licence using either the GUI or CLI.
 Obtaining a Developer licence via the GUI You can obtain and apply a Developer licence in the StorageOS web GUI automatically by creating or logging in with a StorageOS account on the StorageOS portal via the licence page of the StorageOS web GUI: http://ADVERTISE_IP:5705/#/licence." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/docs/operations/licensing/" />
+<meta property="og:url" content="http://ferran.storageos.net:1313/docs/operations/licensing/" />
 <meta property="article:modified_time" content="2020-02-07T11:49:52+00:00" />
 <meta itemprop="name" content="Licensing">
 <meta itemprop="description" content="A newly installed StorageOS cluster includes an unregistered Basic licence, which caps usable storage space at 100GB. To utilise more storage space, we offer either a Developer (free with registration - 500GB) licence or an Enterprise (unlimited capacity - see below) licence. This document explains how to upgrade your licence using either the GUI or CLI.
@@ -43,8 +43,8 @@ Obtaining a Developer licence via the GUI You can obtain and apply a Developer l
 
 
 
-<link rel="preload" href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" as="style">
-<link href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" rel="stylesheet" integrity="">
+
+<link href="/scss/main.css" rel="stylesheet">
 
 
 <script
@@ -155,7 +155,7 @@ Obtaining a Developer licence via the GUI You can obtain and apply a Developer l
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.c8e72a02e1285791461beae6ac8f0760921333b214c4e33bde3604eb83907e9e06d46dc8fd76b449937676d9745586d55d24cef7f98a2952b643599ecd42c02d.json"
+  data-offline-search-index-json-src="/offline-search-index.04ca88613e935c2ddbfa8718811d62691c3bdb8f8bff1107da7135a8ae7673ebd10de08d0c19f3cc67bb3a4310e126e0ee081b727521d208dd83e072ae37f18a.json"
   data-offline-search-base-href="/"
 >
 
@@ -1052,21 +1052,21 @@ Obtaining a Developer licence via the GUI You can obtain and apply a Developer l
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/">Documentation</a>
+	<a href="http://ferran.storageos.net:1313/docs/">Documentation</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/operations/">Operations</a>
+	<a href="http://ferran.storageos.net:1313/docs/operations/">Operations</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/operations/licensing/">Licensing</a>
+	<a href="http://ferran.storageos.net:1313/docs/operations/licensing/">Licensing</a>
 </li>
 
 	</ol>
@@ -1110,7 +1110,7 @@ correct cluster ID before generating the licence key.</p>
 <p><img src="/images/docs/operations/licensing/get-licence.png" alt="Get Licence"></p>
 <p>Then copy the licence key to clipboard and apply the licence by the CLI command:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#204a87">echo</span> PASTE-THE-LICENCE-KEY-HERE <span style="color:#000;font-weight:bold">|</span> storageos licence apply --stdin
-</code></pre></div><p>Read the <a href="/docs/reference/cli/licence/">licence CLI command reference</a> for further information.</p>
+</code></pre></div><p>Read the <a href="http://ferran.storageos.net:1313/docs/reference/cli/licence/">licence CLI command reference</a> for further information.</p>
 <h2 id="obtaining-an-enterprise-licence">Obtaining an Enterprise licence</h2>
 <p>Please contact <a href="mailto:sales@storageos.com">sales@storageos.com</a> to discuss
 pricing for our Enterprise licence.</p>
@@ -1206,10 +1206,9 @@ pricing for our Enterprise licence.</p>
 
 
 
-
-<script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
-
+<script src="/js/main.js"></script>
 
 
-  </body>
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
 </html>

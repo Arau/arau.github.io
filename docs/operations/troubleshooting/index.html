@@ -26,7 +26,7 @@ Tools To be able to troubleshoot issues the StorageOS cli is required.
 Pod in pending because of mount error Issue: The output of kubectl describe pod $POD_ID contains no such file or directory and references the StorageOS volume device file.
 root@node1:~# kubectl -n storageos describe $POD_ID (." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/docs/operations/troubleshooting/" />
+<meta property="og:url" content="http://ferran.storageos.net:1313/docs/operations/troubleshooting/" />
 <meta property="article:modified_time" content="2020-03-24T14:08:15+00:00" />
 <meta itemprop="name" content="Troubleshooting">
 <meta itemprop="description" content="This section is aimed to help you troubleshoot issues in your cluster, whether they are related to the StorageOS installation, integration with orchestrators or common misconfigurations.
@@ -49,8 +49,8 @@ root@node1:~# kubectl -n storageos describe $POD_ID (."/>
 
 
 
-<link rel="preload" href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" as="style">
-<link href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" rel="stylesheet" integrity="">
+
+<link href="/scss/main.css" rel="stylesheet">
 
 
 <script
@@ -161,7 +161,7 @@ root@node1:~# kubectl -n storageos describe $POD_ID (."/>
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.c8e72a02e1285791461beae6ac8f0760921333b214c4e33bde3604eb83907e9e06d46dc8fd76b449937676d9745586d55d24cef7f98a2952b643599ecd42c02d.json"
+  data-offline-search-index-json-src="/offline-search-index.04ca88613e935c2ddbfa8718811d62691c3bdb8f8bff1107da7135a8ae7673ebd10de08d0c19f3cc67bb3a4310e126e0ee081b727521d208dd83e072ae37f18a.json"
   data-offline-search-base-href="/"
 >
 
@@ -1114,21 +1114,21 @@ root@node1:~# kubectl -n storageos describe $POD_ID (."/>
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/">Documentation</a>
+	<a href="http://ferran.storageos.net:1313/docs/">Documentation</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/operations/">Operations</a>
+	<a href="http://ferran.storageos.net:1313/docs/operations/">Operations</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/operations/troubleshooting/">Troubleshooting</a>
+	<a href="http://ferran.storageos.net:1313/docs/operations/troubleshooting/">Troubleshooting</a>
 </li>
 
 	</ol>
@@ -1318,7 +1318,7 @@ the right location.</p>
 </li>
 </ol>
 <h3 id="solution-3">Solution:</h3>
-<p>Deploy StorageOS following the <a href="/docs/introduction/quickstart/">installation procedures</a>. If you are using the manifests
+<p>Deploy StorageOS following the <a href="http://ferran.storageos.net:1313/docs/introduction/quickstart/">installation procedures</a>. If you are using the manifests
 provided for Kubernetes to deploy StorageOS rather than using automated
 provisioners, make sure that the StorageClass parameters and the Secret
 reference match.</p>
@@ -1364,7 +1364,7 @@ Examples
 page</a>.</p>
 <p>For more advanced installations using compute-only and storage nodes, check the
 <code>storageos.com/deployment=computeonly</code> label that can be added to the nodes
-through Kubernetes node labels, or StorageOS in the <a href="/docs/reference/labels/">Labels</a> page.</p>
+through Kubernetes node labels, or StorageOS in the <a href="http://ferran.storageos.net:1313/docs/reference/labels/">Labels</a> page.</p>
 <h2 id="lio-initerror">LIO Init:Error</h2>
 <h3 id="issue-4">Issue:</h3>
 <p>StorageOS pods not starting with <code>Init:Error</code></p>
@@ -1394,7 +1394,7 @@ modprobe: FATAL: Module tcm_loop not found.
 </code></pre></div><h3 id="solution-5">Solution:</h3>
 <p>Install the required kernel modules (usually found in the
 <code>linux-image-extra-$(uname -r)</code> package of your distribution) on your nodes
-following this <a href="/docs/prerequisites/systemconfiguration/">prerequisites page</a> and delete StorageOS
+following this <a href="http://ferran.storageos.net:1313/docs/prerequisites/systemconfiguration/">prerequisites page</a> and delete StorageOS
 pods, allowing the DaemonSet to create the pods again.</p>
 <h2 id="lio-not-enabled">LIO not enabled</h2>
 <h3 id="issue-5">Issue:</h3>
@@ -1410,7 +1410,7 @@ not loaded.</p>
 </code></pre></div><h3 id="solution-6">Solution:</h3>
 <p>Install the required kernel modules (usually found in the
 <code>linux-image-extra-$(uname -r)</code> package of your distribution) on your nodes
-following this <a href="/docs/prerequisites/systemconfiguration/">prerequisites page</a> and restart the container.</p>
+following this <a href="http://ferran.storageos.net:1313/docs/prerequisites/systemconfiguration/">prerequisites page</a> and restart the container.</p>
 <h2 id="openshift-storageos-pods-missing----daemonset-error">(OpenShift) StorageOS pods missing &ndash; DaemonSet error</h2>
 <p>StorageOS DaemonSet doesn&rsquo;t have any pod replicas. The DaemonSet couldn&rsquo;t
 allocate any Pod due to security issues.</p>
@@ -1446,7 +1446,7 @@ enough privileges.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc adm policy add-scc-to-user privileged system:serviceaccount:storageos:storageos
 </code></pre></div><h2 id="getting-help">Getting Help</h2>
 <p>If our troubleshooting guides do not help resolve your issue, please see our
-<a href="/docs/support/">support section</a> for details on how
+<a href="http://ferran.storageos.net:1313/docs/support/">support section</a> for details on how
 to get in touch with us.</p>
 
 	
@@ -1540,10 +1540,9 @@ to get in touch with us.</p>
 
 
 
-
-<script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
-
+<script src="/js/main.js"></script>
 
 
-  </body>
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
 </html>

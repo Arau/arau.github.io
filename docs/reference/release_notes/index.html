@@ -27,7 +27,7 @@ The latest CLI release is 1.2.2, available from Github
 Upgrading See upgrades for upgrade strategies.
 1.4.0 - Released 06/09/2019 Version 1.4.0 changes the way metadata keys are stored on disk resulting in improved key locality and thus an increase in IO performance." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/docs/reference/release_notes/" />
+<meta property="og:url" content="http://ferran.storageos.net:1313/docs/reference/release_notes/" />
 <meta property="article:modified_time" content="2020-02-20T14:30:55+00:00" />
 <meta itemprop="name" content="Release notes">
 <meta itemprop="description" content="We recommend always using &ldquo;tagged&rdquo; versions of StorageOS rather than &ldquo;latest&rdquo;, and to perform upgrades only after reading the release notes.
@@ -52,8 +52,8 @@ Upgrading See upgrades for upgrade strategies.
 
 
 
-<link rel="preload" href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" as="style">
-<link href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" rel="stylesheet" integrity="">
+
+<link href="/scss/main.css" rel="stylesheet">
 
 
 <script
@@ -164,7 +164,7 @@ Upgrading See upgrades for upgrade strategies.
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.c8e72a02e1285791461beae6ac8f0760921333b214c4e33bde3604eb83907e9e06d46dc8fd76b449937676d9745586d55d24cef7f98a2952b643599ecd42c02d.json"
+  data-offline-search-index-json-src="/offline-search-index.04ca88613e935c2ddbfa8718811d62691c3bdb8f8bff1107da7135a8ae7673ebd10de08d0c19f3cc67bb3a4310e126e0ee081b727521d208dd83e072ae37f18a.json"
   data-offline-search-base-href="/"
 >
 
@@ -1256,21 +1256,21 @@ Upgrading See upgrades for upgrade strategies.
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/">Documentation</a>
+	<a href="http://ferran.storageos.net:1313/docs/">Documentation</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/reference/">Reference</a>
+	<a href="http://ferran.storageos.net:1313/docs/reference/">Reference</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/reference/release_notes/">Release notes</a>
+	<a href="http://ferran.storageos.net:1313/docs/reference/release_notes/">Release notes</a>
 </li>
 
 	</ol>
@@ -1288,13 +1288,13 @@ Chart</a></p>
 <p>The latest CLI release is <code>1.2.2</code>, available from
 <a href="https://github.com/storageos/go-cli/releases">Github</a></p>
 <h1 id="upgrading">Upgrading</h1>
-<p>See <a href="/docs/operations/upgrades/">upgrades</a> for upgrade strategies.</p>
+<p>See <a href="http://ferran.storageos.net:1313/docs/operations/upgrades/">upgrades</a> for upgrade strategies.</p>
 <h2 id="140---released-06092019">1.4.0 - Released 06/09/2019</h2>
 <p>Version <code>1.4.0</code> changes the way metadata keys are stored on disk resulting in
 improved key locality and thus an increase in IO performance.</p>
 <p><em>IMPORTANT:</em> Due to the nature of this change, the upgrade process includes an
 automated conversion process. If upgrading from <code>1.3.0</code> or below, please ensure
-you follow the <a href="/docs/operations/upgrades/">upgrade instructions</a>.
+you follow the <a href="http://ferran.storageos.net:1313/docs/operations/upgrades/">upgrade instructions</a>.
 If the upgrade process is not followed, version <code>1.4.0</code> will refuse to start,
 but you may restart using the previous version. Once the upgrade process has
 been completed it is not possible to revert to an earlier version.</p>
@@ -1420,18 +1420,18 @@ storage presentations.</p>
 30-40 seconds) and it protects against multiple nodes accessing volumes
 concurrently, the fencing option gives the ability to override the default
 Kubernetes behaviour.</p>
-<p>See <a href="/docs/concepts/fencing/">fencing</a> for more information.</p>
+<p>See <a href="http://ferran.storageos.net:1313/docs/concepts/fencing/">fencing</a> for more information.</p>
 </li>
 <li>
 <p>Volume Encryption can now be enabled by setting the
 <code>storageos.com/encryption=true</code> label on a volume.  When enabled, data will be
 encrypted prior to being persisted on disk.</p>
-<p>See <a href="/docs/concepts/encryption/">encrypted volumes</a> for more
+<p>See <a href="http://ferran.storageos.net:1313/docs/concepts/encryption/">encrypted volumes</a> for more
 information.</p>
 </li>
 <li>
 <p>Mutual TLS is now supported on external etcd KV backends.</p>
-<p>See <a href="/docs/operations/external-etcd/etcd-tls/">etcd TLS</a> for more
+<p>See <a href="http://ferran.storageos.net:1313/docs/operations/external-etcd/etcd-tls/">etcd TLS</a> for more
 information.</p>
 </li>
 <li>
@@ -1439,7 +1439,7 @@ information.</p>
 Operator</a>, node labels from
 Kubernetes are visible within StorageOS and available for use in rules.  This
 is particularly useful to mark specific nodes as compute-only.  See
-<a href="/docs/reference/labels/">labels</a> for more information.</p>
+<a href="http://ferran.storageos.net:1313/docs/reference/labels/">labels</a> for more information.</p>
 </li>
 </ul>
 <h3 id="improved-3">Improved</h3>
@@ -1711,7 +1711,7 @@ improvements, many to help with running on low-memory or heavily loaded servers.
 <ul>
 <li>
 <p>Cache allocation has been adjusted for lower memory systems.  Allocation sizes
-are described in <a href="/docs/concepts/architecture/">architecture</a>.
+are described in <a href="http://ferran.storageos.net:1313/docs/concepts/architecture/">architecture</a>.
 The cache size will never be set to more than 1/3rd of free memory.</p>
 </li>
 <li>
@@ -1819,7 +1819,7 @@ the Prometheus <code>/metrics</code> endpoint.</li>
 <ul>
 <li>Offline nodes can now be removed from management either by using the CLI <code>node delete</code> command, or in the UI. This is only available when external etcd is
 used as the KV store.  See
-<a href="/docs/operations/decommission-nodes/">decommissioning nodes</a>
+<a href="http://ferran.storageos.net:1313/docs/operations/decommission-nodes/">decommissioning nodes</a>
 for more information.</li>
 <li>Nodes can now be placed into &ldquo;Maintenance mode&rdquo; to disable volume recovery on
 the node while it is offline for maintenance. This allows nodes to be
@@ -1842,7 +1842,7 @@ overcommit percentage. By default, overcommit is set to 0.</li>
 the latest StorageOS version and log if a new version is available.  The UI
 will also notify administrators.  This check can be disabled by setting
 <code>DISABLE_TELEMETRY=true</code>.  For more information see
-<a href="/docs/reference/telemetry/">telemetry</a>.</li>
+<a href="http://ferran.storageos.net:1313/docs/reference/telemetry/">telemetry</a>.</li>
 <li>Since data scrub operations can be intensive, we now limit to 5 concurrent
 volume scrubs.  This does not affect the number of volumes that may be deleted
 in a batch as the scrubs occur asyncronously.  Volumes will remain in
@@ -2249,7 +2249,7 @@ Linux SCSI Target driver. Previous versions used NBD where available, or FUSE
 where it wasn&rsquo;t.  Using the new volume presentation improves performance on
 the RHEL platform where NBD is not available.  This feature is available for
 all major distributions and is widely used.  For more information, see
-<a href="/docs/prerequisites/systemconfiguration/">system configuration</a></li>
+<a href="http://ferran.storageos.net:1313/docs/prerequisites/systemconfiguration/">system configuration</a></li>
 <li>Internally, the StorageOS scheduler has switched to using level-based state
 handling and the gRPC protocol.  This allows the scheduler to make assertions
 about the current state, rather than relying on events that can be missed.
@@ -2353,7 +2353,7 @@ changed from <code>LABEL_ADD</code> to <code>LABELS</code>.  Multiple labels can
 (<code>5705</code>).  To access, point your web browser to http://ADVERTISE_IP:5705.
 where ADVERTISE_IP is the public ip address of a StorageOS node.  Unless you
 have changed the default credentials, login with user <code>storageos</code>, password
-<code>storageos</code>.  See: /docs/reference/gui/</p>
+<code>storageos</code>.  See: http://ferran.storageos.net:1313/docs/reference/gui/</p>
 </li>
 <li>
 <p>Prometheus stats are exported on each cluster node at
@@ -2363,7 +2363,7 @@ http://ADVERTISE_IP:5705/v1/metrics.  Prometheus 2.x is required.</p>
 <p>The CLI can now stream realtime logs from the active StorageOS cluster with
 <code>storageos logs -f</code>.  Logs are aggregated from all cluster nodes over a single
 connection to the API.  Future releases will add support for filtering and
-controlling the log level.  See: /docs/reference/cli/logs/</p>
+controlling the log level.  See: http://ferran.storageos.net:1313/docs/reference/cli/logs/</p>
 </li>
 <li>
 <p>The location of the StorageOS volumes can now be configured on a per-node
@@ -2598,7 +2598,7 @@ installs.  Volumes mount into containers correctly using Docker.</li>
 <li>Docker can only access volumes created in the <code>default</code> namespace.</li>
 <li>Clients mounting volumes from RHEL7/CentOS 7 will experience degraded
 performance due to the absence of the
-<a href="/docs/prerequisites/systemconfiguration/">NBD kernel module</a>
+<a href="http://ferran.storageos.net:1313/docs/prerequisites/systemconfiguration/">NBD kernel module</a>
 on those platforms.</li>
 </ul>
 <h2 id="081">0.8.1</h2>
@@ -2664,7 +2664,7 @@ installs.  Volumes mount into containers correctly using Docker.</li>
 <li>Docker can only access volumes created in the <code>default</code> namespace.</li>
 <li>Clients mounting volumes from RHEL7/CentOS 7 will experience degraded
 performance due to the absence of the
-<a href="/docs/prerequisites/systemconfiguration/">NBD kernel module</a>
+<a href="http://ferran.storageos.net:1313/docs/prerequisites/systemconfiguration/">NBD kernel module</a>
 on those platforms.</li>
 </ul>
 <h2 id="0710">0.7.10</h2>
@@ -2839,10 +2839,9 @@ flapping</li>
 
 
 
-
-<script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
-
+<script src="/js/main.js"></script>
 
 
-  </body>
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
 </html>

@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Concepts</title>
-    <link>/docs/concepts/</link>
+    <link>http://ferran.storageos.net:1313/docs/concepts/</link>
     <description>Recent content in Concepts on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/concepts/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://ferran.storageos.net:1313/docs/concepts/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Architecture</title>
-      <link>/docs/concepts/architecture/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/architecture/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/architecture/</guid>
       <description>
         
         
@@ -31,7 +31,7 @@ creates a virtual pool across nodes, and presents virtual volumes from the pool
 into containers.&lt;/p&gt;
 &lt;p&gt;It is agnostic to the underlying storage and runs equally on
 bare metal, in virtual machines or on cloud providers.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/docs/concepts/storageos-cluster.png&#34; alt=&#34;StorageOS architecture&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ferran.storageos.net:1313/images/docs/concepts/storageos-cluster.png&#34; alt=&#34;StorageOS architecture&#34;&gt;&lt;/p&gt;
 &lt;p&gt;StorageOS is deployed as one container on each node that presents or consumes
 storage, available as &lt;code&gt;storageos/node&lt;/code&gt; on the Docker Hub. In Kubernetes,
 this is typically managed as a daemonset, next
@@ -43,7 +43,7 @@ features are controlled by Kubernetes-style labels and selectors, prefixed with
 &lt;p&gt;StorageOS uses the storage capacity from the nodes where it is installed to
 provide thinly-provisioned volumes. That space is selected from the mount point
 of &lt;code&gt;/var/lib/storageos/data&lt;/code&gt; on the host. It is recommended that disk devices
-are used exclusively for StorageOS, as described in &lt;a href=&#34;/docs/operations/managing-host-storage/&#34;&gt;Managing Host Storage
+are used exclusively for StorageOS, as described in &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/managing-host-storage/&#34;&gt;Managing Host Storage
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Any container may mount a StorageOS virtual volume from any node, regardless of
 whether the container and volume are colocated on the same node or the volume is
@@ -84,16 +84,16 @@ reduce network traffic.&lt;/p&gt;
     
     <item>
       <title>Docs: Clusters</title>
-      <link>/docs/concepts/clusters/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/clusters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/clusters/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/clusters/</guid>
       <description>
         
         
         &lt;p&gt;StorageOS clusters represent groups of nodes which run a common distributed
 control plane, and aggregate their storage into one or more
-&lt;a href=&#34;/docs/concepts/pools&#34;&gt;pools&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/pools&#34;&gt;pools&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Typically, a StorageOS cluster maps one-to-one to a Kubernetes (or similar
 orchestrator) cluster, and we expect our container to run on all worker
 nodes within the cluster that will consume or present storage.&lt;/p&gt;
@@ -108,21 +108,21 @@ or production like workloads will be deployed on StorageOS.&lt;/p&gt;
     
     <item>
       <title>Docs: Compression</title>
-      <link>/docs/concepts/compression/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/compression/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/compression/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/compression/</guid>
       <description>
         
         
         &lt;p&gt;StorageOS compression is handled on a per volume basis and is enabled by
 default, as performance is generally increased when compression is enabled due
 to fewer read/write operations taking place on the backend store (the volumes&amp;rsquo;
-&lt;a href=&#34;/docs/concepts/volumes#blob-files&#34;&gt;blob files&lt;/a&gt;). Compression can be disabled
-by setting the &lt;a href=&#34;/docs/reference/labels&#34;&gt;label&lt;/a&gt; &lt;code&gt;storageos.com/nocompress=true&lt;/code&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/volumes#blob-files&#34;&gt;blob files&lt;/a&gt;). Compression can be disabled
+by setting the &lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/labels&#34;&gt;label&lt;/a&gt; &lt;code&gt;storageos.com/nocompress=true&lt;/code&gt;
 on a volume.&lt;/p&gt;
 &lt;p&gt;StorageOS utilises the &lt;a href=&#34;https://lz4.github.io/lz4/&#34;&gt;lz4 compression algorithm&lt;/a&gt;
-when writing to the backend store and when compressing &lt;a href=&#34;/docs/concepts/replication&#34;&gt;replication
+when writing to the backend store and when compressing &lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/replication&#34;&gt;replication
 traffic&lt;/a&gt; before it is sent across the network.
 Compression is granular per 4k block and data will remain
 compressed/uncompressed once written to a volume. Therefore, compression can be
@@ -138,7 +138,7 @@ increased and CPU resources are not wasted on attempts to compress
 uncompressible blocks. StorageOS&amp;rsquo; patented on disk format is used to tell
 whether individual blocks are compressed without overhead. As such volume
 compression can be dynamically enabled/disabled even while a volume is in use.&lt;/p&gt;
-&lt;p&gt;When compression and &lt;a href=&#34;/docs/concepts/encryption&#34;&gt;encryption&lt;/a&gt; are both enabled
+&lt;p&gt;When compression and &lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/encryption&#34;&gt;encryption&lt;/a&gt; are both enabled
 for a volume, blocks are compressed then encrypted.&lt;/p&gt;
 
       </description>
@@ -146,15 +146,15 @@ for a volume, blocks are compressed then encrypted.&lt;/p&gt;
     
     <item>
       <title>Docs: Encryption</title>
-      <link>/docs/concepts/encryption/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/encryption/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/encryption/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/encryption/</guid>
       <description>
         
         
         &lt;p&gt;Encryption is enabled on a per volume basis using the
-&lt;code&gt;storageos.com/encryption&lt;/code&gt; label (for more information see &lt;a href=&#34;/docs/operations/encrypted-volumes&#34;&gt;Encrypted
+&lt;code&gt;storageos.com/encryption&lt;/code&gt; label (for more information see &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/encrypted-volumes&#34;&gt;Encrypted
 Volumes&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;StorageOS encrypts volumes on disk using AES-256 in XTS-AES mode with 512 bit
 keys as recommended by &lt;a href=&#34;https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38e.pdf&#34;&gt;NIST&lt;/a&gt;, with encryption keys being derived using &lt;a href=&#34;https://eprint.iacr.org/2010/264.pdf&#34;&gt;HKDF&lt;/a&gt;.&lt;/p&gt;
@@ -219,7 +219,7 @@ of the volume key is stored to verify the derived volume key is identical to
 the original key.&lt;/p&gt;
 &lt;p&gt;Ultimately this means that the volume user key, initialisation vector, a digest
 of the volume key and the namespace key are stored in a Kubernetes secret. See
-&lt;a href=&#34;/docs/operations/encrypted-volumes&#34;&gt;Encrypted Volumes&lt;/a&gt; for best practices
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/encrypted-volumes&#34;&gt;Encrypted Volumes&lt;/a&gt; for best practices
 regarding backing up StorageOS secrets.&lt;/p&gt;
 
       </description>
@@ -227,10 +227,10 @@ regarding backing up StorageOS secrets.&lt;/p&gt;
     
     <item>
       <title>Docs: Fencing</title>
-      <link>/docs/concepts/fencing/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/fencing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/fencing/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/fencing/</guid>
       <description>
         
         
@@ -288,7 +288,7 @@ rescheduled by leveraging StorageOS health checks that are already used to
 ensure high availability of data and failover. Without Fencing, the pod will be
 slated for termination but this can only be actioned when the unavailable node
 rejoins the cluster or the unavailable node is deleted from the cluster.&lt;/p&gt;
-&lt;p&gt;As explained in &lt;a href=&#34;/docs/concepts/fencing#statefulset-behaviour&#34;&gt;StatefulSet
+&lt;p&gt;As explained in &lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/fencing#statefulset-behaviour&#34;&gt;StatefulSet
 Behaviour&lt;/a&gt;, the StatefulSet
 controller is conservative by design, given the constraints of various types of
 persistent volumes that can be managed in Kubernetes. For certain workloads,
@@ -308,7 +308,7 @@ will fail as the writes cannot be acknowledged by replica volumes. Therefore,
 in a scenario where the node is unreachable StorageOS knows that the pod will
 lose access to its data so it is safe for StorageOS to force the pod to be
 rescheduled.&lt;/p&gt;
-&lt;p&gt;For more information about how to enable Fencing please see our &lt;a href=&#34;/docs/operations/fencing&#34;&gt;Fencing
+&lt;p&gt;For more information about how to enable Fencing please see our &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/fencing&#34;&gt;Fencing
 Operations&lt;/a&gt; page.&lt;/p&gt;
 
       </description>
@@ -316,17 +316,17 @@ Operations&lt;/a&gt; page.&lt;/p&gt;
     
     <item>
       <title>Docs: Metrics</title>
-      <link>/docs/concepts/metrics/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/metrics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/metrics/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/metrics/</guid>
       <description>
         
         
         &lt;p&gt;StorageOS believes in exposing many metrics about the functioning and
 performance of StorageOS processes to help users instrument applications
 consuming StorageOS volumes and StorageOS itself. To this end StorageOS exposes
-metrics via a Prometheus endpoint on each StorageOS pod. See our &lt;a href=&#34;/docs/reference/prometheus&#34;&gt;Prometheus
+metrics via a Prometheus endpoint on each StorageOS pod. See our &lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/prometheus&#34;&gt;Prometheus
 Endpoint&lt;/a&gt; reference page for specific details about
 what metrics are exposed.&lt;/p&gt;
 &lt;p&gt;StorageOS metrics are exposed in &lt;a href=&#34;https://prometheus.io/docs/instrumenting/exposition_formats/#text-based-format&#34;&gt;Prometheus text
@@ -375,7 +375,7 @@ dimensions for a metric to be exposed. For example the
 Prometheus can be configured to scrape metrics from Kubernetes Services. This
 is important because StorageOS metrics are intended to be scraped from every
 StorageOS pod in the cluster and then aggregated.&lt;/p&gt;
-&lt;p&gt;For an example of how to visualize StorageOS metrics please see our &lt;a href=&#34;/docs/operations/monitoring#analysing-metrics&#34;&gt;Monitoring
+&lt;p&gt;For an example of how to visualize StorageOS metrics please see our &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/monitoring#analysing-metrics&#34;&gt;Monitoring
 StorageOS page&lt;/a&gt; for a link to a
 sample Grafana dashboard.&lt;/p&gt;
 
@@ -384,10 +384,10 @@ sample Grafana dashboard.&lt;/p&gt;
     
     <item>
       <title>Docs: Namespaces</title>
-      <link>/docs/concepts/namespaces/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/namespaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/namespaces/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/namespaces/</guid>
       <description>
         
         
@@ -397,56 +397,56 @@ multiple projects.&lt;/p&gt;
 &lt;p&gt;It is not necessary to create StorageOS namespaces manually, as StorageOS maps
 Kubernetes namespaces on a one-to-one basis when PersistentVolumeClaims using
 the StorageOS StorageClass are created.&lt;/p&gt;
-&lt;p&gt;Access to Namespaces is controlled through user or group level &lt;a href=&#34;/docs/concepts/policies/&#34;&gt;policies&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Access to Namespaces is controlled through user or group level &lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/policies/&#34;&gt;policies&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Nodes</title>
-      <link>/docs/concepts/nodes/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/nodes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/nodes/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/nodes/</guid>
       <description>
         
         
         &lt;p&gt;A StorageOS node is any machine (virtual or physical) that is running the
 StorageOS container. Under Kubernetes orchestration a StorageOS container
 runs as part of a Kubernetes pod on all Kubernetes worker node. StorageOS nodes
-aggregate host storage and present this storage as StorageOS &lt;a href=&#34;/docs/concepts/pools/&#34;&gt;pools&lt;/a&gt;.&lt;/p&gt;
+aggregate host storage and present this storage as StorageOS &lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/pools/&#34;&gt;pools&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Policies</title>
-      <link>/docs/concepts/policies/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/policies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/policies/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/policies/</guid>
       <description>
         
         
         &lt;p&gt;StorageOS policies are a way to control user and group access to StorageOS
-&lt;a href=&#34;/docs/concepts/namespaces/&#34;&gt;Namespaces&lt;/a&gt;. To grant a user or group
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/namespaces/&#34;&gt;Namespaces&lt;/a&gt;. To grant a user or group
 access to a namespace, a policy needs to be created mapping the user or group
 to the namespace.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Note: Users always have access to the default namespace&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;For more information on how to use policies, see the
-&lt;a href=&#34;/docs/operations/policies/&#34;&gt;Policies operations&lt;/a&gt; page.&lt;/p&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/policies/&#34;&gt;Policies operations&lt;/a&gt; page.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Pools</title>
-      <link>/docs/concepts/pools/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/pools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/pools/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/pools/</guid>
       <description>
         
         
@@ -458,17 +458,17 @@ selectors look for labels on host nodes and will aggregate storage from nodes
 whose labels match into the specific pool.&lt;/p&gt;
 &lt;p&gt;Pools can have feature labels applied to them such as
 &lt;code&gt;storageos.com/overcommit&lt;/code&gt; which allows the pool to have its storage
-&lt;a href=&#34;/docs/operations/overcommitment/&#34;&gt;overcommited&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/overcommitment/&#34;&gt;overcommited&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Replication</title>
-      <link>/docs/concepts/replication/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/replication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/replication/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/replication/</guid>
       <description>
         
         
@@ -481,7 +481,7 @@ replicas. Each volume can be replicated between 0 and 5 times, which are
 provisioned to 0 to 5 nodes, up to the number of remaining nodes in the cluster.&lt;/p&gt;
 &lt;p&gt;In this diagram, the master volume &lt;code&gt;D&lt;/code&gt; was created on node 1, and two replicas,
 &lt;code&gt;D2&lt;/code&gt; and &lt;code&gt;D3&lt;/code&gt; on nodes 3 and 5.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/docs/concepts/high-availability.png&#34; alt=&#34;StorageOS replication&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ferran.storageos.net:1313/images/docs/concepts/high-availability.png&#34; alt=&#34;StorageOS replication&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Writes that come into &lt;code&gt;D&lt;/code&gt; (step 1) are written in parallel to &lt;code&gt;D2&lt;/code&gt; and &lt;code&gt;D3&lt;/code&gt;
 (step 2). When both replicas and the master acknowledge that the data has been
 written (step 3), the write operation return successfully to the application
@@ -526,17 +526,17 @@ mode will determine whether the volume can be used during recovery:&lt;/p&gt;
 per-volume basis, some environments may prefer to set appropriate policies to
 ensure a desired level of data protection. This can be accomplished on a
 per-namespace basis  using
-&lt;a href=&#34;/docs/operations/rules/&#34;&gt;Rules&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/rules/&#34;&gt;Rules&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Rules</title>
-      <link>/docs/concepts/rules/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/rules/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/rules/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/rules/</guid>
       <description>
         
         
@@ -548,17 +548,17 @@ rules are evaluated to determine whether to apply the action.&lt;/p&gt;
 &lt;p&gt;An example business requirement might be that all production volumes are
 replicated twice. This would be defined with a selector &lt;code&gt;env==prod&lt;/code&gt;, and the
 action would be to add the label &lt;code&gt;storageos.com/replicas=2&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Rules can be created with the CLI or Web UI. See &lt;a href=&#34;/docs/operations/rules/&#34;&gt;Rules&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;Rules can be created with the CLI or Web UI. See &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/rules/&#34;&gt;Rules&lt;/a&gt; for details.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Volumes</title>
-      <link>/docs/concepts/volumes/</link>
+      <link>http://ferran.storageos.net:1313/docs/concepts/volumes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/concepts/volumes/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/concepts/volumes/</guid>
       <description>
         
         
@@ -572,7 +572,7 @@ may be on the same or different hosts.&lt;/p&gt;
 &lt;p&gt;Volumes are formatted using the linux standard ext4 filesystem by default.
 Kubernetes users may change the default filesystem type to ext2, ext3, ext4,
 or xfs by setting the fsType parameter in their StorageClass (See
-&lt;a href=&#34;/docs/reference/filesystems#persistent-volume-filesystems&#34;&gt;Supported
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/filesystems#persistent-volume-filesystems&#34;&gt;Supported
 Filesystems&lt;/a&gt; for
 more information). Different filesystems may be supported in the future.&lt;/p&gt;
 &lt;p&gt;StorageOS volumes are represented on disk in two parts.&lt;/p&gt;
@@ -596,10 +596,10 @@ implement recovery from replicas for volumes with one or more replicas defined.&
 blocks in the associated volume. This size is consistent irrespective of data
 compression defined on the volume.&lt;/p&gt;
 &lt;p&gt;To ensure deterministic performance, individual StorageOS volumes must fit on a single
-node. In situations where &lt;a href=&#34;/docs/operations/overcommitment/&#34;&gt;overcommit&lt;/a&gt; is applied, a scaling factor is applied when determining whether to place a
+node. In situations where &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/overcommitment/&#34;&gt;overcommit&lt;/a&gt; is applied, a scaling factor is applied when determining whether to place a
 volume on a node.&lt;/p&gt;
 &lt;p&gt;We present various metrics regarding StorageOS volumes, including used capacity
-and throughput, via our &lt;a href=&#34;/docs/reference/prometheus/&#34;&gt;Prometheus Endpoint&lt;/a&gt;.&lt;/p&gt;
+and throughput, via our &lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/prometheus/&#34;&gt;Prometheus Endpoint&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>

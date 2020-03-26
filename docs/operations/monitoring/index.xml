@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Monitoring StorageOS</title>
-    <link>/docs/operations/monitoring/</link>
+    <link>http://ferran.storageos.net:1313/docs/operations/monitoring/</link>
     <description>Recent content in Monitoring StorageOS on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/operations/monitoring/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://ferran.storageos.net:1313/docs/operations/monitoring/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Setting up Prometheus to monitor StorageOS</title>
-      <link>/docs/operations/monitoring/prometheus-setup/</link>
+      <link>http://ferran.storageos.net:1313/docs/operations/monitoring/prometheus-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/operations/monitoring/prometheus-setup/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/operations/monitoring/prometheus-setup/</guid>
       <description>
         
         
@@ -31,9 +31,9 @@ example &lt;a href=&#34;https://grafana.com/dashboards/10093&#34;&gt;Grafana das
 &lt;p&gt;There is a &lt;code&gt;install-prometheus.sh&lt;/code&gt; script that will perform the installation of
 Prometheus using the Prometheus operator and a ServiceMonitor monitoring
 StorageOS. If you wish to use it then follow steps 1 and 2 before skipping to
-&lt;a href=&#34;/docs/operations/monitoring/prometheus-setup#install-grafana&#34;&gt;installing
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/monitoring/prometheus-setup#install-grafana&#34;&gt;installing
 Grafana&lt;/a&gt;. If you
-do not wish to use the script then go to the &lt;a href=&#34;/docs/operations/monitoring/prometheus-setup#install-the-prometheus-operator&#34;&gt;Prometheus
+do not wish to use the script then go to the &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/monitoring/prometheus-setup#install-the-prometheus-operator&#34;&gt;Prometheus
 Operator&lt;/a&gt;
 installation.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -91,7 +91,7 @@ port to the Prometheus pod port.
 &lt;/li&gt;
 &lt;li&gt;Now that the Prometheus UI is available StorageOS metrics can be queried
 from the Graph page. A complete list of StorageOS metrics can be found
-&lt;a href=&#34;/docs/reference/prometheus&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/prometheus&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;install-grafana&#34;&gt;Install Grafana&lt;/h2&gt;
 &lt;p&gt;Grafana is a popular solution for visualising metrics. At the time of writing

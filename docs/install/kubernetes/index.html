@@ -25,7 +25,7 @@
   Any Kubernetes managed service such as EKS, AKS, GKE, DO or DockeEE platform can use the following Kubernetes guide to install StorageOS. Ensure the use of CSI for these platforms.
    1.17 1.16 1.15 1.14 1.13 1.12    Install StorageOS on Kubernetes 1.17 The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/docs/install/kubernetes/" />
+<meta property="og:url" content="http://ferran.storageos.net:1313/docs/install/kubernetes/" />
 <meta property="article:modified_time" content="2020-03-24T14:08:15+00:00" />
 <meta itemprop="name" content="Kubernetes">
 <meta itemprop="description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding._
@@ -46,8 +46,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" as="style">
-<link href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" rel="stylesheet" integrity="">
+
+<link href="/scss/main.css" rel="stylesheet">
 
 
 <script
@@ -158,7 +158,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.c8e72a02e1285791461beae6ac8f0760921333b214c4e33bde3604eb83907e9e06d46dc8fd76b449937676d9745586d55d24cef7f98a2952b643599ecd42c02d.json"
+  data-offline-search-index-json-src="/offline-search-index.04ca88613e935c2ddbfa8718811d62691c3bdb8f8bff1107da7135a8ae7673ebd10de08d0c19f3cc67bb3a4310e126e0ee081b727521d208dd83e072ae37f18a.json"
   data-offline-search-base-href="/"
 >
 
@@ -1046,21 +1046,21 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/">Documentation</a>
+	<a href="http://ferran.storageos.net:1313/docs/">Documentation</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/install/">Install</a>
+	<a href="http://ferran.storageos.net:1313/docs/install/">Install</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/install/kubernetes/">Kubernetes</a>
+	<a href="http://ferran.storageos.net:1313/docs/install/kubernetes/">Kubernetes</a>
 </li>
 
 	</ol>
@@ -1072,7 +1072,7 @@
 	
 	<blockquote>
 <p>Make sure the
-<a href="/docs/prerequisites/">prerequisites for StorageOS</a> are
+<a href="http://ferran.storageos.net:1313/docs/prerequisites/">prerequisites for StorageOS</a> are
 satisfied before proceeding._</p>
 </blockquote>
 <blockquote>
@@ -1384,13 +1384,13 @@ spec:
 <span style="color:#8f5902;font-style:italic">#        - &#34;true&#34;</span>
 </code></pre></div></div></div>
 <blockquote>
-<p>Additional <code>spec</code> parameters are available on the <a href="/docs/reference/cluster-operator/configuration/">Cluster Operator
+<p>Additional <code>spec</code> parameters are available on the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/configuration/">Cluster Operator
 configuration</a>
 page.</p>
 </blockquote>
 <blockquote>
 <p>You can find more examples such as deployments referencing a external etcd kv
-store for StorageOS in the <a href="/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
+store for StorageOS in the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
 </blockquote>
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
@@ -1601,13 +1601,13 @@ spec:
 <span style="color:#8f5902;font-style:italic">#        - &#34;true&#34;</span>
 </code></pre></div></div></div>
 <blockquote>
-<p>Additional <code>spec</code> parameters are available on the <a href="/docs/reference/cluster-operator/configuration/">Cluster Operator
+<p>Additional <code>spec</code> parameters are available on the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/configuration/">Cluster Operator
 configuration</a>
 page.</p>
 </blockquote>
 <blockquote>
 <p>You can find more examples such as deployments referencing a external etcd kv
-store for StorageOS in the <a href="/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
+store for StorageOS in the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
 </blockquote>
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
@@ -1818,13 +1818,13 @@ spec:
 <span style="color:#8f5902;font-style:italic">#        - &#34;true&#34;</span>
 </code></pre></div></div></div>
 <blockquote>
-<p>Additional <code>spec</code> parameters are available on the <a href="/docs/reference/cluster-operator/configuration/">Cluster Operator
+<p>Additional <code>spec</code> parameters are available on the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/configuration/">Cluster Operator
 configuration</a>
 page.</p>
 </blockquote>
 <blockquote>
 <p>You can find more examples such as deployments referencing a external etcd kv
-store for StorageOS in the <a href="/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
+store for StorageOS in the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
 </blockquote>
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
@@ -2035,13 +2035,13 @@ spec:
 <span style="color:#8f5902;font-style:italic">#        - &#34;true&#34;</span>
 </code></pre></div></div></div>
 <blockquote>
-<p>Additional <code>spec</code> parameters are available on the <a href="/docs/reference/cluster-operator/configuration/">Cluster Operator
+<p>Additional <code>spec</code> parameters are available on the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/configuration/">Cluster Operator
 configuration</a>
 page.</p>
 </blockquote>
 <blockquote>
 <p>You can find more examples such as deployments referencing a external etcd kv
-store for StorageOS in the <a href="/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
+store for StorageOS in the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
 </blockquote>
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
@@ -2252,13 +2252,13 @@ spec:
 <span style="color:#8f5902;font-style:italic">#        - &#34;true&#34;</span>
 </code></pre></div></div></div>
 <blockquote>
-<p>Additional <code>spec</code> parameters are available on the <a href="/docs/reference/cluster-operator/configuration/">Cluster Operator
+<p>Additional <code>spec</code> parameters are available on the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/configuration/">Cluster Operator
 configuration</a>
 page.</p>
 </blockquote>
 <blockquote>
 <p>You can find more examples such as deployments referencing a external etcd kv
-store for StorageOS in the <a href="/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
+store for StorageOS in the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
 </blockquote>
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
@@ -2457,13 +2457,13 @@ spec:
 <span style="color:#8f5902;font-style:italic">#        - &#34;true&#34;</span>
 </code></pre></div></div></div>
 <blockquote>
-<p>Additional <code>spec</code> parameters are available on the <a href="/docs/reference/cluster-operator/configuration/">Cluster Operator
+<p>Additional <code>spec</code> parameters are available on the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/configuration/">Cluster Operator
 configuration</a>
 page.</p>
 </blockquote>
 <blockquote>
 <p>You can find more examples such as deployments referencing a external etcd kv
-store for StorageOS in the <a href="/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
+store for StorageOS in the <a href="http://ferran.storageos.net:1313/docs/reference/cluster-operator/examples/">Cluster Operator examples</a> page.</p>
 </blockquote>
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
@@ -2487,7 +2487,7 @@ Phase.</p>
 </div>
 
 <h2 id="first-storageos-volume">First StorageOS volume</h2>
-<p>If this is your first installation you may wish to follow the <a href="/docs/operations/firstpvc/">StorageOS
+<p>If this is your first installation you may wish to follow the <a href="http://ferran.storageos.net:1313/docs/operations/firstpvc/">StorageOS
 Volume guide</a> for an example of how
 to mount a StorageOS volume in a Pod.</p>
 
@@ -2582,10 +2582,9 @@ to mount a StorageOS volume in a Pod.</p>
 
 
 
-
-<script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
-
+<script src="/js/main.js"></script>
 
 
-  </body>
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
 </html>

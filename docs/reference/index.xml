@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Reference</title>
-    <link>/docs/reference/</link>
+    <link>http://ferran.storageos.net:1313/docs/reference/</link>
     <description>Recent content in Reference on </description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/reference/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://ferran.storageos.net:1313/docs/reference/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: API Reference</title>
-      <link>/docs/reference/api/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/api/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/api/</guid>
       <description>
         
         
@@ -44,10 +44,10 @@ window.onload = function() {
     
     <item>
       <title>Docs: Command line interface</title>
-      <link>/docs/reference/cli/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/cli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cli/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/cli/</guid>
       <description>
         
         
@@ -181,10 +181,10 @@ specific help.&lt;/p&gt;
     
     <item>
       <title>Docs: Cluster discovery</title>
-      <link>/docs/reference/clusterdiscovery/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/clusterdiscovery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/clusterdiscovery/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/clusterdiscovery/</guid>
       <description>
         
         
@@ -230,10 +230,10 @@ is to prevent non-obvious split-brain scenarios in multi-node clusters, where
     
     <item>
       <title>Docs: Cluster Operator</title>
-      <link>/docs/reference/cluster-operator/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/cluster-operator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/cluster-operator/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/cluster-operator/</guid>
       <description>
         
         
@@ -260,10 +260,10 @@ repository&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>Docs: Contributing to the docs</title>
-      <link>/docs/reference/contributing/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/contributing/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/contributing/</guid>
       <description>
         
         
@@ -309,10 +309,10 @@ payment.&lt;/p&gt;
     
     <item>
       <title>Docs: Environment Variables</title>
-      <link>/docs/reference/envvars/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/envvars/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/envvars/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/envvars/</guid>
       <description>
         
         
@@ -371,7 +371,7 @@ variables. These can be injected in via any of the usual mechanisms such as
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;DISABLE_TCMU&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1.3+&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Prevents TCMU from being used. On systems where another program is already using TCMU this should be set to &lt;code&gt;true&lt;/code&gt;. See &lt;a href=&#34;/docs/prerequisites/systemconfiguration&#34;&gt;System Configuration&lt;/a&gt; for more information.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Prevents TCMU from being used. On systems where another program is already using TCMU this should be set to &lt;code&gt;true&lt;/code&gt;. See &lt;a href=&#34;http://ferran.storageos.net:1313/docs/prerequisites/systemconfiguration&#34;&gt;System Configuration&lt;/a&gt; for more information.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;DISABLE_TELEMETRY&lt;/code&gt;&lt;/td&gt;
@@ -396,7 +396,7 @@ variables. These can be injected in via any of the usual mechanisms such as
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;JOIN&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1.0+&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;Required&lt;/em&gt; A join token and/or list of cluster nodes to join.  The first node will bootstrap the cluster.  See &lt;a href=&#34;/docs/reference/clusterdiscovery/&#34;&gt;cluster discovery&lt;/a&gt;.  There is no default; this must be set for multiple-node clusters&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;Required&lt;/em&gt; A join token and/or list of cluster nodes to join.  The first node will bootstrap the cluster.  See &lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/clusterdiscovery/&#34;&gt;cluster discovery&lt;/a&gt;.  There is no default; this must be set for multiple-node clusters&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;KUBECONFIG&lt;/code&gt;&lt;/td&gt;
@@ -496,17 +496,17 @@ variables. These can be injected in via any of the usual mechanisms such as
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;TLS_ETCD_CA&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1.2.0&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;The file path to the etcd server Certificate Authority certificate. The certificate should be mounted into the container using a Secret. See &lt;a href=&#34;/docs/operations/external-etcd/etcd-tls&#34;&gt;etcd TLS&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;The file path to the etcd server Certificate Authority certificate. The certificate should be mounted into the container using a Secret. See &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/external-etcd/etcd-tls&#34;&gt;etcd TLS&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;TLS_ETCD_CLIENT_CERT&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1.2.0&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;The file path to the etcd server client certificate. The certificate should be mounted into the container using a Secret. See &lt;a href=&#34;/docs/operations/external-etcd/etcd-tls&#34;&gt;etcd TLS&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;The file path to the etcd server client certificate. The certificate should be mounted into the container using a Secret. See &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/external-etcd/etcd-tls&#34;&gt;etcd TLS&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;TLS_ETCD_CLIENT_KEY&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;1.2.0&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;The file path to the etcd server client key. The certificate should be mounted into the container using a Secret. See &lt;a href=&#34;/docs/operations/external-etcd/etcd-tls&#34;&gt;etcd TLS&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;The file path to the etcd server client key. The certificate should be mounted into the container using a Secret. See &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/external-etcd/etcd-tls&#34;&gt;etcd TLS&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;USERNAME&lt;/code&gt;&lt;/td&gt;
@@ -521,10 +521,10 @@ variables. These can be injected in via any of the usual mechanisms such as
     
     <item>
       <title>Docs: Graphical user interface (GUI)</title>
-      <link>/docs/reference/gui/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/gui/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/gui/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/gui/</guid>
       <description>
         
         
@@ -532,31 +532,31 @@ variables. These can be injected in via any of the usual mechanisms such as
 &lt;p&gt;The GUI is available at port 5705 on any of the nodes in the cluster. Initally
 you can log in as the default administrator, using the username &lt;code&gt;storageos&lt;/code&gt; and
 password &lt;code&gt;storageos&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/docs/gui/login.png&#34; alt=&#34;Logging in&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ferran.storageos.net:1313/images/docs/gui/login.png&#34; alt=&#34;Logging in&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;manage-cluster-nodes-and-pools&#34;&gt;Manage cluster nodes and pools&lt;/h2&gt;
 &lt;p&gt;The nodes and pools page allow you to manage cluster nodes and storage pool. In this example, this cluster consists of three nodes with 35.9GB capacity each. The default storage pool contains all three nodes, giving a total of 107.6GB.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/docs/gui/nodes.png&#34; alt=&#34;Managing nodes&#34;&gt;
-&lt;img src=&#34;/images/docs/gui/pools.png&#34; alt=&#34;Managing storage pools&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ferran.storageos.net:1313/images/docs/gui/nodes.png&#34; alt=&#34;Managing nodes&#34;&gt;
+&lt;img src=&#34;http://ferran.storageos.net:1313/images/docs/gui/pools.png&#34; alt=&#34;Managing storage pools&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;create-and-view-volumes&#34;&gt;Create and view volumes&lt;/h2&gt;
 &lt;p&gt;You can create volumes, including replicated volumes, and view volume details:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/docs/gui/create-volume.png&#34; alt=&#34;Creating a volume&#34;&gt;
-&lt;img src=&#34;/images/docs/gui/volumes.png&#34; alt=&#34;Viewing storage volumes&#34;&gt;
-&lt;img src=&#34;/images/docs/gui/volume-details.png&#34; alt=&#34;Viewing details of a volume&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ferran.storageos.net:1313/images/docs/gui/create-volume.png&#34; alt=&#34;Creating a volume&#34;&gt;
+&lt;img src=&#34;http://ferran.storageos.net:1313/images/docs/gui/volumes.png&#34; alt=&#34;Viewing storage volumes&#34;&gt;
+&lt;img src=&#34;http://ferran.storageos.net:1313/images/docs/gui/volume-details.png&#34; alt=&#34;Viewing details of a volume&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;managing-volumes-with-namespaces-and-rules&#34;&gt;Managing volumes with namespaces and rules&lt;/h2&gt;
 &lt;p&gt;Volumes can be namespaced across different projects or teams, and you can switch namespace using the left hand panel:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/docs/gui/namespaces.png&#34; alt=&#34;Viewing namespaces&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ferran.storageos.net:1313/images/docs/gui/namespaces.png&#34; alt=&#34;Viewing namespaces&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Data policy and placement is enforced using rules:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/docs/gui/rules.png&#34; alt=&#34;Viewing rules&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ferran.storageos.net:1313/images/docs/gui/rules.png&#34; alt=&#34;Viewing rules&#34;&gt;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Init container</title>
-      <link>/docs/reference/init-container/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/init-container/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/init-container/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/init-container/</guid>
       <description>
         
         
@@ -564,7 +564,7 @@ password &lt;code&gt;storageos&lt;/code&gt;.&lt;/p&gt;
 StorageOS starts an init container that sets the system configuration for
 StorageOS. The container also manages configuration changes required when
 upgrading StorageOS versions.&lt;/p&gt;
-&lt;p&gt;The container belongs to the DaemonSet that the &lt;a href=&#34;/docs/reference/cluster-operator/&#34;&gt;StorageOS Cluster
+&lt;p&gt;The container belongs to the DaemonSet that the &lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/cluster-operator/&#34;&gt;StorageOS Cluster
 Operator&lt;/a&gt; starts when a
 &lt;code&gt;StorageOSCluster&lt;/code&gt; resource is created. The &lt;code&gt;storageos-init&lt;/code&gt; container is
 executed as an
@@ -601,21 +601,21 @@ be used:&lt;/p&gt;
     
     <item>
       <title>Docs: StorageOS Feature labels</title>
-      <link>/docs/reference/labels/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/labels/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/labels/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/labels/</guid>
       <description>
         
         
         &lt;p&gt;Feature labels are a powerful and flexible way to control storage features,
-especially when combined with &lt;a href=&#34;/docs/reference/cli/rule/&#34;&gt;rules&lt;/a&gt;.&lt;/p&gt;
+especially when combined with &lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/cli/rule/&#34;&gt;rules&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Labels can be applied to various StorageOS artefacts. Applying specific feature
 labels triggers compression, replication and other storage features. No feature
 labels are present by default.&lt;/p&gt;
 &lt;h2 id=&#34;storageos-node-labels&#34;&gt;StorageOS Node labels&lt;/h2&gt;
 &lt;p&gt;Nodes do not have any feature labels present by default.  When StorageOS is run
-within Kubernetes with the &lt;a href=&#34;/docs/reference/cluster-operator/&#34;&gt;Cluster Operator&lt;/a&gt;, any node labels set on
+within Kubernetes with the &lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/cluster-operator/&#34;&gt;Cluster Operator&lt;/a&gt;, any node labels set on
 Kubernetes nodes are available within StorageOS.  Node labels may also be set
 with the CLI or UI.&lt;/p&gt;
 &lt;table&gt;
@@ -677,7 +677,7 @@ with the CLI or UI.&lt;/p&gt;
 &lt;td align=&#34;left&#34;&gt;Fencing&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos.com/fenced&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;true / false&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Enables StorageOS fencing of pods on unavailable nodes. For more information about fencing prerequisites please see the &lt;a href=&#34;/docs/operations/fencing&#34;&gt;Fencing&lt;/a&gt; operations page.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Enables StorageOS fencing of pods on unavailable nodes. For more information about fencing prerequisites please see the &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/fencing&#34;&gt;Fencing&lt;/a&gt; operations page.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -700,7 +700,7 @@ kubectl label pod mydb-pod storageos.com/fenced&lt;span style=&#34;color:#ce5c00
 &lt;td align=&#34;left&#34;&gt;Overcommitment&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos.com/overcommit&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;integers [+]&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Sets the percentage of overcommitment allowed for the pool (see &lt;a href=&#34;/docs/operations/overcommitment/&#34;&gt;here&lt;/a&gt;).&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Sets the percentage of overcommitment allowed for the pool (see &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/overcommitment/&#34;&gt;here&lt;/a&gt;).&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -734,7 +734,7 @@ kubectl label pod mydb-pod storageos.com/fenced&lt;span style=&#34;color:#ce5c00
 &lt;td align=&#34;left&#34;&gt;Encryption&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos.com/encryption&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;true / false&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Enables volume encryption, more details &lt;a href=&#34;/docs/operations/encrypted-volumes&#34;&gt;here&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Enables volume encryption, more details &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/encrypted-volumes&#34;&gt;here&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;Failure mode&lt;/td&gt;
@@ -775,7 +775,7 @@ labels can also be added to the parameters section of the StorageClass. This
 means that all volumes created with the specific StorageClass will have
 StorageOS volume labels applied to them.&lt;/p&gt;
 &lt;p&gt;For example the StorageClass below will create &lt;code&gt;ext4&lt;/code&gt; formatted volumes with a
-single StorageOS replica, in the &lt;code&gt;default&lt;/code&gt; &lt;a href=&#34;/docs/concepts/pools/&#34;&gt;pool&lt;/a&gt;.&lt;/p&gt;
+single StorageOS replica, in the &lt;code&gt;default&lt;/code&gt; &lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/pools/&#34;&gt;pool&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;storage.k8s.io/v1&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;StorageClass&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
@@ -791,10 +791,10 @@ single StorageOS replica, in the &lt;code&gt;default&lt;/code&gt; &lt;a href=&#3
     
     <item>
       <title>Docs: StorageOS Open Source Software Attribution Notice</title>
-      <link>/docs/reference/open_source_attribution/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/open_source_attribution/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/open_source_attribution/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/open_source_attribution/</guid>
       <description>
         
         
@@ -5582,10 +5582,10 @@ limitations under the License.
     
     <item>
       <title>Docs: Platforms</title>
-      <link>/docs/reference/platforms/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/platforms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/platforms/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/platforms/</guid>
       <description>
         
         
@@ -5597,10 +5597,10 @@ or operations that relate to a specific platform.&lt;/p&gt;
     
     <item>
       <title>Docs: Prometheus</title>
-      <link>/docs/reference/prometheus/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/prometheus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/prometheus/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/prometheus/</guid>
       <description>
         
         
@@ -6177,10 +6177,10 @@ provide them during a support engagement.&lt;/p&gt;
     
     <item>
       <title>Docs: Release notes</title>
-      <link>/docs/reference/release_notes/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/release_notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/release_notes/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/release_notes/</guid>
       <description>
         
         
@@ -6192,13 +6192,13 @@ Chart&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The latest CLI release is &lt;code&gt;1.2.2&lt;/code&gt;, available from
 &lt;a href=&#34;https://github.com/storageos/go-cli/releases&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;upgrading&#34;&gt;Upgrading&lt;/h1&gt;
-&lt;p&gt;See &lt;a href=&#34;/docs/operations/upgrades/&#34;&gt;upgrades&lt;/a&gt; for upgrade strategies.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/upgrades/&#34;&gt;upgrades&lt;/a&gt; for upgrade strategies.&lt;/p&gt;
 &lt;h2 id=&#34;140---released-06092019&#34;&gt;1.4.0 - Released 06/09/2019&lt;/h2&gt;
 &lt;p&gt;Version &lt;code&gt;1.4.0&lt;/code&gt; changes the way metadata keys are stored on disk resulting in
 improved key locality and thus an increase in IO performance.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;IMPORTANT:&lt;/em&gt; Due to the nature of this change, the upgrade process includes an
 automated conversion process. If upgrading from &lt;code&gt;1.3.0&lt;/code&gt; or below, please ensure
-you follow the &lt;a href=&#34;/docs/operations/upgrades/&#34;&gt;upgrade instructions&lt;/a&gt;.
+you follow the &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/upgrades/&#34;&gt;upgrade instructions&lt;/a&gt;.
 If the upgrade process is not followed, version &lt;code&gt;1.4.0&lt;/code&gt; will refuse to start,
 but you may restart using the previous version. Once the upgrade process has
 been completed it is not possible to revert to an earlier version.&lt;/p&gt;
@@ -6324,18 +6324,18 @@ storage presentations.&lt;/p&gt;
 30-40 seconds) and it protects against multiple nodes accessing volumes
 concurrently, the fencing option gives the ability to override the default
 Kubernetes behaviour.&lt;/p&gt;
-&lt;p&gt;See &lt;a href=&#34;/docs/concepts/fencing/&#34;&gt;fencing&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/fencing/&#34;&gt;fencing&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Volume Encryption can now be enabled by setting the
 &lt;code&gt;storageos.com/encryption=true&lt;/code&gt; label on a volume.  When enabled, data will be
 encrypted prior to being persisted on disk.&lt;/p&gt;
-&lt;p&gt;See &lt;a href=&#34;/docs/concepts/encryption/&#34;&gt;encrypted volumes&lt;/a&gt; for more
+&lt;p&gt;See &lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/encryption/&#34;&gt;encrypted volumes&lt;/a&gt; for more
 information.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Mutual TLS is now supported on external etcd KV backends.&lt;/p&gt;
-&lt;p&gt;See &lt;a href=&#34;/docs/operations/external-etcd/etcd-tls/&#34;&gt;etcd TLS&lt;/a&gt; for more
+&lt;p&gt;See &lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/external-etcd/etcd-tls/&#34;&gt;etcd TLS&lt;/a&gt; for more
 information.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -6343,7 +6343,7 @@ information.&lt;/p&gt;
 Operator&lt;/a&gt;, node labels from
 Kubernetes are visible within StorageOS and available for use in rules.  This
 is particularly useful to mark specific nodes as compute-only.  See
-&lt;a href=&#34;/docs/reference/labels/&#34;&gt;labels&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/labels/&#34;&gt;labels&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;improved-3&#34;&gt;Improved&lt;/h3&gt;
@@ -6615,7 +6615,7 @@ improvements, many to help with running on low-memory or heavily loaded servers.
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Cache allocation has been adjusted for lower memory systems.  Allocation sizes
-are described in &lt;a href=&#34;/docs/concepts/architecture/&#34;&gt;architecture&lt;/a&gt;.
+are described in &lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/architecture/&#34;&gt;architecture&lt;/a&gt;.
 The cache size will never be set to more than 1/3rd of free memory.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -6723,7 +6723,7 @@ the Prometheus &lt;code&gt;/metrics&lt;/code&gt; endpoint.&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;Offline nodes can now be removed from management either by using the CLI &lt;code&gt;node delete&lt;/code&gt; command, or in the UI. This is only available when external etcd is
 used as the KV store.  See
-&lt;a href=&#34;/docs/operations/decommission-nodes/&#34;&gt;decommissioning nodes&lt;/a&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/operations/decommission-nodes/&#34;&gt;decommissioning nodes&lt;/a&gt;
 for more information.&lt;/li&gt;
 &lt;li&gt;Nodes can now be placed into &amp;ldquo;Maintenance mode&amp;rdquo; to disable volume recovery on
 the node while it is offline for maintenance. This allows nodes to be
@@ -6746,7 +6746,7 @@ overcommit percentage. By default, overcommit is set to 0.&lt;/li&gt;
 the latest StorageOS version and log if a new version is available.  The UI
 will also notify administrators.  This check can be disabled by setting
 &lt;code&gt;DISABLE_TELEMETRY=true&lt;/code&gt;.  For more information see
-&lt;a href=&#34;/docs/reference/telemetry/&#34;&gt;telemetry&lt;/a&gt;.&lt;/li&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/telemetry/&#34;&gt;telemetry&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Since data scrub operations can be intensive, we now limit to 5 concurrent
 volume scrubs.  This does not affect the number of volumes that may be deleted
 in a batch as the scrubs occur asyncronously.  Volumes will remain in
@@ -7153,7 +7153,7 @@ Linux SCSI Target driver. Previous versions used NBD where available, or FUSE
 where it wasn&amp;rsquo;t.  Using the new volume presentation improves performance on
 the RHEL platform where NBD is not available.  This feature is available for
 all major distributions and is widely used.  For more information, see
-&lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;system configuration&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/prerequisites/systemconfiguration/&#34;&gt;system configuration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Internally, the StorageOS scheduler has switched to using level-based state
 handling and the gRPC protocol.  This allows the scheduler to make assertions
 about the current state, rather than relying on events that can be missed.
@@ -7212,7 +7212,7 @@ against corruption.&lt;/li&gt;
 Instead we recommend that you provision a new cluster and migrate data.&lt;/p&gt;
 &lt;p&gt;Please update to the latest CLI when installing 0.10.x.&lt;/p&gt;
 &lt;h3 id=&#34;08x---09x&#34;&gt;0.8.x -&amp;gt; 0.9.x&lt;/h3&gt;
-&lt;p&gt;Start-up scripts should be updated to use the new &lt;a href=&#34;/docs/reference/clusterdiscovery&#34;&gt;cluster
+&lt;p&gt;Start-up scripts should be updated to use the new &lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/clusterdiscovery&#34;&gt;cluster
 discovery&lt;/a&gt; syntax&lt;/p&gt;
 &lt;p&gt;Do not mix a cluster with 0.8.x and 0.9.x versions as port numbers have changed.
 This may cause cluster instability while nodes are being upgraded.&lt;/p&gt;
@@ -7257,7 +7257,7 @@ changed from &lt;code&gt;LABEL_ADD&lt;/code&gt; to &lt;code&gt;LABELS&lt;/code&g
 (&lt;code&gt;5705&lt;/code&gt;).  To access, point your web browser to http://ADVERTISE_IP:5705.
 where ADVERTISE_IP is the public ip address of a StorageOS node.  Unless you
 have changed the default credentials, login with user &lt;code&gt;storageos&lt;/code&gt;, password
-&lt;code&gt;storageos&lt;/code&gt;.  See: /docs/reference/gui/&lt;/p&gt;
+&lt;code&gt;storageos&lt;/code&gt;.  See: http://ferran.storageos.net:1313/docs/reference/gui/&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Prometheus stats are exported on each cluster node at
@@ -7267,7 +7267,7 @@ http://ADVERTISE_IP:5705/v1/metrics.  Prometheus 2.x is required.&lt;/p&gt;
 &lt;p&gt;The CLI can now stream realtime logs from the active StorageOS cluster with
 &lt;code&gt;storageos logs -f&lt;/code&gt;.  Logs are aggregated from all cluster nodes over a single
 connection to the API.  Future releases will add support for filtering and
-controlling the log level.  See: /docs/reference/cli/logs/&lt;/p&gt;
+controlling the log level.  See: http://ferran.storageos.net:1313/docs/reference/cli/logs/&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The location of the StorageOS volumes can now be configured on a per-node
@@ -7502,7 +7502,7 @@ installs.  Volumes mount into containers correctly using Docker.&lt;/li&gt;
 &lt;li&gt;Docker can only access volumes created in the &lt;code&gt;default&lt;/code&gt; namespace.&lt;/li&gt;
 &lt;li&gt;Clients mounting volumes from RHEL7/CentOS 7 will experience degraded
 performance due to the absence of the
-&lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;NBD kernel module&lt;/a&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/prerequisites/systemconfiguration/&#34;&gt;NBD kernel module&lt;/a&gt;
 on those platforms.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;081&#34;&gt;0.8.1&lt;/h2&gt;
@@ -7568,7 +7568,7 @@ installs.  Volumes mount into containers correctly using Docker.&lt;/li&gt;
 &lt;li&gt;Docker can only access volumes created in the &lt;code&gt;default&lt;/code&gt; namespace.&lt;/li&gt;
 &lt;li&gt;Clients mounting volumes from RHEL7/CentOS 7 will experience degraded
 performance due to the absence of the
-&lt;a href=&#34;/docs/prerequisites/systemconfiguration/&#34;&gt;NBD kernel module&lt;/a&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/prerequisites/systemconfiguration/&#34;&gt;NBD kernel module&lt;/a&gt;
 on those platforms.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;0710&#34;&gt;0.7.10&lt;/h2&gt;
@@ -7657,10 +7657,10 @@ flapping&lt;/li&gt;
     
     <item>
       <title>Docs: StorageOS Telemetry</title>
-      <link>/docs/reference/telemetry/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/telemetry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/telemetry/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/telemetry/</guid>
       <description>
         
         
@@ -7761,32 +7761,32 @@ variables or the StorageOS Cluster Spec.&lt;/p&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;             &amp;#34;reportErrors&amp;#34;: false
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;         }&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;storageos-cluster-spec&#34;&gt;StorageOS Cluster Spec&lt;/h4&gt;
-&lt;p&gt;Disable telemetry explicitly through the configurable &lt;a href=&#34;/docs/reference/cluster-operator/configuration/&#34;&gt;spec parameters&lt;/a&gt; of the StorageOSCluster custom resource.&lt;/p&gt;
+&lt;p&gt;Disable telemetry explicitly through the configurable &lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/cluster-operator/configuration/&#34;&gt;spec parameters&lt;/a&gt; of the StorageOSCluster custom resource.&lt;/p&gt;
 &lt;h4 id=&#34;environment-variables&#34;&gt;Environment Variables&lt;/h4&gt;
 &lt;p&gt;You can use the following environmental variables to disable or enable telemetry.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;DISABLE_TELEMETRY       &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Disable the DNS query and once per day sentry.io reporting&lt;/span&gt;
 DISABLE_ERROR_REPORTING &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Disable sentry.io crash reports&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can find more information about StorageOS environment variables
-&lt;a href=&#34;/docs/reference/envvars/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;http://ferran.storageos.net:1313/docs/reference/envvars/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Supported File systems</title>
-      <link>/docs/reference/filesystems/</link>
+      <link>http://ferran.storageos.net:1313/docs/reference/filesystems/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/reference/filesystems/</guid>
+      <guid>http://ferran.storageos.net:1313/docs/reference/filesystems/</guid>
       <description>
         
         
         &lt;h2 id=&#34;host-filesystems&#34;&gt;Host Filesystems&lt;/h2&gt;
 &lt;p&gt;StorageOS will automatically use &lt;code&gt;/var/lib/storageos&lt;/code&gt; on each host as a base
-directory for storing &lt;a href=&#34;/docs/concepts/volumes#blob-files&#34;&gt;configuration and blob
+directory for storing &lt;a href=&#34;http://ferran.storageos.net:1313/docs/concepts/volumes#blob-files&#34;&gt;configuration and blob
 files&lt;/a&gt;. Recommended host filesystem types
-are &lt;code&gt;ext4&lt;/code&gt; or &lt;code&gt;xfs&lt;/code&gt;. If you require a specific filesystem please &lt;a href=&#34;/docs/support/contactus&#34;&gt;contact
+are &lt;code&gt;ext4&lt;/code&gt; or &lt;code&gt;xfs&lt;/code&gt;. If you require a specific filesystem please &lt;a href=&#34;http://ferran.storageos.net:1313/docs/support/contactus&#34;&gt;contact
 StorageOS&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;persistent-volume-filesystems&#34;&gt;Persistent Volume Filesystems&lt;/h2&gt;
 &lt;p&gt;StorageOS provides a block device on which a file system can be created. The

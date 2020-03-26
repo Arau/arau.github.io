@@ -24,7 +24,7 @@
 <meta property="og:description" content="Use an external Etcd cluster StorageOS uses the etcd distributed key-value store to store essential cluster metadata and manage distributed configuration state. An embedded etcd instance is included in the StorageOS container, but for production environments and testing of production workloads, we recommend deploying an external etcd cluster. For more details about, and an example of, how to run etcd, see the External etcd Operations page.
 It is highly recommended to use external etcd for cloud environments and place the etcd cluster on stable nodes." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/docs/best-practices/" />
+<meta property="og:url" content="http://ferran.storageos.net:1313/docs/best-practices/" />
 <meta property="article:modified_time" content="2020-03-18T18:14:56+00:00" />
 <meta itemprop="name" content="StorageOS Best Practices">
 <meta itemprop="description" content="Use an external Etcd cluster StorageOS uses the etcd distributed key-value store to store essential cluster metadata and manage distributed configuration state. An embedded etcd instance is included in the StorageOS container, but for production environments and testing of production workloads, we recommend deploying an external etcd cluster. For more details about, and an example of, how to run etcd, see the External etcd Operations page.
@@ -43,8 +43,8 @@ It is highly recommended to use external etcd for cloud environments and place t
 
 
 
-<link rel="preload" href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" as="style">
-<link href="/scss/main.min.f756d06bf015089574ec734bc20c403411466ed8e4cace0da5ceffb0aa317037.css" rel="stylesheet" integrity="">
+
+<link href="/scss/main.css" rel="stylesheet">
 
 
 <script
@@ -155,7 +155,7 @@ It is highly recommended to use external etcd for cloud environments and place t
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.c8e72a02e1285791461beae6ac8f0760921333b214c4e33bde3604eb83907e9e06d46dc8fd76b449937676d9745586d55d24cef7f98a2952b643599ecd42c02d.json"
+  data-offline-search-index-json-src="/offline-search-index.04ca88613e935c2ddbfa8718811d62691c3bdb8f8bff1107da7135a8ae7673ebd10de08d0c19f3cc67bb3a4310e126e0ee081b727521d208dd83e072ae37f18a.json"
   data-offline-search-base-href="/"
 >
 
@@ -1053,14 +1053,14 @@ It is highly recommended to use external etcd for cloud environments and place t
 
 
 <li class="breadcrumb-item" >
-	<a href="/docs/">Documentation</a>
+	<a href="http://ferran.storageos.net:1313/docs/">Documentation</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="/docs/best-practices/">Best Practices</a>
+	<a href="http://ferran.storageos.net:1313/docs/best-practices/">Best Practices</a>
 </li>
 
 	</ol>
@@ -1084,7 +1084,7 @@ recycled often might affect the normal operations of StorageOS.</p>
 <p>We recommend creating a separate filesystem for StorageOS to mitigate the risk
 of filling the root filesystem on nodes. This has to be done for each node in
 the cluster.</p>
-<p>Follow the <a href="/docs/operations/managing-host-storage/">managing host storage</a> best practices page for more
+<p>Follow the <a href="http://ferran.storageos.net:1313/docs/operations/managing-host-storage/">managing host storage</a> best practices page for more
 details.</p>
 <h2 id="resource-reservations">Resource reservations</h2>
 <p>StorageOS resource consumption depends on the workloads and the StorageOS
@@ -1138,7 +1138,7 @@ define StorageOS pools based on node selectors to collocate volumes.</p>
 <p>Losing a few nodes at the same time could cause the loss of data even when
 volume replicas are being used.</p>
 <h2 id="port-blocking">Port blocking</h2>
-<p>StorageOS exposes ports to operate. It is recommended that the <a href="/docs/prerequisites/firewalls/">ports</a> are not accessible from outside
+<p>StorageOS exposes ports to operate. It is recommended that the <a href="http://ferran.storageos.net:1313/docs/prerequisites/firewalls/">ports</a> are not accessible from outside
 the scope of your cluster.</p>
 <h2 id="storageos-in-docker-ee">StorageOS in Docker EE</h2>
 <p>StorageOS does not support running on Swarm nodes nor on mixed (Kubernetes and
@@ -1236,10 +1236,9 @@ nodes.</p>
 
 
 
-
-<script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
-
+<script src="/js/main.js"></script>
 
 
-  </body>
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10&v=2"></' + 'script>')</script></body>
 </html>
