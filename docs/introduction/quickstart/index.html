@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.63.2" />
+<meta name="generator" content="Hugo 0.64.1" />
 
-<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 
@@ -27,13 +27,13 @@
   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://arau.github.io/docs/introduction/quickstart/" />
-<meta property="article:modified_time" content="2020-03-18T23:39:58+00:00" />
+
 <meta itemprop="name" content="Quickstart">
 <meta itemprop="description" content="  Start by understanding the architecture and playing with a demo
   For production deployments, follow our installation guides for Kubernetes, OpenShift or Rancher.
   Dive into our Use Case documentation for Workloads deployed in Kubernetes.
   ">
-<meta itemprop="dateModified" content="2020-03-18T23:39:58&#43;00:00" />
+
 <meta itemprop="wordCount" content="33">
 
 
@@ -44,8 +44,6 @@
   For production deployments, follow our installation guides for Kubernetes, OpenShift or Rancher.
   Dive into our Use Case documentation for Workloads deployed in Kubernetes.
   "/>
-
-
 
 
 
@@ -146,6 +144,8 @@
 	
 	<a class="dropdown-item" href="/">v1.x</a>
 	
+	<a class="dropdown-item" href="/v2">v2.0</a>
+	
 </div>
 
 			</li>
@@ -163,7 +163,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.a7e5698ae8ab8765c64dec717481f68bde7de2ff1dfcbde73f596c1ab73e2643e95620d5086d8f9d289106ea38bf034a93c5f65ec7a041dc9203a9a5433f21b6.json"
+  data-offline-search-index-json-src="/offline-search-index.8df3a2fa60ec124fcbeec7d86f199be7418ec5e65e1c23d82e87e7b6aa827522b355210898cf2bfdba70c00c1fe45922b9114b1dd3f23a5b5806dbb6508fe8b3.json"
   data-offline-search-base-href="/"
 >
 
@@ -303,6 +303,12 @@
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptspodlocality" href="/docs/concepts/podlocality/">Podlocality</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptspolicies" href="/docs/concepts/policies/">Policies</a>
       
       
@@ -322,6 +328,12 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsrules" href="/docs/concepts/rules/">Rules</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptssharedfs" href="/docs/concepts/sharedfs/">Shared Filesystem - RWX</a>
       
       
       
@@ -420,6 +432,59 @@
       
       
       
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/platforms/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Platforms</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsplatforms">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsaws-eks" href="/docs/platforms/aws-eks/">AWS EKS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsazure-aks" href="/docs/platforms/azure-aks/">Azure AKS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsdockeree" href="/docs/platforms/dockeree/">DockerEE</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshift" href="/docs/platforms/openshift/">OpenShift</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsrancher" href="/docs/platforms/rancher/">Rancher</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsbest-practices" href="/docs/best-practices/">Best Practices</a>
       
@@ -469,7 +534,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">ETCD</a>
+    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Etcd</a>
   </li>
   <ul>
     <li class="collapse " id="docsoperationsexternal-etcd">
@@ -575,6 +640,12 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsrules" href="/docs/operations/rules/">Rules</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationssharedfs" href="/docs/operations/sharedfs/">Shared Filesystem - RWX</a>
       
       
       
@@ -899,59 +970,6 @@
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/reference/platforms/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Platforms</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsreferenceplatforms">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsaws-eks" href="/docs/reference/platforms/aws-eks/">AWS EKS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsazure-aks" href="/docs/reference/platforms/azure-aks/">Azure AKS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsdockeree" href="/docs/reference/platforms/dockeree/">DockerEE</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsopenshift" href="/docs/reference/platforms/openshift/">OpenShift</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsrancher" href="/docs/reference/platforms/rancher/">Rancher</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceprometheus" href="/docs/reference/prometheus/">Prometheus Endpoint</a>
       
@@ -960,6 +978,41 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencerelease_notes" href="/docs/reference/release_notes/">Release notes</a>
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/reference/scheduler/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Scheduler</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencescheduler">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencescheduleradmission-controller" href="/docs/reference/scheduler/admission-controller/">Admission Controller</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceschedulerexamples" href="/docs/reference/scheduler/examples/">Examples</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
       
       
       
@@ -1010,20 +1063,6 @@
 
 
 
-
-<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-
-
-
-
-
-<a href="https://github.com/storageos/storageos.github.io/edit/master/content/en/docs/introduction/quickstart.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/storageos/storageos.github.io/issues/new?title=Quickstart" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
-
-
-<a href="https://github.com/storageos/storageos.github.io/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
-
-</div>
 
 
 
@@ -1092,8 +1131,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified March 18, 2020: <a  href="https://github.com/storageos/storageos.github.io/commit/1171484e963c0854582ec642547893446408eebd">Promote installation subpages to first level. (1171484)</a>
-</div>
+	<div class="text-muted mt-5 pt-3 border-top"></div>
 </div>
 
 
@@ -1183,6 +1221,13 @@
 
 
 <script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript"
+	  id="hs-script-loader"
+	  async
+	  defer
+	  src="//js.hs-scripts.com/3402546.js"></script>
 
 
 

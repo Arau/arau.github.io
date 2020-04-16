@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.63.2" />
+<meta name="generator" content="Hugo 0.64.1" />
 
-<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 
@@ -21,28 +21,26 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Kubernetes | </title><meta property="og:title" content="Kubernetes" />
-<meta property="og:description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding._
+<meta property="og:description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding.
   Any Kubernetes managed service such as EKS, AKS, GKE, DO or DockeEE platform can use the following Kubernetes guide to install StorageOS. Ensure the use of CSI for these platforms.
    1.17 1.16 1.15 1.14 1.13 1.12    Install StorageOS on Kubernetes 1.17 The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://arau.github.io/docs/install/kubernetes/" />
-<meta property="article:modified_time" content="2020-03-24T14:08:15+00:00" />
+
 <meta itemprop="name" content="Kubernetes">
-<meta itemprop="description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding._
+<meta itemprop="description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding.
   Any Kubernetes managed service such as EKS, AKS, GKE, DO or DockeEE platform can use the following Kubernetes guide to install StorageOS. Ensure the use of CSI for these platforms.
    1.17 1.16 1.15 1.14 1.13 1.12    Install StorageOS on Kubernetes 1.17 The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations.">
-<meta itemprop="dateModified" content="2020-03-24T14:08:15&#43;00:00" />
-<meta itemprop="wordCount" content="4539">
+
+<meta itemprop="wordCount" content="4569">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kubernetes"/>
-<meta name="twitter:description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding._
+<meta name="twitter:description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding.
   Any Kubernetes managed service such as EKS, AKS, GKE, DO or DockeEE platform can use the following Kubernetes guide to install StorageOS. Ensure the use of CSI for these platforms.
    1.17 1.16 1.15 1.14 1.13 1.12    Install StorageOS on Kubernetes 1.17 The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations."/>
-
-
 
 
 
@@ -143,6 +141,8 @@
 	
 	<a class="dropdown-item" href="/">v1.x</a>
 	
+	<a class="dropdown-item" href="/v2">v2.0</a>
+	
 </div>
 
 			</li>
@@ -160,7 +160,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.a7e5698ae8ab8765c64dec717481f68bde7de2ff1dfcbde73f596c1ab73e2643e95620d5086d8f9d289106ea38bf034a93c5f65ec7a041dc9203a9a5433f21b6.json"
+  data-offline-search-index-json-src="/offline-search-index.8df3a2fa60ec124fcbeec7d86f199be7418ec5e65e1c23d82e87e7b6aa827522b355210898cf2bfdba70c00c1fe45922b9114b1dd3f23a5b5806dbb6508fe8b3.json"
   data-offline-search-base-href="/"
 >
 
@@ -300,6 +300,12 @@
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptspodlocality" href="/docs/concepts/podlocality/">Podlocality</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptspolicies" href="/docs/concepts/policies/">Policies</a>
       
       
@@ -319,6 +325,12 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsrules" href="/docs/concepts/rules/">Rules</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptssharedfs" href="/docs/concepts/sharedfs/">Shared Filesystem - RWX</a>
       
       
       
@@ -417,6 +429,59 @@
       
       
       
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/platforms/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Platforms</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsplatforms">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsaws-eks" href="/docs/platforms/aws-eks/">AWS EKS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsazure-aks" href="/docs/platforms/azure-aks/">Azure AKS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsdockeree" href="/docs/platforms/dockeree/">DockerEE</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshift" href="/docs/platforms/openshift/">OpenShift</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsrancher" href="/docs/platforms/rancher/">Rancher</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsbest-practices" href="/docs/best-practices/">Best Practices</a>
       
@@ -466,7 +531,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">ETCD</a>
+    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Etcd</a>
   </li>
   <ul>
     <li class="collapse " id="docsoperationsexternal-etcd">
@@ -572,6 +637,12 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsrules" href="/docs/operations/rules/">Rules</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationssharedfs" href="/docs/operations/sharedfs/">Shared Filesystem - RWX</a>
       
       
       
@@ -896,59 +967,6 @@
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/reference/platforms/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Platforms</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsreferenceplatforms">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsaws-eks" href="/docs/reference/platforms/aws-eks/">AWS EKS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsazure-aks" href="/docs/reference/platforms/azure-aks/">Azure AKS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsdockeree" href="/docs/reference/platforms/dockeree/">DockerEE</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsopenshift" href="/docs/reference/platforms/openshift/">OpenShift</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsrancher" href="/docs/reference/platforms/rancher/">Rancher</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceprometheus" href="/docs/reference/prometheus/">Prometheus Endpoint</a>
       
@@ -957,6 +975,41 @@
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencerelease_notes" href="/docs/reference/release_notes/">Release notes</a>
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/reference/scheduler/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Scheduler</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencescheduler">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencescheduleradmission-controller" href="/docs/reference/scheduler/admission-controller/">Admission Controller</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceschedulerexamples" href="/docs/reference/scheduler/examples/">Examples</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
       
       
       
@@ -1007,20 +1060,6 @@
 
 
 
-
-<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-
-
-
-
-
-<a href="https://github.com/storageos/storageos.github.io/edit/master/content/en/docs/install/kubernetes.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/storageos/storageos.github.io/issues/new?title=Kubernetes" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
-
-
-<a href="https://github.com/storageos/storageos.github.io/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
-
-</div>
 
 
 
@@ -1075,7 +1114,7 @@
 	<blockquote>
 <p>Make sure the
 <a href="https://arau.github.io/docs/prerequisites/">prerequisites for StorageOS</a> are
-satisfied before proceeding._</p>
+satisfied before proceeding.</p>
 </blockquote>
 <blockquote>
 <p>Any Kubernetes managed service such as EKS, AKS, GKE, DO or DockeEE
@@ -1233,8 +1272,8 @@ storageoscluster-operator-68678798ff-f28zw   1/1       Running   <span style="co
 </blockquote>
 <h2 id="2-create-a-secret">2. Create a Secret</h2>
 <p>Before deploying a StorageOS cluster, create a Secret defining the StorageOS
-API Username and Password in base64 encoding.</p>
-<p>The API username and password are used to create the default StorageOS admin
+API Username and Password in base64 encoding.
+The API username and password are used to create the default StorageOS admin
 account which can be used with the StorageOS CLI and to login to the StorageOS
 GUI. The account defined in the secret is also used by Kubernetes to
 authenticate against the StorageOS API when installing with the native driver.</p>
@@ -1397,6 +1436,7 @@ store for StorageOS in the <a href="https://arau.github.io/docs/reference/cluste
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
 NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-75f6c               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-czbqx               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-zv4tq               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
@@ -1450,8 +1490,8 @@ storageoscluster-operator-68678798ff-f28zw   1/1       Running   <span style="co
 </blockquote>
 <h2 id="2-create-a-secret">2. Create a Secret</h2>
 <p>Before deploying a StorageOS cluster, create a Secret defining the StorageOS
-API Username and Password in base64 encoding.</p>
-<p>The API username and password are used to create the default StorageOS admin
+API Username and Password in base64 encoding.
+The API username and password are used to create the default StorageOS admin
 account which can be used with the StorageOS CLI and to login to the StorageOS
 GUI. The account defined in the secret is also used by Kubernetes to
 authenticate against the StorageOS API when installing with the native driver.</p>
@@ -1614,6 +1654,7 @@ store for StorageOS in the <a href="https://arau.github.io/docs/reference/cluste
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
 NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-75f6c               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-czbqx               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-zv4tq               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
@@ -1667,8 +1708,8 @@ storageoscluster-operator-68678798ff-f28zw   1/1       Running   <span style="co
 </blockquote>
 <h2 id="2-create-a-secret">2. Create a Secret</h2>
 <p>Before deploying a StorageOS cluster, create a Secret defining the StorageOS
-API Username and Password in base64 encoding.</p>
-<p>The API username and password are used to create the default StorageOS admin
+API Username and Password in base64 encoding.
+The API username and password are used to create the default StorageOS admin
 account which can be used with the StorageOS CLI and to login to the StorageOS
 GUI. The account defined in the secret is also used by Kubernetes to
 authenticate against the StorageOS API when installing with the native driver.</p>
@@ -1831,6 +1872,7 @@ store for StorageOS in the <a href="https://arau.github.io/docs/reference/cluste
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
 NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-75f6c               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-czbqx               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-zv4tq               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
@@ -1884,8 +1926,8 @@ storageoscluster-operator-68678798ff-f28zw   1/1       Running   <span style="co
 </blockquote>
 <h2 id="2-create-a-secret">2. Create a Secret</h2>
 <p>Before deploying a StorageOS cluster, create a Secret defining the StorageOS
-API Username and Password in base64 encoding.</p>
-<p>The API username and password are used to create the default StorageOS admin
+API Username and Password in base64 encoding.
+The API username and password are used to create the default StorageOS admin
 account which can be used with the StorageOS CLI and to login to the StorageOS
 GUI. The account defined in the secret is also used by Kubernetes to
 authenticate against the StorageOS API when installing with the native driver.</p>
@@ -2048,6 +2090,7 @@ store for StorageOS in the <a href="https://arau.github.io/docs/reference/cluste
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
 NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-75f6c               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-czbqx               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-zv4tq               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
@@ -2101,8 +2144,8 @@ storageoscluster-operator-68678798ff-f28zw   1/1       Running   <span style="co
 </blockquote>
 <h2 id="2-create-a-secret">2. Create a Secret</h2>
 <p>Before deploying a StorageOS cluster, create a Secret defining the StorageOS
-API Username and Password in base64 encoding.</p>
-<p>The API username and password are used to create the default StorageOS admin
+API Username and Password in base64 encoding.
+The API username and password are used to create the default StorageOS admin
 account which can be used with the StorageOS CLI and to login to the StorageOS
 GUI. The account defined in the secret is also used by Kubernetes to
 authenticate against the StorageOS API when installing with the native driver.</p>
@@ -2265,6 +2308,7 @@ store for StorageOS in the <a href="https://arau.github.io/docs/reference/cluste
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
 NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-75f6c               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-czbqx               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-zv4tq               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
@@ -2318,8 +2362,8 @@ storageoscluster-operator-68678798ff-f28zw   1/1       Running   <span style="co
 </blockquote>
 <h2 id="2-create-a-secret">2. Create a Secret</h2>
 <p>Before deploying a StorageOS cluster, create a Secret defining the StorageOS
-API Username and Password in base64 encoding.</p>
-<p>The API username and password are used to create the default StorageOS admin
+API Username and Password in base64 encoding.
+The API username and password are used to create the default StorageOS admin
 account which can be used with the StorageOS CLI and to login to the StorageOS
 GUI. The account defined in the secret is also used by Kubernetes to
 authenticate against the StorageOS API when installing with the native driver.</p>
@@ -2470,6 +2514,7 @@ store for StorageOS in the <a href="https://arau.github.io/docs/reference/cluste
 <h3 id="verify-storageos-installation">Verify StorageOS Installation</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos get pods -w</span>
 NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-75f6c               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-czbqx               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
 storageos-daemonset-zv4tq               3/3     Running   <span style="color:#0000cf;font-weight:bold">0</span>          3m
@@ -2495,8 +2540,7 @@ to mount a StorageOS volume in a Pod.</p>
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified March 24, 2020: <a  href="https://github.com/storageos/storageos.github.io/commit/ea22d32b37dae864a900115133d3150028e28a43">Language changes (ea22d32)</a>
-</div>
+	<div class="text-muted mt-5 pt-3 border-top"></div>
 </div>
 
 
@@ -2586,6 +2630,13 @@ to mount a StorageOS volume in a Pod.</p>
 
 
 <script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript"
+	  id="hs-script-loader"
+	  async
+	  defer
+	  src="//js.hs-scripts.com/3402546.js"></script>
 
 
 

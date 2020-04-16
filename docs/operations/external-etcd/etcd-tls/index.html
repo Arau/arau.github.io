@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.63.2" />
+<meta name="generator" content="Hugo 0.64.1" />
 
-<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 
@@ -26,12 +26,12 @@ StorageOS uses environment variables to specify the location of the necessary ce
 Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can be used to setup StorageOS with etcd using mTLS." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://arau.github.io/docs/operations/external-etcd/etcd-tls/" />
-<meta property="article:modified_time" content="2020-02-06T15:46:42+00:00" />
+
 <meta itemprop="name" content="Encrypting communication with Etcd">
 <meta itemprop="description" content="StorageOS supports secure communication with an external etcd cluster using mutual TLS (mTLS). With mTLS both StorageOS and etcd authenticate each other ensuring that communication only happens between mutually authenticated end points, and that all communication is encrypted.
 StorageOS uses environment variables to specify the location of the necessary certificates and keys. This allows Kubernetes secrets to be mounted as volumes, directly into pods.
 Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can be used to setup StorageOS with etcd using mTLS.">
-<meta itemprop="dateModified" content="2020-02-06T15:46:42&#43;00:00" />
+
 <meta itemprop="wordCount" content="265">
 
 
@@ -41,8 +41,6 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
 <meta name="twitter:description" content="StorageOS supports secure communication with an external etcd cluster using mutual TLS (mTLS). With mTLS both StorageOS and etcd authenticate each other ensuring that communication only happens between mutually authenticated end points, and that all communication is encrypted.
 StorageOS uses environment variables to specify the location of the necessary certificates and keys. This allows Kubernetes secrets to be mounted as volumes, directly into pods.
 Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can be used to setup StorageOS with etcd using mTLS."/>
-
-
 
 
 
@@ -143,6 +141,8 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
 	
 	<a class="dropdown-item" href="/">v1.x</a>
 	
+	<a class="dropdown-item" href="/v2">v2.0</a>
+	
 </div>
 
 			</li>
@@ -160,7 +160,7 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.a7e5698ae8ab8765c64dec717481f68bde7de2ff1dfcbde73f596c1ab73e2643e95620d5086d8f9d289106ea38bf034a93c5f65ec7a041dc9203a9a5433f21b6.json"
+  data-offline-search-index-json-src="/offline-search-index.8df3a2fa60ec124fcbeec7d86f199be7418ec5e65e1c23d82e87e7b6aa827522b355210898cf2bfdba70c00c1fe45922b9114b1dd3f23a5b5806dbb6508fe8b3.json"
   data-offline-search-base-href="/"
 >
 
@@ -300,6 +300,12 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptspodlocality" href="/docs/concepts/podlocality/">Podlocality</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptspolicies" href="/docs/concepts/policies/">Policies</a>
       
       
@@ -319,6 +325,12 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsrules" href="/docs/concepts/rules/">Rules</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptssharedfs" href="/docs/concepts/sharedfs/">Shared Filesystem - RWX</a>
       
       
       
@@ -417,6 +429,59 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
       
       
       
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/platforms/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Platforms</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsplatforms">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsaws-eks" href="/docs/platforms/aws-eks/">AWS EKS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsazure-aks" href="/docs/platforms/azure-aks/">Azure AKS</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsdockeree" href="/docs/platforms/dockeree/">DockerEE</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshift" href="/docs/platforms/openshift/">OpenShift</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsrancher" href="/docs/platforms/rancher/">Rancher</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsbest-practices" href="/docs/best-practices/">Best Practices</a>
       
@@ -466,7 +531,7 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">ETCD</a>
+    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Etcd</a>
   </li>
   <ul>
     <li class="collapse show" id="docsoperationsexternal-etcd">
@@ -572,6 +637,12 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsrules" href="/docs/operations/rules/">Rules</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationssharedfs" href="/docs/operations/sharedfs/">Shared Filesystem - RWX</a>
       
       
       
@@ -896,59 +967,6 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
       
       
       
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/reference/platforms/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Platforms</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsreferenceplatforms">
-      
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsaws-eks" href="/docs/reference/platforms/aws-eks/">AWS EKS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsazure-aks" href="/docs/reference/platforms/azure-aks/">Azure AKS</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsdockeree" href="/docs/reference/platforms/dockeree/">DockerEE</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsopenshift" href="/docs/reference/platforms/openshift/">OpenShift</a>
-      
-      
-      
-      
-      
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceplatformsrancher" href="/docs/reference/platforms/rancher/">Rancher</a>
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceprometheus" href="/docs/reference/prometheus/">Prometheus Endpoint</a>
       
@@ -957,6 +975,41 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencerelease_notes" href="/docs/reference/release_notes/">Release notes</a>
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/reference/scheduler/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Scheduler</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencescheduler">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencescheduleradmission-controller" href="/docs/reference/scheduler/admission-controller/">Admission Controller</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceschedulerexamples" href="/docs/reference/scheduler/examples/">Examples</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
       
       
       
@@ -1008,20 +1061,6 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
 
 
 
-<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-
-
-
-
-
-<a href="https://github.com/storageos/storageos.github.io/edit/master/content/en/docs/operations/external-etcd/etcd-tls.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/storageos/storageos.github.io/issues/new?title=Encrypting%20communication%20with%20Etcd" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
-
-
-<a href="https://github.com/storageos/storageos.github.io/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
-
-</div>
-
 
 
 
@@ -1065,7 +1104,7 @@ Setting up mTLS with Etcd Below is an example StorageOSCluster resource that can
 
 
 <li class="breadcrumb-item" >
-	<a href="https://arau.github.io/docs/operations/external-etcd/">ETCD</a>
+	<a href="https://arau.github.io/docs/operations/external-etcd/">Etcd</a>
 </li>
 
 
@@ -1124,7 +1163,7 @@ volume so that the certificate files are avaliable inside the pod. Environment
 variables containing the file paths are passed to the StorageOS process in
 order to use the files from the mounted path.</p>
 <p>A worked example of settings up StorageOS with external etcd using mTLS is avaliable
-<a href="https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-tls">here</a>.
+<a href="https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-helpers/etcd-operator-example-with-tls">here</a>.
 For ease of use the example uses the CoreOS etcd operator and the CoreOS guide
 for <a href="https://github.com/coreos/etcd-operator/blob/master/doc/user/cluster_tls.md">Cluster
 TLS</a>
@@ -1132,8 +1171,7 @@ is followed.</p>
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified February 6, 2020: <a  href="https://github.com/storageos/storageos.github.io/commit/131b65ea3e2e4586868a5582651d9be4cae0c528">StorageOS Docs init (131b65e)</a>
-</div>
+	<div class="text-muted mt-5 pt-3 border-top"></div>
 </div>
 
 
@@ -1223,6 +1261,13 @@ is followed.</p>
 
 
 <script src="/js/main.min.07381cb6406f1d15281f85a6dea05a3c2e9460f063c7e8dcc39b41f18db3aad0.js" integrity="sha256-BzgctkBvHRUoH4Wm3qBaPC6UYPBjx&#43;jcw5tB8Y2zqtA=" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript"
+	  id="hs-script-loader"
+	  async
+	  defer
+	  src="//js.hs-scripts.com/3402546.js"></script>
 
 
 
