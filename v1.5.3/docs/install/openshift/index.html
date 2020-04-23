@@ -34,7 +34,7 @@ The recommended way to run StorageOS on OpenShift 4." />
   Installing StorageOS on OpenShift 4.3 has fewer prerequisites as compared to previous OpenShift 3.x versions.
 The recommended way to run StorageOS on OpenShift 4.">
 
-<meta itemprop="wordCount" content="2299">
+<meta itemprop="wordCount" content="2303">
 
 
 
@@ -163,7 +163,7 @@ The recommended way to run StorageOS on OpenShift 4."/>
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/v1.5.3/offline-search-index.1e4e1f62ac163f3fe99cf8153e73fa7f772491fd6056814766645b3280f234798344674924c24f839e0cae691bf7c44f4edeb8c19d76ae9dbc7b21faeb012a8f.json"
+  data-offline-search-index-json-src="/v1.5.3/offline-search-index.a7e1978b0ecf88ebea954425bb18e8ef6ad02de58fe137a160bb13e237c52906a5d3950a7c6e6c7446ba9c79d82a14af03f5c98cca933addeaa793fe95afaeba.json"
   data-offline-search-base-href="/"
 >
 
@@ -1187,7 +1187,7 @@ The recommended way to run StorageOS on OpenShift 4."/>
     <h1 id="install-storageos-on-openshift-v4">Install StorageOS on OpenShift v4</h1>
 <blockquote>
 <p>Make sure the
-<a href="/docs/prerequisites/overview">prerequisites for StorageOS</a> are
+<a href="https://arau.github.io/v1.5.3/docs/prerequisites/">prerequisites for StorageOS</a> are
 satisfied before proceeding.</p>
 </blockquote>
 <blockquote>
@@ -1547,6 +1547,7 @@ spec:
   k8sDistro: <span style="color:#4e9a06">&#34;openshift&#34;</span>
   images:
     nodeContainer: <span style="color:#4e9a06">&#34;storageos/node:1.5.3&#34;</span> <span style="color:#8f5902;font-style:italic"># StorageOS version</span>
+  disableScheduler: <span style="color:#204a87">true</span>
   resources:
     requests:
     memory: <span style="color:#4e9a06">&#34;512Mi&#34;</span>
@@ -1723,6 +1724,7 @@ spec:
   k8sDistro: <span style="color:#4e9a06">&#34;openshift&#34;</span>
   images:
     nodeContainer: <span style="color:#4e9a06">&#34;storageos/node:1.5.3&#34;</span> <span style="color:#8f5902;font-style:italic"># StorageOS version</span>
+  disableScheduler: <span style="color:#204a87">true</span>
   resources:
     requests:
     memory: <span style="color:#4e9a06">&#34;512Mi&#34;</span>

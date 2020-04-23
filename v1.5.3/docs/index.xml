@@ -1636,7 +1636,8 @@ following object exists.&lt;/p&gt;
       <description>
         
         
-        &lt;p&gt;The following table lists the configurable spec parameters of the StorageOSCluster custom resource and their default values.&lt;/p&gt;
+        &lt;h2 id=&#34;storageoscluster-resource-configuration&#34;&gt;StorageOSCluster Resource Configuration&lt;/h2&gt;
+&lt;p&gt;The following table lists the configurable spec parameters of the StorageOSCluster custom resource and their default values.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1727,14 +1728,29 @@ following object exists.&lt;/p&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;quay.io/k8scsi/csi-node-driver-registrar:v1.0.1&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.hyperkubeContainer&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Deprecated field - HyperKube Container image&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Default dependent on Scheduler version&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.initContainer&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;StorageOS init container image&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/init:1.0.0&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.kubeschedulerContainer&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Kube scheduler container image&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Default dependent on Scheduler version&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.nfsContainer&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;StorageOS nfs container image&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/nfs:1.0.0&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.nodeContainer&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;StorageOS node container image&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/node:{{ site.latest_node_version  }}&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/node:1.5.3&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;ingress.annotations&lt;/code&gt;&lt;/td&gt;
@@ -1934,7 +1950,7 @@ following object exists.&lt;/p&gt;
     &lt;h1 id=&#34;install-storageos-on-openshift-v4&#34;&gt;Install StorageOS on OpenShift v4&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Make sure the
-&lt;a href=&#34;https://arau.github.io/v1.5.3/docs/prerequisites/overview&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
+&lt;a href=&#34;https://arau.github.io/v1.5.3/docs/prerequisites/&#34;&gt;prerequisites for StorageOS&lt;/a&gt; are
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
@@ -2294,6 +2310,7 @@ spec:
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift&amp;#34;&lt;/span&gt;
   images:
     nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:1.5.3&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+  disableScheduler: &lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;
   resources:
     requests:
     memory: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;512Mi&amp;#34;&lt;/span&gt;
@@ -2470,6 +2487,7 @@ spec:
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift&amp;#34;&lt;/span&gt;
   images:
     nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:1.5.3&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+  disableScheduler: &lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;
   resources:
     requests:
     memory: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;512Mi&amp;#34;&lt;/span&gt;
@@ -3408,7 +3426,6 @@ the scope of your cluster.&lt;/p&gt;
 &lt;p&gt;StorageOS does not support running on Swarm nodes nor on mixed (Kubernetes and
 Swarm) nodes. StorageOS volumes have to be provisioned and used from Kubernetes
 nodes.&lt;/p&gt;
-&lt;p&gt;test&lt;/p&gt;
 
       </description>
     </item>
