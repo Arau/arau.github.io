@@ -55,8 +55,10 @@ window.onload = function() {
 configuration.&lt;/p&gt;
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# linux/amd64&lt;/span&gt;
-curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt; site.latest_cli_version &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;/storageos_linux_amd64 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; chmod +x storageos &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo mv storageos /usr/local/bin/
-curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt; site.latest_cli_version &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;/storageos_darwin_amd64 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; chmod +x storageos &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo mv storageos /usr/local/bin/
+curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/1.2.2/storageos_linux_amd64 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; chmod +x storageos &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo mv storageos /usr/local/bin/
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# MacOS&lt;/span&gt;
+curl -sSLo storageos https://github.com/storageos/go-cli/releases/download/1.2.2/storageos_darwin_amd64 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; chmod +x storageos &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo mv storageos /usr/local/bin/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You will need to provide the correct credentials to connect to the API. The
 default installation creates a single user with username &lt;code&gt;storageos&lt;/code&gt; and
 password &lt;code&gt;storageos&lt;/code&gt;:&lt;/p&gt;
@@ -7898,8 +7900,9 @@ application and data is essential.&lt;/p&gt;
 &lt;p&gt;For instance, when running Kafka Pods under heavy load, it may be better to
 avoid scheduling a Pod using a remote volume rather than have clients
 direct traffic at a cluster member which exhibits degraded performance.&lt;/p&gt;
-&lt;p&gt;Enable &lt;code&gt;peferred/strict&lt;/code&gt; modes by setting labels for your Pods. Checkout the [examples
-section]({{ ref &amp;ldquo;docs/reference/scheduler/examples.md&amp;rdquo; &amp;gt;}}) for full details.&lt;/p&gt;
+&lt;p&gt;Enable &lt;code&gt;preferred/strict&lt;/code&gt; modes by setting labels for your Pods. Checkout the
+&lt;a href=&#34;https://arau.github.io/docs/reference/scheduler/examples/&#34;&gt;examples section&lt;/a&gt; for full
+details.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;

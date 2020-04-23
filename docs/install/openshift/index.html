@@ -34,7 +34,7 @@ The recommended way to run StorageOS on OpenShift 4." />
   Installing StorageOS on OpenShift 4.3 has fewer prerequisites as compared to previous OpenShift 3.x versions.
 The recommended way to run StorageOS on OpenShift 4.">
 
-<meta itemprop="wordCount" content="2299">
+<meta itemprop="wordCount" content="2303">
 
 
 
@@ -163,7 +163,7 @@ The recommended way to run StorageOS on OpenShift 4."/>
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.8df3a2fa60ec124fcbeec7d86f199be7418ec5e65e1c23d82e87e7b6aa827522b355210898cf2bfdba70c00c1fe45922b9114b1dd3f23a5b5806dbb6508fe8b3.json"
+  data-offline-search-index-json-src="/offline-search-index.dc8f0049753b23b2b18f9260872c5dd0550284d200c9e34aac5d5a71a0fe34992ae2051f1e24ab4cf99b6371578fb8bdcf4b615e4719c9293a494eed33d0a769.json"
   data-offline-search-base-href="/"
 >
 
@@ -1187,7 +1187,7 @@ The recommended way to run StorageOS on OpenShift 4."/>
     <h1 id="install-storageos-on-openshift-v4">Install StorageOS on OpenShift v4</h1>
 <blockquote>
 <p>Make sure the
-<a href="/docs/prerequisites/overview">prerequisites for StorageOS</a> are
+<a href="https://arau.github.io/docs/prerequisites/">prerequisites for StorageOS</a> are
 satisfied before proceeding.</p>
 </blockquote>
 <blockquote>
@@ -1547,6 +1547,7 @@ spec:
   k8sDistro: <span style="color:#4e9a06">&#34;openshift&#34;</span>
   images:
     nodeContainer: <span style="color:#4e9a06">&#34;storageos/node:1.5.3&#34;</span> <span style="color:#8f5902;font-style:italic"># StorageOS version</span>
+  disableScheduler: <span style="color:#204a87">true</span>
   resources:
     requests:
     memory: <span style="color:#4e9a06">&#34;512Mi&#34;</span>
@@ -1723,6 +1724,7 @@ spec:
   k8sDistro: <span style="color:#4e9a06">&#34;openshift&#34;</span>
   images:
     nodeContainer: <span style="color:#4e9a06">&#34;storageos/node:1.5.3&#34;</span> <span style="color:#8f5902;font-style:italic"># StorageOS version</span>
+  disableScheduler: <span style="color:#204a87">true</span>
   resources:
     requests:
     memory: <span style="color:#4e9a06">&#34;512Mi&#34;</span>
