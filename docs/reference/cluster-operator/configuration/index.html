@@ -30,7 +30,7 @@
 <meta itemprop="description" content="StorageOSCluster Resource Configuration The following table lists the configurable spec parameters of the StorageOSCluster custom resource and their default values.
    Parameter Description Default     csi.deploymentStrategy CSI helper deployment strategy (statefulset or deployment) statefulset   csi.enable Enable CSI setup false   csi.enableControllerPublishCreds Enable CSI controller publish credentials false   csi.enableNodePublishCreds Enable CSI node publish credentials false   csi.enableProvisionCreds Enable CSI provision credentials false   debug Enable debug mode for all the cluster nodes false   disableFencing Disable Pod fencing false   disableScheduler Disable StorageOS scheduler false   disableTCMU Disable TCMU to allow co-existence with other TCMU users.">
 
-<meta itemprop="wordCount" content="385">
+<meta itemprop="wordCount" content="387">
 
 
 
@@ -157,7 +157,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.35e3dc762aaa8fdc992ff35c68cbb8c0c9f2374e7c80bba35d0e6ee6239559d58a5f357897c910622a574080edb2640568b64aa347c07ef1d975e5f3ba4b16c8.json"
+  data-offline-search-index-json-src="/offline-search-index.a5c2bb933e7e90308f448892a3307f64d815231842b2d31361cadb2c86f655c57aaa292eeef58ee5458355f3c8a864919b9b89a4ca58ec76f86fcb3f60e455ce.json"
   data-offline-search-base-href="/"
 >
 
@@ -828,6 +828,12 @@
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencelicence" href="/docs/reference/licence/">Licence</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceopen_source_attribution" href="/docs/reference/open_source_attribution/">Open Source Attribution</a>
       
       
@@ -1066,7 +1072,7 @@
 <tr>
 <td align="left"><code>images.nodeContainer</code></td>
 <td align="left">StorageOS node container image</td>
-<td align="left"><code>storageos/node:2.0.0-rc.1</code></td>
+<td align="left"><code>storageos/node:2.0.0</code></td>
 </tr>
 <tr>
 <td align="left"><code>ingress.annotations</code></td>
@@ -1099,14 +1105,14 @@
 <td></td>
 </tr>
 <tr>
-<td align="left"><code>kvBackend.backend</code></td>
+<td align="left"><code>kvBackend.backend</code> (v2 deprecated)</td>
 <td align="left">Name of the key-value store to use. Set to <code>etcd</code> for external key-value store.</td>
 <td align="left"><code>embedded</code></td>
 </tr>
 <tr>
 <td align="left"><code>namespace</code></td>
 <td align="left">Namespace where storageos cluster resources are created</td>
-<td align="left"><code>storageos</code></td>
+<td align="left"><code>kube-system</code></td>
 </tr>
 <tr>
 <td align="left"><code>nodeSelectorTerms</code></td>

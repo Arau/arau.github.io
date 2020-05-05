@@ -32,7 +32,7 @@
   StorageOS transparently supports Rancher deployments on CentOS, RHEL, Debian, Ubuntu or RancherOS (CSI is not supported on RancherOS) and can support other Linux distributions as detailed on the System Configuration page if the appropriate kernel modules are available.
    Catalog Advanced    Rancher Catalog Install StorageOS is a Certified application in the Rancher Catalog.">
 
-<meta itemprop="wordCount" content="1181">
+<meta itemprop="wordCount" content="1186">
 
 
 
@@ -160,7 +160,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/v1.x/offline-search-index.48046041bd5cc2e4d15d6e14935c260e48c656e36a70ca525697c0d2f9d40b175012b3c096fa2943c49b48e3c668c6d707b4bb9d97bf22869e088ecfd476b9e6.json"
+  data-offline-search-index-json-src="/v1.x/offline-search-index.edf315ea84660f889373a178eb1b48d98da44228596a4cc079d7ce1427e729a5c6159cc7a0d06ffc92d3c369d0b9d0f8801094478636c4d8afe2c45b64ffe776.json"
   data-offline-search-base-href="/"
 >
 
@@ -190,7 +190,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/v1.x/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation</a>
+    <a  href="/v1.x/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation V1</a>
   </li>
   <ul>
     <li class="collapse show" id="v1xdocs">
@@ -1087,7 +1087,7 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="https://arau.github.io/v1.x/docs/">Documentation</a>
+	<a href="https://arau.github.io/v1.x/docs/">Documentation V1</a>
 </li>
 
 
@@ -1348,6 +1348,7 @@ documentation.</p>
 <li><a href="#1-install-storageos-operator">Install StorageOS Operator</a></li>
 <li><a href="#2-create-a-secret">Create a Secret for default username and password</a></li>
 <li><a href="#3-trigger-a-storageos-installation">Trigger bootstrap using a CustomResource</a></li>
+<li><a href="#4-license-cluster">Apply StorageOS licence</a></li>
 </ul>
 <h2 id="1-install-storageos-operator">1. Install StorageOS operator</h2>
 <p>Install the StorageOS Cluster Operator using the following yaml manifest.</p>
@@ -1402,6 +1403,7 @@ spec:
   secretRefName: <span style="color:#4e9a06">&#34;storageos-api&#34;</span> <span style="color:#8f5902;font-style:italic"># Reference from the Secret created in the previous step</span>
   secretRefNamespace: <span style="color:#4e9a06">&#34;storageos-operator&#34;</span>  <span style="color:#8f5902;font-style:italic"># Namespace of the Secret</span>
   k8sDistro: <span style="color:#4e9a06">&#34;rancher&#34;</span>
+  namespace: <span style="color:#4e9a06">&#34;kube-system&#34;</span>
   images:
     nodeContainer: <span style="color:#4e9a06">&#34;storageos/node:1.5.3&#34;</span> <span style="color:#8f5902;font-style:italic"># StorageOS version</span>
   csi:

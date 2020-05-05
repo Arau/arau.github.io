@@ -174,7 +174,7 @@ StorageOS.&lt;/p&gt;
       <description>
         
         
-        &lt;p&gt;StorageOS uses (etcd)[https://etcd.io] to store cluster metadata. Because of
+        &lt;p&gt;StorageOS uses &lt;a href=&#34;https://etcd.io&#34;&gt;etcd&lt;/a&gt; to store cluster metadata. Because of
 the strong consistency model that etcd enforces, StorageOS metadata operations
 are guaranteed to be atomic and consistent.&lt;/p&gt;
 &lt;h2 id=&#34;installation-options&#34;&gt;Installation options&lt;/h2&gt;

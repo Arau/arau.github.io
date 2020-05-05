@@ -34,7 +34,7 @@ The recommended way to run StorageOS on OpenShift 4." />
   Installing StorageOS on OpenShift 4.3 has fewer prerequisites as compared to previous OpenShift 3.x versions.
 The recommended way to run StorageOS on OpenShift 4.">
 
-<meta itemprop="wordCount" content="2303">
+<meta itemprop="wordCount" content="2312">
 
 
 
@@ -163,7 +163,7 @@ The recommended way to run StorageOS on OpenShift 4."/>
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/v1.x/offline-search-index.48046041bd5cc2e4d15d6e14935c260e48c656e36a70ca525697c0d2f9d40b175012b3c096fa2943c49b48e3c668c6d707b4bb9d97bf22869e088ecfd476b9e6.json"
+  data-offline-search-index-json-src="/v1.x/offline-search-index.edf315ea84660f889373a178eb1b48d98da44228596a4cc079d7ce1427e729a5c6159cc7a0d06ffc92d3c369d0b9d0f8801094478636c4d8afe2c45b64ffe776.json"
   data-offline-search-base-href="/"
 >
 
@@ -193,7 +193,7 @@ The recommended way to run StorageOS on OpenShift 4."/>
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/v1.x/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation</a>
+    <a  href="/v1.x/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation V1</a>
   </li>
   <ul>
     <li class="collapse show" id="v1xdocs">
@@ -1090,7 +1090,7 @@ The recommended way to run StorageOS on OpenShift 4."/>
 
 
 <li class="breadcrumb-item" >
-	<a href="https://arau.github.io/v1.x/docs/">Documentation</a>
+	<a href="https://arau.github.io/v1.x/docs/">Documentation V1</a>
 </li>
 
 
@@ -1298,6 +1298,7 @@ documentation.</p>
 <li><a href="#1-install-storageos-operator">Install StorageOS Operator</a></li>
 <li><a href="#2-create-a-secret">Create a Secret for default username and password</a></li>
 <li><a href="#3-trigger-a-storageos-installation">Trigger bootstrap using a CustomResource</a></li>
+<li><a href="#4-license-cluster">Apply StorageOS licence</a></li>
 </ul>
 <h2 id="1-install-storageos-operator">1. Install StorageOS operator</h2>
 <p>Install the StorageOS Cluster Operator using the following yaml manifest.</p>
@@ -1388,7 +1389,7 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   <span style="color:#00
 Note that pods typically take approximately 65 seconds to enter the Running
 Phase.</p>
 </blockquote>
-<h2 id="4-set-selinux-permissions">4. Set SELinux Permissions</h2>
+<h2 id="5-set-selinux-permissions">5. Set SELinux Permissions</h2>
 <p>The StorageOS CSI helper needs to mount a CSI Socket into the container so
 on each node add the <code>svirt_sandbox_file_t</code> flag to the CSI socket directory
 and CSI socket.</p>
@@ -1491,6 +1492,7 @@ documentation.</p>
 <li><a href="#1-install-storageos-operator">Install StorageOS Operator</a></li>
 <li><a href="#2-create-a-secret">Create a Secret for default username and password</a></li>
 <li><a href="#3-trigger-a-storageos-installation">Trigger bootstrap using a CustomResource</a></li>
+<li><a href="#4-license-cluster">Apply StorageOS licence</a></li>
 </ul>
 <h2 id="1-install-storageos-operator">1. Install StorageOS operator</h2>
 <p>Install the StorageOS Cluster Operator using the following yaml manifest.</p>
@@ -1668,6 +1670,7 @@ documentation.</p>
 <li><a href="#1-install-storageos-operator">Install StorageOS Operator</a></li>
 <li><a href="#2-create-a-secret">Create a Secret for default username and password</a></li>
 <li><a href="#3-trigger-a-storageos-installation">Trigger bootstrap using a CustomResource</a></li>
+<li><a href="#4-license-cluster">Apply StorageOS licence</a></li>
 </ul>
 <h2 id="1-install-storageos-operator">1. Install StorageOS operator</h2>
 <p>Install the StorageOS Cluster Operator using the following yaml manifest.</p>

@@ -22,28 +22,28 @@
 
 <title>Rancher | </title><meta property="og:title" content="Rancher" />
 <meta property="og:description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding.
+  Make sure to add a StorageOS licence after installing.
   StorageOS transparently supports Rancher deployments on CentOS, RHEL, Debian, Ubuntu or RancherOS (CSI is not supported on RancherOS) and can support other Linux distributions as detailed on the System Configuration page if the appropriate kernel modules are available.
-  The StorageOS v2 installation using the Rancher Catalog will be available soon.
- Manual    Manual Installation The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations." />
+  The StorageOS v2 installation using the Rancher Catalog will be available soon." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://arau.github.io/docs/install/rancher/" />
 
 <meta itemprop="name" content="Rancher">
 <meta itemprop="description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding.
+  Make sure to add a StorageOS licence after installing.
   StorageOS transparently supports Rancher deployments on CentOS, RHEL, Debian, Ubuntu or RancherOS (CSI is not supported on RancherOS) and can support other Linux distributions as detailed on the System Configuration page if the appropriate kernel modules are available.
-  The StorageOS v2 installation using the Rancher Catalog will be available soon.
- Manual    Manual Installation The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations.">
+  The StorageOS v2 installation using the Rancher Catalog will be available soon.">
 
-<meta itemprop="wordCount" content="638">
+<meta itemprop="wordCount" content="702">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rancher"/>
 <meta name="twitter:description" content="Make sure the prerequisites for StorageOS are satisfied before proceeding.
+  Make sure to add a StorageOS licence after installing.
   StorageOS transparently supports Rancher deployments on CentOS, RHEL, Debian, Ubuntu or RancherOS (CSI is not supported on RancherOS) and can support other Linux distributions as detailed on the System Configuration page if the appropriate kernel modules are available.
-  The StorageOS v2 installation using the Rancher Catalog will be available soon.
- Manual    Manual Installation The StorageOS Cluster Operator is a Kubernetes native application developed to deploy and configure StorageOS clusters, and assist with maintenance operations."/>
+  The StorageOS v2 installation using the Rancher Catalog will be available soon."/>
 
 
 
@@ -163,7 +163,7 @@
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.35e3dc762aaa8fdc992ff35c68cbb8c0c9f2374e7c80bba35d0e6ee6239559d58a5f357897c910622a574080edb2640568b64aa347c07ef1d975e5f3ba4b16c8.json"
+  data-offline-search-index-json-src="/offline-search-index.a5c2bb933e7e90308f448892a3307f64d815231842b2d31361cadb2c86f655c57aaa292eeef58ee5458355f3c8a864919b9b89a4ca58ec76f86fcb3f60e455ce.json"
   data-offline-search-base-href="/"
 >
 
@@ -834,6 +834,12 @@
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencelicence" href="/docs/reference/licence/">Licence</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceopen_source_attribution" href="/docs/reference/open_source_attribution/">Open Source Attribution</a>
       
       
@@ -954,6 +960,9 @@
 satisfied before proceeding.</p>
 </blockquote>
 <blockquote>
+<p>Make sure to add a StorageOS licence after installing.</p>
+</blockquote>
+<blockquote>
 <p>StorageOS transparently supports Rancher deployments on CentOS, RHEL,
 Debian, Ubuntu or RancherOS (CSI is not supported on RancherOS) and can
 support other Linux distributions as detailed on the <a href="https://arau.github.io/docs/prerequisites/systemconfiguration/">System Configuration
@@ -1019,10 +1028,11 @@ documentation.</p>
 <li><a href="#1-install-storageos-operator">Install StorageOS Operator</a></li>
 <li><a href="#2-create-a-secret">Create a Secret for default username and password</a></li>
 <li><a href="#3-trigger-a-storageos-installation">Trigger bootstrap using a CustomResource</a></li>
+<li><a href="#4-license-cluster">Apply StorageOS licence</a></li>
 </ul>
 <h2 id="1-install-storageos-operator">1. Install StorageOS operator</h2>
 <p>Install the StorageOS Cluster Operator using the following yaml manifest.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create -f https://github.com/storageos/cluster-operator/releases/download/2.0.0-rc.1/storageos-operator.yaml
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
 </code></pre></div><h3 id="verify-the-cluster-operator-pod-status">Verify the Cluster Operator Pod Status</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master03<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># kubectl -n storageos-operator get pod</span>
 NAME                                         READY     STATUS    RESTARTS   AGE
@@ -1079,9 +1089,10 @@ metadata:
 spec:
   secretRefName: <span style="color:#4e9a06">&#34;storageos-api&#34;</span> <span style="color:#8f5902;font-style:italic"># Reference from the Secret created in the previous step</span>
   secretRefNamespace: <span style="color:#4e9a06">&#34;storageos-operator&#34;</span>  <span style="color:#8f5902;font-style:italic"># Namespace of the Secret</span>
+  namespace: <span style="color:#4e9a06">&#34;kube-system&#34;</span>
   k8sDistro: <span style="color:#4e9a06">&#34;rancher&#34;</span>
   images:
-    nodeContainer: <span style="color:#4e9a06">&#34;storageos/node:2.0.0-rc.1&#34;</span> <span style="color:#8f5902;font-style:italic"># StorageOS version</span>
+    nodeContainer: <span style="color:#4e9a06">&#34;storageos/node:2.0.0&#34;</span> <span style="color:#8f5902;font-style:italic"># StorageOS version</span>
   kvBackend:
     address: <span style="color:#4e9a06">&#39;storageos-etcd-client.etcd:2379&#39;</span> <span style="color:#8f5902;font-style:italic"># Example address, change for your etcd endpoint</span>
   <span style="color:#8f5902;font-style:italic"># address: &#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&#39; # You can set ETCD server ips</span>
@@ -1122,6 +1133,15 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   <span style="color:#00
 Note that pods typically take approximately 65 seconds to enter the Running
 Phase.</p>
 </blockquote>
+<h2 id="4-license-cluster">4. License cluster</h2>
+<blockquote>
+<p>A newly installed StorageOS cluster does not include a licence. A cluster
+must be licensed within 24 hours of the installation. For more information,
+check the <a href="https://arau.github.io/docs/reference/licence/">reference licence page</a>.</p>
+</blockquote>
+<p>You can apply a Free Developer licence following the <a href="https://arau.github.io/docs/operations/licensing/">operations
+licensing</a> page, or purchase a
+licence contacting <a href="mailto:sales@storageos.com">sales@storageos.com</a>.</p>
 
 </div>
 

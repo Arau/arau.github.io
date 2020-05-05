@@ -22,7 +22,7 @@
       <description>
         
         
-        &lt;p&gt;StorageOS uses (etcd)[https://etcd.io] to store cluster metadata. Because of
+        &lt;p&gt;StorageOS uses &lt;a href=&#34;https://etcd.io&#34;&gt;etcd&lt;/a&gt; to store cluster metadata. Because of
 the strong consistency model that etcd enforces, StorageOS metadata operations
 are guaranteed to be atomic and consistent.&lt;/p&gt;
 &lt;h2 id=&#34;installation-options&#34;&gt;Installation options&lt;/h2&gt;
@@ -654,27 +654,25 @@ Filesystem                  Size  Used Avail Use% Mounted on
       <description>
         
         
-        &lt;p&gt;A newly installed StorageOS cluster includes an unregistered Basic licence,
-which caps usable storage space at 100GB.  To utilise more storage space, we
-offer either a Developer (free with registration - 500GB) licence or an
-Enterprise (unlimited capacity - see below) licence. This document explains how
-to upgrade your licence using either the GUI or CLI.&lt;/p&gt;
+        &lt;p&gt;A newly installed StorageOS cluster does not include a licence. A cluster can
+run unlicensed for 24 hours. After that, new operations such as volume
+provisioning or adding nodes are not permitted. Normal functioning of the
+cluster can be unlocked by applying for a Free Developer licence.&lt;/p&gt;
 &lt;h2 id=&#34;obtaining-a-developer-licence-via-the-gui&#34;&gt;Obtaining a Developer licence via the GUI&lt;/h2&gt;
-&lt;p&gt;You can obtain and apply a Developer licence in the StorageOS web GUI
-automatically by creating or logging in with a StorageOS account on the
-StorageOS portal via the licence page of the StorageOS web GUI:
+&lt;p&gt;You can obtain and apply a free Developer licence in the StorageOS web GUI by
+creating or logging in with a StorageOS account on the StorageOS portal via the
+licence page of the StorageOS web GUI:
 &lt;code&gt;http://ADVERTISE_IP:5705/#/licence&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/docs/operations/licensing/licence-login.png&#34; alt=&#34;Licence Login&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Wait a few seconds for the licence generation process to complete, at which
-point your licence will be visible. To inspect your licence, click on the
-&amp;ldquo;DETAILS&amp;rdquo; button as follows:&lt;/p&gt;
+point your licence will be visible.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/docs/gui-v2/license.png&#34; alt=&#34;Developer Licence&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;applying-a-previously-obtained-licence-via-the-gui&#34;&gt;Applying a previously obtained licence via the GUI&lt;/h2&gt;
-&lt;p&gt;Occasionally we will issue licences directly, e.g. by email or some other
-off-line method. To apply such keys, via the web GUI, visit
-&lt;code&gt;http://ADVERTISE_IP:5705/#/licence&lt;/code&gt; and click on the tab &amp;ldquo;ENTER KEY&amp;rdquo;, then
-paste the licence key and click on &amp;ldquo;UPLOAD KEY TO CLUSTER&amp;rdquo;. Note that you could
-also view your cluster ID on the same page.&lt;/p&gt;
+&lt;p&gt;Commercial licences are delivered through contact with the StorageOS team.
+To apply such keys, via the web GUI, visit &lt;code&gt;http://ADVERTISE_IP:5705/#/licence&lt;/code&gt;
+and click on the tab &amp;ldquo;Upgrade&amp;rdquo;, for the specific licence level you purchased.
+Then paste the licence key and click on &amp;ldquo;UPLOAD KEY TO CLUSTER&amp;rdquo;. Note that you
+can also view your cluster ID on the same page.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://arau.github.io/images/docs/operations/licensing/apply-licence-key.png&#34; alt=&#34;Apply Licence Key&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;obtaining-a-developer-licence-via-the-cli&#34;&gt;Obtaining a Developer licence via the CLI&lt;/h2&gt;
 &lt;p&gt;Before getting a licence, you need to know the ID of your StorageOS cluster.&lt;/p&gt;
@@ -699,7 +697,7 @@ correct cluster ID before generating the licence key.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Read the &lt;a href=&#34;https://arau.github.io/docs/reference/cli/apply/&#34;&gt;licence CLI command reference&lt;/a&gt; for further information.&lt;/p&gt;
 &lt;h2 id=&#34;obtaining-an-enterprise-licence&#34;&gt;Obtaining an Enterprise licence&lt;/h2&gt;
 &lt;p&gt;Please contact &lt;a href=&#34;mailto:sales@storageos.com&#34;&gt;sales@storageos.com&lt;/a&gt; to discuss
-pricing for our Enterprise licence.&lt;/p&gt;
+pricing for commercial licences.&lt;/p&gt;
 
       </description>
     </item>
