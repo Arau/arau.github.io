@@ -124,7 +124,7 @@ keys are lost the volume &lt;strong&gt;cannot&lt;/strong&gt; be decrypted.&lt;/p
 used to store the encryption keys.&lt;/p&gt;
 &lt;p&gt;StorageOS will create one secret per encrypted volume and the secrets are
 created in whatever namespace StorageOS is installed into.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl get secrets -n storageos
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl get secrets -n kube-system
 NAME                                           TYPE                                  DATA   AGE
 ns-key.default                                 Opaque                                &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;      20h
 vol-key.4276fc07-7d85-70bf-35a0-f0b005e55e0f   Opaque                                &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;      1m
@@ -1499,7 +1499,7 @@ cli&lt;/a&gt; is required.&lt;/p&gt;
 &lt;h2 id=&#34;pod-in-pending-because-of-mount-error&#34;&gt;Pod in pending because of mount error&lt;/h2&gt;
 &lt;h3 id=&#34;issue&#34;&gt;Issue:&lt;/h3&gt;
 &lt;p&gt;The output of &lt;code&gt;kubectl describe pod $POD_ID&lt;/code&gt; contains &lt;code&gt;no such file or directory&lt;/code&gt; and references the StorageOS volume device file.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;root@node1:~# kubectl -n storageos describe &lt;span style=&#34;color:#000&#34;&gt;$POD_ID&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;root@node1:~# kubectl -n kube-system describe &lt;span style=&#34;color:#000&#34;&gt;$POD_ID&lt;/span&gt;
 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;...&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
 Events:
   &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;...&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
@@ -1589,7 +1589,7 @@ implying that StorageOS is not running. For Kubernetes to define StorageOS pods
 ready, the health check must pass.&lt;/p&gt;
 &lt;h3 id=&#34;assert-2&#34;&gt;Assert:&lt;/h3&gt;
 &lt;p&gt;Check the status of StorageOS pods.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;root@node1:~/# kubectl -n storageos get pod --selector &lt;span style=&#34;color:#000&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;storageos &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# for CSI add --selector kind=daemonset&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;root@node1:~/# kubectl -n kube-system get pod --selector &lt;span style=&#34;color:#000&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;storageos &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# for CSI add --selector kind=daemonset&lt;/span&gt;
 NAME              READY     STATUS    RESTARTS   AGE
 storageos-qrqkj   0/1       Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          1m
 storageos-s4bfv   0/1       Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          1m
@@ -1662,7 +1662,7 @@ reclaimPolicy: Delete
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Check if the secret exists according to those parameters&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n storageos get secret storageos-api
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n kube-system get secret storageos-api
 No resources found.
 Error from server &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;NotFound&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;: secrets &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt; not found
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If no resources are found, it is clear that the Secret doesn&amp;rsquo;t exist or it is not deployed in
@@ -1701,9 +1701,9 @@ such cases the &lt;code&gt;JOIN&lt;/code&gt; variable must not contain master no
 cluster will remain unable to start.&lt;/p&gt;
 &lt;h3 id=&#34;assert-4&#34;&gt;Assert:&lt;/h3&gt;
 &lt;p&gt;Check that the first node of the &lt;code&gt;JOIN&lt;/code&gt; variable started properly.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;root@node1:~/# kubectl -n storageos describe ds/storageos &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep JOIN
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;root@node1:~/# kubectl -n kube-system describe ds/storageos &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep JOIN
     JOIN:          172.28.128.3,172.28.128.4,172.28.128.5
-root@node1:~/# kubectl -n storageos get pod -o wide &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep 172.28.128.3
+root@node1:~/# kubectl -n kube-system get pod -o wide &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep 172.28.128.3
 storageos-8zqxl   1/1       Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          2m        172.28.128.3   node1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;solution-4&#34;&gt;Solution:&lt;/h3&gt;
 &lt;p&gt;Make sure that the &lt;code&gt;JOIN&lt;/code&gt; variable doesn&amp;rsquo;t specify the master nodes. In case
@@ -1720,7 +1720,7 @@ through Kubernetes node labels, or StorageOS in the &lt;a href=&#34;https://arau
 &lt;h2 id=&#34;lio-initerror&#34;&gt;LIO Init:Error&lt;/h2&gt;
 &lt;h3 id=&#34;issue-4&#34;&gt;Issue:&lt;/h3&gt;
 &lt;p&gt;StorageOS pods not starting with &lt;code&gt;Init:Error&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n storageos get pod
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n kube-system get pod
 NAME              READY     STATUS              RESTARTS   AGE
 storageos-2kwqx   0/3       Init:Err             &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          6s
 storageos-cffcr   0/3       Init:Err             &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          6s
@@ -1733,7 +1733,7 @@ modules on the host system. If you are seeing these errors it is because that
 container couldn&amp;rsquo;t load the modules.&lt;/p&gt;
 &lt;h3 id=&#34;assert-5&#34;&gt;Assert&lt;/h3&gt;
 &lt;p&gt;Check the logs of the init container.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n storageos logs &lt;span style=&#34;color:#000&#34;&gt;$ANY_STORAGEOS_POD&lt;/span&gt; -c storageos-init
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n kube-system logs &lt;span style=&#34;color:#000&#34;&gt;$ANY_STORAGEOS_POD&lt;/span&gt; -c storageos-init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In case of failure, it will show the following output, indicating which kernel
 modules couldn&amp;rsquo;t be loaded or that they are not properly configured:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Checking configfs

@@ -47,7 +47,7 @@
 satisfied before proceeding.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Any Kubernetes managed service such as EKS, AKS, GKE, DO or DockeEE
+&lt;p&gt;Any Kubernetes managed service such as EKS, AKS, GKE, DO or DockerEE
 platform can use the following Kubernetes guide to install StorageOS.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
@@ -182,7 +182,7 @@ documentation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
 &lt;p&gt;Install the StorageOS Cluster Operator using the following yaml manifest.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.0.0/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos-operator get pod&lt;/span&gt;
 NAME                                         READY     STATUS    RESTARTS   AGE
@@ -266,7 +266,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;upstream&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -297,7 +297,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;eks&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -328,7 +328,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;aks&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -359,7 +359,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;gke&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -389,7 +389,7 @@ page.&lt;/p&gt;
 store for StorageOS in the &lt;a href=&#34;https://arau.github.io/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos get pods -w&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n kube-system get pods -w&lt;/span&gt;
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
@@ -445,7 +445,7 @@ documentation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
 &lt;p&gt;Install the StorageOS Cluster Operator using the following yaml manifest.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.0.0/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos-operator get pod&lt;/span&gt;
 NAME                                         READY     STATUS    RESTARTS   AGE
@@ -529,7 +529,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;upstream&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -560,7 +560,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;eks&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -591,7 +591,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;aks&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -622,7 +622,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;gke&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -652,7 +652,7 @@ page.&lt;/p&gt;
 store for StorageOS in the &lt;a href=&#34;https://arau.github.io/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos get pods -w&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n kube-system get pods -w&lt;/span&gt;
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
@@ -708,7 +708,7 @@ documentation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
 &lt;p&gt;Install the StorageOS Cluster Operator using the following yaml manifest.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.0.0/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos-operator get pod&lt;/span&gt;
 NAME                                         READY     STATUS    RESTARTS   AGE
@@ -792,7 +792,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;upstream&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -823,7 +823,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;eks&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -854,7 +854,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;aks&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -885,7 +885,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;gke&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -915,7 +915,7 @@ page.&lt;/p&gt;
 store for StorageOS in the &lt;a href=&#34;https://arau.github.io/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos get pods -w&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n kube-system get pods -w&lt;/span&gt;
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
@@ -971,7 +971,7 @@ documentation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
 &lt;p&gt;Install the StorageOS Cluster Operator using the following yaml manifest.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.0.0/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos-operator get pod&lt;/span&gt;
 NAME                                         READY     STATUS    RESTARTS   AGE
@@ -1055,7 +1055,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;upstream&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -1086,7 +1086,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;eks&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -1117,7 +1117,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;aks&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -1148,7 +1148,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;gke&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -1178,7 +1178,7 @@ page.&lt;/p&gt;
 store for StorageOS in the &lt;a href=&#34;https://arau.github.io/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos get pods -w&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n kube-system get pods -w&lt;/span&gt;
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
@@ -1234,7 +1234,7 @@ documentation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
 &lt;p&gt;Install the StorageOS Cluster Operator using the following yaml manifest.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.0.0/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos-operator get pod&lt;/span&gt;
 NAME                                         READY     STATUS    RESTARTS   AGE
@@ -1318,7 +1318,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;upstream&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -1349,7 +1349,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;eks&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -1380,7 +1380,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;aks&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -1411,7 +1411,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;gke&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -1441,7 +1441,7 @@ page.&lt;/p&gt;
 store for StorageOS in the &lt;a href=&#34;https://arau.github.io/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos get pods -w&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n kube-system get pods -w&lt;/span&gt;
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
@@ -1777,7 +1777,7 @@ the init container, perform the following steps:&lt;/p&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.nodeContainer&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;StorageOS node container image&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/node:2.0.0&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/node:v2.0.0&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;ingress.annotations&lt;/code&gt;&lt;/td&gt;
@@ -2052,7 +2052,7 @@ spec:
   namespace: kube-system
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     backend: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;etcd&amp;#39;&lt;/span&gt;
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
@@ -2126,7 +2126,7 @@ documentation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
 &lt;p&gt;Install the StorageOS Cluster Operator using the following yaml manifest.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;oc create -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;oc create -f https://github.com/storageos/cluster-operator/releases/download/v2.0.0/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# oc -n storageos-operator get pod&lt;/span&gt;
 NAME                                         READY     STATUS    RESTARTS   AGE
@@ -2185,7 +2185,7 @@ spec:
   secretRefNamespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace of the Secret&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;openshift&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -2214,7 +2214,7 @@ page.&lt;/p&gt;
 store for StorageOS in the &lt;a href=&#34;https://arau.github.io/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# oc -n storageos get pods -w&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# oc -n kube-system get pods -w&lt;/span&gt;
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
@@ -2629,7 +2629,7 @@ documentation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;1-install-storageos-operator&#34;&gt;1. Install StorageOS operator&lt;/h2&gt;
 &lt;p&gt;Install the StorageOS Cluster Operator using the following yaml manifest.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.0.0/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;verify-the-cluster-operator-pod-status&#34;&gt;Verify the Cluster Operator Pod Status&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos-operator get pod&lt;/span&gt;
 NAME                                         READY     STATUS    RESTARTS   AGE
@@ -2689,7 +2689,7 @@ spec:
   namespace: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kube-system&amp;#34;&lt;/span&gt;
   k8sDistro: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;rancher&amp;#34;&lt;/span&gt;
   images:
-    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
+    nodeContainer: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# StorageOS version&lt;/span&gt;
   kvBackend:
     address: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos-etcd-client.etcd:2379&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Example address, change for your etcd endpoint&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can set ETCD server ips&lt;/span&gt;
@@ -2718,7 +2718,7 @@ page.&lt;/p&gt;
 store for StorageOS in the &lt;a href=&#34;https://arau.github.io/docs/reference/cluster-operator/examples/&#34;&gt;Cluster Operator examples&lt;/a&gt; page.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;verify-storageos-installation&#34;&gt;Verify StorageOS Installation&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n storageos get pods -w&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;root@master03&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# kubectl -n kube-system get pods -w&lt;/span&gt;
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-csi-helper-5cf59b5b4-f5nwr    2/2     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
 storageos-daemonset-75f6c               3/3     Running   &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;          3m
@@ -2767,7 +2767,7 @@ to mount a StorageOS volume in a Pod.&lt;/p&gt;
         
         &lt;h2 id=&#34;upgrade-storageos-operator-from-yaml-manifest&#34;&gt;Upgrade StorageOS operator from yaml manifest&lt;/h2&gt;
 &lt;p&gt;Upgrade the StorageOS operator using the following yaml manifest.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;kubectl apply -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
+&lt;pre&gt;&lt;code&gt;kubectl apply -f https://github.com/storageos/cluster-operator/releases/download/v2.0.0/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;When you run the above command StorageOS Operator resources will be updated.
 Since, the Update Strategy of the StorageOS Operator Deployment is set to
@@ -2950,9 +2950,9 @@ Bundle&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Version and installation method&lt;/li&gt;
 &lt;li&gt;Managed or self managed?&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;kubectl -n storageos get pod&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;kubectl -n storageos logs -lapp=storageos -c storageos&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;kubectl -n storageos get storageclass&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kubectl -n kube-system get pod&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kubectl -n kube-system logs -lapp=storageos -c storageos&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kubectl -n kube-system get storageclass&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Specific for your namespaces: &lt;code&gt;kubectl describe pvc PVC_NAME&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Specific for your namespaces: &lt;code&gt;kubectl describe pod POD_NAME&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -3076,7 +3076,36 @@ $ &lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&
 &lt;li&gt;
 &lt;p&gt;Deploy Operator&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ./etcd-operator/example/rbac/create_role.sh
-$ kubectl -n &lt;span style=&#34;color:#000&#34;&gt;$NAMESPACE&lt;/span&gt; create -f ./etcd-operator/example/deployment.yaml
+$ kubectl -n &lt;span style=&#34;color:#000&#34;&gt;$NAMESPACE&lt;/span&gt; create -f - &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt;END
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;apiVersion: apps/v1
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;kind: Deployment
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;metadata:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  name: etcd-operator
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;spec:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  selector:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    matchLabels:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;      app: etcd-operator
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  replicas: 1
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;  template:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    metadata:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;      labels:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;        app: etcd-operator
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    spec:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;      containers:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;      - name: etcd-operator
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;        image: quay.io/coreos/etcd-operator:v0.9.4
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;        command:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;        - etcd-operator
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;        env:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;        - name: MY_POD_NAMESPACE
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;          valueFrom:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;            fieldRef:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;              fieldPath: metadata.namespace
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;        - name: MY_POD_NAME
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;          valueFrom:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;            fieldRef:
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;              fieldPath: metadata.name
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;END&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The Kubernetes masters should then be labelled so a nodeSelector can be used in the EtcdCluster manifest&lt;/p&gt;
@@ -3092,7 +3121,7 @@ $ kubectl -n &lt;span style=&#34;color:#000&#34;&gt;$NAMESPACE&lt;/span&gt; crea
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt; name: &amp;#34;storageos-etcd&amp;#34;
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;spec:
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt; size: 1
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt; version: &amp;#34;3.4.16&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt; version: &amp;#34;3.4.7&amp;#34;
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt; pod:
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;   etcdEnv:
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;   - name: ETCD_QUOTA_BACKEND&lt;/span&gt;_BYTES
@@ -3131,7 +3160,7 @@ END
 &lt;p&gt; &lt;/p&gt;
 &lt;h2 id=&#34;a-nameinstallstorageosoperatorainstall-storageos-operator&#34;&gt;&lt;a name=&#39;InstallStorageOSOperator&#39;&gt;&lt;/a&gt;Install StorageOS Operator&lt;/h2&gt;
 &lt;p&gt;In order to install the StorageOS operator download the requisite yaml manifests or apply them with kubectl.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl create -f https://github.com/storageos/cluster-operator/releases/download/2.0.0/storageos-operator.yaml
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl create -f https://github.com/storageos/cluster-operator/releases/download/v2.0.0/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can verify the operator is running using the following command&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl get pods -n storageos-operator
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt; &lt;/p&gt;
@@ -3174,8 +3203,7 @@ END
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;secretRefName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;secretRefNamespace&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-operator&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;namespace&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;k8sDistro&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;kubernetes&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Set the Kubernetes distribution for your cluster (upstream, eks, aks, gke, rancher, dockeree)&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;k8sDistro&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;upstream&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Set the Kubernetes distribution for your cluster (upstream, eks, aks, gke, rancher, dockeree)&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# storageClassName: fast # The storage class creates by the StorageOS operator is configurable&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;csi&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;   &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;enable&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
@@ -3189,13 +3217,13 @@ END
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Confirm that the cluster has been created and that StorageOS pods are running&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n storageos get pods
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n kube-system get pods
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;StorageOS pods enter a ready state after a minimum of 65s has passed.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Deploy the StorageOS CLI as a container&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n storageos run               &lt;span style=&#34;color:#4e9a06&#34;&gt;\
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;--image storageos/cli:2.0.0         &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n kube-system run               &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;--image storageos/cli:v2.0.0         &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;--restart&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;Never                          &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;--env &lt;span style=&#34;color:#000&#34;&gt;STORAGEOS_ENDPOINTS&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;storageos:5705 &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;--env &lt;span style=&#34;color:#000&#34;&gt;STORAGEOS_USERNAME&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;storageos       &lt;span style=&#34;color:#4e9a06&#34;&gt;\
@@ -3203,6 +3231,17 @@ END
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;--command cli                            &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;-- /bin/sleep &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;999999&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;License cluster&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A newly installed StorageOS cluster does not include a licence. A cluster
+must be licensed within 24 hours of the installation. For more information,
+check the &lt;a href=&#34;https://arau.github.io/docs/reference/licence/&#34;&gt;reference licence page&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You can apply a Free Developer licence by following the &lt;a href=&#34;https://arau.github.io/docs/operations/licensing/&#34;&gt;operations
+licensing&lt;/a&gt; page, or purchase a
+licence by contacting &lt;a href=&#34;mailto:sales@storageos.com&#34;&gt;sales@storageos.com&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Confirm that StorageOS is working by creating a PVC&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl create -f - &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt;END
@@ -3221,7 +3260,7 @@ END
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Verify that the CLI is working. &lt;code&gt;pvc-1&lt;/code&gt; should be listed in the CLI output&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n storageos &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; -it cli -- storageos get volumes
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n kube-system &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; -it cli -- storageos get volumes
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The StorageOS web UI can also be used to display information about the state of the cluster. The StorageOS UI can be accessed on any node that is running a StorageOS pod on port 5705. The username/password for the UI is defined by the &lt;code&gt;storageos-api&lt;/code&gt; secret. For this self-evaluation the username/password is &lt;code&gt;storageos:storageos&lt;/code&gt;&lt;/p&gt;
@@ -3328,7 +3367,7 @@ Hello World!
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Confirm that a replicated volume has been created by using the StorageOS CLI or UI&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n storageos &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; -it cli -- storageos get volumes
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n kube-system &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; -it cli -- storageos get volumes
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Create a pod that uses the PVC&lt;/p&gt;
@@ -3365,14 +3404,14 @@ Hello World!
 NAME           STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
 pvc-replicated Bound    pvc-29e2ad6e-8c4e-11e9-8356-027bfbbece86   5Gi        RWO            fast           1m
 
-$ kubectl &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; -it -n storageos cli -- storageos get volumes
+$ kubectl &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; -it -n kube-system cli -- storageos get volumes
 NAMESPACE  NAME                                      SIZE     LOCATION              ATTACHED ON   REPLICAS  AGE
 default    pvc-4e796a62-0271-45f9-9908-21d58789a3fe  5.0 GiB  kind-worker &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;online&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;  kind-worker2  1/1       &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;26&lt;/span&gt; seconds ago
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Check the location of the master volume and notice that it is on a new node. If the pod that mounted the volume was located on the same node that was shutdown then the pod will need to be recreated.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; -it -n storageos cli -- storageos get volumes
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; -it -n kube-system cli -- storageos get volumes
 NAMESPACE  NAME                                      SIZE     LOCATION               ATTACHED ON   REPLICAS  AGE
 default    pvc-4e796a62-0271-45f9-9908-21d58789a3fe  5.0 GiB  kind-worker2 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;online&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;  kind-worker2  1/1       &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;46&lt;/span&gt; seconds ago
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
@@ -3437,7 +3476,7 @@ Hello World!
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Use the StorageOS CLI to check the location of the volumes&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n storageos &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; cli -- storageos get volumes
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n kube-system &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; cli -- storageos get volumes
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Verify that the Pod is running on the same node&lt;/p&gt;
@@ -3476,7 +3515,7 @@ Hello World!
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Use the StorageOS CLI or the GUI to check the master volume location and the mount location. They should match&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n storageos &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; -it cli -- storageos v ls
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl -n kube-system &lt;span style=&#34;color:#204a87&#34;&gt;exec&lt;/span&gt; -it cli -- storageos get volumes
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Exec into the pgbench container and run pgbench&lt;/p&gt;
@@ -4609,11 +4648,19 @@ to specify default labels.&lt;/p&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;StorageClass&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;storageos-replicated&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;provisioner&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;csi.storageos.com&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Provisioner when using CSI&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;parameters&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;fsType&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;ext4&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;pool&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;default&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;storageos.com/replicas&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Enforces 1 replica for the Volume&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;provisioner&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;storageos&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Provisioner when using CSI&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Change the Namespace below if StorageOS doesn&amp;#39;t run in kube-system&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;csi.storage.k8s.io/node-publish-secret-namespace&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;kube-system&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;       &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace that runs StorageOS Daemonset&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;csi.storage.k8s.io/provisioner-secret-namespace&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;kube-system&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace that runs StorageOS Daemonset&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;csi.storage.k8s.io/controller-publish-secret-namespace&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;kube-system&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Namespace that runs StorageOS Daemonset&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;csi.storage.k8s.io/node-publish-secret-name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;csi-node-publish-secret&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;csi.storage.k8s.io/provisioner-secret-name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;csi-provisioner-secret&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;csi.storage.k8s.io/controller-publish-secret-name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;csi-controller-publish-secret&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above StorageClass has the &lt;code&gt;storageos.com/replicas&lt;/code&gt; label set. This
 label tells StorageOS to create a volume with a replica. Adding StorageOS
 feature labels to the StorageClass ensures all volumes created with the
@@ -5166,7 +5213,7 @@ Kubernetes Pod events.&lt;/p&gt;
 failure to Kubernetes, showing the status of the Pod as &lt;code&gt;Init:Err&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;To view the output of all &lt;code&gt;storageos-init&lt;/code&gt; containers the following command can
 be used:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n storageos logs -l &lt;span style=&#34;color:#000&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;storageos,kind&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;daemonset -c storageos-init
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n kube-system logs -l &lt;span style=&#34;color:#000&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;storageos,kind&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;daemonset -c storageos-init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For more details, check the
 &lt;a href=&#34;https://github.com/storageos/init&#34;&gt;StorageOS init container project&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;scripts-executed&#34;&gt;Scripts executed&lt;/h2&gt;
@@ -5546,9 +5593,29 @@ labels are present by default.&lt;/p&gt;
 within Kubernetes, the &lt;a href=&#34;https://arau.github.io/docs/reference/cluster-operator/&#34;&gt;Cluster Operator&lt;/a&gt; syncs any node labels
 set on Kubernetes nodes within StorageOS.  Node labels may also be set with the
 CLI or UI.&lt;/p&gt;
-&lt;p&gt;Future versions of StorageOS v2 will allow the use of node labels to set
-compute-only topologies vs. HyperConverged.&lt;/p&gt;
-&lt;h2 id=&#34;storageos-volume-labels&#34;&gt;StorageOS Volume labels&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Feature&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Label&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Values&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Compute only&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos.com/computeonly&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;true / false&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Specifies whether a node should be &lt;code&gt;computeonly&lt;/code&gt; where it only acts as a client and does not host volume data locally, otherwise the node is hyperconverged (the default), where the node can operate in both client and server modes.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;You can set the computeonly label on the Kubernetes node and the label will be
+sync&amp;rsquo;d to the StorageOS node (labels take an eventual consistency
+reconciliation time of ~1min).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl label node &lt;span style=&#34;color:#000&#34;&gt;$NODE&lt;/span&gt; storageos.com/computeonly&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;storageos-volume-labels&#34;&gt;StorageOS Volume labels&lt;/h2&gt;
 &lt;p&gt;Volumes do not have any feature labels present by default&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -5841,7 +5908,7 @@ StorageOS with etcd using mTLS.&lt;/p&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;namespace&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;default&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;images&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nodeContainer&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:2.0.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;nodeContainer&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos/node:v2.0.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;secretRefName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos-api&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;secretRefNamespace&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;default&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;namespace&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;

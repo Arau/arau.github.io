@@ -314,7 +314,7 @@ Kubernetes Pod events.&lt;/p&gt;
 failure to Kubernetes, showing the status of the Pod as &lt;code&gt;Init:Err&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;To view the output of all &lt;code&gt;storageos-init&lt;/code&gt; containers the following command can
 be used:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n storageos logs -l &lt;span style=&#34;color:#000&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;storageos,kind&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;daemonset -c storageos-init
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n kube-system logs -l &lt;span style=&#34;color:#000&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;storageos,kind&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;daemonset -c storageos-init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For more details, check the
 &lt;a href=&#34;https://github.com/storageos/init&#34;&gt;StorageOS init container project&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;scripts-executed&#34;&gt;Scripts executed&lt;/h2&gt;
@@ -345,9 +345,29 @@ labels are present by default.&lt;/p&gt;
 within Kubernetes, the &lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/&#34;&gt;Cluster Operator&lt;/a&gt; syncs any node labels
 set on Kubernetes nodes within StorageOS.  Node labels may also be set with the
 CLI or UI.&lt;/p&gt;
-&lt;p&gt;Future versions of StorageOS v2 will allow the use of node labels to set
-compute-only topologies vs. HyperConverged.&lt;/p&gt;
-&lt;h2 id=&#34;storageos-volume-labels&#34;&gt;StorageOS Volume labels&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Feature&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Label&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Values&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Compute only&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos.com/computeonly&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;true / false&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Specifies whether a node should be &lt;code&gt;computeonly&lt;/code&gt; where it only acts as a client and does not host volume data locally, otherwise the node is hyperconverged (the default), where the node can operate in both client and server modes.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;You can set the computeonly label on the Kubernetes node and the label will be
+sync&amp;rsquo;d to the StorageOS node (labels take an eventual consistency
+reconciliation time of ~1min).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl label node &lt;span style=&#34;color:#000&#34;&gt;$NODE&lt;/span&gt; storageos.com/computeonly&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;storageos-volume-labels&#34;&gt;StorageOS Volume labels&lt;/h2&gt;
 &lt;p&gt;Volumes do not have any feature labels present by default&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -5266,12 +5286,71 @@ limitations under the License.
         
         &lt;p&gt;We recommend always using &amp;ldquo;tagged&amp;rdquo; versions of StorageOS rather than &amp;ldquo;latest&amp;rdquo;,
 and to perform upgrades only after reading the release notes.&lt;/p&gt;
-&lt;p&gt;The latest tagged release is &lt;code&gt;2.0.0&lt;/code&gt;, available from
-&lt;a href=&#34;https://hub.docker.com/r/storageos/node/&#34;&gt;Docker Hub&lt;/a&gt; as &lt;code&gt;storageos/node:2.0.0&lt;/code&gt;, or via the &lt;a href=&#34;https://github.com/storageos/charts&#34;&gt;Helm
+&lt;p&gt;The latest tagged release is &lt;code&gt;v2.0.0&lt;/code&gt;, available from
+&lt;a href=&#34;https://hub.docker.com/r/storageos/node/&#34;&gt;Docker Hub&lt;/a&gt; as &lt;code&gt;storageos/node:v2.0.0&lt;/code&gt;, or via the &lt;a href=&#34;https://github.com/storageos/charts&#34;&gt;Helm
 Chart&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The latest CLI release is &lt;code&gt;2.0.0&lt;/code&gt;, available from
+&lt;p&gt;The latest CLI release is &lt;code&gt;v2.0.0&lt;/code&gt;, available from
 &lt;a href=&#34;https://github.com/storageos/go-cli/releases&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;200---to-be-released&#34;&gt;2.0.0 - To be released&lt;/h2&gt;
+&lt;h1 id=&#34;upgrading&#34;&gt;Upgrading&lt;/h1&gt;
+&lt;p&gt;To upgrade from version 1.x to 2.x, please contact &lt;a href=&#34;https://arau.github.io/v2/docs/support/&#34;&gt;support&lt;/a&gt; for assistance.&lt;/p&gt;
+&lt;h2 id=&#34;v200---released-2020-05-05&#34;&gt;v2.0.0 - Released 2020-05-05&lt;/h2&gt;
+&lt;h3 id=&#34;new&#34;&gt;New&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;operator: StorageOS containers now run in the &lt;code&gt;kube-system&lt;/code&gt; namespace by
+default to allow the &lt;code&gt;system-node-critical&lt;/code&gt; priority class to be set.  This
+instructs Kubernetes to start StorageOS before application Pods, and to evict
+StorageOS only after application Pods have finished.  This setting was
+previously recommended in documentation; it is now the default.&lt;/li&gt;
+&lt;li&gt;operator: StorageOS CSI helper containers now run as privileged.  This ensures
+that the CSI endpoint can be seen on systems with SELinux enabled.&lt;/li&gt;
+&lt;li&gt;ui: replication progress for new or re-joining replicas is now displayed.&lt;/li&gt;
+&lt;li&gt;ui: show warning for unlicensed clusters.&lt;/li&gt;
+&lt;li&gt;cli: new commands:
+&lt;ul&gt;
+&lt;li&gt;licence management&lt;/li&gt;
+&lt;li&gt;get policy&lt;/li&gt;
+&lt;li&gt;create namespace&lt;/li&gt;
+&lt;li&gt;create policy&lt;/li&gt;
+&lt;li&gt;describe user&lt;/li&gt;
+&lt;li&gt;describe namespace&lt;/li&gt;
+&lt;li&gt;describe policy&lt;/li&gt;
+&lt;li&gt;delete user&lt;/li&gt;
+&lt;li&gt;delete namespace&lt;/li&gt;
+&lt;li&gt;delete policy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;licence: removed the default licence expiry date added for &lt;code&gt;v2.0.0-rc.1&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;improved&#34;&gt;Improved&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;dataplane: improved retry behaviour for network IO.&lt;/li&gt;
+&lt;li&gt;cli: &amp;ldquo;get volumes&amp;rdquo; for all namespaces should be done in parallel.&lt;/li&gt;
+&lt;li&gt;cli: help text document config file&lt;/li&gt;
+&lt;li&gt;ui: link node name and get to node details on the volume details page.&lt;/li&gt;
+&lt;li&gt;ui: node details add available capacity spinner.&lt;/li&gt;
+&lt;li&gt;ui: node list remove capacity values / address port.&lt;/li&gt;
+&lt;li&gt;ui: node list show master/replica counts.&lt;/li&gt;
+&lt;li&gt;ui: node list remove edit action.&lt;/li&gt;
+&lt;li&gt;ui: format entity labels.&lt;/li&gt;
+&lt;li&gt;ui: node details link volumes.&lt;/li&gt;
+&lt;li&gt;ui: align buttons for licences.&lt;/li&gt;
+&lt;li&gt;ui: k8s warning in &amp;ldquo;create volume&amp;rdquo; modal.&lt;/li&gt;
+&lt;li&gt;ui: node list remove &amp;ldquo;API&amp;rdquo; from &amp;ldquo;API Address&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;ui: add some details about the Licence on the licence page.&lt;/li&gt;
+&lt;li&gt;api: include valid for duration in login response.&lt;/li&gt;
+&lt;li&gt;licence: restrict nodes which are unregistered after 24 hours.&lt;/li&gt;
+&lt;li&gt;scheduler: return error for namespace/volume not found&lt;/li&gt;
+&lt;li&gt;dataplane: start gRPC threads separately from rest of the supervisor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fixed&#34;&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ui: centre licence types.&lt;/li&gt;
+&lt;li&gt;ui: capacity in ui is per namespace.&lt;/li&gt;
+&lt;li&gt;cli: fail gracefully if missing some output details (i.e. no node exists for id).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;v200-rc1---released-2020-03-31&#34;&gt;v2.0.0-rc.1 - Released 2020-03-31&lt;/h2&gt;
+&lt;p&gt;Initial release of version 2.x.  See &lt;a href=&#34;https://storageos.com/storageos-2-0-release-blog&#34;&gt;StorageOS v2.0 Release
+Blog&lt;/a&gt; for details.&lt;/p&gt;
 
       </description>
     </item>

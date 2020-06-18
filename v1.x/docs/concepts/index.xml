@@ -201,7 +201,7 @@ namespace StorageOS is installed into.&lt;/p&gt;
 namespace because a StorageOS volume has been provisioned in the &lt;code&gt;default&lt;/code&gt; and
 &lt;code&gt;mongo&lt;/code&gt; namespaces. A &lt;code&gt;ns-key&lt;/code&gt; is created for a namespace regardless of whether
 an encrypted volume exists in the namespace or not.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl get secrets -n storageos &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep ns-key
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ kubectl get secrets -n kube-system &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep ns-key
 ns-key.default                                 Opaque                                &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;      4d
 ns-key.mongo                                   Opaque                                &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;      5h
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A volume is encrypted with a volume key that is a randomly generated 512 bit
