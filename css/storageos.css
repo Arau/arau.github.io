@@ -2408,6 +2408,25 @@ header .container-fluid {
   display: none;
 }
 
+.td-search-input {
+    color: $primary!important;
+    background-color: #002A53!important;
+    border-radius: 60px;
+    border: none!important;
+    outline: 0!important;
+    background-image: url(../images/search-white.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding-right: 60px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 0.8em;
+    width: auto;
+    float: right;
+
+
+}
+
 @media (min-width: 960px) {
   #bs-example-navbar-collapse-1.collapse {
     display: block;
@@ -3313,7 +3332,7 @@ var {
     font-weight: 500;
     padding-bottom: .8rem;
     font-size: 12px;
-    text-align: right;
+    text-align: left;
     color: #475065!important;
     line-height: 14px;
 }
