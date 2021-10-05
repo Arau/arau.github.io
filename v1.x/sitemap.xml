@@ -296,6 +296,14 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/v1.x/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/v1.x/docs/reference/telemetry/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/v1.x/docs/reference/open_source_attribution/</loc>
   </url>
   
@@ -389,14 +397,6 @@
   
   <url>
     <loc>https://arau.github.io/v1.x/docs/operations/sharedfs/</loc>
-  </url>
-  
-  <url>
-    <loc>https://arau.github.io/v1.x/</loc>
-  </url>
-  
-  <url>
-    <loc>https://arau.github.io/v1.x/docs/reference/telemetry/</loc>
   </url>
   
   <url>

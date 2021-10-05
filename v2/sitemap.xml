@@ -275,6 +275,14 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/v2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/v2/docs/reference/telemetry/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/v2/docs/reference/open_source_attribution/</loc>
   </url>
   
@@ -292,6 +300,10 @@
   
   <url>
     <loc>https://arau.github.io/v2/docs/usecases/postgres/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/v2/docs/usecases/prometheus/</loc>
   </url>
   
   <url>
@@ -319,19 +331,15 @@
   </url>
   
   <url>
-    <loc>https://arau.github.io/v2/</loc>
-  </url>
-  
-  <url>
-    <loc>https://arau.github.io/v2/docs/reference/telemetry/</loc>
-  </url>
-  
-  <url>
     <loc>https://arau.github.io/v2/docs/reference/bundle/</loc>
   </url>
   
   <url>
     <loc>https://arau.github.io/v2/docs/reference/filesystems/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/v2/docs/reference/tolerations/</loc>
   </url>
   
   <url>
@@ -344,6 +352,10 @@
   
   <url>
     <loc>https://arau.github.io/v2/docs/reference/cli/version/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/v2/docs/operations/resize/</loc>
   </url>
   
   <url>

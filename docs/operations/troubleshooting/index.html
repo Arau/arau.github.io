@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.64.1" />
 
-<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
 
@@ -21,29 +21,31 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Troubleshooting | </title><meta property="og:title" content="Troubleshooting" />
-<meta property="og:description" content="This section is aimed to help you troubleshoot issues in your cluster, whether they are related to the StorageOS installation, integration with orchestrators or common misconfigurations.
-Tools To be able to troubleshoot issues the StorageOS cli is required.
-Pod in pending because of mount error Issue: The output of kubectl describe pod $POD_ID contains no such file or directory and references the StorageOS volume device file.
+<meta property="og:description" content="This section is aimed to help you troubleshoot issues in your cluster, whether they are related to the Ondat installation, integration with orchestrators or common misconfigurations.
+Tools To be able to troubleshoot issues the Ondat CLI is required.
+Pod in pending because of mount error Issue: The output of kubectl describe pod $POD_ID contains no such file or directory and references the Ondat volume device file.
 root@node1:~# kubectl -n kube-system describe $POD_ID (." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://arau.github.io/docs/operations/troubleshooting/" />
 
 <meta itemprop="name" content="Troubleshooting">
-<meta itemprop="description" content="This section is aimed to help you troubleshoot issues in your cluster, whether they are related to the StorageOS installation, integration with orchestrators or common misconfigurations.
-Tools To be able to troubleshoot issues the StorageOS cli is required.
-Pod in pending because of mount error Issue: The output of kubectl describe pod $POD_ID contains no such file or directory and references the StorageOS volume device file.
+<meta itemprop="description" content="This section is aimed to help you troubleshoot issues in your cluster, whether they are related to the Ondat installation, integration with orchestrators or common misconfigurations.
+Tools To be able to troubleshoot issues the Ondat CLI is required.
+Pod in pending because of mount error Issue: The output of kubectl describe pod $POD_ID contains no such file or directory and references the Ondat volume device file.
 root@node1:~# kubectl -n kube-system describe $POD_ID (.">
 
-<meta itemprop="wordCount" content="2174">
+<meta itemprop="wordCount" content="2785">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Troubleshooting"/>
-<meta name="twitter:description" content="This section is aimed to help you troubleshoot issues in your cluster, whether they are related to the StorageOS installation, integration with orchestrators or common misconfigurations.
-Tools To be able to troubleshoot issues the StorageOS cli is required.
-Pod in pending because of mount error Issue: The output of kubectl describe pod $POD_ID contains no such file or directory and references the StorageOS volume device file.
+<meta name="twitter:description" content="This section is aimed to help you troubleshoot issues in your cluster, whether they are related to the Ondat installation, integration with orchestrators or common misconfigurations.
+Tools To be able to troubleshoot issues the Ondat CLI is required.
+Pod in pending because of mount error Issue: The output of kubectl describe pod $POD_ID contains no such file or directory and references the Ondat volume device file.
 root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
+
+
 
 <link rel="stylesheet"  href="/css/font-awesome.css?ver=5.4.1" type="text/css" media="all">
 
@@ -80,106 +82,63 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
   </head>
   <body class="td-page">
     <header>
-      
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-
-    <div class="col-2 col-sm-2">
-      <div class="navbar-header">
-        <div class="logo-tag">
-
-          <a class="navbar-brand" href="/">
-  		<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="476.964" height="141.732" viewBox="0 0 476.964 141.732" enable-background="new 0 0 476.964 141.732"><g><g><path fill="#fff" d="M34.74 89.882H3.477v-9.34h31.264c1.538.0 2.704-.355 3.476-1.062.744-.693 1.118-1.655 1.118-2.854.0-1.318-.363-2.293-1.078-2.896-.778-.661-1.959-.996-3.515-.996H16.346c-2.017.0-3.873-.302-5.538-.905-1.681-.627-3.113-1.499-4.277-2.604-1.164-1.099-2.073-2.429-2.708-3.96-.63-1.521-.954-3.196-.954-4.967.0-1.742.293-3.379.884-4.863.592-1.499 1.489-2.828 2.67-3.938 1.181-1.097 2.635-1.957 4.316-2.572 1.657-.604 3.578-.917 5.707-.917h30.002v9.342H16.446c-1.267.0-2.232.312-2.885.928-.63.615-.943 1.487-.943 2.673.0 1.187.3 2.025.961 2.64.656.604 1.602.917 2.805.917h18.321c4.36.0 7.757 1.054 10.085 3.145 2.375 2.102 3.579 5.291 3.579 9.462.0 1.812-.284 3.5-.841 5.021-.562 1.567-1.42 2.941-2.561 4.105-1.169 1.163-2.618 2.081-4.328 2.695C38.975 89.556 36.982 89.882 34.74 89.882z"/></g><g><path fill="#fff" d="M79.764 89.882h-9.486V57.344H55.081v-9.339h39.878v9.339H79.762v32.537L79.764 89.882z"/></g><g><path fill="#fff" d="M129.784 89.882h-9.733c-2.96.0-5.731-.547-8.248-1.653-2.527-1.099-4.742-2.606-6.57-4.51-1.853-1.891-3.306-4.172-4.329-6.755-1.026-2.604-1.544-5.436-1.544-8.422.0-3.028.521-5.849 1.544-8.376 1.033-2.54 2.512-4.73 4.367-6.521 1.864-1.789 4.072-3.198 6.578-4.161 2.509-.984 5.264-1.478 8.201-1.478h9.733c3.043.0 5.878.503 8.422 1.499 2.545.996 4.77 2.415 6.616 4.229 1.846 1.823 3.288 4.015 4.294 6.521 1.01 2.482 1.521 5.278 1.521 8.286.0 3.021-.516 5.853-1.538 8.422-1.039 2.597-2.498 4.877-4.34 6.768-1.84 1.891-4.055 3.411-6.587 4.508C135.634 89.332 132.812 89.882 129.784 89.882zM120.052 57.344c-1.613.0-3.129.28-4.515.854-1.363.57-2.557 1.364-3.521 2.348-.99 1.008-1.772 2.215-2.334 3.624-.563 1.409-.848 2.986-.848 4.688.0 1.687.285 3.274.86 4.729.572 1.442 1.345 2.686 2.323 3.682.988 1.018 2.18 1.835 3.539 2.404 1.356.58 2.873.871 4.497.871h9.733c1.675.0 3.221-.291 4.583-.871 1.385-.569 2.597-1.388 3.596-2.404.982-.996 1.777-2.237 2.35-3.691.568-1.442.853-3.031.853-4.719.0-1.669-.284-3.244-.853-4.677-.561-1.409-1.351-2.63-2.344-3.624-.989-.995-2.198-1.788-3.596-2.372-1.386-.56-2.924-.84-4.589-.84L120.052 57.344z"/></g><path fill="#fff" d="M195.707 77.802c1.812-.727 3.38-1.724 4.652-3.009 1.375-1.366 2.432-2.717 3.15-4.642.643-1.711.994-3.611 1.057-5.692.006-.225.012-.6.012-.835v-.11c0-2.35-.356-4.483-1.068-6.389-.719-1.923-1.774-3.59-3.149-4.965-1.362-1.365-3.044-2.428-5.016-3.154-1.937-.716-4.139-1.085-6.786-1.007H159.05h-.483v41.882h9.706V78.975h16.071l10.03 10.903h13.561L195.707 77.802zM193.617 68.821c-1.039 1.085-2.661 1.645-4.827 1.645h-20.513V57.26h20.53c2.077.0 3.69.517 4.781 1.521 1.079 1.008 1.624 2.64 1.624 4.842C195.213 65.85 194.669 67.702 193.617 68.821z"/><path fill="#fff" d="M243.355 50.3c-.5-.839-1.086-1.499-1.723-1.968-1.441-1.105-3.906-1.12-5.438-.034-.693.516-1.277 1.188-1.75 1.992l-24.148 39.592h10.889l5.967-9.933h23.068l6.008 9.933h11.322L243.355 50.3zM230.384 72.812l8.275-13.757 8.311 13.757H230.384z"/><g><path fill="#fff" d="M314.21 89.882h-25.385c-2.959.0-5.728-.547-8.23-1.653-2.533-1.099-4.738-2.616-6.557-4.497-1.847-1.901-3.3-4.171-4.33-6.768-1.031-2.596-1.549-5.424-1.549-8.422.0-3.041.526-5.849 1.561-8.376 1.023-2.525 2.49-4.73 4.354-6.521 1.861-1.789 4.076-3.198 6.594-4.161 2.506-.984 5.265-1.478 8.185-1.478h22.94v9.342h-22.94c-1.613.0-3.123.291-4.511.851-1.34.56-2.524 1.354-3.53 2.359-.974.993-1.754 2.2-2.317 3.609-.558 1.398-.841 2.979-.841 4.688.0 1.687.283 3.274.847 4.729.573 1.442 1.352 2.686 2.321 3.682 1 1.018 2.19 1.835 3.533 2.416 1.353.567 2.862.872 4.498.872h15.883v-7.817h-18.063v-8.232h27.543v25.377H314.21V89.882z"/></g><g><path fill="#fff" d="M363.412 57.344h-38.285v-9.339h38.285V57.344z"/></g><g><path fill="#fff" d="M363.472 89.882h-38.346V64.504h36.75v8.231h-27.277v7.807h28.875v9.34H363.472z"/></g><g><path fill="#61c202" d="M402.357 89.882h-9.75c-2.961.0-5.725-.547-8.234-1.653-2.514-1.086-4.725-2.606-6.572-4.51-1.857-1.9-3.326-4.183-4.328-6.767-1.02-2.604-1.553-5.436-1.553-8.41.0-3.021.521-5.838 1.553-8.376 1.035-2.54 2.5-4.73 4.355-6.521 1.871-1.789 4.084-3.198 6.584-4.161 2.512-.984 5.271-1.478 8.195-1.478h9.75c3.033.0 5.859.503 8.416 1.499 2.568 1.009 4.799 2.438 6.611 4.238 1.84 1.801 3.285 3.994 4.291 6.497 1.012 2.517 1.523 5.304 1.523 8.3.012 3.009-.516 5.838-1.545 8.422-1.023 2.583-2.48 4.864-4.336 6.768-1.848 1.899-4.064 3.422-6.596 4.508C408.193 89.332 405.38 89.882 402.357 89.882zM392.607 57.344c-1.619.0-3.135.291-4.498.854-1.361.57-2.549 1.364-3.531 2.348-.984.996-1.768 2.215-2.314 3.613-.568 1.397-.857 2.986-.857 4.698.0 1.696.289 3.286.852 4.719.566 1.442 1.35 2.685 2.328 3.691.984 1.018 2.17 1.835 3.535 2.404 1.354.58 2.857.871 4.48.871h9.762c1.652.0 3.197-.291 4.572-.871 1.375-.569 2.596-1.388 3.602-2.404.971-.996 1.766-2.229 2.354-3.691.553-1.453.842-3.042.842-4.719.0-1.656-.289-3.234-.852-4.679-.557-1.422-1.352-2.628-2.34-3.622-1.01-.995-2.209-1.802-3.59-2.358-1.379-.562-2.936-.854-4.588-.854H392.607z"/></g><g><path fill="#61c202" d="M461.541 89.882h-31.258v-9.329h31.258c1.537.0 2.707-.355 3.475-1.071.756-.704 1.125-1.646 1.119-2.854.006-1.342-.346-2.279-1.074-2.906-.775-.649-1.961-.984-3.52-.984H443.15c-2.033.0-3.896-.302-5.539-.905-1.684-.627-3.129-1.499-4.285-2.604-1.158-1.118-2.078-2.438-2.713-3.96-.621-1.53-.934-3.196-.934-4.967.0-1.73.293-3.364.875-4.863.607-1.521 1.51-2.854 2.682-3.949 1.186-1.084 2.635-1.944 4.303-2.549 1.682-.616 3.602-.931 5.715-.931h29.984v9.341h-29.984c-1.27.0-2.25.312-2.885.928-.615.604-.943 1.51-.943 2.673.0 1.188.312 2.025.965 2.641.648.604 1.602.917 2.805.917h18.311c4.377.0 7.771 1.053 10.105 3.144 2.371 2.103 3.559 5.292 3.559 9.462.0 1.789-.271 3.468-.826 5.01-.592 1.601-1.459 2.987-2.588 4.116-1.137 1.163-2.594 2.069-4.312 2.696C465.765 89.567 463.775 89.882 461.541 89.882z"/></g></g></svg><span class="text-uppercase font-weight-bold"></span>
-  	</a>
-
-        </div>
+      <div id="ondat-lp-header">
+  <div class="ondat-lp-header-wrapper">
+    <div class="ondat-lp-header-wrapper-left">
+      <a class="navbar-brand" href="https://storageos.com">
+        <svg width="135" height="24" viewBox="0 0 135 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M48.8466 13.2064V10.5821C48.8466 6.30695 51.1323 4.02124 55.8307 4.02124 60.6561 4.02124 62.7725 6.2223 62.7725 10.5821v2.6243C62.7725 17.4392 60.4868 19.7673 55.8307 19.7673 50.963 19.8096 48.8466 17.6085 48.8466 13.2064zM59.6826 10.5821C59.6826 8.0424 58.836 6.94188 55.8731 6.94188 52.9101 6.94188 52.0212 8.0424 52.0212 10.5821v2.6243C52.0212 15.7461 52.8678 16.8466 55.8731 16.8466 58.836 16.8466 59.6826 15.7884 59.6826 13.2064V10.5821z" fill="#1239b8"/><path d="M68.91 18.074C68.91 19.1745 68.6561 19.4285 67.5555 19.4285H67.1746C66.074 19.4285 65.8201 19.1745 65.8201 18.074V9.90469C65.8201 5.96818 68.0635 3.97876 72.4656 3.97876 77.0793 3.97876 79.0687 5.96818 79.0687 9.90469V18.074C79.0687 19.1745 78.8148 19.4285 77.7143 19.4285H77.3333C76.2328 19.4285 75.9788 19.1745 75.9788 18.074V9.90469C75.9788 7.83061 75.2169 6.94172 72.5079 6.94172 69.7989 6.94172 68.9947 7.87294 68.9947 9.90469V18.074H68.91z" fill="#1239b8"/><path d="M95.1534 13.5026C95.1534 17.6931 92.9947 19.7248 88.6772 19.7248 84.1481 19.7248 82.2433 17.5237 82.2433 13.5026V10.5396C82.2433 6.47613 84.0211 4.27507 88.5079 4.27507 91.0476 4.27507 92.6984 5.0793 93.4603 6.73009V1.31211C93.4603.719513 93.6296.592529 94.1799.592529H94.3492C94.9418.592529 95.0687.761841 95.0687 1.31211V13.5026H95.1534zM83.8941 13.5026C83.8941 16.7618 85.037 18.2433 88.7195 18.2433 92.3598 18.2433 93.5449 16.7618 93.5449 13.5026V10.4973C93.5449 7.23803 92.4021 5.75655 88.7195 5.75655 85.0793 5.75655 83.8941 7.23803 83.8941 10.4973v3.0053z" fill="#017efa"/><path d="M111.323 19.0053C111.323 19.5979 111.153 19.7249 110.603 19.7249H110.434C109.841 19.7249 109.714 19.5556 109.714 19.0053V17.3122C108.952 18.9207 107.259 19.7672 104.762 19.7672 100.275 19.7672 98.4974 17.5238 98.4974 13.5027V10.4974C98.4974 6.43388 100.317 4.27515 104.931 4.27515 109.206 4.27515 111.407 6.34922 111.407 10.4974V19.0053H111.323zM100.021 13.5027C100.021 16.7619 101.164 18.2434 104.847 18.2434 108.529 18.2434 109.672 16.7619 109.672 13.5027V10.4974C109.672 7.23811 108.529 5.75663 104.847 5.75663 101.164 5.75663 100.021 7.23811 100.021 10.4974v3.0053z" fill="#017efa"/><path d="M113.862 5.3756C113.862 4.99465 113.947 4.86766 114.413 4.78301L116.36 4.57137 116.656 1.14279C116.741.677185 116.868.592529 117.249.592529H117.418C117.884.592529 117.968.761841 117.968 1.14279V4.57137H123.429C124.021 4.57137 124.148 4.74068 124.148 5.29094V5.41793C124.148 5.92586 124.021 6.1375 123.429 6.1375H117.968V14.5608C117.968 17.2698 119.069 18.2856 121.101 18.2856 122.159 18.2856 123.09 18.1587 123.979 17.9047 124.444 17.7354 124.698 17.947 124.698 18.4973V18.6243C124.698 19.1322 124.529 19.3438 123.979 19.4708 123.132 19.7248 122.201 19.8518 121.143 19.8518 117.926 19.8518 116.36 18.074 116.36 14.6031V6.05285H114.413C114.032 6.05285 113.862 5.88353 113.862 5.50258V5.3756z" fill="#017efa"/><path d="M130.794 4.78311C130.794 4.95242 130.751 4.99475 130.582 4.99475H129.905V7.11115C129.905 7.32279 129.862 7.36512 129.651 7.36512H129.566C129.355 7.36512 129.312 7.32279 129.312 7.11115V4.99475H128.635C128.466 4.99475 128.423 4.95242 128.423 4.78311V4.69846C128.423 4.52914 128.466 4.48682 128.635 4.48682H130.582C130.751 4.48682 130.794 4.52914 130.794 4.69846V4.78311zM134.392 7.11115C134.392 7.32279 134.349 7.36512 134.138 7.36512H134.053C133.841 7.36512 133.799 7.32279 133.799 7.11115V4.99475L133.206 7.06883C133.164 7.28047 133.079 7.36512 132.825 7.36512 132.656 7.36512 132.529 7.28047 132.444 7.06883L131.852 4.99475V7.11115C131.852 7.32279 131.81 7.36512 131.598 7.36512H131.513C131.302 7.36512 131.259 7.32279 131.259 7.11115V4.86777C131.259 4.6138 131.386 4.48682 131.64 4.48682H131.894C132.148 4.48682 132.318 4.65613 132.402 4.95242L132.825 6.60322 133.291 4.86777C133.333 4.57147 133.503 4.48682 133.841 4.48682H133.968C134.222 4.48682 134.349 4.6138 134.349 4.86777V7.11115H134.392z" fill="#017efa"/><path d="M0 7.83057V16.1692l10.1587-4.1905L0 7.83057z" fill="#017efa"/><path d="M10.1587 11.9788 19.1323 8.33862V0L0 7.83069 10.1587 11.9788z" fill="#1239b8"/><path d="M0 16.1692l19.1323 7.8307V15.6613L10.1587 11.9788.0 16.1692z" fill="#0bbbef"/><path d="M30.0106 11.9787l10.1587 4.1905V7.83057L30.0106 11.9787z" fill="#017efa"/><path d="M40.1692 7.83069 20.9946.0V8.33862L30.0105 11.9788 40.1692 7.83069z" fill="#0bbbef"/><path d="M20.9946 15.6613v8.3386L40.1692 16.1692 30.0105 11.9788 20.9946 15.6613z" fill="#1239b8"/></g><defs><clipPath id="clip0"><rect width="134.392" height="24" fill="#fff"/></clipPath></defs></svg>
+        <span class="text-uppercase font-weight-bold"></span>
+      </a>
+      <ul class="ondat-lp-menu">
+        <li class="ondat-lp-menu-drop">
+          <a href="#">Platform</a>
+          <ul>
+            <li><a href="#">Platform Overview</a></li>
+            <li><a href="#">How it works</a></li>
+          </ul>
+        </li>
+        <li class="ondat-lp-menu-drop">
+          <a href="#">Teams</a>
+          <ul>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">DevOps SRE</a></li>
+            <li><a href="#">Digital Transformation</a></li>
+          </ul>
+        </li>
+        <li class="ondat-lp-menu-drop">
+          <a href="#">Solutions</a>
+          <ul>
+            <li><a href="#">Stateful Apps</a></li>
+            <li><a href="#">Kubernetes Distros</a></li>
+          </ul>
+        </li>
+        <li class="ondat-lp-menu-no-drop"><a href="#">Blog</a></li>
+        <li class="ondat-lp-menu-no-drop"><a href="#">Resources</a></li>
+        
+        <li class="ondat-lp-menu-drop">
+          <a href="#">Releases</a>
+          <ul>
+            
+            <li><a class="dropdown-item" href="/v1.x">v1.x</a></li>
+            
+            <li><a class="dropdown-item" href="/v2.0">v2.0</a></li>
+            
+            <li><a class="dropdown-item" href="/v2.1">v2.1</a></li>
+            
+            <li><a class="dropdown-item" href="/v2.2">v2.2</a></li>
+            
+            <li><a class="dropdown-item" href="/v2.3">v2.3</a></li>
+            
+            <li><a class="dropdown-item" href="/">v2.4</a></li>
+            
+          </ul>
+        </li>
+        
       </div>
-    </div>
-
-    <div class="col-8 col-sm-8">
-    	<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-    		<ul class="navbar-nav nav">
-                <li>
-    <a class="nav-link" href="#">
-        Product <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="https://storageos.com/product">Overview</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/features">Features</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/why-storageos">Why StorageOS</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/how-it-works">How it works</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/use-cases">Use cases</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/support">Support</a></li>
-
-    </ul>
-</li>
-
-<li class="nav-item dropdown">
-    <a class="nav-link" href="#">
-        Solutions <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="https://storageos.com/developers">Developers</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/infrastructure-managers">Infrastructure Managers</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/cloud">Cloud</a></li>
-    </ul>
-</li>
-
-<li class="nav-item">
-    <a class="nav-link" href="#">
-        Docs
-    </a>
-</li>
-
-<li class="nav-item dropdown">
-    <a class="nav-link" href="#">
-        Company <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="https://storageos.com/company">About us</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/leadership">Leadership</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/careers">Careers</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/news">News</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/events">Events</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/customers">Customers</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/partners">Partners</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/contact">Contact</a></li>
-    </ul>
-</li>
-
-<li class="nav-item dropdown">
-    <a class="nav-link" href="#">
-          Learn <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="https://storageos.com/blog">Blog</a></li>
-        <li><a class="dropdown-item" href="https://play.storageos.com/main">Play with StorageOS</a></li>
-        <li><a class="dropdown-item" href="https://storageos.com/resources/">Resources</a></li>
-        <li><a class="dropdown-item" href="https://resources.storageos.com/demo-request">Get a demo</a></li>
-    </ul>
-</li>
-
-
-    			
-    			<li class="nav-item dropdown d-none d-lg-block">
-    				<a class="nav-link" href="#">
-		Releases <span class="caret"></span>
-</a>
-<ul class="dropdown-menu">
-	
-	<li><a class="dropdown-item" href="/v1.x">v1.x</a></li>
-	
-	<li><a class="dropdown-item" href="/">v2.0</a></li>
-	
-</ul>
-
-    			</li>
-    			
-    			
-    		</ul>
-  	</div>
-  </div>
-  	<div class="col-2 col-sm-2 nav-right-items">
+      </ul>
+    <div class="ondat-lp-header-wrapper-right">
+      <a href="#" class="gs-btn">Get started for free</a>
+      
 
 
 <input
@@ -189,21 +148,135 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.01323e4a0426540fa26c6b43fc7ac3caacc7e5476f35477314d5eccbb71ffcde4306f94b7155c2ac21900317c2de572055a5ba4a8781562aa6c55e21ec6e590b.json"
+  data-offline-search-index-json-src="/offline-search-index.05bd0a09b511b0444bf5465c9e8e98734cf0975cd7325280594de4b14cc22a7a23db381182967f3767498bdceb86a800a9abf6c7e0b73610cb12c93adbe16a4b.json"
   data-offline-search-base-href="/"
 >
 
-</div>
+
+    </div>
   </div>
+</div>
 
-  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
 
-</nav>
+  #ondat-lp-header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: white;
+    font-weight: 500;
+  }
+
+  .ondat-lp-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+  }
+
+  .ondat-lp-header-wrapper-left {
+    display: flex;
+    align-items: center;
+  }
+
+  ul.ondat-lp-menu,
+  ul.ondat-lp-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.ondat-lp-menu {
+    display: flex;
+  }
+
+  ul.ondat-lp-menu > li {
+    margin-left: 48px;
+  }
+
+  li.ondat-lp-menu-drop > a {
+    display: flex;
+    align-items: center;
+  }
+
+  li.ondat-lp-menu-no-drop a {
+    display: flex;
+    align-items: center;
+  }
+
+  li.ondat-lp-menu-drop > a:after {
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 5px;
+    margin-left: 6px;
+    background: url("images/drop.svg") no-repeat;
+  }
+
+  li.ondat-lp-menu-drop ul {
+    display: none;
+    box-shadow: 0px 10px 35px 5px rgb(50 50 50 / 15%);
+    background-color: white;
+    border-top: 2px solid #017efa;
+    position: absolute;
+    padding-left: 0;
+    padding: 15px;
+    margin-left: 0;
+  }
+
+  li.ondat-lp-menu-drop ul > li {
+    list-style: none;
+    margin-bottom: 10px;
+    line-height: normal;
+    font-size: 13px;
+  }
+
+  li.ondat-lp-menu-drop ul > li:last-child {
+    margin-bottom: 0px;
+  }
+
+  li.ondat-lp-menu-drop ul > li > a {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+  }
+
+  li.ondat-lp-menu-drop:hover ul {
+    display: block;
+  }
+
+  li.ondat-lp-menu-drop:hover ul {
+    display: block;
+  }
+
+  #ondat-lp-header a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #081d60;
+    font-family: "Plus Jakarta Display";
+  }
+
+  .ondat-lp-header-wrapper-right {
+    display: flex;
+    align-items: center;
+  }
+
+  #ondat-lp-header a.gs-btn {
+    color: #017efa;
+    display: block;
+    padding: 10px 24px;
+  }
+
+  #ondat-lp-header a.login-btn {
+    color: #fff;
+    font-weight: 700;
+    display: block;
+    padding: 10px 24px;
+    background-color: #017efa;
+    border-radius: 4px;
+  }
+</style>
 
     </header>
     <div class="body-search">
@@ -223,7 +296,7 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
   aria-label="Search this site…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.01323e4a0426540fa26c6b43fc7ac3caacc7e5476f35477314d5eccbb71ffcde4306f94b7155c2ac21900317c2de572055a5ba4a8781562aa6c55e21ec6e590b.json"
+  data-offline-search-index-json-src="/offline-search-index.05bd0a09b511b0444bf5465c9e8e98734cf0975cd7325280594de4b14cc22a7a23db381182967f3767498bdceb86a800a9abf6c7e0b73610cb12c93adbe16a4b.json"
   data-offline-search-base-href="/"
 >
 
@@ -278,7 +351,7 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsintroductionoverview" href="/docs/introduction/overview/">StorageOS V2 Overview</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsintroductionoverview" href="/docs/introduction/overview/">Ondat V2 Overview</a>
       
       
       
@@ -319,7 +392,7 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsarchitecture" href="/docs/concepts/architecture/">Architecture</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptscluster-topologies" href="/docs/concepts/cluster-topologies/">Cluster Topologies</a>
       
       
       
@@ -343,6 +416,12 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsfencing" href="/docs/concepts/fencing/">Fencing</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsnamespaces" href="/docs/concepts/namespaces/">Namespaces</a>
       
       
@@ -355,7 +434,19 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptscomponents" href="/docs/concepts/components/">Ondat Components</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptspolicies" href="/docs/concepts/policies/">Policies</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsconceptsrwx" href="/docs/concepts/rwx/">ReadWriteMany</a>
       
       
       
@@ -402,6 +493,12 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsprerequisitesipv6" href="/docs/prerequisites/ipv6/">Availability of IPv6</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsprerequisitesfirewalls" href="/docs/prerequisites/firewalls/">Ports and Firewall settings</a>
       
       
@@ -409,6 +506,18 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsprerequisitesmountpropagation" href="/docs/prerequisites/mountpropagation/">Mount Propagation</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsprerequisitespidlimits" href="/docs/prerequisites/pidlimits/">PID Limits</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsprerequisitesmax-aio" href="/docs/prerequisites/max-aio/">Max AIO</a>
       
       
       
@@ -502,6 +611,12 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsgoogle-gke" href="/docs/platforms/google-gke/">Google GKE</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsplatformsopenshift" href="/docs/platforms/openshift/">OpenShift</a>
       
       
@@ -542,6 +657,30 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationscluster-id" href="/docs/operations/cluster-id/">ClusterID</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsdelete-stos-objects" href="/docs/operations/delete-stos-objects/">Deleting Ondat Objects</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsdisk-full" href="/docs/operations/disk-full/">Disk Full</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsencryption" href="/docs/operations/encryption/">Encryption</a>
+      
+      
+      
+      
 
 
 
@@ -550,23 +689,41 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/operations/external-etcd/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Etcd</a>
+    <a  href="/docs/operations/etcd/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Etcd</a>
   </li>
   <ul>
-    <li class="collapse " id="docsoperationsexternal-etcd">
+    <li class="collapse " id="docsoperationsetcd">
       
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsexternal-etcdetcd-tls" href="/docs/operations/external-etcd/etcd-tls/">mTLS</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsetcdmigrate-etcd-cluster" href="/docs/operations/etcd/migrate-etcd-cluster/">Etcd node migration</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsetcdstorageos-secret-info" href="/docs/operations/etcd/storageos-secret-info/">mTLS</a>
       
       
     </li>
   </ul>
 </ul>
 
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsfailure-modes" href="/docs/operations/failure-modes/">Failure Modes</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsfencing" href="/docs/operations/fencing/">Fencing</a>
       
       
       
@@ -590,6 +747,12 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationslabel-stos-objects" href="/docs/operations/label-stos-objects/">Labeling Ondat Objects</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationslicensing" href="/docs/operations/licensing/">Licensing</a>
       
       
@@ -608,7 +771,19 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsrwx" href="/docs/operations/rwx/">ReadWriteMany</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsstorageclasses" href="/docs/operations/storageclasses/">StorageClasses</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationstrim" href="/docs/operations/trim/">TRIM</a>
       
       
       
@@ -620,7 +795,25 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsuninstall" href="/docs/operations/uninstall/">Uninstall Ondat</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsupgrade" href="/docs/operations/upgrade/">Upgrade Ondat</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsusers" href="/docs/operations/users/">User Management</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsoperationsresize" href="/docs/operations/resize/">Volume Resize</a>
       
       
     </li>
@@ -649,12 +842,6 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesbackups" href="/docs/usecases/backups/">Backups</a>
-      
-      
-      
-      
-      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasescassandra" href="/docs/usecases/cassandra/">Cassandra</a>
       
       
@@ -662,6 +849,12 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecaseselasticsearch" href="/docs/usecases/elasticsearch/">Elasticsearch</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesinfluxdb" href="/docs/usecases/influxdb/">InfluxDB</a>
       
       
       
@@ -709,7 +902,25 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesprometheus" href="/docs/usecases/prometheus/">Prometheus</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesredis" href="/docs/usecases/redis/">Redis</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasessidecar-backups" href="/docs/usecases/sidecar-backups/">Sidecar Backups</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsusecasesvelero-backups" href="/docs/usecases/velero-backups/">Velero Backups</a>
       
       
       
@@ -743,6 +954,41 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/reference/bundles/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Bundles</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencebundles">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencebundlesdiagnostic-bundle" href="/docs/reference/bundles/diagnostic-bundle/">Diagnostic bundle</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencebundlessupport_bundle" href="/docs/reference/bundles/support_bundle/">Support bundle</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceapi" href="/docs/reference/api/">API Reference</a>
       
@@ -767,7 +1013,7 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencecliapply" href="/docs/reference/cli/apply/">Apply licence</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencecliapply" href="/docs/reference/cli/apply/">Apply</a>
       
       
       
@@ -810,6 +1056,12 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceclihelp" href="/docs/reference/cli/help/">Help</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencecliupdate" href="/docs/reference/cli/update/">Update volume</a>
       
       
       
@@ -880,6 +1132,12 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceencryption" href="/docs/reference/encryption/">Encryption</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencegui" href="/docs/reference/gui/">GUI</a>
       
       
@@ -887,6 +1145,12 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceinit-container" href="/docs/reference/init-container/">Init container</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencekubernetes-object-sync" href="/docs/reference/kubernetes-object-sync/">Kubernetes Object Sync</a>
       
       
       
@@ -904,6 +1168,12 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencetelemetry" href="/docs/reference/telemetry/">Ondat Telemetry</a>
+      
+      
+      
+      
+      
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceopen_source_attribution" href="/docs/reference/open_source_attribution/">Open Source Attribution</a>
       
       
@@ -916,19 +1186,48 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencetelemetry" href="/docs/reference/telemetry/">StorageOS Telemetry</a>
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferenceresource_requests_and_limits" href="/docs/reference/resource_requests_and_limits/">Resource Requests and Limits</a>
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/reference/scheduler/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Scheduler</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencescheduler">
       
       
       
       
       
-      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencebundle" href="/docs/reference/bundle/">Support bundle</a>
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencescheduleradmission-controller" href="/docs/reference/scheduler/admission-controller/">Admission Controller</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
       
       
       
       
       
       <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencefilesystems" href="/docs/reference/filesystems/">Supported File systems</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencetolerations" href="/docs/reference/tolerations/">Tolerations</a>
       
       
     </li>
@@ -986,7 +1285,7 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
         <li><a href="#solution-1">Solution:</a></li>
       </ul>
     </li>
-    <li><a href="#pvc-pending-state---failed-to-dial-storageos">PVC pending state - Failed to dial StorageOS</a>
+    <li><a href="#pvc-pending-state---failed-to-dial-ondat">PVC pending state - Failed to dial Ondat</a>
       <ul>
         <li><a href="#issue-1">Issue:</a></li>
         <li><a href="#reason-1">Reason:</a></li>
@@ -1002,36 +1301,51 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
         <li><a href="#solution-3">Solution:</a></li>
       </ul>
     </li>
+    <li><a href="#node-name-different-from-hostname">Node name different from Hostname</a>
+      <ul>
+        <li></li>
+        <li><a href="#reason-3">Reason:</a></li>
+        <li><a href="#solution-4">Solution:</a></li>
+      </ul>
+    </li>
+    <li><a href="#peer-discovery---networking">Peer discovery - Networking</a>
+      <ul>
+        <li><a href="#issue-4">Issue:</a></li>
+        <li><a href="#reason-4">Reason:</a></li>
+        <li><a href="#assert-4">Assert:</a></li>
+        <li><a href="#solution-5">Solution:</a></li>
+      </ul>
+    </li>
     <li><a href="#peer-discovery---pod-allocation">Peer discovery - Pod allocation</a>
       <ul>
-        <li><a href="#issue-3">Issue:</a></li>
-        <li><a href="#reason-3">Reason:</a></li>
-        <li><a href="#assert-4">Assert:</a></li>
-        <li><a href="#solution-4">Solution:</a></li>
+        <li><a href="#issue-5">Issue:</a></li>
+        <li><a href="#reason-5">Reason:</a></li>
+        <li><a href="#assert-5">Assert:</a></li>
+        <li><a href="#solution-6">Solution:</a></li>
       </ul>
     </li>
     <li><a href="#lio-initerror">LIO Init:Error</a>
       <ul>
-        <li><a href="#issue-4">Issue:</a></li>
-        <li><a href="#reason-4">Reason:</a></li>
-        <li><a href="#assert-5">Assert</a></li>
-        <li><a href="#solution-5">Solution:</a></li>
+        <li><a href="#issue-6">Issue:</a></li>
+        <li><a href="#reason-6">Reason:</a></li>
+        <li><a href="#assert-6">Assert</a></li>
+        <li><a href="#solution-7">Solution:</a></li>
       </ul>
     </li>
     <li><a href="#lio-not-enabled">LIO not enabled</a>
       <ul>
-        <li><a href="#issue-5">Issue:</a></li>
-        <li><a href="#reason-5">Reason:</a></li>
-        <li><a href="#assert-6">Assert</a></li>
-        <li><a href="#solution-6">Solution:</a></li>
+        <li><a href="#issue-7">Issue:</a></li>
+        <li><a href="#reason-7">Reason:</a></li>
+        <li><a href="#assert-7">Assert</a></li>
+        <li><a href="#solution-8">Solution:</a></li>
       </ul>
     </li>
-    <li><a href="#openshift-storageos-pods-missing----daemonset-error">(OpenShift) StorageOS pods missing &ndash; DaemonSet error</a>
+    <li><a href="#openshift-ondat-pods-missing----daemonset-error">(OpenShift) Ondat pods missing &ndash; DaemonSet error</a>
       <ul>
-        <li><a href="#issue-6">Issue:</a></li>
-        <li><a href="#reason-6">Reason:</a></li>
-        <li><a href="#assert-7">Assert:</a></li>
-        <li><a href="#solution-7">Solution:</a></li>
+        <li><a href="#issue-8">Issue:</a></li>
+        <li><a href="#reason-8">Reason:</a></li>
+        <li><a href="#assert-8">Assert:</a></li>
+        <li><a href="#solution-9">Solution:</a></li>
       </ul>
     </li>
     <li><a href="#getting-help">Getting Help</a></li>
@@ -1084,14 +1398,14 @@ root@node1:~# kubectl -n kube-system describe $POD_ID (."/>
 	<h1>Troubleshooting</h1>
 	
 	<p>This section is aimed to help you troubleshoot issues in your cluster, whether
-they are related to the StorageOS installation, integration with
+they are related to the Ondat installation, integration with
 orchestrators or common misconfigurations.</p>
 <h2 id="tools">Tools</h2>
-<p>To be able to troubleshoot issues the <a href="https://github.com/storageos/go-cli">StorageOS
-cli</a> is required.</p>
+<p>To be able to troubleshoot issues the <a href="https://github.com/storageos/go-cli">Ondat
+CLI</a> is required.</p>
 <h2 id="pod-in-pending-because-of-mount-error">Pod in pending because of mount error</h2>
 <h3 id="issue">Issue:</h3>
-<p>The output of <code>kubectl describe pod $POD_ID</code> contains <code>no such file or directory</code> and references the StorageOS volume device file.</p>
+<p>The output of <code>kubectl describe pod $POD_ID</code> contains <code>no such file or directory</code> and references the Ondat volume device file.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~# kubectl -n kube-system describe <span style="color:#000">$POD_ID</span>
 <span style="color:#ce5c00;font-weight:bold">(</span>...<span style="color:#ce5c00;font-weight:bold">)</span>
 Events:
@@ -1101,15 +1415,15 @@ Events:
 </code></pre></div><h3 id="reason">Reason:</h3>
 <p>There are two main reasons this issue may arise:</p>
 <ul>
-<li>The StorageOS <code>DEVICE_DIR</code> location is wrongly configured when using Kubelet
+<li>The Ondat <code>DEVICE_DIR</code> location is wrongly configured when using Kubelet
 as a container</li>
 <li>Mount Propagation is not enabled</li>
 </ul>
 <p>(Option 1) Misconfiguration of the DeviceDir/SharedDir</p>
 <p>Some Kubernetes distributions such as Rancher, DockerEE or some installations
 of OpenShift deploy the Kubelet as a container, because of this, the device
-files that StorageOS creates to mount into the containers need to be visible to
-the kubelet. StorageOS can be configured to share the device directory.</p>
+files that Ondat creates to mount into the containers need to be visible to
+the kubelet. Ondat can be configured to share the device directory.</p>
 <p>Modern installations use CSI, which handles the complexity internally.</p>
 <h3 id="assert">Assert:</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~# kubectl -n default describe stos <span style="color:#000;font-weight:bold">|</span> grep <span style="color:#4e9a06">&#34;Shared Dir&#34;</span>
@@ -1120,7 +1434,7 @@ the kubelet. StorageOS can be configured to share the device directory.</p>
   sharedDir: <span style="color:#4e9a06">&#39;/var/lib/kubelet/plugins/kubernetes.io~storageos&#39;</span> <span style="color:#8f5902;font-style:italic"># Needed when Kubelet as a container</span>
   ...
 </code></pre></div><blockquote>
-<p>See example on how to configure the <a href="/docs/reference/cluster-operator/examples/#specifying-a-shared-directory-for-use-with-kubelet-as-a-container">StorageOS Custom
+<p>See example on how to configure the <a href="/docs/reference/cluster-operator/examples/#specifying-a-shared-directory-for-use-with-kubelet-as-a-container">Ondat Custom
 Resource</a>.</p>
 </blockquote>
 <p> </p>
@@ -1130,7 +1444,7 @@ Resource</a>.</p>
 </blockquote>
 <h3 id="assert-1">Assert:</h3>
 <p><strong>If not using the Kubelet as a container</strong>, SSH into one of the nodes and check if
-<code>/var/lib/storageos/volumes</code> is empty. If so, exec into any StorageOS pod and
+<code>/var/lib/storageos/volumes</code> is empty. If so, exec into any Ondat pod and
 check the same directory.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~# ls /var/lib/storageos/volumes/
 root@node1:~#     <span style="color:#8f5902;font-style:italic"># &amp;lt;-- Shouldn&#39;t be blank</span>
@@ -1142,7 +1456,7 @@ ff537c5b-e295-e518-a340-0b6308b69f74
 disabled mount propagation is the cause.</p>
 <p><strong>If using the Kubelet as a container</strong>, SSH into one of the nodes and check if
 <code>/var/lib/kubelet/plugins/kubernetes.io~storageos/devices</code> is empty. If
-so, exec into any StorageOS pod and check the same directory.</p>
+so, exec into any Ondat pod and check the same directory.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~# ls /var/lib/kubelet/plugins/kubernetes.io~storageos/devices
 root@node1:~#      <span style="color:#8f5902;font-style:italic"># &amp;lt;-- Shouldn&#39;t be blank</span>
 root@node1:~# kubectl <span style="color:#204a87">exec</span> <span style="color:#000">$POD_ID</span> -c storageos -- ls -l /var/lib/kubelet/plugins/kubernetes.io~storageos/devices
@@ -1157,7 +1471,7 @@ enabled by default. Most Kubernetes distributions allow MountPropagation to be
 enabled using FeatureGates. Rancher specifically, needs to enable it in the
 &ldquo;View in API&rdquo; section of your cluster. You need to edit the section
 &ldquo;rancherKubernetesEngineConfig&rdquo; to enable the Kubelet feature gate.</p>
-<h2 id="pvc-pending-state---failed-to-dial-storageos">PVC pending state - Failed to dial StorageOS</h2>
+<h2 id="pvc-pending-state---failed-to-dial-ondat">PVC pending state - Failed to dial Ondat</h2>
 <p>A created PVC remains in pending state making pods that need to mount that PVC
 unable to start.</p>
 <h3 id="issue-1">Issue:</h3>
@@ -1172,16 +1486,16 @@ Events:
   ----     ------              ----              ----                         -------
   Warning  ProvisioningFailed  7s <span style="color:#ce5c00;font-weight:bold">(</span>x2 over 18s<span style="color:#ce5c00;font-weight:bold">)</span>  persistentvolume-controller  Failed to provision volume with StorageClass <span style="color:#4e9a06">&#34;fast&#34;</span>: Get http://storageos-cluster/version: failed to dial all known cluster members, <span style="color:#ce5c00;font-weight:bold">(</span>10.233.59.206:5705<span style="color:#ce5c00;font-weight:bold">)</span>
 </code></pre></div><h3 id="reason-1">Reason:</h3>
-<p>For non CSI installations of StorageOS, Kubernetes uses the StorageOS
+<p>For non CSI installations of Ondat, Kubernetes uses the Ondat
 API endpoint to communicate. If that communication fails, relevant actions such
-as create or mount volume can&rsquo;t be transmitted to StorageOS, hence the PVC
-will remain in pending state. StorageOS never received the action to perform,
+as create or mount volume can&rsquo;t be transmitted to Ondat, hence the PVC
+will remain in pending state. Ondat never received the action to perform,
 so it never sent back an acknowledgement.</p>
-<p>In this case, the Event message indicates that StorageOS API is not responding,
-implying that StorageOS is not running. For Kubernetes to define StorageOS pods
+<p>In this case, the Event message indicates that Ondat API is not responding,
+implying that Ondat is not running. For Kubernetes to define Ondat pods
 ready, the health check must pass.</p>
 <h3 id="assert-2">Assert:</h3>
-<p>Check the status of StorageOS pods.</p>
+<p>Check the status of Ondat pods.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~/# kubectl -n kube-system get pod --selector <span style="color:#000">app</span><span style="color:#ce5c00;font-weight:bold">=</span>storageos <span style="color:#8f5902;font-style:italic"># for CSI add --selector kind=daemonset</span>
 NAME              READY     STATUS    RESTARTS   AGE
 storageos-qrqkj   0/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          1m
@@ -1189,19 +1503,19 @@ storageos-s4bfv   0/1       Running   <span style="color:#0000cf;font-weight:bol
 storageos-vcpfx   0/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          1m
 storageos-w98f5   0/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          1m
 </code></pre></div><p>If the pods are not READY, the service will not forward traffic to the API they
-serve hence PVC will remain in pending state until StorageOS pods are
+serve hence PVC will remain in pending state until Ondat pods are
 available.</p>
 <blockquote>
 <p>Kubernetes keeps trying to execute the action until it succeeds. If
-a PVC is created before StorageOS finish starting, the PVC will be created
+a PVC is created before Ondat finish starting, the PVC will be created
 eventually.</p>
 </blockquote>
 <h3 id="solution-2">Solution:</h3>
 <ul>
-<li>StorageOS health check takes 60 seconds of grace before reporting as READY.
-If StorageOS is starting properly after that period, the volume will be
-created when StorageOS finishes its bootstrap.</li>
-<li>If StorageOS is not running or is not starting properly, the solution would
+<li>Ondat health check takes 60 seconds of grace before reporting as READY.
+If Ondat is starting properly after that period, the volume will be
+created when Ondat finishes its bootstrap.</li>
+<li>If Ondat is not running or is not starting properly, the solution would
 be to troubleshoot the installation.</li>
 </ul>
 <h2 id="pvc-pending-state---secret-missing">PVC pending state - Secret Missing</h2>
@@ -1216,12 +1530,12 @@ Events:
   Warning  ProvisioningFailed  13s <span style="color:#ce5c00;font-weight:bold">(</span>x2 over 28s<span style="color:#ce5c00;font-weight:bold">)</span>  persistentvolume-controller  Failed to provision volume with StorageClass <span style="color:#4e9a06">&#34;fast&#34;</span>: failed to get secret from <span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;storageos&#34;</span>/<span style="color:#4e9a06">&#34;storageos-api&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span>
 
 </code></pre></div><h3 id="reason-2">Reason:</h3>
-<p>For non CSI installations of StorageOS, Kubernetes uses the StorageOS
+<p>For non CSI installations of Ondat, Kubernetes uses the Ondat
 API endpoint to communicate. If that communication fails, relevant actions such
-as create or mount a volume can&rsquo;t be transmitted to StorageOS, and the PVC
-will remain in pending state. StorageOS never received the action to perform,
+as create or mount a volume can&rsquo;t be transmitted to Ondat, and the PVC
+will remain in pending state. Ondat never received the action to perform,
 so it never sent back an acknowledgement.</p>
-<p>The StorageClass provisioned for StorageOS references a Secret from where it
+<p>The StorageClass provisioned for Ondat references a Secret from where it
 retrieves the API endpoint and the authentication parameters. If that secret is
 incorrect or missing, the connections won&rsquo;t be established. It is common to see
 that the Secret has been deployed in a different namespace where the
@@ -1246,7 +1560,6 @@ parameters:
   adminSecretNamespace: storageos
   description: Kubernetes volume
   fsType: ext4
-  pool: default
 provisioner: kubernetes.io/storageos
 reclaimPolicy: Delete
 </code></pre></div><blockquote>
@@ -1263,68 +1576,160 @@ the right location.</p>
 </li>
 </ol>
 <h3 id="solution-3">Solution:</h3>
-<p>Deploy StorageOS following the <a href="https://arau.github.io/docs/introduction/quickstart/">installation procedures</a>. If you are using the manifests
-provided for Kubernetes to deploy StorageOS rather than using automated
+<p>Deploy Ondat following the <a href="https://arau.github.io/docs/introduction/quickstart/">installation procedures</a>. If you are using the manifests
+provided for Kubernetes to deploy Ondat rather than using automated
 provisioners, make sure that the StorageClass parameters and the Secret
 reference match.</p>
-<p>{% include troubleshoot/issues/nodename-vs-nodehostname.md %}
-{% include troubleshoot/issues/one-node-multiple-clusters.md %}
-{% include troubleshoot/issues/ports-closed.md %}</p>
-<h2 id="peer-discovery---pod-allocation">Peer discovery - Pod allocation</h2>
-<h3 id="issue-3">Issue:</h3>
-<p>StorageOS nodes can&rsquo;t join the cluster and show the following log entries.</p>
+<h2 id="node-name-different-from-hostname">Node name different from Hostname</h2>
+<h4 id="issue-3">Issue:</h4>
+<p>Ondat nodes can&rsquo;t join the cluster showing the following log entries.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:47:02Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;failed to start api&#34;</span> <span style="color:#000">error</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;error verifying UUID: UUID aed3275f-846b-1f75-43a1-adbfec8bf974 has already been registered and has hostname &#39;debian-4&#39;, not &#39;node4&#39;&#34;</span> <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">command</span>
+</code></pre></div><h3 id="reason-3">Reason:</h3>
+<p>The Ondat registration process to start the cluster uses the hostname of
+the node where the Ondat container is running, provided by the Kubelet.
+However, Ondat verifies the network hostname of the OS as a prestart check
+to make sure it can communicate with other nodes. If those names don&rsquo;t match,
+Ondat will be unable to start.</p>
+<h3 id="solution-4">Solution:</h3>
+<p>Make sure the hostnames match with the Kubernetes advertised names. If
+you have changed the hostname of your nodes, make sure that you restart the
+nodes to apply the change.</p>
+<h2 id="peer-discovery---networking">Peer discovery - Networking</h2>
+<h3 id="issue-4">Issue:</h3>
+<p>Ondat nodes can&rsquo;t join the cluster showing the following logs after one
+minute of container uptime.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>info <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;not first cluster node, joining first node&#34;</span> <span style="color:#000">action</span><span style="color:#ce5c00;font-weight:bold">=</span>create <span style="color:#000">address</span><span style="color:#ce5c00;font-weight:bold">=</span>172.28.128.5 <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>etcd <span style="color:#000">host</span><span style="color:#ce5c00;font-weight:bold">=</span>node3 <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>cp <span style="color:#000">target</span><span style="color:#ce5c00;font-weight:bold">=</span>172.28.128.6
 <span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;could not retrieve cluster config from api&#34;</span> <span style="color:#000">status_code</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">503</span>
 <span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;failed to join existing cluster&#34;</span> <span style="color:#000">action</span><span style="color:#ce5c00;font-weight:bold">=</span>create <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>etcd <span style="color:#000">endpoint</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;172.28.128.3,172.28.128.4,172.28.128.5,172.28.128.6&#34;</span> <span style="color:#000">error</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;503 Service Unavailable&#34;</span> <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>cp
 <span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>info <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;retrying cluster join in 5 seconds...&#34;</span> <span style="color:#000">action</span><span style="color:#ce5c00;font-weight:bold">=</span>create <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>etcd <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>cp
-</code></pre></div><h3 id="reason-3">Reason:</h3>
-<p>StorageOS uses a gossip protocol to discover the nodes in the cluster. When
-StorageOS starts, one or more active nodes must be referenced so new nodes can
+</code></pre></div><h3 id="reason-4">Reason:</h3>
+<p>Ondat uses a gossip protocol to discover nodes in the cluster. When
+Ondat starts, one or more nodes can be referenced so new nodes can query
+existing nodes for the list of members. This error indicates that the node
+can&rsquo;t connect to any of the nodes in the known list. The known list is defined
+in the <code>JOIN</code> variable.</p>
+<h3 id="assert-4">Assert:</h3>
+<p>It is likely that ports are block by a firewall.</p>
+<p>SSH into one of your nodes and check connectivity to the rest of the nodes.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Successfull execution:</span>
+<span style="color:#ce5c00;font-weight:bold">[</span>root@node06 ~<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># nc -zv node04 5705</span>
+Ncat: Version 7.50 <span style="color:#ce5c00;font-weight:bold">(</span> https://nmap.org/ncat  <span style="color:#ce5c00;font-weight:bold">)</span>
+Ncat: Connected to 10.0.1.166:5705.
+Ncat: <span style="color:#0000cf;font-weight:bold">0</span> bytes sent, <span style="color:#0000cf;font-weight:bold">0</span> bytes received in 0.01 seconds.
+</code></pre></div><p>Ondat exposes network diagnostics in its API, viewable from the CLI.  To
+use this feature, the CLI must query the API of a running node. The diagnostics
+show information from all known cluster members. If all the ports are blocked
+during the first bootstrap of the cluster, the diagnostics won&rsquo;t show any data
+as nodes couldn&rsquo;t register.</p>
+<blockquote>
+<p>Ondat networks diagnostics are available for storageos-rc5 and
+storageos-cli-rc3 and above.</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Example:</span>
+root@node1:~# storageos cluster connectivity
+SOURCE  NAME            ADDRESS            LATENCY      STATUS  MESSAGE
+node4   node2.nats      172.28.128.4:5708  1.949275ms   OK
+node4   node3.api       172.28.128.5:5705  3.070574ms   OK
+node4   node3.nats      172.28.128.5:5708  2.989238ms   OK
+node4   node2.directfs  172.28.128.4:5703  2.925707ms   OK
+node4   node3.etcd      172.28.128.5:5707  2.854726ms   OK
+node4   node3.directfs  172.28.128.5:5703  2.833371ms   OK
+node4   node1.api       172.28.128.3:5705  2.714467ms   OK
+node4   node1.nats      172.28.128.3:5708  2.613752ms   OK
+node4   node1.etcd      172.28.128.3:5707  2.594159ms   OK
+node4   node1.directfs  172.28.128.3:5703  2.601834ms   OK
+node4   node2.api       172.28.128.4:5705  2.598236ms   OK
+node4   node2.etcd      172.28.128.4:5707  16.650625ms  OK
+node3   node4.nats      172.28.128.6:5708  1.304126ms   OK
+node3   node4.api       172.28.128.6:5705  1.515218ms   OK
+node3   node2.directfs  172.28.128.4:5703  1.359827ms   OK
+node3   node1.api       172.28.128.3:5705  1.185535ms   OK
+node3   node4.directfs  172.28.128.6:5703  1.379765ms   OK
+node3   node1.etcd      172.28.128.3:5707  1.221176ms   OK
+node3   node1.nats      172.28.128.3:5708  1.330122ms   OK
+node3   node2.api       172.28.128.4:5705  1.238541ms   OK
+node3   node1.directfs  172.28.128.3:5703  1.413574ms   OK
+node3   node2.etcd      172.28.128.4:5707  1.214273ms   OK
+node3   node2.nats      172.28.128.4:5708  1.321145ms   OK
+node1   node4.directfs  172.28.128.6:5703  1.140797ms   OK
+node1   node3.api       172.28.128.5:5705  1.089252ms   OK
+node1   node4.api       172.28.128.6:5705  1.178439ms   OK
+node1   node4.nats      172.28.128.6:5708  1.176648ms   OK
+node1   node2.directfs  172.28.128.4:5703  1.529612ms   OK
+node1   node2.etcd      172.28.128.4:5707  1.165681ms   OK
+node1   node2.api       172.28.128.4:5705  1.29602ms    OK
+node1   node2.nats      172.28.128.4:5708  1.267454ms   OK
+node1   node3.nats      172.28.128.5:5708  1.485657ms   OK
+node1   node3.etcd      172.28.128.5:5707  1.469429ms   OK
+node1   node3.directfs  172.28.128.5:5703  1.503015ms   OK
+node2   node4.directfs  172.28.128.6:5703  1.484ms      OK
+node2   node1.directfs  172.28.128.3:5703  1.275304ms   OK
+node2   node4.nats      172.28.128.6:5708  1.261422ms   OK
+node2   node4.api       172.28.128.6:5705  1.465532ms   OK
+node2   node3.api       172.28.128.5:5705  1.252768ms   OK
+node2   node3.nats      172.28.128.5:5708  1.212332ms   OK
+node2   node3.directfs  172.28.128.5:5703  1.192792ms   OK
+node2   node3.etcd      172.28.128.5:5707  1.270076ms   OK
+node2   node1.etcd      172.28.128.3:5707  1.218522ms   OK
+node2   node1.api       172.28.128.3:5705  1.363071ms   OK
+node2   node1.nats      172.28.128.3:5708  1.349383ms   OK
+</code></pre></div><h3 id="solution-5">Solution:</h3>
+<p>Open ports following the <a href="https://arau.github.io/docs/prerequisites/firewalls/">prerequisites page</a>.</p>
+<h2 id="peer-discovery---pod-allocation">Peer discovery - Pod allocation</h2>
+<h3 id="issue-5">Issue:</h3>
+<p>Ondat nodes can&rsquo;t join the cluster and show the following log entries.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>info <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;not first cluster node, joining first node&#34;</span> <span style="color:#000">action</span><span style="color:#ce5c00;font-weight:bold">=</span>create <span style="color:#000">address</span><span style="color:#ce5c00;font-weight:bold">=</span>172.28.128.5 <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>etcd <span style="color:#000">host</span><span style="color:#ce5c00;font-weight:bold">=</span>node3 <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>cp <span style="color:#000">target</span><span style="color:#ce5c00;font-weight:bold">=</span>172.28.128.6
+<span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;could not retrieve cluster config from api&#34;</span> <span style="color:#000">status_code</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">503</span>
+<span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;failed to join existing cluster&#34;</span> <span style="color:#000">action</span><span style="color:#ce5c00;font-weight:bold">=</span>create <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>etcd <span style="color:#000">endpoint</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;172.28.128.3,172.28.128.4,172.28.128.5,172.28.128.6&#34;</span> <span style="color:#000">error</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;503 Service Unavailable&#34;</span> <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>cp
+<span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T13:40:20Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>info <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;retrying cluster join in 5 seconds...&#34;</span> <span style="color:#000">action</span><span style="color:#ce5c00;font-weight:bold">=</span>create <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>etcd <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>cp
+</code></pre></div><h3 id="reason-5">Reason:</h3>
+<p>Ondat uses a gossip protocol to discover the nodes in the cluster. When
+Ondat starts, one or more active nodes must be referenced so new nodes can
 query existing nodes for the list of members. This error indicates that the node
 can&rsquo;t connect to any of the nodes in the known list. The known list is defined
 in the <code>JOIN</code> variable.</p>
-<p>If there are no active StorageOS nodes, the bootstrap process will elect the
+<p>If there are no active Ondat nodes, the bootstrap process will elect the
 first node in the <code>JOIN</code> variable as master, and the rest will try to
 discover from it. In case of that node not starting, the whole cluster will
 remain unable to bootstrap.</p>
-<p>Installations of StorageOS use a DaemonSet, and by default do not schedule
-StorageOS pods to master nodes, due to the presence of the
+<p>Installations of Ondat use a DaemonSet, and by default do not schedule
+Ondat pods to master nodes, due to the presence of the
 <code>node-role.kubernetes.io/master:NoSchedule</code> taint that is typically present. In
-such cases the <code>JOIN</code> variable must not contain master nodes or the StorageOS
+such cases the <code>JOIN</code> variable must not contain master nodes or the Ondat
 cluster will remain unable to start.</p>
-<h3 id="assert-4">Assert:</h3>
+<h3 id="assert-5">Assert:</h3>
 <p>Check that the first node of the <code>JOIN</code> variable started properly.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@node1:~/# kubectl -n kube-system describe ds/storageos <span style="color:#000;font-weight:bold">|</span> grep JOIN
     JOIN:          172.28.128.3,172.28.128.4,172.28.128.5
 root@node1:~/# kubectl -n kube-system get pod -o wide <span style="color:#000;font-weight:bold">|</span> grep 172.28.128.3
 storageos-8zqxl   1/1       Running   <span style="color:#0000cf;font-weight:bold">0</span>          2m        172.28.128.3   node1
-</code></pre></div><h3 id="solution-4">Solution:</h3>
+</code></pre></div><h3 id="solution-6">Solution:</h3>
 <p>Make sure that the <code>JOIN</code> variable doesn&rsquo;t specify the master nodes. In case
 you are using the discovery service, it is necessary to ensure that the
 DaemonSet won&rsquo;t allocate Pods on the masters. This can be achieved with taints,
 node selectors or labels.</p>
-<p>For installations with the StorageOS operator you can specify which nodes to
-deploy StorageOS on using nodeSelectors. See examples in the <a href="docs/reference/cluster-operator/examples/#installing-to-a-subset-of-nodes">Cluster Operator
+<p>For installations with the Ondat operator you can specify which nodes to
+deploy Ondat on using nodeSelectors. See examples in the <a href="docs/reference/cluster-operator/examples/#installing-to-a-subset-of-nodes">Cluster Operator
 Examples
 page</a>.</p>
 <p>For more advanced installations using compute-only and storage nodes, check the
 <code>storageos.com/deployment=computeonly</code> label that can be added to the nodes
-through Kubernetes node labels, or StorageOS in the <a href="https://arau.github.io/docs/reference/labels/">Labels</a> page.</p>
+through Kubernetes node labels, or Ondat in the <a href="https://arau.github.io/docs/reference/labels/">Labels</a> page.</p>
 <h2 id="lio-initerror">LIO Init:Error</h2>
-<h3 id="issue-4">Issue:</h3>
-<p>StorageOS pods not starting with <code>Init:Error</code></p>
+<h3 id="issue-6">Issue:</h3>
+<p>Ondat pods not starting with <code>Init:Error</code></p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n kube-system get pod
 NAME              READY     STATUS              RESTARTS   AGE
 storageos-2kwqx   0/3       Init:Err             <span style="color:#0000cf;font-weight:bold">0</span>          6s
 storageos-cffcr   0/3       Init:Err             <span style="color:#0000cf;font-weight:bold">0</span>          6s
 storageos-d4f69   0/3       Init:Err             <span style="color:#0000cf;font-weight:bold">0</span>          6s
 storageos-nhq7m   0/3       Init:Err             <span style="color:#0000cf;font-weight:bold">0</span>          6s
-</code></pre></div><h3 id="reason-4">Reason:</h3>
+</code></pre></div><h3 id="reason-6">Reason:</h3>
 <p>This indicates that since the Linux open source SCSI drivers are not enabled,
-StorageOS cannot start. The StorageOS DaemonSet enables the required kernel
+Ondat cannot start. The Ondat DaemonSet enables the required kernel
 modules on the host system. If you are seeing these errors it is because that
 container couldn&rsquo;t load the modules.</p>
-<h3 id="assert-5">Assert</h3>
+<h3 id="assert-6">Assert</h3>
 <p>Check the logs of the init container.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n kube-system logs <span style="color:#000">$ANY_STORAGEOS_POD</span> -c storageos-init
 </code></pre></div><p>In case of failure, it will show the following output, indicating which kernel
@@ -1336,30 +1741,30 @@ executing modprobe -b target_core_mod
 Module tcm_loop is not running
 executing modprobe -b tcm_loop
 modprobe: FATAL: Module tcm_loop not found.
-</code></pre></div><h3 id="solution-5">Solution:</h3>
+</code></pre></div><h3 id="solution-7">Solution:</h3>
 <p>Install the required kernel modules (usually found in the
 <code>linux-image-extra-$(uname -r)</code> package of your distribution) on your nodes
-following this <a href="https://arau.github.io/docs/prerequisites/systemconfiguration/">prerequisites page</a> and delete StorageOS
+following this <a href="https://arau.github.io/docs/prerequisites/systemconfiguration/">prerequisites page</a> and delete Ondat
 pods, allowing the DaemonSet to create the pods again.</p>
 <h2 id="lio-not-enabled">LIO not enabled</h2>
-<h3 id="issue-5">Issue:</h3>
-<p>StorageOS node can&rsquo;t start and shows the following log entries.</p>
+<h3 id="issue-7">Issue:</h3>
+<p>Ondat node can&rsquo;t start and shows the following log entries.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T14:34:40Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;liocheck returned error&#34;</span> <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span>liocheck <span style="color:#000">error</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;exit status 1&#34;</span> <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span>dataplane <span style="color:#000">stderr</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Sysfs root &#39;/sys/kernel/config/target&#39; is missing, is kernel configfs present and target_core_mod loaded? category=fslio level=warn\nRuntime error checking stage &#39;target_core_mod&#39;: SysFs root missing category=fslio level=warn\nliocheck: FAIL (lio_capable_system() returns failure) category=fslio level=fatal\n&#34;</span> <span style="color:#000">stdout</span><span style="color:#ce5c00;font-weight:bold">=</span>
 <span style="color:#000">time</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;2018-09-24T14:34:40Z&#34;</span> <span style="color:#000">level</span><span style="color:#ce5c00;font-weight:bold">=</span>error <span style="color:#000">msg</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;failed to start dataplane services&#34;</span> <span style="color:#000">error</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;system dependency check failed: exit status 1&#34;</span> <span style="color:#000">module</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">command</span>
-</code></pre></div><h3 id="reason-5">Reason:</h3>
-<p>This indicates that one or more kernel modules required for StorageOS are
+</code></pre></div><h3 id="reason-7">Reason:</h3>
+<p>This indicates that one or more kernel modules required for Ondat are
 not loaded.</p>
-<h3 id="assert-6">Assert</h3>
+<h3 id="assert-7">Assert</h3>
 <p>The following kernel modules must be enabled in the host.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lsmod  <span style="color:#000;font-weight:bold">|</span> egrep <span style="color:#4e9a06">&#34;^tcm_loop|^target_core_mod|^target_core_file|^configfs&#34;</span>
-</code></pre></div><h3 id="solution-6">Solution:</h3>
+</code></pre></div><h3 id="solution-8">Solution:</h3>
 <p>Install the required kernel modules (usually found in the
 <code>linux-image-extra-$(uname -r)</code> package of your distribution) on your nodes
 following this <a href="https://arau.github.io/docs/prerequisites/systemconfiguration/">prerequisites page</a> and restart the container.</p>
-<h2 id="openshift-storageos-pods-missing----daemonset-error">(OpenShift) StorageOS pods missing &ndash; DaemonSet error</h2>
-<p>StorageOS DaemonSet doesn&rsquo;t have any pod replicas. The DaemonSet couldn&rsquo;t
+<h2 id="openshift-ondat-pods-missing----daemonset-error">(OpenShift) Ondat pods missing &ndash; DaemonSet error</h2>
+<p>Ondat DaemonSet doesn&rsquo;t have any pod replicas. The DaemonSet couldn&rsquo;t
 allocate any Pod due to security issues.</p>
-<h3 id="issue-6">Issue:</h3>
+<h3 id="issue-8">Issue:</h3>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>root@master02 standard<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># oc get pod</span>
 No resources found.
 <span style="color:#ce5c00;font-weight:bold">[</span>root@master02 standard<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#8f5902;font-style:italic"># oc describe daemonset storageos</span>
@@ -1368,12 +1773,12 @@ Events:
   Type     Reason        Age                From                  Message
   ----     ------        ----               ----                  -------
   Warning  FailedCreate  0s <span style="color:#ce5c00;font-weight:bold">(</span>x12 over 10s<span style="color:#ce5c00;font-weight:bold">)</span>  daemonset-controller  Error creating: pods <span style="color:#4e9a06">&#34;storageos-&#34;</span> is forbidden: unable to validate against any security context constraint: <span style="color:#ce5c00;font-weight:bold">[</span>provider restricted: .spec.securityContext.hostNetwork: Invalid value: true: Host network is not allowed to be used provider restricted: .spec.securityContext.hostPID: Invalid value: true: Host PID is not allowed to be used spec.volumes<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>: Invalid value: <span style="color:#4e9a06">&#34;hostPath&#34;</span>: hostPath volumes are not allowed to be used spec.volumes<span style="color:#ce5c00;font-weight:bold">[</span>1<span style="color:#ce5c00;font-weight:bold">]</span>: Invalid value: <span style="color:#4e9a06">&#34;hostPath&#34;</span>: hostPath volumes are not allowed to be used spec.volumes<span style="color:#ce5c00;font-weight:bold">[</span>2<span style="color:#ce5c00;font-weight:bold">]</span>: Invalid value: <span style="color:#4e9a06">&#34;hostPath&#34;</span>: hostPath volumes are not allowed to be used spec.volumes<span style="color:#ce5c00;font-weight:bold">[</span>3<span style="color:#ce5c00;font-weight:bold">]</span>: Invalid value: <span style="color:#4e9a06">&#34;hostPath&#34;</span>: hostPath volumes are not allowed to be used spec.initContainers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.privileged: Invalid value: true: Privileged containers are not allowed capabilities.add: Invalid value: <span style="color:#4e9a06">&#34;SYS_ADMIN&#34;</span>: capability may not be added spec.initContainers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.hostNetwork: Invalid value: true: Host network is not allowed to be used spec.initContainers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.hostPort: Invalid value: 5705: Host ports are not allowed to be used spec.initContainers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.hostPID: Invalid value: true: Host PID is not allowed to be used spec.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.privileged: Invalid value: true: Privileged containers are not allowed capabilities.add: Invalid value: <span style="color:#4e9a06">&#34;SYS_ADMIN&#34;</span>: capability may not be added spec.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.hostNetwork: Invalid value: true: Host network is not allowed to be used spec.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.hostPort: Invalid value: 5705: Host ports are not allowed to be used spec.containers<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.securityContext.hostPID: Invalid value: true: Host PID is not allowed to be used<span style="color:#ce5c00;font-weight:bold">]</span>
-</code></pre></div><h3 id="reason-6">Reason:</h3>
+</code></pre></div><h3 id="reason-8">Reason:</h3>
 <p>The OpenShift cluster has security context constraint policies enabled that
 forbid any pod, without an explicitly set policy for the service account, to
 be allocated.</p>
-<h3 id="assert-7">Assert:</h3>
-<p>Check if the StorageOS ServiceAccount can create pods with enough permissions</p>
+<h3 id="assert-8">Assert:</h3>
+<p>Check if the Ondat ServiceAccount can create pods with enough permissions</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc get scc privileged -o yaml <span style="color:#8f5902;font-style:italic"># Or custom scc with enough privileges</span>
 <span style="color:#ce5c00;font-weight:bold">(</span>...<span style="color:#ce5c00;font-weight:bold">)</span>
 users:
@@ -1383,14 +1788,14 @@ users:
 - system:serviceaccount:management-infra:inspector-admin
 - system:serviceaccount:storageos:storageos                       <span style="color:#000;font-weight:bold">&amp;</span>lt<span style="color:#000;font-weight:bold">;</span>--
 - system:serviceaccount:tiller:tiller
-</code></pre></div><p>If the StorageOS sa system:serviceaccount:storageos:storageos is in the
+</code></pre></div><p>If the Ondat sa system:serviceaccount:storageos:storageos is in the
 privileged scc it will be able to create pods.</p>
-<h3 id="solution-7">Solution:</h3>
+<h3 id="solution-9">Solution:</h3>
 <p>Add the ServiceAccount system:serviceaccount:storageos:storageos to a scc with
 enough privileges.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">oc adm policy add-scc-to-user privileged system:serviceaccount:storageos:storageos
 </code></pre></div><h2 id="getting-help">Getting Help</h2>
-<p>If our troubleshooting guides do not help resolve your issue, please see our
+<p>If our troubleshooting guides do not help resolve your issue, see our
 <a href="https://arau.github.io/docs/support/">support section</a> for details on how
 to get in touch with us.</p>
 
@@ -1405,97 +1810,79 @@ to get in touch with us.</p>
       </div>
 
     </div>
-    
-<footer class="foot row">
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-2">
-      <div class="footer-nav-column">
-        <a href="https://storageos.com/" class="custom-logo-link"><img src="https://storageos.com/wp-content/themes/storageOS/images/logo.svg" class="master-logo"></a>
-          <div class="footer-social">
-              <div class="menu-footer-social-container">
-                  <ul id="menu-footer-social" class="menu">
-                    <li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom social-icon twitter menu-item-22"><a href="https://twitter.com/Storage_OS" data-ps2id-api="true"><i class="icon-2x icon-twitter "></i><span class="fa-hidden">Twitter</span></a></li>
-                    <li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom social-icon facebook menu-item-23"><a href="https://www.facebook.com/storageos" data-ps2id-api="true"><i class="icon-2x icon-facebook "></i><span class="fa-hidden">Facebook</span></a></li>
-                    <li id="menu-item-24" class="menu-item menu-item-type-custom menu-item-object-custom social-icon linkedin menu-item-24"><a href="https://www.linkedin.com/company/storageos" data-ps2id-api="true"><i class="icon-2x icon-linkedin "></i><span class="fa-hidden">LinkedIn</span></a></li>
-                    <li id="menu-item-3202" class="slack menu-item menu-item-type-custom menu-item-object-custom menu-item-3202"><a href="https://slack.storageos.com/" data-ps2id-api="true">Slack</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div id="ondat-lp-footer">
+  <div class="ondat-lp-footer-wrapper">
+    <div class="ondat-lp-footer-wrapper-left">
+      <a class="navbar-brand" href="https://storageos.com">
+        <svg width="135" height="24" viewBox="0 0 135 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M48.8466 13.2064V10.5821C48.8466 6.30695 51.1323 4.02124 55.8307 4.02124 60.6561 4.02124 62.7725 6.2223 62.7725 10.5821v2.6243C62.7725 17.4392 60.4868 19.7673 55.8307 19.7673 50.963 19.8096 48.8466 17.6085 48.8466 13.2064zM59.6826 10.5821C59.6826 8.0424 58.836 6.94188 55.8731 6.94188 52.9101 6.94188 52.0212 8.0424 52.0212 10.5821v2.6243C52.0212 15.7461 52.8678 16.8466 55.8731 16.8466 58.836 16.8466 59.6826 15.7884 59.6826 13.2064V10.5821z" fill="#1239b8"/><path d="M68.91 18.074C68.91 19.1745 68.6561 19.4285 67.5555 19.4285H67.1746C66.074 19.4285 65.8201 19.1745 65.8201 18.074V9.90469C65.8201 5.96818 68.0635 3.97876 72.4656 3.97876 77.0793 3.97876 79.0687 5.96818 79.0687 9.90469V18.074C79.0687 19.1745 78.8148 19.4285 77.7143 19.4285H77.3333C76.2328 19.4285 75.9788 19.1745 75.9788 18.074V9.90469C75.9788 7.83061 75.2169 6.94172 72.5079 6.94172 69.7989 6.94172 68.9947 7.87294 68.9947 9.90469V18.074H68.91z" fill="#1239b8"/><path d="M95.1534 13.5026C95.1534 17.6931 92.9947 19.7248 88.6772 19.7248 84.1481 19.7248 82.2433 17.5237 82.2433 13.5026V10.5396C82.2433 6.47613 84.0211 4.27507 88.5079 4.27507 91.0476 4.27507 92.6984 5.0793 93.4603 6.73009V1.31211C93.4603.719513 93.6296.592529 94.1799.592529H94.3492C94.9418.592529 95.0687.761841 95.0687 1.31211V13.5026H95.1534zM83.8941 13.5026C83.8941 16.7618 85.037 18.2433 88.7195 18.2433 92.3598 18.2433 93.5449 16.7618 93.5449 13.5026V10.4973C93.5449 7.23803 92.4021 5.75655 88.7195 5.75655 85.0793 5.75655 83.8941 7.23803 83.8941 10.4973v3.0053z" fill="#017efa"/><path d="M111.323 19.0053C111.323 19.5979 111.153 19.7249 110.603 19.7249H110.434C109.841 19.7249 109.714 19.5556 109.714 19.0053V17.3122C108.952 18.9207 107.259 19.7672 104.762 19.7672 100.275 19.7672 98.4974 17.5238 98.4974 13.5027V10.4974C98.4974 6.43388 100.317 4.27515 104.931 4.27515 109.206 4.27515 111.407 6.34922 111.407 10.4974V19.0053H111.323zM100.021 13.5027C100.021 16.7619 101.164 18.2434 104.847 18.2434 108.529 18.2434 109.672 16.7619 109.672 13.5027V10.4974C109.672 7.23811 108.529 5.75663 104.847 5.75663 101.164 5.75663 100.021 7.23811 100.021 10.4974v3.0053z" fill="#017efa"/><path d="M113.862 5.3756C113.862 4.99465 113.947 4.86766 114.413 4.78301L116.36 4.57137 116.656 1.14279C116.741.677185 116.868.592529 117.249.592529H117.418C117.884.592529 117.968.761841 117.968 1.14279V4.57137H123.429C124.021 4.57137 124.148 4.74068 124.148 5.29094V5.41793C124.148 5.92586 124.021 6.1375 123.429 6.1375H117.968V14.5608C117.968 17.2698 119.069 18.2856 121.101 18.2856 122.159 18.2856 123.09 18.1587 123.979 17.9047 124.444 17.7354 124.698 17.947 124.698 18.4973V18.6243C124.698 19.1322 124.529 19.3438 123.979 19.4708 123.132 19.7248 122.201 19.8518 121.143 19.8518 117.926 19.8518 116.36 18.074 116.36 14.6031V6.05285H114.413C114.032 6.05285 113.862 5.88353 113.862 5.50258V5.3756z" fill="#017efa"/><path d="M130.794 4.78311C130.794 4.95242 130.751 4.99475 130.582 4.99475H129.905V7.11115C129.905 7.32279 129.862 7.36512 129.651 7.36512H129.566C129.355 7.36512 129.312 7.32279 129.312 7.11115V4.99475H128.635C128.466 4.99475 128.423 4.95242 128.423 4.78311V4.69846C128.423 4.52914 128.466 4.48682 128.635 4.48682H130.582C130.751 4.48682 130.794 4.52914 130.794 4.69846V4.78311zM134.392 7.11115C134.392 7.32279 134.349 7.36512 134.138 7.36512H134.053C133.841 7.36512 133.799 7.32279 133.799 7.11115V4.99475L133.206 7.06883C133.164 7.28047 133.079 7.36512 132.825 7.36512 132.656 7.36512 132.529 7.28047 132.444 7.06883L131.852 4.99475V7.11115C131.852 7.32279 131.81 7.36512 131.598 7.36512H131.513C131.302 7.36512 131.259 7.32279 131.259 7.11115V4.86777C131.259 4.6138 131.386 4.48682 131.64 4.48682H131.894C132.148 4.48682 132.318 4.65613 132.402 4.95242L132.825 6.60322 133.291 4.86777C133.333 4.57147 133.503 4.48682 133.841 4.48682H133.968C134.222 4.48682 134.349 4.6138 134.349 4.86777V7.11115H134.392z" fill="#017efa"/><path d="M0 7.83057V16.1692l10.1587-4.1905L0 7.83057z" fill="#017efa"/><path d="M10.1587 11.9788 19.1323 8.33862V0L0 7.83069 10.1587 11.9788z" fill="#1239b8"/><path d="M0 16.1692l19.1323 7.8307V15.6613L10.1587 11.9788.0 16.1692z" fill="#0bbbef"/><path d="M30.0106 11.9787l10.1587 4.1905V7.83057L30.0106 11.9787z" fill="#017efa"/><path d="M40.1692 7.83069 20.9946.0V8.33862L30.0105 11.9788 40.1692 7.83069z" fill="#0bbbef"/><path d="M20.9946 15.6613v8.3386L40.1692 16.1692 30.0105 11.9788 20.9946 15.6613z" fill="#1239b8"/></g><defs><clipPath id="clip0"><rect width="134.392" height="24" fill="#fff"/></clipPath></defs></svg>
+        <span class="text-uppercase font-weight-bold"></span>
+      </a>
+      <ul>
+        <li class="ondat-lp-footer-header">Platform</li>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">How It Works</a></li>
+      </ul>
+      <ul>
+        <li class="ondat-lp-footer-header">Teams</li>
+        <li><a href="#">Developement</a></li>
+        <li><a href="#">DevOps & SRE</a></li>
+      </ul>
+      <ul>
+        <li class="ondat-lp-footer-header">Solutions</li>
+        <li><a href="#">Stateful Apps</a></li>
+        <li><a href="#">Kubernetes Distros</a></li>
+      </ul>
+      <ul>
+        <li class="ondat-lp-footer-header">Blog</li>
+      </ul>
+      <ul>
+        <li class="ondat-lp-footer-header">Contact Us</li>
+      </ul>
+    </div>
+    <div class="ondat-lp-footer-wrapper-right"></div>
+  </div>
+</div>
 
-          <div class="footer-nav-wrap footer-nav-wrap-1">
-            <div class="col-sm-6">
-              <div class="footer-nav-column"><h3 class="widget-title">Product</h3>
-                <div class="menu-footer-product-container">
-                  <ul id="menu-footer-product" class="menu">
-                    <li id="menu-item-3818" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3818"><a href="https://storageos.com/product" data-ps2id-api="true">Overview</a></li>
-                    <li id="menu-item-3817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3817"><a href="https://storageos.com/features" data-ps2id-api="true">Features</a></li>
-                    <li id="menu-item-3891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3891"><a href="https://storageos.com/why-storageos" data-ps2id-api="true">Why StorageOS</a></li>
-                    <li id="menu-item-3892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3892"><a href="https://storageos.com/how-it-works" data-ps2id-api="true">How it works</a></li>
-                    <li id="menu-item-3819" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3819"><a href="https://storageos.com/use-cases" data-ps2id-api="true">Use cases</a></li>
-                    <li id="menu-item-4616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4616"><a href="https://storageos.com/support" data-ps2id-api="true">Support</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+  #ondat-lp-footer {
+    background-color: #f8f9ff;
+    padding: 120px 0;
+  }
+  .ondat-lp-footer-wrapper {
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+  }
+  .ondat-lp-footer-wrapper-left {
+    display: flex;
+  }
 
-            <div class="col-sm-6">
-              <div class="footer-nav-column"><h3 class="widget-title">Solutions</h3>
-                <div class="menu-footer-solutions-container">
-                  <ul id="menu-footer-solutions" class="menu">
-                    <li id="menu-item-3894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3894"><a href="https://storageos.com/developers" data-ps2id-api="true">Developers</a></li>
-                    <li id="menu-item-3895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3895"><a href="https://storageos.com/infrastructure-managers" data-ps2id-api="true">Infrastructure Managers</a></li>
-                    <li id="menu-item-3893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3893"><a href="https://storageos.com/cloud" data-ps2id-api="true">Cloud</a></li>
-                  </ul>
-                </div>
-
-                <h3 class="widget-title">Docs</h3>
-                <div class="menu-footer-docs-container">
-                  <ul id="menu-footer-docs" class="menu">
-                    <li id="menu-item-3828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3828"><a href="https://docs.storageos.com/" data-ps2id-api="true">Overview</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="footer-nav-wrap footer-nav-wrap-2">
-            <div class="col-sm-6">
-              <div class="footer-nav-column"><h3 class="widget-title">Company</h3>
-                <div class="menu-footer-company-container">
-                  <ul id="menu-footer-company" class="menu">
-                    <li id="menu-item-3830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3830"><a href="https://storageos.com/company/#about" data-ps2id-api="true">About Us</a></li>
-                    <li id="menu-item-4123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4123"><a href="https://storageos.com/leadership" data-ps2id-api="true">Leadership</a></li>
-                    <li id="menu-item-3840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3840"><a href="https://storageos.com/careers" data-ps2id-api="true">Careers</a></li>
-                    <li id="menu-item-3907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3907"><a href="https://storageos.com/news" data-ps2id-api="true">News</a></li>
-                    <li id="menu-item-3908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3908"><a href="https://storageos.com/events" data-ps2id-api="true">Events</a></li>
-                    <li id="menu-item-4702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4702"><a href="https://storageos.com/customers" data-ps2id-api="true">Customers</a></li>
-                    <li id="menu-item-4617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4617"><a href="https://storageos.com/partners" data-ps2id-api="true">Partners</a></li>
-                    <li id="menu-item-4124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4124"><a href="https://storageos.com/contact" data-ps2id-api="true">Contact</a></li>
-                    <li id="menu-item-3924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3924"><a href="https://storageos.com/privacy" data-ps2id-api="true">Legal</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <div class="footer-nav-column"><h3 class="widget-title">Learn</h3>
-                <div class="menu-footer-learn-container">
-                  <ul id="menu-footer-learn" class="menu">
-                    <li id="menu-item-3835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3835"><a href="https://storageos.com/blog" data-ps2id-api="true">Blog</a></li>
-                    <li id="menu-item-3837" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3837"><a href="https://play.storageos.com/" data-ps2id-api="true">play.storageos.com</a></li>
-                    <li id="menu-item-3838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3838"><a href="https://storageos.com/resources" data-ps2id-api="true">Resources</a></li>
-                    <li id="menu-item-3839" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3839"><a href="https://resources.storageos.com/demo-request" data-ps2id-api="true">Get a demo</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-</footer>
+  .ondat-lp-footer-wrapper-left ul,
+  .ondat-lp-footer-wrapper-left ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .ondat-lp-footer-wrapper-left ul {
+    margin-left: 60px;
+  }
+  .ondat-lp-footer-wrapper-left ul li a {
+    text-decoration: none;
+    color: #5e6a8e;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 18px;
+    display: block;
+  }
+  .ondat-lp-footer-wrapper-left ul li.ondat-lp-footer-header {
+    font-weight: 700;
+    font-size: 14px;
+    color: #081d60;
+  }
+  .ondat-lp-footer-wrapper-right {
+  }
+</style>
 
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

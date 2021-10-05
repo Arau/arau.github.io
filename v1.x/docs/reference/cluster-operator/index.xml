@@ -89,7 +89,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;disableScheduler&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Disable StorageOS scheduler&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Disable Ondat scheduler&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -104,8 +104,13 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;forceTCMU&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Forces TCMU to be enabled or causes StorageOS to abort startup&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Forces TCMU to be enabled or causes Ondat to abort startup&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.apiManagerContainer&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Ondat API Manager container image&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/api-manager:v1.0.0&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.csiClusterDriverRegistrarContainer&lt;/code&gt;&lt;/td&gt;
@@ -139,23 +144,23 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.initContainer&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;StorageOS init container image&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/init:1.0.0&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Ondat init container image&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/init:2.1.0&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.kubeschedulerContainer&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.kubeSchedulerContainer&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Kube scheduler container image&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Default dependent on Scheduler version&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.nfsContainer&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;StorageOS nfs container image&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Ondat nfs container image&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/nfs:1.0.0&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;images.nodeContainer&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;StorageOS node container image&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/node:1.5.3&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Ondat node container image&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos/node:1.5.4&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;ingress.annotations&lt;/code&gt;&lt;/td&gt;
@@ -253,6 +258,11 @@
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;/var/lib/kubelet/plugins/kubernetes.io~storageos&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageClassName&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;The name of the default StorageClass created for Ondat volumes&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;fast&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;tlsEtcdSecretRefName&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Secret containing etcd client certificates&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
@@ -282,7 +292,7 @@
       <description>
         
         
-        &lt;p&gt;Before deploying a StorageOS cluster, create a Secret to define the StorageOS
+        &lt;p&gt;Before deploying a Ondat cluster, create a Secret to define the Ondat
 API Username and Password in base64 encoding.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f - &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt;END
 &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;apiVersion: v1
@@ -308,7 +318,7 @@ unique, strong password.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Create a &lt;code&gt;cluster-config.yaml&lt;/code&gt; according to your needs from the examples below.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl create -f cluster-config.yaml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note that StorageOS will be deployed in &lt;code&gt;spec.namespace&lt;/code&gt; (storageos by
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note that Ondat will be deployed in &lt;code&gt;spec.namespace&lt;/code&gt; (storageos by
 default), irrespective of what NameSpace the CR is defined in.&lt;/p&gt;
 &lt;p&gt;  &lt;!-- this is a blank line --&gt;&lt;/p&gt;
 &lt;h1 id=&#34;examples&#34;&gt;Examples&lt;/h1&gt;
@@ -330,7 +340,7 @@ examples&lt;/a&gt; for full CR files.&lt;/p&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# address: &amp;#39;10.42.15.23:2379,10.42.12.22:2379,10.42.13.16:2379&amp;#39; # You can specify individual IPs of the etcd servers&lt;/span&gt;
     backend: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;etcd&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;installing-to-a-subset-of-nodes&#34;&gt;Installing to a subset of nodes&lt;/h2&gt;
-&lt;p&gt;In this case we select nodes that are workers. To make sure that StorageOS doesn&amp;rsquo;t start in Master nodes.&lt;/p&gt;
+&lt;p&gt;In this case we select nodes that are workers. To make sure that Ondat doesn&amp;rsquo;t start in Master nodes.&lt;/p&gt;
 &lt;p&gt;You can see the labels in the nodes by &lt;code&gt;kubectl get node --show-labels&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;spec:
   nodeSelectorTerms:
@@ -346,7 +356,7 @@ examples&lt;/a&gt; for full CR files.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Different provisioners and Kubernetes distributions use node labels
 differently to specify master vs workers. Node Taints are not enough to
-make sure StorageOS doesn&amp;rsquo;t start in a node. The
+make sure Ondat doesn&amp;rsquo;t start in a node. The
 &lt;a href=&#34;https://docs.storageos.com/docs/reference/clusterdiscovery&#34;&gt;JOIN&lt;/a&gt;
 variable is defined by the operator by selecting all the nodes that match the
 &lt;code&gt;nodeSelectorTerms&lt;/code&gt;.&lt;/p&gt;
@@ -390,8 +400,8 @@ data:
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#   cpu: &amp;#34;1&amp;#34;&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# limits:&lt;/span&gt;
   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;#   memory: &amp;#34;4Gi&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Limiting StorageOS can cause malfunction for IO to StorageOS volumes, therefore
-we do not currently recommend applying upper limits to resources for StorageOS
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Limiting Ondat can cause malfunction for IO to Ondat volumes, therefore
+we do not currently recommend applying upper limits to resources for Ondat
 pods.&lt;/p&gt;
 
       </description>
@@ -406,19 +416,19 @@ pods.&lt;/p&gt;
       <description>
         
         
-        &lt;h2 id=&#34;upgrade-storageos-operator-from-yaml-manifest&#34;&gt;Upgrade StorageOS operator from yaml manifest&lt;/h2&gt;
-&lt;p&gt;Upgrade the StorageOS operator using the following yaml manifest.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;kubectl apply -f https://github.com/storageos/cluster-operator/releases/download/1.5.3/storageos-operator.yaml
+        &lt;h2 id=&#34;upgrade-ondat-operator-from-yaml-manifest&#34;&gt;Upgrade Ondat operator from yaml manifest&lt;/h2&gt;
+&lt;p&gt;Upgrade the Ondat operator using the following yaml manifest.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubectl apply -f https://github.com/storageos/cluster-operator/releases/download/1.5.4/storageos-operator.yaml
 &lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
-&lt;p&gt;When you run the above command StorageOS Operator resources will be updated.
-Since, the Update Strategy of the StorageOS Operator Deployment is set to
-rolling update, a new StorageOS Operator Pod will be created. Only when
+&lt;p&gt;When you run the above command Ondat Operator resources will be updated.
+Since, the Update Strategy of the Ondat Operator Deployment is set to
+rolling update, a new Ondat Operator Pod will be created. Only when
 the new Pod enters the Running Phase will the old Pod be deleted.
-Your StorageOS Cluster will not be affected while the StorageOS
+Your Ondat Cluster will not be affected while the Ondat
 Operator is upgrading.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;upgrade-storageos-operator-using-helm&#34;&gt;Upgrade StorageOS Operator using Helm&lt;/h2&gt;
-&lt;p&gt;If you have installed the StorageOS Operator using the &lt;a href=&#34;https://github.com/storageos/charts/tree/master/stable/storageos-operator#installing-the-chart&#34;&gt;Helm Chart&lt;/a&gt;, then you can upgrade the operator using the following commands.&lt;/p&gt;
+&lt;h2 id=&#34;upgrade-ondat-operator-using-helm&#34;&gt;Upgrade Ondat Operator using Helm&lt;/h2&gt;
+&lt;p&gt;If you have installed the Ondat Operator using the &lt;a href=&#34;https://github.com/storageos/charts/tree/master/stable/storageos-operator#installing-the-chart&#34;&gt;Helm Chart&lt;/a&gt;, then you can upgrade the operator using the following commands.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ helm list
 
 NAME            REVISION        STATUS          CHART                           APP VERSION     NAMESPACE   
@@ -426,11 +436,11 @@ storageos-v1   4               DEPLOYED        storageos-operator-0.2.11       1
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;$ helm repo update
 $ helm upgrade $NAME storageos/storageos-operator
 &lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
-&lt;p&gt;When you run the above command StorageOS Operator resources will be updated.
-Since, the Update Strategy of the StorageOS Operator Deployment is set to
-rolling update, a new StorageOS Operator Pod will be created. Only when
+&lt;p&gt;When you run the above command Ondat Operator resources will be updated.
+Since, the Update Strategy of the Ondat Operator Deployment is set to
+rolling update, a new Ondat Operator Pod will be created. Only when
 the new Pod enters the Running Phase will the old Pod be deleted.
-Your StorageOS Cluster will not be affected while the StorageOS
+Your Ondat Cluster will not be affected while the Ondat
 Operator is upgrading.&lt;/p&gt;
 &lt;/blockquote&gt;
 

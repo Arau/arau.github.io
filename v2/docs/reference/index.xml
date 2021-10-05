@@ -70,7 +70,7 @@ password &lt;code&gt;storageos&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ storageos
 Storage &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; Cloud Native Applications.
 
-By using this product, you are agreeing to the terms of the the StorageOS Ltd. End
+By using this product, you are agreeing to the terms of the the Ondat Ltd. End
 User Subscription Agreement &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;EUSA&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; found at: https://storageos.com/legal/#eusa
 
 To be notified about stable releases and latest features, sign up at https://my.storageos.com.
@@ -87,23 +87,23 @@ Available Commands:
   detach      Detach a volume from its current location
   get         Fetch basic details &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; resources
   &lt;span style=&#34;color:#204a87&#34;&gt;help&lt;/span&gt;        Help about any &lt;span style=&#34;color:#204a87&#34;&gt;command&lt;/span&gt;
-  version     View version information &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; the StorageOS CLI
+  version     View version information &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; the Ondat CLI
 
 Flags:
-      --endpoints stringArray   &lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; the list of endpoints which are used when connecting to the StorageOS API &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;http://localhost:5705&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+      --endpoints stringArray   &lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; the list of endpoints which are used when connecting to the Ondat API &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;http://localhost:5705&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
   -h, --help                    &lt;span style=&#34;color:#204a87&#34;&gt;help&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; storageos
   -n, --namespace string        specifies the namespace to operate within &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; commands that require one &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;default&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
   -o, --output string           specifies the output format &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;one of &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;json yaml text&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
-      --password string         &lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; the StorageOS account password to authenticate with &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+      --password string         &lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; the Ondat account password to authenticate with &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
       --timeout duration        &lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; the timeout duration to use &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; execution of the &lt;span style=&#34;color:#204a87&#34;&gt;command&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default 5s&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
-      --use-ids                 specify existing StorageOS resources by their unique identifiers instead of by their names
-      --username string         &lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; the StorageOS account username to authenticate as &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
+      --use-ids                 specify existing Ondat resources by their unique identifiers instead of by their names
+      --username string         &lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; the Ondat account username to authenticate as &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;default &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;storageos&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt;
 
 Additional &lt;span style=&#34;color:#204a87&#34;&gt;help&lt;/span&gt; topics:
   storageos env       View documentation &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; configuration settings which can be &lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; in the environment
-  storageos exitcodes View documentation &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; the &lt;span style=&#34;color:#204a87&#34;&gt;exit&lt;/span&gt; codes used by the StorageOS CLI
+  storageos exitcodes View documentation &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; the &lt;span style=&#34;color:#204a87&#34;&gt;exit&lt;/span&gt; codes used by the Ondat CLI
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;formatting-cli-output&#34;&gt;Formatting CLI Output&lt;/h2&gt;
-&lt;p&gt;StorageOS CLI output can be formatted using the &lt;code&gt;--output&lt;/code&gt; option. The strings
+&lt;p&gt;Ondat CLI output can be formatted using the &lt;code&gt;--output&lt;/code&gt; option. The strings
 that are passed to &lt;code&gt;--output&lt;/code&gt; are &amp;lsquo;json&amp;rsquo;, &amp;lsquo;yaml&amp;rsquo; or &amp;lsquo;text&amp;rsquo;.&lt;/p&gt;
 &lt;h2 id=&#34;cheatsheet&#34;&gt;Cheatsheet&lt;/h2&gt;
 &lt;table&gt;
@@ -122,7 +122,7 @@ that are passed to &lt;code&gt;--output&lt;/code&gt; are &amp;lsquo;json&amp;rsq
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;attach&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;volume&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Attach Volume to a node.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -178,21 +178,21 @@ that are passed to &lt;code&gt;--output&lt;/code&gt; are &amp;lsquo;json&amp;rsq
         
         &lt;p&gt;Our cluster operator is a &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/&#34;&gt;Kubernetes native
 application&lt;/a&gt;
-developed to deploy and configure StorageOS clusters, and assist with
+developed to deploy and configure Ondat clusters, and assist with
 maintenance operations. We recommend its use for standard installations.&lt;/p&gt;
 &lt;p&gt;The operator acts as a Kubernetes controller that watches the &lt;code&gt;StorageOSCluster&lt;/code&gt;
-CR (Custom Resource). Once the controller is ready, a StorageOS cluster definition can be
-created. The operator will deploy a StorageOS cluster based on the
+CR (Custom Resource). Once the controller is ready, a Ondat cluster definition can be
+created. The operator will deploy a Ondat cluster based on the
 configuration specified in the cluster definition.&lt;/p&gt;
 &lt;p&gt;You can find the source code in the &lt;a href=&#34;https://github.com/storageos/cluster-operator&#34;&gt;cluster-operator
 repository&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Install the operator following orchestrator specific procedure.&lt;/p&gt;
-&lt;p&gt;To deploy a StorageOS cluster you will need to fulfil the following steps.&lt;/p&gt;
+&lt;p&gt;To deploy a Ondat cluster you will need to fulfil the following steps.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Install Etcd&lt;/li&gt;
 &lt;li&gt;Install operator&lt;/li&gt;
 &lt;li&gt;Create &lt;code&gt;storageos-api&lt;/code&gt; Secret&lt;/li&gt;
-&lt;li&gt;Create a CR (Custom Resource) to deploy StorageOS&lt;/li&gt;
+&lt;li&gt;Create a CR (Custom Resource) to deploy Ondat&lt;/li&gt;
 &lt;/ol&gt;
 
       </description>
@@ -212,7 +212,7 @@ and can write, read on for the process for submitting your contributions. If you
 guide is published, you&amp;rsquo;ll receive $250 per article by PayPal.&lt;/p&gt;
 &lt;h2 id=&#34;content-guidelines&#34;&gt;Content guidelines&lt;/h2&gt;
 &lt;p&gt;A guide contains step by step instructions for how to accomplish a specific
-task using StorageOS. To be accepted, guides must be:&lt;/p&gt;
+task using Ondat. To be accepted, guides must be:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Written in English.&lt;/li&gt;
 &lt;li&gt;Relevant, accurate and complete.&lt;/li&gt;
@@ -233,14 +233,14 @@ this, your submission will be reviewed internally for about another week.&lt;/p&
 send your submission title and PayPal account information. Non-response will be
 taken as a go-ahead to publish.&lt;/p&gt;
 &lt;h2 id=&#34;legal&#34;&gt;Legal&lt;/h2&gt;
-&lt;p&gt;COPYRIGHT OWNERSHIP. The StorageOS Guides &amp;amp; Tutorials repository is licensed
+&lt;p&gt;COPYRIGHT OWNERSHIP. The Ondat Guides &amp;amp; Tutorials repository is licensed
 under the &lt;a href=&#34;https://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International&lt;/a&gt;
 (CC BY-NC-SA 4.0) license.&lt;/p&gt;
-&lt;p&gt;CREDIT. Nothing contained in this Agreement shall be deeded to require StorageOS
-to use the Work, or any part thereof, in connection with StorageOS Guides &amp;amp;
+&lt;p&gt;CREDIT. Nothing contained in this Agreement shall be deeded to require Ondat
+to use the Work, or any part thereof, in connection with Ondat Guides &amp;amp;
 Tutorials or otherwise. Credit for the Work shall read, “Contributed by &lt;em&gt;writer’s
 name&lt;/em&gt;.”&lt;/p&gt;
-&lt;p&gt;PAYMENT. Upon publication of a submission to the StorageOS Guides &amp;amp; Tutorials
+&lt;p&gt;PAYMENT. Upon publication of a submission to the Ondat Guides &amp;amp; Tutorials
 Repository, the writer will be paid the sum of USD $250.00 as an electronic
 payment.&lt;/p&gt;
 
@@ -256,7 +256,7 @@ payment.&lt;/p&gt;
       <description>
         
         
-        &lt;p&gt;StorageOS provides a GUI for cluster and volume management.&lt;/p&gt;
+        &lt;p&gt;Ondat provides a GUI for cluster and volume management.&lt;/p&gt;
 &lt;p&gt;The GUI is available at port 5705 on any of the nodes in the cluster. Initially
 you can log in as the default administrator, with the username and password
 from the &lt;code&gt;storageos-api&lt;/code&gt; Secret. By default &lt;code&gt;storageos&lt;/code&gt;, &lt;code&gt;storageos&lt;/code&gt;.&lt;/p&gt;
@@ -292,11 +292,11 @@ Ingress rule. i.e &lt;code&gt;kubectl -n kube-system port-forward svc/storageos 
       <description>
         
         
-        &lt;p&gt;StorageOS has requirements for the configuration of host systems. As such,
-StorageOS starts an init container that sets the system configuration for
-StorageOS. The container also manages configuration changes required when
-upgrading StorageOS versions.&lt;/p&gt;
-&lt;p&gt;The container belongs to the DaemonSet that the &lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/&#34;&gt;StorageOS Cluster
+        &lt;p&gt;Ondat has requirements for the configuration of host systems. As such,
+Ondat starts an init container that sets the system configuration for
+Ondat. The container also manages configuration changes required when
+upgrading Ondat versions.&lt;/p&gt;
+&lt;p&gt;The container belongs to the DaemonSet that the &lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/&#34;&gt;Ondat Cluster
 Operator&lt;/a&gt; starts when a
 &lt;code&gt;StorageOSCluster&lt;/code&gt; resource is created. The &lt;code&gt;storageos-init&lt;/code&gt; container is
 executed as an
@@ -308,7 +308,7 @@ starting.&lt;/p&gt;
 &lt;p&gt;The code responsible for fulfilling the requirements is based on a Script
 Framework.&lt;/p&gt;
 &lt;p&gt;The script framework executes a set of scripts, performing checks,
-verifications and other procedures needed for StorageOS to be able to start.
+verifications and other procedures needed for Ondat to be able to start.
 The scripts stdout and stderr are written to the stdout and stderr of the init
 app. The container logs contain all the logs of the individual scripts that
 run. The exit statuses of the scripts are used to determine initialization
@@ -320,7 +320,7 @@ failure to Kubernetes, showing the status of the Pod as &lt;code&gt;Init:Err&lt;
 be used:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl -n kube-system logs -l &lt;span style=&#34;color:#000&#34;&gt;app&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;storageos,kind&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;daemonset -c storageos-init
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For more details, check the
-&lt;a href=&#34;https://github.com/storageos/init&#34;&gt;StorageOS init container project&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/storageos/init&#34;&gt;Ondat init container project&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;scripts-executed&#34;&gt;Scripts executed&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;storageos-init&lt;/code&gt; container executes the following scripts.&lt;/p&gt;
 &lt;ul&gt;
@@ -332,7 +332,7 @@ be used:&lt;/p&gt;
     </item>
     
     <item>
-      <title>Docs: StorageOS Feature labels</title>
+      <title>Docs: Ondat Feature labels</title>
       <link>https://arau.github.io/v2/docs/reference/labels/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -341,13 +341,13 @@ be used:&lt;/p&gt;
         
         
         &lt;p&gt;Feature labels are a powerful and flexible way to control storage features.&lt;/p&gt;
-&lt;p&gt;Labels can be applied to various StorageOS artefacts. Applying specific feature
+&lt;p&gt;Labels can be applied to various Ondat artefacts. Applying specific feature
 labels triggers compression, replication and other storage features. No feature
 labels are present by default.&lt;/p&gt;
-&lt;h2 id=&#34;storageos-node-labels&#34;&gt;StorageOS Node labels&lt;/h2&gt;
-&lt;p&gt;Nodes do not have any feature labels present by default.  When StorageOS is run
+&lt;h2 id=&#34;ondat-node-labels&#34;&gt;Ondat Node labels&lt;/h2&gt;
+&lt;p&gt;Nodes do not have any feature labels present by default.  When Ondat is run
 within Kubernetes, the &lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/&#34;&gt;Cluster Operator&lt;/a&gt; syncs any node labels
-set on Kubernetes nodes within StorageOS.  Node labels may also be set with the
+set on Kubernetes nodes within Ondat.  Node labels may also be set with the
 CLI or UI.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -368,11 +368,13 @@ CLI or UI.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;You can set the computeonly label on the Kubernetes node and the label will be
-sync&amp;rsquo;d to the StorageOS node (labels take an eventual consistency
+sync&amp;rsquo;d to the Ondat node (labels take an eventual consistency
 reconciliation time of ~1min).&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kubectl label node &lt;span style=&#34;color:#000&#34;&gt;$NODE&lt;/span&gt; storageos.com/computeonly&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;storageos-volume-labels&#34;&gt;StorageOS Volume labels&lt;/h2&gt;
-&lt;p&gt;Volumes do not have any feature labels present by default&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ondat-volume-labels&#34;&gt;Ondat Volume labels&lt;/h2&gt;
+&lt;p&gt;Volumes do not have any feature labels present by default. WARNING: The caching
+and compression labels can only apply during provision time, they can&amp;rsquo;t be
+changed during execution.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -399,7 +401,7 @@ reconciliation time of ~1min).&lt;/p&gt;
 &lt;td align=&#34;left&#34;&gt;Replication&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;&lt;code&gt;storageos.com/replicas&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;integers [0, 5]&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Replicates entire volume across nodes. Typically 1 replica is sufficient (2 copies of the data); more than 2 replicas is not recommended.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Replicates entire volume across nodes. Typically 1 replica is sufficient (2 copies of the data); more than 2 replicas is not recommended. Once applied, this setting can only be changed in the Ondat UI or CLI.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -429,17 +431,16 @@ precedence over the StorageClass parameters.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;storage.k8s.io/v1&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;StorageClass&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;storageos-replicated&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;ondat-replicated&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;parameters&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;fsType&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;ext4&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;pool&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;default&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;csi.storage.k8s.io/fstype&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;ext4&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;storageos.com/replicas&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Label   &amp;lt;--------&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;provisioner&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;storageos&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# CSI driver (recommended) &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Option 3:&lt;/p&gt;
-&lt;p&gt;Once a PVC is created, you can update the Labels in StorageOS both in the
-UI or CLI. Those labels are going to be visible only for StorageOS and will
+&lt;p&gt;Once a PVC is created, you can update the Labels in Ondat both in the
+UI or CLI. Those labels are going to be visible only for Ondat and will
 not be synced to the Kubernetes resource.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -456,40 +457,160 @@ not be synced to the Kubernetes resource.&lt;/p&gt;
       <description>
         
         
-        &lt;p&gt;A newly installed StorageOS cluster does not include a licence. A cluster can
+        &lt;p&gt;A newly installed Ondat cluster does not include a licence. A cluster can
 run unlicensed for 24 hours. After that, new operations such as volume
 provisioning or adding nodes are not permitted. Normal functioning of the
-cluster can be unlocked by applying a Free Developer licence.&lt;/p&gt;
+cluster can be unlocked by applying a Free Community licence.&lt;/p&gt;
 &lt;p&gt;To learn how to apply a licence to your cluster, check the &lt;a href=&#34;https://arau.github.io/v2/docs/operations/licensing/&#34;&gt;operations
 licensing&lt;/a&gt; page.&lt;/p&gt;
-&lt;h2 id=&#34;free-developer-licence&#34;&gt;Free Developer licence&lt;/h2&gt;
-&lt;p&gt;The developer licence only requires the user to register and issue a
-licence through StorageOS.&lt;/p&gt;
-&lt;p&gt;The developer licence is free and grants a licence for a 5 node StorageOS
+&lt;h2 id=&#34;free-community-licence&#34;&gt;Free Community licence&lt;/h2&gt;
+&lt;p&gt;The community licence only requires the user to register and issue a
+licence through Ondat.&lt;/p&gt;
+&lt;p&gt;The community licence is free and grants a licence for a 5 node Ondat
 cluster with 5TB of provisioned capacity. It is designed to enable basic cloud
 native workflows in Kubernetes that require the persistence of stateful
 application data. Dynamic provisioning, distributed access to data and high
 availability of volumes through synchronous replication and automatic failover
-are some of the features that are available under the developer licence.&lt;/p&gt;
-&lt;p&gt;The free developer licence includes community support through &lt;a href=&#34;https://slack.storageos.com&#34;&gt;our public Slack
+are some of the features that are available under the community licence.&lt;/p&gt;
+&lt;p&gt;The free community licence includes community support through &lt;a href=&#34;https://slack.storageos.com&#34;&gt;our public Slack
 channel.&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;commercial-licences&#34;&gt;Commercial licences&lt;/h2&gt;
 &lt;p&gt;For information on our commercial offerings, including support, please contact
 &lt;a href=&#34;mailto:sales@storageos.com&#34;&gt;sales@storageos.com&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;note-about-capacity-limits&#34;&gt;Note about capacity limits&lt;/h2&gt;
-&lt;p&gt;Some StorageOS licences have limits on capacity. StorageOS allows provisioning
+&lt;p&gt;Some Ondat licences have limits on capacity. Ondat allows provisioning
 volumes until the limit of the licence is reached. Only the size of the volume
 requested by the Persistent Volume Claim counts for the licence limit,
 regardless whether of whether the volume has replication enabled.&lt;/p&gt;
 &lt;p&gt;Once the licence limit is reached, new volumes are not able to provision unless
 provisioned capacity is released, i.e deleting volumes. That behaviour is not
-tight to the capacity of the backend disks on your nodes.&lt;/p&gt;
+tied to the capacity of the backend disks on your nodes.&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Docs: StorageOS Open Source Software Attribution Notice</title>
+      <title>Docs: Ondat Telemetry</title>
+      <link>https://arau.github.io/v2/docs/reference/telemetry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arau.github.io/v2/docs/reference/telemetry/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Ondat collects telemetry and error reports from Ondat clusters via two
+different methods for two different purposes.&lt;/p&gt;
+&lt;h2 id=&#34;telemetry&#34;&gt;Telemetry&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Telemetry is made up a DNS version check query and a once per day report.&lt;/li&gt;
+&lt;li&gt;Error reporting is the sentry.io crash dump reporting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sentryio&#34;&gt;sentry.io&lt;/h2&gt;
+&lt;p&gt;Ondat sends crash reports to &lt;a href=&#34;https://sentry.io&#34;&gt;sentry.io&lt;/a&gt;. This
+information helps our developers monitor and fix crashes. Information is sent
+to sentry.io when a process inside the Ondat container
+crashes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The crash report contains the signal that triggered the shutdown (e.g. SIGSEGV),
+the exit code and whether or not the crash generated a core dump.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All Ondat clusters with a routable connection to the internet will send crash
+reports to sentry.io over tcp/443. Ondat respects environment variables that
+&lt;a href=&#34;https://golang.org/pkg/net/http/#ProxyFromEnvironment&#34;&gt;ProxyFromEnvironment&lt;/a&gt;
+uses.&lt;/p&gt;
+&lt;p&gt;An exhaustive list of information included in the crash report is below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ondat version&lt;/li&gt;
+&lt;li&gt;Crash description string&lt;/li&gt;
+&lt;li&gt;Anonymized Cluster ID&lt;/li&gt;
+&lt;li&gt;Anonymized Node ID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dns-query&#34;&gt;DNS Query&lt;/h2&gt;
+&lt;p&gt;Ondat will perform a &amp;ldquo;latest version check&amp;rdquo; using a DNS query in order to
+inform administrators that a new version is available. Ondat will also send
+anonymized node ids, cluster id and Ondat version information to Ondat
+using a DNS query. The information that we send in the query is encoded as well
+as being anonymized. This query allows us to inform Cluster admins when
+Ondat upgrades are available in the Ondat GUI and in the logs.&lt;/p&gt;
+&lt;p&gt;The DNS query includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Anonymized Ondat Cluster ID&lt;/li&gt;
+&lt;li&gt;Anonymized Ondat node ID&lt;/li&gt;
+&lt;li&gt;Ondat version number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;once-per-day-report&#34;&gt;Once Per Day Report&lt;/h2&gt;
+&lt;p&gt;The once per day report contains information about the Ondat cluster and
+Kubernetes versions to help Ondat focus our development efforts on the most
+popular platforms. The once per day data is encrypted and sent to a Ondat
+telemetry server so it is never processed outside of Ondat assets.&lt;/p&gt;
+&lt;p&gt;An exhaustive list of information included in the once per day report is below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;api_call_metrics&lt;/li&gt;
+&lt;li&gt;cluster_disable_crash_reporting&lt;/li&gt;
+&lt;li&gt;cluster_disable_version_check&lt;/li&gt;
+&lt;li&gt;cluster_log_format&lt;/li&gt;
+&lt;li&gt;cluster_log_level&lt;/li&gt;
+&lt;li&gt;cluster_tls_provided&lt;/li&gt;
+&lt;li&gt;k8s_distribution&lt;/li&gt;
+&lt;li&gt;k8s_in_k8s&lt;/li&gt;
+&lt;li&gt;k8s_scheduler_extender_enabled&lt;/li&gt;
+&lt;li&gt;k8s_version&lt;/li&gt;
+&lt;li&gt;node_available_bytes&lt;/li&gt;
+&lt;li&gt;node_capacity&lt;/li&gt;
+&lt;li&gt;node_crash_files_on_disk&lt;/li&gt;
+&lt;li&gt;node_created_at_time&lt;/li&gt;
+&lt;li&gt;node_etcd_config&lt;/li&gt;
+&lt;li&gt;node_etcd_namespacing_enabled&lt;/li&gt;
+&lt;li&gt;node_etcd_tls_enabled&lt;/li&gt;
+&lt;li&gt;node_free_bytes&lt;/li&gt;
+&lt;li&gt;node_health&lt;/li&gt;
+&lt;li&gt;node_http_tls_enabled&lt;/li&gt;
+&lt;li&gt;node_id&lt;/li&gt;
+&lt;li&gt;node_labels&lt;/li&gt;
+&lt;li&gt;node_status&lt;/li&gt;
+&lt;li&gt;node_storageos_version&lt;/li&gt;
+&lt;li&gt;node_system_clock_time&lt;/li&gt;
+&lt;li&gt;node_total_bytes&lt;/li&gt;
+&lt;li&gt;node_version&lt;/li&gt;
+&lt;li&gt;volume_fs_type&lt;/li&gt;
+&lt;li&gt;volume_id&lt;/li&gt;
+&lt;li&gt;volume_labels&lt;/li&gt;
+&lt;li&gt;volume_master_attach&lt;/li&gt;
+&lt;li&gt;volume_master_delete_deployment&lt;/li&gt;
+&lt;li&gt;volume_master_detach&lt;/li&gt;
+&lt;li&gt;volume_master_failover_deployment&lt;/li&gt;
+&lt;li&gt;volume_master_promote&lt;/li&gt;
+&lt;li&gt;volume_master_provision&lt;/li&gt;
+&lt;li&gt;volume_master_recover_replica&lt;/li&gt;
+&lt;li&gt;volume_master_trigger_rejoin&lt;/li&gt;
+&lt;li&gt;volume_metrics&lt;/li&gt;
+&lt;li&gt;volume_placement_strategy&lt;/li&gt;
+&lt;li&gt;volume_provision_source_user_agent&lt;/li&gt;
+&lt;li&gt;volume_replica_delete_deployment&lt;/li&gt;
+&lt;li&gt;volume_replica_failover_deployment&lt;/li&gt;
+&lt;li&gt;volume_replica_promote&lt;/li&gt;
+&lt;li&gt;volume_replica_provision&lt;/li&gt;
+&lt;li&gt;volume_replicas&lt;/li&gt;
+&lt;li&gt;volume_replica_trigger_rejoin&lt;/li&gt;
+&lt;li&gt;volume_size_bytes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;disable-telemetry&#34;&gt;Disable Telemetry&lt;/h2&gt;
+&lt;p&gt;It is possible to disable telemetry using the GUI, CLI, API, environment
+variables or the Ondat Cluster Spec.&lt;/p&gt;
+&lt;h4 id=&#34;ondat-cluster-spec&#34;&gt;Ondat Cluster Spec&lt;/h4&gt;
+&lt;p&gt;Disable telemetry explicitly through the configurable &lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/configuration/&#34;&gt;spec parameters&lt;/a&gt; of the
+StorageOSCluster custom resource.&lt;/p&gt;
+&lt;h4 id=&#34;environment-variables&#34;&gt;Environment Variables&lt;/h4&gt;
+&lt;p&gt;You can use the following environmental variables to disable or enable telemetry.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;DISABLE_VERSION_CHECK   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Disable the DNS version check&lt;/span&gt;
+DISABLE_TELEMETRY       &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Disable the once per day reporting&lt;/span&gt;
+DISABLE_ERROR_REPORTING &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Disable sentry.io crash reports&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Ondat Open Source Software Attribution Notice</title>
       <link>https://arau.github.io/v2/docs/reference/open_source_attribution/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -497,7 +618,7 @@ tight to the capacity of the backend disks on your nodes.&lt;/p&gt;
       <description>
         
         
-        &lt;p&gt;The following document lists the open source software attributions in the StorageOS Control Plane, Data Plane and CLI.&lt;/p&gt;
+        &lt;p&gt;The following document lists the open source software attributions in the Ondat Control Plane, Data Plane and CLI.&lt;/p&gt;
 &lt;h2 id=&#34;cnats&#34;&gt;CNats&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;The MIT License (MIT)
 
@@ -5288,24 +5409,141 @@ limitations under the License.
       <description>
         
         
-        &lt;p&gt;We recommend always using &amp;ldquo;tagged&amp;rdquo; versions of StorageOS rather than &amp;ldquo;latest&amp;rdquo;,
+        &lt;p&gt;We recommend always using &amp;ldquo;tagged&amp;rdquo; versions of Ondat rather than &amp;ldquo;latest&amp;rdquo;,
 and to perform upgrades only after reading the release notes.&lt;/p&gt;
-&lt;p&gt;The latest tagged release is &lt;code&gt;v2.0.0&lt;/code&gt;, available from
-&lt;a href=&#34;https://hub.docker.com/r/storageos/node/&#34;&gt;Docker Hub&lt;/a&gt; as &lt;code&gt;storageos/node:v2.0.0&lt;/code&gt;, or via the &lt;a href=&#34;https://github.com/storageos/charts&#34;&gt;Helm
-Chart&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The latest tagged release is &lt;code&gt;v2.0.0&lt;/code&gt;. For
+installation instructions please see our
+&lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/install&#34;&gt;Install&lt;/a&gt; page.&lt;/p&gt;
 &lt;p&gt;The latest CLI release is &lt;code&gt;v2.0.0&lt;/code&gt;, available from
 &lt;a href=&#34;https://github.com/storageos/go-cli/releases&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;upgrading&#34;&gt;Upgrading&lt;/h1&gt;
 &lt;p&gt;To upgrade from version 1.x to 2.x, please contact &lt;a href=&#34;https://arau.github.io/v2/docs/support/&#34;&gt;support&lt;/a&gt; for assistance.&lt;/p&gt;
-&lt;h2 id=&#34;v200---released-2020-05-05&#34;&gt;v2.0.0 - Released 2020-05-05&lt;/h2&gt;
+&lt;h2 id=&#34;v220---released-2020-08-18&#34;&gt;v2.2.0 - Released 2020-08-18&lt;/h2&gt;
+&lt;p&gt;This release focuses on performance. We analysed existing performance
+characteristics across a variety of real-world use cases and ended up with
+improvements across the board. Of particular note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sequential reads have improved by up to 130%&lt;/li&gt;
+&lt;li&gt;Sequential writes have improved by up to 737%&lt;/li&gt;
+&lt;li&gt;Random reads have improved by up to 45%&lt;/li&gt;
+&lt;li&gt;Random writes have improved by up to 135%&lt;/li&gt;
+&lt;li&gt;I/O for large block sizes (128K) has improved by up to 353%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We are extremely proud of our performance and we love to talk about it. Have a
+look at the &lt;a href=&#34;https://arau.github.io/v2/docs/self-eval/#Benchmarking&#34;&gt;Benchmarking&lt;/a&gt; section of the self-evaluation guide and consider sharing
+your results. Our PRE engineers are available to discuss in our &lt;a href=&#34;https://storageos.slack.com&#34;&gt;slack
+channel&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;new&#34;&gt;New&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;operator: StorageOS containers now run in the &lt;code&gt;kube-system&lt;/code&gt; namespace by
-default to allow the &lt;code&gt;system-node-critical&lt;/code&gt; priority class to be set.  This
-instructs Kubernetes to start StorageOS before application Pods, and to evict
-StorageOS only after application Pods have finished.  This setting was
+&lt;li&gt;
+&lt;p&gt;Data engine revamp focused on provable consistency and performance. Key
+characteristics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Metadata is stored in an optimised index, lowering I/O latency and improving
+performance for all workloads.&lt;/li&gt;
+&lt;li&gt;Large block reads/writes are now be handled in a single operation.
+Applications like Kafka will go much faster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On-disk compression is now disabled by default as in most scenarios this
+offers better performance. To enable on-disk compression for a specific
+workload, see &lt;a href=&#34;https://arau.github.io/v2/docs/concepts/compression&#34;&gt;compression&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;improved&#34;&gt;Improved&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;dataplane: The number of I/O threads are now determined by the number of
+processing cores available.  This improves scalability and performance on
+larger servers.&lt;/li&gt;
+&lt;li&gt;ha: Improve partition tolerance behaviour when a volume master that has lost
+its connection to etcd rejoins.&lt;/li&gt;
+&lt;li&gt;ha: Allow replicas in unhealthy states to be remediated and re-used while
+maintaining partition tolerance.&lt;/li&gt;
+&lt;li&gt;ha: When a master fails and the new master is not yet available, introduce a
+back-off to the redirection logic to avoid spamming the logs with connection
+failure errors.&lt;/li&gt;
+&lt;li&gt;ha: Ignore health advertisements for local node. Local nodes are handled
+directly.&lt;/li&gt;
+&lt;li&gt;node delete: Only refuse to delete a node if the node health can be
+authoritatively verified to be in use.&lt;/li&gt;
+&lt;li&gt;api: Increase HTTP server write timeout.&lt;/li&gt;
+&lt;li&gt;cli/ui: Allow partial diagnostic bundle downloads.&lt;/li&gt;
+&lt;li&gt;ui: Namespace dropdown can now be scrolled.&lt;/li&gt;
+&lt;li&gt;ui: Add &amp;ldquo;Job title&amp;rdquo; to UI licence form.&lt;/li&gt;
+&lt;li&gt;logging: Log version at startup at INFO level.&lt;/li&gt;
+&lt;li&gt;logging: Lower verbosity of SCSI warnings that do not apply to Ondat.&lt;/li&gt;
+&lt;li&gt;diagnostics: Include logs that have been rotated.&lt;/li&gt;
+&lt;li&gt;diagnostics: Bundle collection across providers is now done in parallel.&lt;/li&gt;
+&lt;li&gt;build: Update base image to RHEL 8.2.&lt;/li&gt;
+&lt;li&gt;operator: Removed DB migration utility required for v1.3 -&amp;gt; v1.4 upgrades.&lt;/li&gt;
+&lt;li&gt;operator: Automatically refreshes Ondat API token without failing
+requests when the token expires.&lt;/li&gt;
+&lt;li&gt;operator: Updated CSI attacher and provisioner to latest upstream.&lt;/li&gt;
+&lt;li&gt;operator: Remove &lt;code&gt;cluster.local&lt;/code&gt; suffix on Pod scheduler service address.
+This allows the scheduler to work in clusters with custom DNS configuration.&lt;/li&gt;
+&lt;li&gt;operator: Defaults are now set for most CSI configuration options in the
+StorageOSCluster custom resource.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fixed&#34;&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;csi: When unmount request is received for a volume that has already been
+unmounted, return success.&lt;/li&gt;
+&lt;li&gt;csi: Verify volume is attached on the node before mounting it.&lt;/li&gt;
+&lt;li&gt;xfs: Support older RHEL kernels which have an XFS library that does not
+allow reflinks/dedupe.&lt;/li&gt;
+&lt;li&gt;dataplane: Reserve 1GiB of capacity on the target disk to allow manual cleanup
+operations, rather than filling target disk to capacity.&lt;/li&gt;
+&lt;li&gt;operator: In some cases &lt;code&gt;/var/lib/storageos&lt;/code&gt; could fail to unmount cleanly
+after a restart. This resulted in multiple entries in &lt;code&gt;/proc/mounts&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;v210---released-2020-06-26&#34;&gt;v2.1.0 - Released 2020-06-26&lt;/h2&gt;
+&lt;h3 id=&#34;new-1&#34;&gt;New&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;csi: Volume expansion now supported in offline mode. To expand a volume,
+stop any workloads accessing the volume, then edit the PVC to increase the
+capacity. For more information, see our &lt;a href=&#34;https://arau.github.io/v2/docs/operations/resize&#34;&gt;Volume
+Resize&lt;/a&gt; operations page and the &lt;a href=&#34;https://kubernetes-csi.github.io/docs/volume-expansion.html&#34;&gt;&lt;code&gt;CSI Volume Expansion&lt;/code&gt;&lt;/a&gt;
+page.&lt;/li&gt;
+&lt;li&gt;api: Volume configuration including replica count can now be updated while
+the volume is in use. Other updateable fields include labels and
+description.&lt;/li&gt;
+&lt;li&gt;failover: Before determining that a node is offline and performing recovery
+operations, the I/O path is also verified. This provides more robust failure
+detection and ensures that nodes that are still responding to I/O do not get
+replaced. This I/O path verification is in addition to the gossip-based
+failure detection.&lt;/li&gt;
+&lt;li&gt;operator: Default tolerations are now set for the Ondat node container.
+This helps ensure that the Ondat node container does not get evicted when
+the node is running low on resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;improved-1&#34;&gt;Improved&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;api: Added checks to prevent deletion of a node with active volumes, or if it
+is the master of at least one volume. This helps prevent orphaned volumes.&lt;/li&gt;
+&lt;li&gt;cli: Add an &lt;code&gt;--offline-delete&lt;/code&gt; flag to allow removal of volumes whose master
+and replica nodes are offline. This allows cleanup of orphaned volumes.&lt;/li&gt;
+&lt;li&gt;ui: Add an offline volume delete option.&lt;/li&gt;
+&lt;li&gt;ui: Volumes can now be detached from the UI.&lt;/li&gt;
+&lt;li&gt;cli: Labels are no longer truncated.&lt;/li&gt;
+&lt;li&gt;api: When a new node is added to the cluster, its capacity is available to use
+immediately.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fixed-1&#34;&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ui: Favicon was missing.&lt;/li&gt;
+&lt;li&gt;ui: Duplicate volumes could be shown on the node details page.&lt;/li&gt;
+&lt;li&gt;operator: During uninstall a ClusterRoleBinding was not removed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;v200---released-2020-05-05&#34;&gt;v2.0.0 - Released 2020-05-05&lt;/h2&gt;
+&lt;h3 id=&#34;new-2&#34;&gt;New&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;operator: Ondat containers now run in the &lt;code&gt;kube-system&lt;/code&gt; namespace by
+default to allow the &lt;code&gt;system-node-critical&lt;/code&gt; priority class to be set. This
+instructs Kubernetes to start Ondat before application Pods, and to evict
+Ondat only after application Pods have finished. This setting was
 previously recommended in documentation; it is now the default.&lt;/li&gt;
-&lt;li&gt;operator: StorageOS CSI helper containers now run as privileged.  This ensures
+&lt;li&gt;operator: Ondat CSI helper containers now run as privileged. This ensures
 that the CSI endpoint can be seen on systems with SELinux enabled.&lt;/li&gt;
 &lt;li&gt;ui: replication progress for new or re-joining replicas is now displayed.&lt;/li&gt;
 &lt;li&gt;ui: show warning for unlicensed clusters.&lt;/li&gt;
@@ -5325,9 +5563,9 @@ that the CSI endpoint can be seen on systems with SELinux enabled.&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;licence: removed the default licence expiry date added for &lt;code&gt;v2.0.0-rc.1&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;improved&#34;&gt;Improved&lt;/h3&gt;
+&lt;h3 id=&#34;improved-2&#34;&gt;Improved&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;dataplane: improved retry behaviour for network IO.&lt;/li&gt;
+&lt;li&gt;dataplane: improved retry behaviour for network I/O.&lt;/li&gt;
 &lt;li&gt;cli: &amp;ldquo;get volumes&amp;rdquo; for all namespaces should be done in parallel.&lt;/li&gt;
 &lt;li&gt;cli: help text document config file&lt;/li&gt;
 &lt;li&gt;ui: link node name and get to node details on the volume details page.&lt;/li&gt;
@@ -5346,136 +5584,16 @@ that the CSI endpoint can be seen on systems with SELinux enabled.&lt;/li&gt;
 &lt;li&gt;scheduler: return error for namespace/volume not found&lt;/li&gt;
 &lt;li&gt;dataplane: start gRPC threads separately from rest of the supervisor.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;fixed&#34;&gt;Fixed&lt;/h3&gt;
+&lt;h3 id=&#34;fixed-2&#34;&gt;Fixed&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;ui: centre licence types.&lt;/li&gt;
 &lt;li&gt;ui: capacity in ui is per namespace.&lt;/li&gt;
 &lt;li&gt;cli: fail gracefully if missing some output details (i.e. no node exists for id).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;v200-rc1---released-2020-03-31&#34;&gt;v2.0.0-rc.1 - Released 2020-03-31&lt;/h2&gt;
-&lt;p&gt;Initial release of version 2.x.  See &lt;a href=&#34;https://storageos.com/storageos-2-0-release-blog&#34;&gt;StorageOS v2.0 Release
+&lt;p&gt;Initial release of version 2.x. See &lt;a href=&#34;https://storageos.com/storageos-2-0-release-blog&#34;&gt;Ondat v2.0 Release
 Blog&lt;/a&gt; for details.&lt;/p&gt;
 
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: StorageOS Telemetry</title>
-      <link>https://arau.github.io/v2/docs/reference/telemetry/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://arau.github.io/v2/docs/reference/telemetry/</guid>
-      <description>
-        
-        
-        &lt;p&gt;StorageOS collects telemetry and error reports from StorageOS clusters via two
-different methods for two different purposes.&lt;/p&gt;
-&lt;h2 id=&#34;telemetry&#34;&gt;Telemetry&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Telemetry is made up a DNS version check query and a once per day report.&lt;/li&gt;
-&lt;li&gt;Error reporting is the sentry.io crash dump reporting.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;sentryio&#34;&gt;sentry.io&lt;/h2&gt;
-&lt;p&gt;StorageOS sends crash reports to &lt;a href=&#34;https://sentry.io&#34;&gt;sentry.io&lt;/a&gt;. This
-information helps our developers monitor and fix crashes. Information is sent
-to sentry.io when a process inside the StorageOS container
-crashes.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;The crash report contains the signal that triggered the shutdown (e.g. SIGSEGV),
-the exit code and whether or not the crash generated a core dump.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;All StorageOS clusters with a routable connection to the internet will send crash
-reports to sentry.io over tcp/443. StorageOS respects environment variables that
-&lt;a href=&#34;https://golang.org/pkg/net/http/#ProxyFromEnvironment&#34;&gt;ProxyFromEnvironment&lt;/a&gt;
-uses.&lt;/p&gt;
-&lt;p&gt;An exhaustive list of information included in the crash report is below:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;StorageOS version&lt;/li&gt;
-&lt;li&gt;Crash description string&lt;/li&gt;
-&lt;li&gt;Anonymized Cluster ID&lt;/li&gt;
-&lt;li&gt;Anonymized Node ID&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;dns-query&#34;&gt;DNS Query&lt;/h2&gt;
-&lt;p&gt;StorageOS will perform a &amp;ldquo;latest version check&amp;rdquo; using a DNS query in order to
-inform administrators that a new version is available. StorageOS will also send
-anonymized node ids, cluster id and StorageOS version information to StorageOS
-using a DNS query. The information that we send in the query is encoded as well
-as being anonymized. This query allows us to inform Cluster admins when
-StorageOS upgrades are available in the StorageOS GUI and in the logs.&lt;/p&gt;
-&lt;p&gt;The DNS query includes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Anonymized StorageOS Cluster ID&lt;/li&gt;
-&lt;li&gt;Anonymized StorageOS node ID&lt;/li&gt;
-&lt;li&gt;StorageOS version number&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;once-per-day-report&#34;&gt;Once Per Day Report&lt;/h2&gt;
-&lt;p&gt;The once per day report contains information about the StorageOS cluster and
-Kubernetes versions to help StorageOS focus our development efforts on the most
-popular platforms. The once per day data is encrypted and sent to a StorageOS
-telemetry server so it is never processed outside of StorageOS assets.&lt;/p&gt;
-&lt;p&gt;An exhaustive list of information included in the once per day report is below:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;api_call_metrics&lt;/li&gt;
-&lt;li&gt;cluster_disable_crash_reporting&lt;/li&gt;
-&lt;li&gt;cluster_disable_version_check&lt;/li&gt;
-&lt;li&gt;cluster_log_format&lt;/li&gt;
-&lt;li&gt;cluster_log_level&lt;/li&gt;
-&lt;li&gt;cluster_tls_provided&lt;/li&gt;
-&lt;li&gt;k8s_distribution&lt;/li&gt;
-&lt;li&gt;k8s_in_k8s&lt;/li&gt;
-&lt;li&gt;k8s_scheduler_extender_enabled&lt;/li&gt;
-&lt;li&gt;k8s_version&lt;/li&gt;
-&lt;li&gt;node_available_bytes&lt;/li&gt;
-&lt;li&gt;node_capacity&lt;/li&gt;
-&lt;li&gt;node_crash_files_on_disk&lt;/li&gt;
-&lt;li&gt;node_created_at_time&lt;/li&gt;
-&lt;li&gt;node_etcd_config&lt;/li&gt;
-&lt;li&gt;node_etcd_namespacing_enabled&lt;/li&gt;
-&lt;li&gt;node_etcd_tls_enabled&lt;/li&gt;
-&lt;li&gt;node_free_bytes&lt;/li&gt;
-&lt;li&gt;node_health&lt;/li&gt;
-&lt;li&gt;node_http_tls_enabled&lt;/li&gt;
-&lt;li&gt;node_id&lt;/li&gt;
-&lt;li&gt;node_labels&lt;/li&gt;
-&lt;li&gt;node_status&lt;/li&gt;
-&lt;li&gt;node_storageos_version&lt;/li&gt;
-&lt;li&gt;node_system_clock_time&lt;/li&gt;
-&lt;li&gt;node_total_bytes&lt;/li&gt;
-&lt;li&gt;node_version&lt;/li&gt;
-&lt;li&gt;volume_fs_type&lt;/li&gt;
-&lt;li&gt;volume_id&lt;/li&gt;
-&lt;li&gt;volume_labels&lt;/li&gt;
-&lt;li&gt;volume_master_attach&lt;/li&gt;
-&lt;li&gt;volume_master_delete_deployment&lt;/li&gt;
-&lt;li&gt;volume_master_detach&lt;/li&gt;
-&lt;li&gt;volume_master_failover_deployment&lt;/li&gt;
-&lt;li&gt;volume_master_promote&lt;/li&gt;
-&lt;li&gt;volume_master_provision&lt;/li&gt;
-&lt;li&gt;volume_master_recover_replica&lt;/li&gt;
-&lt;li&gt;volume_master_trigger_rejoin&lt;/li&gt;
-&lt;li&gt;volume_metrics&lt;/li&gt;
-&lt;li&gt;volume_placement_strategy&lt;/li&gt;
-&lt;li&gt;volume_provision_source_user_agent&lt;/li&gt;
-&lt;li&gt;volume_replica_delete_deployment&lt;/li&gt;
-&lt;li&gt;volume_replica_failover_deployment&lt;/li&gt;
-&lt;li&gt;volume_replica_promote&lt;/li&gt;
-&lt;li&gt;volume_replica_provision&lt;/li&gt;
-&lt;li&gt;volume_replicas&lt;/li&gt;
-&lt;li&gt;volume_replica_trigger_rejoin&lt;/li&gt;
-&lt;li&gt;volume_size_bytes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;disable-telemetry&#34;&gt;Disable Telemetry&lt;/h2&gt;
-&lt;p&gt;It is possible to disable telemetry using the GUI, CLI, API, environment
-variables or the StorageOS Cluster Spec.&lt;/p&gt;
-&lt;h4 id=&#34;storageos-cluster-spec&#34;&gt;StorageOS Cluster Spec&lt;/h4&gt;
-&lt;p&gt;Disable telemetry explicitly through the configurable &lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/configuration/&#34;&gt;spec parameters&lt;/a&gt; of the
-StorageOSCluster custom resource.&lt;/p&gt;
-&lt;h4 id=&#34;environment-variables&#34;&gt;Environment Variables&lt;/h4&gt;
-&lt;p&gt;You can use the following environmental variables to disable or enable telemetry.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;DISABLE_VERSION_CHECK   &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Disable the DNS version check&lt;/span&gt;
-DISABLE_TELEMETRY       &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Disable the once per day reporting&lt;/span&gt;
-DISABLE_ERROR_REPORTING &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Disable sentry.io crash reports&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -5488,13 +5606,13 @@ DISABLE_ERROR_REPORTING &lt;span style=&#34;color:#8f5902;font-style:italic&#34;
       <description>
         
         
-        &lt;p&gt;StorageOS can generate a cluster diagnostic bundle from the GUI or CLI under
+        &lt;p&gt;Ondat can generate a cluster diagnostic bundle from the GUI or CLI under
 user request. The bundle packages the information needed for the engineering
 team to understand the context of your cluster and begin troubleshooting any
 issues you may be experiencing.&lt;/p&gt;
 &lt;h2 id=&#34;generate-bundle&#34;&gt;Generate Bundle&lt;/h2&gt;
 &lt;h3 id=&#34;cli&#34;&gt;CLI&lt;/h3&gt;
-&lt;p&gt;The &lt;a href=&#34;https://arau.github.io/v2/docs/reference/cli/&#34;&gt;StorageOS CLI&lt;/a&gt; can generate
+&lt;p&gt;The &lt;a href=&#34;https://arau.github.io/v2/docs/reference/cli/&#34;&gt;CLI&lt;/a&gt; can generate
 the bundle.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ storageos get diagnostics
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
@@ -5508,17 +5626,17 @@ the bundle.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;data-collected-in-the-bundle&#34;&gt;Data collected in the bundle&lt;/h2&gt;
 &lt;p&gt;Most of the data collected in the bundle is regarding the state of the
-StorageOS cluster, however some other information regarding the infrastructure
+Ondat cluster, however some other information regarding the infrastructure
 is also gathered. The information is used to have a clear view of the cluster
-where StorageOS is running.&lt;/p&gt;
+where Ondat is running.&lt;/p&gt;
 &lt;p&gt;The bundle incorporates for each node:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;StorageOS Daemonset Pod logs&lt;/li&gt;
+&lt;li&gt;Ondat Daemonset Pod logs&lt;/li&gt;
 &lt;li&gt;lshw&lt;/li&gt;
 &lt;li&gt;dmesg (kernel logs)&lt;/li&gt;
-&lt;li&gt;StorageOS metadata for the ControlPlane and DataPlane&lt;/li&gt;
+&lt;li&gt;Ondat metadata for the ControlPlane and DataPlane&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;storageos-metadata-collected&#34;&gt;StorageOS metadata collected&lt;/h3&gt;
+&lt;h3 id=&#34;ondat-metadata-collected&#34;&gt;Ondat metadata collected&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;cluster metadata&lt;/li&gt;
 &lt;li&gt;namespaces metadata&lt;/li&gt;
@@ -5529,9 +5647,9 @@ where StorageOS is running.&lt;/p&gt;
 &lt;li&gt;health&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;privacy&#34;&gt;Privacy&lt;/h2&gt;
-&lt;p&gt;StorageOS can only obtain the bundle if it is downloaded by the user and given
+&lt;p&gt;Ondat can only obtain the bundle if it is downloaded by the user and given
 to our engineering team, or uploaded for analysis. The data received by
-StorageOS is private and never leaves nor will leave StorageOS Inc.&lt;/p&gt;
+Ondat is private and never leaves nor will leave Ondat Inc.&lt;/p&gt;
 &lt;p&gt;The data contained in the cluster diagnostic bundle has the sole purpose of
 helping customers troubleshoot their issues.&lt;/p&gt;
 
@@ -5548,19 +5666,71 @@ helping customers troubleshoot their issues.&lt;/p&gt;
         
         
         &lt;h2 id=&#34;host-filesystems&#34;&gt;Host Filesystems&lt;/h2&gt;
-&lt;p&gt;StorageOS will automatically use &lt;code&gt;/var/lib/storageos&lt;/code&gt; on each host as a base
+&lt;p&gt;Ondat will automatically use &lt;code&gt;/var/lib/storageos&lt;/code&gt; on each host as a base
 directory for storing &lt;a href=&#34;https://arau.github.io/v2/docs/concepts/volumes#blob-files&#34;&gt;configuration and blob
-files&lt;/a&gt;. Recommended host filesystem types
-are &lt;code&gt;ext4&lt;/code&gt; or &lt;code&gt;xfs&lt;/code&gt;. If you require a specific filesystem please &lt;a href=&#34;https://arau.github.io/v2/docs/support/contactus&#34;&gt;contact
-StorageOS&lt;/a&gt;.&lt;/p&gt;
+files&lt;/a&gt;. Supported host filesystem types
+are &lt;code&gt;ext4&lt;/code&gt; and &lt;code&gt;xfs&lt;/code&gt;. If you require a specific filesystem please &lt;a href=&#34;https://arau.github.io/v2/docs/support/contactus&#34;&gt;contact
+Ondat&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;persistent-volume-filesystems&#34;&gt;Persistent Volume Filesystems&lt;/h2&gt;
-&lt;p&gt;StorageOS provides a block device on which a file system can be created. The
-creation of the filesystem is either handled by StorageOS or by Kubernetes
+&lt;p&gt;Ondat provides a block device on which a file system can be created. The
+creation of the filesystem is either handled by Ondat or by Kubernetes
 which affects what filesystems can be created.&lt;/p&gt;
 &lt;h3 id=&#34;csi-driver&#34;&gt;CSI Driver&lt;/h3&gt;
-&lt;p&gt;When using StorageOS with the CSI driver, StorageOS is responsible for running
-mkfs against the block device that pods mount. StorageOS is able to create
+&lt;p&gt;When using Ondat with the CSI driver, Ondat is responsible for running
+mkfs against the block device that pods mount. Ondat is able to create
 ext2, ext3, ext4 and xfs file systems.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Tolerations</title>
+      <link>https://arau.github.io/v2/docs/reference/tolerations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arau.github.io/v2/docs/reference/tolerations/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;kubernetes-tolerations&#34;&gt;Kubernetes Tolerations&lt;/h2&gt;
+&lt;p&gt;Tolerations are a Kubernetes pod property that allow pods to tolerate certain
+node taints. Taints can be thought of as the opposite of Node affinity in that
+taints repel pods. Node taints are automatically applied by Kubernetes in
+response to node resources coming under contention. As Ondat provides
+storage to pods it should not be evicted during periods of resource contention,
+as any pods using Ondat volumes on the same node would need to be
+restarted.&lt;/p&gt;
+&lt;p&gt;As Ondat runs as a daemonset some Kubernetes tolerations are added by
+Kubernetes while others are automatically added by the Ondat operator.&lt;/p&gt;
+&lt;p&gt;For more information about tolerations please see the &lt;a href=&#34;https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/&#34;&gt;Kubernetes
+documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;tolerations&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# The unreachable and not-ready tolerations are added by Kubernetes to daemonsets automatically&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;node.kubernetes.io/unreachable&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Exists&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;effect&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;NoExecute&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;node.kubernetes.io/not-ready&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Exists&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;effect&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;NoExecute&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# The following tolerations are added to the Ondat daemonset by the Ondat operator&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;node.kubernetes.io/disk-pressure&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Exists&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;node.kubernetes.io/memory-pressure&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Exists&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;node.kubernetes.io/network-unavailable&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Exists&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;node.kubernetes.io/out-of-disk&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Exists&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;node.kubernetes.io/pid-pressure&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Exists&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;node.kubernetes.io/unschedulable&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;Exists&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;adding-custom-tolerations&#34;&gt;Adding Custom Tolerations&lt;/h2&gt;
+&lt;p&gt;To add custom tolerations to the Ondat daemonset &lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/examples/#specifying-custom-tolerations&#34;&gt;configure them in the
+StorageOSCluster
+resource&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>

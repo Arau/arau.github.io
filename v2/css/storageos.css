@@ -49,6 +49,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-display.min.css");
+
 .body--lock {
   overflow-y:hidden;
 }
@@ -407,7 +409,7 @@ big {
 }
 
 .intro-banner-text p strong em {
-  color: #55af00;
+  color: #081d60;
   font-style: normal;
 }
 
@@ -609,7 +611,7 @@ big {
 }
 
 .large-cta-banner-text p strong em {
-  color: #55af00;
+  color: #081d60;
   font-style: normal;
 }
 
@@ -1657,6 +1659,12 @@ q:after {
 
 blockquote,
 q {
+  padding: 0 0 0 1rem;
+  margin-bottom: 2rem;
+  color: #888;
+  border-left: 6px solid #55af00;
+  margin-left: 0;
+  margin-top: 2rem;
   quotes: """";
 }
 
@@ -2111,7 +2119,7 @@ object {
 --------------------------------------------------------------*/
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Plus Jakarta Display", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #475065;
@@ -2136,7 +2144,7 @@ p a {
 a,
 
 a:hover {
-  color: #55af00;
+  color: #081d60;
 }
 
 img,
@@ -2318,7 +2326,7 @@ header .navbar-default .navbar-nav li a {
 }
 
 header .navbar-default .navbar-nav li ul li a:hover {
-  background: #002A53; color: #55af00;
+  background: #002A53; color: #081d60;
 }
 
 .navbar-nav>li>.dropdown-menu {
@@ -2410,11 +2418,11 @@ header .container-fluid {
 
 .td-search-input {
     color: $primary!important;
-    background-color: #002A53!important;
-    border-radius: 60px;
+    background-color: #fafafa!important;
+    border-radius: 20px;
     border: none!important;
     outline: 0!important;
-    background-image: url(../images/search-white.svg);
+    background-image: url(../images/search-blue.svg);
     background-repeat: no-repeat;
     background-position: center right;
     padding-right: 60px;
@@ -2423,8 +2431,6 @@ header .container-fluid {
     font-size: 0.8em;
     width: auto;
     float: right;
-
-
 }
 
 @media (min-width: 960px) {
@@ -2448,7 +2454,7 @@ header .container-fluid {
 	padding-top: 20px!important;
 }
 header .navbar-default .navbar-nav li a {
-    border-bottom: 5px solid #55af00;
+    border-bottom: 5px solid #081d60;
     color: #4a5165;
     font-size: 0.8em!important;
     font-weight: bold;
@@ -2532,7 +2538,7 @@ header .navbar-default .navbar-nav li.menu-item-4146 a {
     margin-top: 20px;
 }
 
-header li ul li a:hover {color: #55af00!important; background: transparent!important;}
+header li ul li a:hover {color: #081d60!important; background: transparent!important;}
 
 
 
@@ -3117,7 +3123,7 @@ h1 {
   font-size: 35px !important;
   font-weight: 700 !important;
   margin-bottom: 30px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Plus Jakarta Display", Helvetica, Arial, sans-serif !important;
 }
 
 h2 {
@@ -3127,39 +3133,39 @@ h2 {
   margin-bottom: 10px;
   margin-top: 30px;
   line-height: 38px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Plus Jakarta Display", Helvetica, Arial, sans-serif !important;
 }
 
 h3 {
   font-size: 18px;
   font-weight: 400;
   margin: 25px 0 10px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Plus Jakarta Display", Helvetica, Arial, sans-serif !important;
 }
 
 h5 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Plus Jakarta Display", Helvetica, Arial, sans-serif !important;
 }
 
 p {
   margin-bottom: 0.5em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Plus Jakarta Display", Helvetica, Arial, sans-serif !important;
 }
 
 li {
   font-size: 20px;
   font-weight: 400;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Plus Jakarta Display", Helvetica, Arial, sans-serif !important;
 }
 
 p a {
   font-weight: 400;
   text-decoration: none;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Plus Jakarta Display", Helvetica, Arial, sans-serif !important;
 }
 
 span {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Plus Jakarta Display", Helvetica, Arial, sans-serif !important;
 }
 
 pre {
@@ -3172,7 +3178,7 @@ pre span {
 }
 
 .content a {
-  color: #55af00;
+  color: #081d60;
 }
 
 .highlighter-rouge {
@@ -3256,7 +3262,7 @@ var {
 }
 
 .banner a {
-  color: #55af00;
+  color: #081d60;
 }
 
 .breadcrumb a {
@@ -3358,11 +3364,12 @@ var {
 }
 
 .td-sidebar-nav .td-sidebar-nav__section ul li a:hover {
-  color: #55af00!important;
+  color: #081d60!important;
 }
 
 .td-sidebar-nav .td-sidebar-nav__section-title a {
   font-weight: 700!important;
+  color: #081d60;
 }
 
 .td-sidebar-nav .td-sidebar-nav__section ul li ul li a {
@@ -3371,7 +3378,7 @@ var {
 }
 
 .td-sidebar-nav .td-sidebar-nav__section ul li ul li a.active {
-    color: #55af00;
+    color: #081d60;
     font-weight: 700!important;
 }
 
@@ -3389,7 +3396,7 @@ var {
     padding: 0 0 0 1rem;
     margin-bottom: 2rem;
     color: #888;
-    border-left: 6px solid #55af00;
+    border-left: 6px solid #081d60;
     margin-left: 0;
     margin-top: 2rem;
 }
@@ -3429,7 +3436,7 @@ var {
       padding: 10px 60px 10px 0;
       font-weight: bold;
       font-size: 0.8em;
-      width: 100%;
+      width: 50%;
       text-align: right;
       box-sizing: border-box;
   }
@@ -3486,6 +3493,7 @@ var {
 .card-header a{
     font-size: 12px;
     font-weight: bold;
+    color: #fff;
 }
 
 .card-body {

@@ -22,7 +22,7 @@
       <description>
         
         
-        &lt;p&gt;StorageOS requires certain kernel modules to function, in particular &lt;a href=&#34;http://linux-iscsi.org/wiki/Main_Page&#34;&gt;Linux-IO
+        &lt;p&gt;Ondat requires certain kernel modules to function, in particular &lt;a href=&#34;http://linux-iscsi.org/wiki/Main_Page&#34;&gt;Linux-IO
 &lt;/a&gt;, an open-source implementation of the
 SCSI target.&lt;/p&gt;
 &lt;p&gt;We require the following modules to be loaded:&lt;/p&gt;
@@ -36,10 +36,10 @@ SCSI target.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;N.B. Other applications utilising &lt;a href=&#34;http://linux-iscsi.org/wiki/LIO&#34;&gt;TCMU&lt;/a&gt;
-cannot be run concurrently with StorageOS. Doing so may result in corruption
-of data. On startup, StorageOS will detect if other applications are using
-TCMU and fall back to FUSE. However if StorageOS is started first there is no
-mechanism for StorageOS to fallback to FUSE if another application begins to
+cannot be run concurrently with Ondat. Doing so may result in corruption
+of data. On startup, Ondat will detect if other applications are using
+TCMU and fall back to FUSE. However if Ondat is started first there is no
+mechanism for Ondat to fallback to FUSE if another application begins to
 use TCMU. TCMU can be disabled using the
 &lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/configuration&#34;&gt;DISABLE_TCMU&lt;/a&gt;
 StorageOSCluster spec parameter.&lt;/p&gt;
@@ -86,7 +86,7 @@ sudo shutdown -r now
 &lt;p&gt;Once required kernel modules are installed on the system, for convenience we
 provide a container which will ensure the appropriate modules are loaded and
 ready for use at runtime. On Docker installations, you will need to run the
-init container prior to starting StorageOS. Our installation guides for
+init container prior to starting Ondat. Our installation guides for
 Kubernetes and OpenShift include this step.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Load the required kernel modules. The Kubernetes and OpenShift installations include this step.&lt;/span&gt;
 docker run --name enable_lio                  &lt;span style=&#34;color:#4e9a06&#34;&gt;\
@@ -117,7 +117,7 @@ the init container, perform the following steps:&lt;/p&gt;
         
         
         &lt;h2 id=&#34;port-list&#34;&gt;Port list&lt;/h2&gt;
-&lt;p&gt;StorageOS daemons listen on specific ports, which we require to be accessible
+&lt;p&gt;Ondat daemons listen on specific ports, which we require to be accessible
 between all nodes in the cluster:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -130,37 +130,37 @@ between all nodes in the cluster:&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;5701&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;tcp&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;TCP&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;gRPC&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;5703&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;tcp&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;TCP&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;DirectFS&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;5704&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;tcp&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;TCP&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Dataplane Supervisor&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;5705&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;tcp&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;TCP&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;REST API&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;5711&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;tcp &amp;amp; udp&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;TCP &amp;amp; UDP&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;Gossip service&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;StorageOS also uses &lt;a href=&#34;https://en.wikipedia.org/wiki/Ephemeral_port&#34;&gt;ephemeral&lt;/a&gt;
-ports to dial-out to these ports on other StorageOS nodes. For this reason,
+&lt;p&gt;Ondat also uses &lt;a href=&#34;https://en.wikipedia.org/wiki/Ephemeral_port&#34;&gt;ephemeral&lt;/a&gt;
+ports to dial-out to these ports on other Ondat nodes. For this reason,
 outgoing traffic should be enabled.&lt;/p&gt;
 &lt;h2 id=&#34;firewalls-and-vps-providers&#34;&gt;Firewalls and VPS providers&lt;/h2&gt;
 &lt;p&gt;Some VPS providers (such as Digital Ocean) ship default firewall rulesets which
-must be updated to allow StorageOS to run. Some example rules are shown below -
+must be updated to allow Ondat to run. Some example rules are shown below -
 modify to taste.&lt;/p&gt;
 &lt;h3 id=&#34;ufw&#34;&gt;UFW&lt;/h3&gt;
 &lt;p&gt;For distributions using UFW, such as RHEL and derivatives:&lt;/p&gt;
@@ -178,8 +178,8 @@ firewall-cmd --reload
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Inbound traffic&lt;/span&gt;
 iptables -I INPUT -i lo -m comment --comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Permit loopback traffic&amp;#39;&lt;/span&gt; -j ACCEPT
 iptables -I INPUT -m state --state ESTABLISHED,RELATED -m comment --comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Permit established traffic&amp;#39;&lt;/span&gt; -j ACCEPT
-iptables -I INPUT -p tcp --dport 5701:5711 -m comment --comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;StorageOS&amp;#39;&lt;/span&gt; -j ACCEPT
-iptables -I INPUT -p udp --dport &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5711&lt;/span&gt; -m comment --comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;StorageOS&amp;#39;&lt;/span&gt; -j ACCEPT
+iptables -I INPUT -p tcp --dport 5701:5711 -m comment --comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Ondat&amp;#39;&lt;/span&gt; -j ACCEPT
+iptables -I INPUT -p udp --dport &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5711&lt;/span&gt; -m comment --comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Ondat&amp;#39;&lt;/span&gt; -j ACCEPT
 
 &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Outbound traffic&lt;/span&gt;
 iptables -I OUTPUT -o lo -m comment --comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Permit loopback traffic&amp;#39;&lt;/span&gt; -j ACCEPT
@@ -203,12 +203,12 @@ default DROP or REJECT rules.&lt;/p&gt;
 &lt;p&gt;Modern versions of Kubernetes, Docker or other Container Runtimes enable
 mount propagation by default.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;StorageOS requires mount propagation enabled to present devices as volumes for
+&lt;p&gt;Ondat requires mount propagation enabled to present devices as volumes for
 containers (see linux kernel documentation
 &lt;a href=&#34;http://man7.org/linux/man-pages/man2/mount.2.html&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;Certain versions of docker ship with a systemd manifest with
 &lt;a href=&#34;https://www.freedesktop.org/software/systemd/man/systemd.exec.html#&#34;&gt;MountFlags&lt;/a&gt; set
-to &amp;lsquo;slave&amp;rsquo;, thus preventing StorageOS from working. This can be removed or set
+to &amp;lsquo;slave&amp;rsquo;, thus preventing Ondat from working. This can be removed or set
 to &amp;lsquo;shared&amp;rsquo; with a systemd drop in:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mkdir -p /etc/systemd/system/docker.service.d/
 cat &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;lt;&amp;lt;EOF &amp;gt; /etc/systemd/system/docker.service.d/mount_propagation_flags.conf
@@ -242,17 +242,17 @@ check and enable mount propagation where appropriate.&lt;/p&gt;
       <description>
         
         
-        &lt;p&gt;StorageOS requires an etcd cluster in order to function.&lt;/p&gt;
+        &lt;p&gt;Ondat requires an etcd cluster in order to function.&lt;/p&gt;
 &lt;p&gt;For more information on why etcd is required please see our &lt;a href=&#34;https://arau.github.io/v2/docs/concepts/etcd/&#34;&gt;etcd concepts&lt;/a&gt; page and for production recommendations for
 etcd installations please see our &lt;a href=&#34;https://arau.github.io/v2/docs/operations/external-etcd/&#34;&gt;Etcd Operations&lt;/a&gt; page.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;N.B. StorageOS does not recommend using the Kubernetes etcd cluster for
-StorageOS installations&lt;/p&gt;
+&lt;p&gt;N.B. Ondat does not recommend using the Kubernetes etcd cluster for
+Ondat installations&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;using-etcd-with-storageos&#34;&gt;Using Etcd with StorageOS&lt;/h2&gt;
-&lt;p&gt;During installation of StorageOS the &lt;code&gt;kvBackend&lt;/code&gt; parameters of the StorageOS
+&lt;h2 id=&#34;using-etcd-with-ondat&#34;&gt;Using Etcd with Ondat&lt;/h2&gt;
+&lt;p&gt;During installation of Ondat the &lt;code&gt;kvBackend&lt;/code&gt; parameters of the Ondat
 operator are used to specify the address of the etcd cluster. See the
-&lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/examples/&#34;&gt;StorageOS cluster operator
+&lt;a href=&#34;https://arau.github.io/v2/docs/reference/cluster-operator/examples/&#34;&gt;Ondat cluster operator
 configuration&lt;/a&gt; examples for more
 information.&lt;/p&gt;
 

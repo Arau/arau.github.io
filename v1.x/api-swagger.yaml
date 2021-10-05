@@ -1,5 +1,5 @@
 
-# A Swagger 2.0 (a.k.a. OpenAPI) definition of the StorageOS API.
+# A Swagger 2.0 (a.k.a. OpenAPI) definition of the Ondat API.
 #
 # This is used for generating API documentation and the types used by the
 # client/server. See api/README.md for more information.
@@ -22,13 +22,13 @@ consumes:
   - "text/plain"
 basePath: "/v1"
 info:
-  title: "StorageOS API"
+  title: "Ondat API"
   version: "0.9"
   x-logo:
     url: "https://storageos.com/wp-content/themes/storageOS/images/logo.svg"
   description: |
-    The StorageOS API is an HTTP API used for managing volumes and StorageOS services. It is the API that the StorageOS UI, CLI and platform integrations use to communicate with the StorageOS backend.
-    The REST APIs are accessible at port 5705 on any of the nodes in a StorageOS cluster.
+    The Ondat API is an HTTP API used for managing volumes and Ondat services. It is the API that the Ondat UI, CLI and platform integrations use to communicate with the Ondat backend.
+    The REST APIs are accessible at port 5705 on any of the nodes in a Ondat cluster.
 
     # Errors
 
@@ -1617,7 +1617,7 @@ paths:
   /auth/login:
     post:
       summary: "Login"
-      description: "Log into the StorageOS cluster"
+      description: "Log into the Ondat cluster"
       produces:
         - "application/json"
       tags: ["Auth"]
@@ -1637,7 +1637,7 @@ paths:
   /auth/logout:
     post:
       summary: "Logout"
-      description: "Log out of the StorageOS cluster"
+      description: "Log out of the Ondat cluster"
       produces:
         - "application/json"
       tags: ["Auth"]

@@ -1,27 +1,27 @@
 openapi: "3.0.2"
 info:
-    title: "StorageOS API"
+    title: "Ondat API"
     version: "2.0.0"
     contact:
-        name: StorageOS
+        name: Ondat
         url: https://storageos.com
         email: info@storageos.com
 
 externalDocs:
     url: https://docs.storageos.com/
-    description: "The latest StorageOS user documentation"
+    description: "The latest Ondat user documentation"
 
 servers:
     - url: /v2
 
 components:
     securitySchemes:
-        # The StorageOS API uses JWT (JSON web token) based authentication.
+        # The Ondat API uses JWT (JSON web token) based authentication.
         jwt:
             type: http
             scheme: bearer
             bearerFormat: "JWT"
-            description: StorageOS uses JSON web tokens for authentication.
+            description: Ondat uses JSON web tokens for authentication.
 
     schemas:
         OpenAPISpec:
@@ -357,7 +357,7 @@ components:
                     default: false
                     description: >
                         Disables the mechanism responsible for checking if there is an
-                        updated version of StorageOS available for installation.
+                        updated version of Ondat available for installation.
                     example: false
                 logLevel:
                     $ref: "#/components/schemas/LogLevel"
@@ -500,7 +500,7 @@ components:
                         The hostname of the node.
 
                         This value is set by the node each time it joins the
-                        StorageOS cluster.
+                        Ondat cluster.
                     example: db1.lcy.storageos.network
                 health:
                     $ref: "#/components/schemas/NodeHealth"
@@ -2435,7 +2435,7 @@ paths:
                                 licenceKey:
                                     type: string
                                     description: >
-                                        A StorageOS product licence key, used to
+                                        A Ondat product licence key, used to
                                         register a cluster. The format of this
                                         type is opaque and may change.
 
@@ -2463,7 +2463,7 @@ paths:
                                     description: >
                                         Disables the mechanism responsible for
                                         checking if there is an updated version
-                                        of StorageOS available for installation.
+                                        of Ondat available for installation.
                                     example: false
                                 logLevel:
                                     $ref: "#/components/schemas/LogLevel"

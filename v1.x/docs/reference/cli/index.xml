@@ -420,7 +420,7 @@ Commands:
 Run &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;storageos node COMMAND --help&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; more information on a command.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;storageos-node-connectivity&#34;&gt;&lt;code&gt;storageos node connectivity&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;Display the latency and status of the connection between different nodes of the
-cluster and the services attached to the network started by StorageOS. It shows
+cluster and the services attached to the network started by Ondat. It shows
 whether any node or service can&amp;rsquo;t be connected.&lt;/p&gt;
 &lt;p&gt;The output can be for all permutations of nodes in the cluster or for one
 specific node.&lt;/p&gt;
@@ -482,7 +482,7 @@ storageos-1
 &lt;blockquote&gt;
 &lt;p&gt;Only applicable for installations with &lt;code&gt;KV_BACKEND=etcd&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Removes a StorageOS node from the cluster. It will only succeed if the node is
+&lt;p&gt;Removes a Ondat node from the cluster. It will only succeed if the node is
 &lt;code&gt;Offline&lt;/code&gt;. All data in that node will be lost, hence it is recommended to drain
 the node before decommissioning it.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ storageos node delete storageos-1
@@ -556,7 +556,7 @@ health, version and capacity in JSON format, inspect the node:&lt;/p&gt;
                 &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;experimental&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#204a87&#34;&gt;false&lt;/span&gt;
             &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
         &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;,
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;StorageOS 1.0.0 (f8915fa), built: 2018-05-25T190132Z&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Ondat 1.0.0 (f8915fa), built: 2018-05-25T190132Z&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Revision&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;scheduler&amp;#34;&lt;/span&gt;: true,
         &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cordon&amp;#34;&lt;/span&gt;: false,
@@ -581,7 +581,7 @@ NAME         ADDRESS         HEALTH              SCHEDULER  VOLUMES     TOTAL   
 storageos-1  192.168.50.100  Healthy &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;18&lt;/span&gt; minutes  &lt;span style=&#34;color:#204a87&#34;&gt;true&lt;/span&gt;       M: 0, R: &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;  40.58GB  4.88%  1.0.0
 storageos-2  192.168.50.101  Healthy &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;17&lt;/span&gt; minutes  &lt;span style=&#34;color:#204a87&#34;&gt;false&lt;/span&gt;      M: 1, R: &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;  40.58GB  4.88%  1.0.0
 storageos-3  192.168.50.102  Healthy &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;17&lt;/span&gt; minutes  &lt;span style=&#34;color:#204a87&#34;&gt;false&lt;/span&gt;      M: 1, R: &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;  40.58GB  4.88%  1.0.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output shows a StorageOS cluster with three nodes named
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The output shows a Ondat cluster with three nodes named
 &lt;code&gt;storageos-1&lt;/code&gt;, &lt;code&gt;storageos-2&lt;/code&gt; and &lt;code&gt;storageos-3&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;SCHEDULER&lt;/code&gt;: whether the node contains the scheduler, which is responsible for
@@ -787,7 +787,7 @@ production  &lt;span style=&#34;color:#204a87&#34;&gt;false&lt;/span&gt;        
                         &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;experimental&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#204a87&#34;&gt;false&lt;/span&gt;
                     &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
                 &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;,
-                &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;StorageOS 1.0.0 (f8915fa), built: 2018-05-25T190132Z&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Ondat 1.0.0 (f8915fa), built: 2018-05-25T190132Z&amp;#34;&lt;/span&gt;,
                 &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Revision&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
                 &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;scheduler&amp;#34;&lt;/span&gt;: true,
                 &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cordon&amp;#34;&lt;/span&gt;: false,

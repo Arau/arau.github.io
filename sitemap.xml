@@ -19,7 +19,7 @@
   </url>
   
   <url>
-    <loc>https://arau.github.io/docs/prerequisites/systemconfiguration/</loc>
+    <loc>https://arau.github.io/docs/reference/scheduler/admission-controller/</loc>
   </url>
   
   <url>
@@ -31,19 +31,11 @@
   </url>
   
   <url>
-    <loc>https://arau.github.io/docs/prerequisites/firewalls/</loc>
-  </url>
-  
-  <url>
     <loc>https://arau.github.io/docs/introduction/quickstart/</loc>
   </url>
   
   <url>
     <loc>https://arau.github.io/docs/reference/cluster-operator/examples/</loc>
-  </url>
-  
-  <url>
-    <loc>https://arau.github.io/docs/prerequisites/mountpropagation/</loc>
   </url>
   
   <url>
@@ -59,7 +51,23 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/prerequisites/systemconfiguration/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/prerequisites/ipv6/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/concepts/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/prerequisites/firewalls/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/prerequisites/mountpropagation/</loc>
   </url>
   
   <url>
@@ -71,6 +79,10 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/prerequisites/pidlimits/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/platforms/</loc>
   </url>
   
@@ -79,11 +91,23 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/prerequisites/max-aio/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/operations/</loc>
   </url>
   
   <url>
     <loc>https://arau.github.io/docs/usecases/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/prerequisites/etcd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/reference/bundles/</loc>
   </url>
   
   <url>
@@ -111,10 +135,6 @@
   </url>
   
   <url>
-    <loc>https://arau.github.io/docs/concepts/architecture/</loc>
-  </url>
-  
-  <url>
     <loc>https://arau.github.io/docs/reference/cli/attach/</loc>
   </url>
   
@@ -127,10 +147,6 @@
   </url>
   
   <url>
-    <loc>https://arau.github.io/docs/usecases/backups/</loc>
-  </url>
-  
-  <url>
     <loc>https://arau.github.io/docs/usecases/cassandra/</loc>
   </url>
   
@@ -140,6 +156,14 @@
   
   <url>
     <loc>https://arau.github.io/docs/reference/cluster-operator/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/concepts/cluster-topologies/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/operations/cluster-id/</loc>
   </url>
   
   <url>
@@ -163,11 +187,23 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/operations/delete-stos-objects/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/reference/cli/describe/</loc>
   </url>
   
   <url>
     <loc>https://arau.github.io/docs/reference/cli/detach/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/reference/bundles/diagnostic-bundle/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/operations/disk-full/</loc>
   </url>
   
   <url>
@@ -183,15 +219,35 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/operations/encryption/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/reference/encryption/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/concepts/etcd/</loc>
   </url>
   
   <url>
-    <loc>https://arau.github.io/docs/operations/external-etcd/</loc>
+    <loc>https://arau.github.io/docs/operations/etcd/</loc>
   </url>
   
   <url>
-    <loc>https://arau.github.io/docs/prerequisites/etcd/</loc>
+    <loc>https://arau.github.io/docs/operations/etcd/migrate-etcd-cluster/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/operations/failure-modes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/concepts/fencing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/operations/fencing/</loc>
   </url>
   
   <url>
@@ -200,6 +256,10 @@
   
   <url>
     <loc>https://arau.github.io/docs/reference/cli/get/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/platforms/google-gke/</loc>
   </url>
   
   <url>
@@ -219,6 +279,10 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/usecases/influxdb/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/reference/init-container/</loc>
   </url>
   
@@ -231,7 +295,15 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/reference/kubernetes-object-sync/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/usecases/kubevirt/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/operations/label-stos-objects/</loc>
   </url>
   
   <url>
@@ -251,7 +323,7 @@
   </url>
   
   <url>
-    <loc>https://arau.github.io/docs/operations/external-etcd/etcd-tls/</loc>
+    <loc>https://arau.github.io/docs/operations/etcd/storageos-secret-info/</loc>
   </url>
   
   <url>
@@ -275,6 +347,18 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/concepts/components/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/reference/telemetry/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/reference/open_source_attribution/</loc>
   </url>
   
@@ -295,7 +379,19 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/usecases/prometheus/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/platforms/rancher/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/concepts/rwx/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/operations/rwx/</loc>
   </url>
   
   <url>
@@ -311,7 +407,19 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/reference/resource_requests_and_limits/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/reference/scheduler/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/search/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/usecases/sidecar-backups/</loc>
   </url>
   
   <url>
@@ -319,15 +427,7 @@
   </url>
   
   <url>
-    <loc>https://arau.github.io/</loc>
-  </url>
-  
-  <url>
-    <loc>https://arau.github.io/docs/reference/telemetry/</loc>
-  </url>
-  
-  <url>
-    <loc>https://arau.github.io/docs/reference/bundle/</loc>
+    <loc>https://arau.github.io/docs/reference/bundles/support_bundle/</loc>
   </url>
   
   <url>
@@ -335,7 +435,27 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/reference/tolerations/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/operations/trim/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/operations/troubleshooting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/operations/uninstall/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/reference/cli/update/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/operations/upgrade/</loc>
   </url>
   
   <url>
@@ -343,7 +463,15 @@
   </url>
   
   <url>
+    <loc>https://arau.github.io/docs/usecases/velero-backups/</loc>
+  </url>
+  
+  <url>
     <loc>https://arau.github.io/docs/reference/cli/version/</loc>
+  </url>
+  
+  <url>
+    <loc>https://arau.github.io/docs/operations/resize/</loc>
   </url>
   
   <url>
