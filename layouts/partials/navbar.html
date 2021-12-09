@@ -1,0 +1,171 @@
+<div id="ondat-lp-header">
+  <div class="ondat-lp-header-wrapper">
+    <div class="ondat-lp-header-wrapper-left">
+      <a class="navbar-brand" href="{{ .Site.Params.logo_url }}">
+        {{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}{{ end }}
+        <span class="text-uppercase font-weight-bold">{{ .Site.Title }}</span>
+      </a>
+      <ul class="ondat-lp-menu">
+        <li class="ondat-lp-menu-drop">
+          <a href="#">Platform</a>
+          <ul>
+            <li><a href="https://ondat.io/platform/platform-overview">Platform Overview</a></li>
+            <li><a href="https://ondat.io/platform/how-it-works">How it works</a></li>
+          </ul>
+        </li>
+        <li class="ondat-lp-menu-drop">
+          <a href="#">Teams</a>
+          <ul>
+            <li><a href="https://ondat.io/teams/development">Development</a></li>
+            <li><a href="https://ondat.io/teams/devops-sre">DevOps SRE</a></li>
+            <li><a href="https://ondat.io/digital-transformation">Digital Transformation</a></li>
+          </ul>
+        </li>
+        <li class="ondat-lp-menu-drop">
+          <a href="#">Solutions</a>
+          <ul>
+            <li><a href="https://ondat.io/solutions/stateful-applications">Stateful Apps</a></li>
+            <li><a href="https://ondat.io/solutions/kubernetes-distributions">Kubernetes Distros</a></li>
+          </ul>
+        </li>
+        <li class="ondat-lp-menu-no-drop"><a href="https://www.ondat.io/blog">Blog</a></li>
+        <li class="ondat-lp-menu-no-drop"><a href="https://docs.ondat.io">Resources</a></li>
+        {{ if  .Site.Params.versions }}
+        <li class="ondat-lp-menu-drop">
+          <a href="#">Releases</a>
+          <ul>
+            {{ range .Site.Params.versions }}
+            <li><a class="dropdown-item" href="{{ .url }}">{{ .version }}</a></li>
+            {{ end }}
+          </ul>
+        </li>
+        {{ end }}
+      </div>
+      </ul>
+    <div class="ondat-lp-header-wrapper-right">
+      <a href="https://www.ondat.io/request-demo" class="gs-btn">Get started for free</a>
+      {{ partial "search-input.html" . }}
+    </div>
+  </div>
+</div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
+  #ondat-lp-header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: white;
+    font-weight: 500;
+  }
+
+  .ondat-lp-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+  }
+
+  .ondat-lp-header-wrapper-left {
+    display: flex;
+    align-items: center;
+  }
+
+  ul.ondat-lp-menu,
+  ul.ondat-lp-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.ondat-lp-menu {
+    display: flex;
+  }
+
+  ul.ondat-lp-menu > li {
+    margin-left: 48px;
+  }
+
+  li.ondat-lp-menu-drop > a {
+    display: flex;
+    align-items: center;
+  }
+
+  li.ondat-lp-menu-no-drop a {
+    display: flex;
+    align-items: center;
+  }
+
+  li.ondat-lp-menu-drop > a:after {
+    display: inline-block;
+    content: "";
+    width: 8px;
+    height: 5px;
+    margin-left: 6px;
+    background: url("images/drop.svg") no-repeat;
+  }
+
+  li.ondat-lp-menu-drop ul {
+    display: none;
+    box-shadow: 0px 10px 35px 5px rgb(50 50 50 / 15%);
+    background-color: white;
+    border-top: 2px solid #017efa;
+    position: absolute;
+    padding-left: 0;
+    padding: 15px;
+    margin-left: 0;
+  }
+
+  li.ondat-lp-menu-drop ul > li {
+    list-style: none;
+    margin-bottom: 10px;
+    line-height: normal;
+    font-size: 13px;
+  }
+
+  li.ondat-lp-menu-drop ul > li:last-child {
+    margin-bottom: 0px;
+  }
+
+  li.ondat-lp-menu-drop ul > li > a {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+  }
+
+  li.ondat-lp-menu-drop:hover ul {
+    display: block;
+  }
+
+  li.ondat-lp-menu-drop:hover ul {
+    display: block;
+  }
+
+  #ondat-lp-header a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #081d60;
+    font-family: "Plus Jakarta Display";
+  }
+
+  .ondat-lp-header-wrapper-right {
+    display: flex;
+    align-items: center;
+  }
+
+  #ondat-lp-header a.gs-btn {
+    color: #017efa;
+    display: block;
+    padding: 10px 24px;
+  }
+
+  #ondat-lp-header a.login-btn {
+    color: #fff;
+    font-weight: 700;
+    display: block;
+    padding: 10px 24px;
+    background-color: #017efa;
+    border-radius: 4px;
+  }
+</style>

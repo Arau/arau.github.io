@@ -1,0 +1,91 @@
+{{ $links := .Site.Params.links }}
+<footer class="foot row">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="footer-nav-column">
+        <a href="https://storageos.com/" class="custom-logo-link"><img src="https://storageos.com/wp-content/themes/storageOS/images/logo.svg" class="master-logo"></a>
+          <div class="footer-social">
+              <div class="menu-footer-social-container">
+                  <ul id="menu-footer-social" class="menu">
+                    <li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom social-icon twitter menu-item-22"><a href="https://twitter.com/Storage_OS" data-ps2id-api="true"><i class="icon-2x icon-twitter "></i><span class="fa-hidden">Twitter</span></a></li>
+                    <li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom social-icon facebook menu-item-23"><a href="https://www.facebook.com/storageos" data-ps2id-api="true"><i class="icon-2x icon-facebook "></i><span class="fa-hidden">Facebook</span></a></li>
+                    <li id="menu-item-24" class="menu-item menu-item-type-custom menu-item-object-custom social-icon linkedin menu-item-24"><a href="https://www.linkedin.com/company/storageos" data-ps2id-api="true"><i class="icon-2x icon-linkedin "></i><span class="fa-hidden">LinkedIn</span></a></li>
+                    <li id="menu-item-3202" class="slack menu-item menu-item-type-custom menu-item-object-custom menu-item-3202"><a href="https://slack.storageos.com/" data-ps2id-api="true">Slack</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-nav-wrap footer-nav-wrap-1">
+            <div class="col-sm-6">
+              <div class="footer-nav-column"><h3 class="widget-title">Product</h3>
+                <div class="menu-footer-product-container">
+                  <ul id="menu-footer-product" class="menu">
+                    <li id="menu-item-3818" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3818"><a href="https://storageos.com/product" data-ps2id-api="true">Overview</a></li>
+                    <li id="menu-item-3817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3817"><a href="https://storageos.com/features" data-ps2id-api="true">Features</a></li>
+                    <li id="menu-item-3891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3891"><a href="https://storageos.com/why-storageos" data-ps2id-api="true">Why StorageOS</a></li>
+                    <li id="menu-item-3892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3892"><a href="https://storageos.com/how-it-works" data-ps2id-api="true">How it works</a></li>
+                    <li id="menu-item-3819" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3819"><a href="https://storageos.com/use-cases" data-ps2id-api="true">Use cases</a></li>
+                    <li id="menu-item-4616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4616"><a href="https://storageos.com/support" data-ps2id-api="true">Support</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="footer-nav-column"><h3 class="widget-title">Solutions</h3>
+                <div class="menu-footer-solutions-container">
+                  <ul id="menu-footer-solutions" class="menu">
+                    <li id="menu-item-3894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3894"><a href="https://storageos.com/developers" data-ps2id-api="true">Developers</a></li>
+                    <li id="menu-item-3895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3895"><a href="https://storageos.com/infrastructure-managers" data-ps2id-api="true">Infrastructure Managers</a></li>
+                    <li id="menu-item-3893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3893"><a href="https://storageos.com/cloud" data-ps2id-api="true">Cloud</a></li>
+                  </ul>
+                </div>
+
+                <h3 class="widget-title">Docs</h3>
+                <div class="menu-footer-docs-container">
+                  <ul id="menu-footer-docs" class="menu">
+                    <li id="menu-item-3828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3828"><a href="https://docs.storageos.com/" data-ps2id-api="true">Overview</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-nav-wrap footer-nav-wrap-2">
+            <div class="col-sm-6">
+              <div class="footer-nav-column"><h3 class="widget-title">Company</h3>
+                <div class="menu-footer-company-container">
+                  <ul id="menu-footer-company" class="menu">
+                    <li id="menu-item-3830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3830"><a href="https://storageos.com/company/#about" data-ps2id-api="true">About Us</a></li>
+                    <li id="menu-item-4123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4123"><a href="https://storageos.com/leadership" data-ps2id-api="true">Leadership</a></li>
+                    <li id="menu-item-3840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3840"><a href="https://storageos.com/careers" data-ps2id-api="true">Careers</a></li>
+                    <li id="menu-item-3907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3907"><a href="https://storageos.com/news" data-ps2id-api="true">News</a></li>
+                    <li id="menu-item-3908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3908"><a href="https://storageos.com/events" data-ps2id-api="true">Events</a></li>
+                    <li id="menu-item-4702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4702"><a href="https://storageos.com/customers" data-ps2id-api="true">Customers</a></li>
+                    <li id="menu-item-4617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4617"><a href="https://storageos.com/partners" data-ps2id-api="true">Partners</a></li>
+                    <li id="menu-item-4124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4124"><a href="https://storageos.com/contact" data-ps2id-api="true">Contact</a></li>
+                    <li id="menu-item-3924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3924"><a href="https://storageos.com/privacy" data-ps2id-api="true">Legal</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="footer-nav-column"><h3 class="widget-title">Learn</h3>
+                <div class="menu-footer-learn-container">
+                  <ul id="menu-footer-learn" class="menu">
+                    <li id="menu-item-3835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3835"><a href="https://storageos.com/blog" data-ps2id-api="true">Blog</a></li>
+                    <li id="menu-item-3837" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3837"><a href="https://play.storageos.com/" data-ps2id-api="true">play.storageos.com</a></li>
+                    <li id="menu-item-3838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3838"><a href="https://storageos.com/resources" data-ps2id-api="true">Resources</a></li>
+                    <li id="menu-item-3839" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3839"><a href="https://resources.storageos.com/demo-request" data-ps2id-api="true">Get a demo</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</footer>

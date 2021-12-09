@@ -1,0 +1,17 @@
+{{ $tabName := .Get "tabName" }}
+{{ $tabRef := default (.Get "tabName") (.Get "tabRef" | urlize) }}
+
+{{ $firstTab := default "false" (.Get "firstTab") }}
+{{ if eq $firstTab "true" }}
+
+<div class="tab-pane fade show active" id="{{ $tabRef }}" role="tabpanel" aria-labelledby="nav-{{ $tabName }}">
+    {{ $.Inner  }}
+</div>
+
+{{ else }}
+
+<div class="tab-pane fade" id="{{ $tabRef }}" role="tabpanel" aria-labelledby="nav-{{ $tabName }}">
+    {{ $.Inner  }}
+</div>
+
+{{ end }}

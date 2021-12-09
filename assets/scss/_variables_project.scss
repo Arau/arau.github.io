@@ -1,0 +1,20 @@
+/*
+
+Add styles or override variables from the theme here.
+
+*/
+
+
+$primary: white;
+$secondary: green;
+
+$stos-grey: #4a5165;
+$navbar-dark-color: $stos-grey;
+$navbar-dark-hover-color: $stos-grey;
+$navbar-dark-active-color: $stos-grey;
+$navbar-dark-disabled-color: $stos-grey;
+
+// Dropdown settings for Releases in top nav menu
+$dropdown-min-width: 0rem;
+$dropdown-border-width: 10px;
+$dropdown-border-color: white;

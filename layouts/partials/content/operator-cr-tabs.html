@@ -1,0 +1,48 @@
+{{ $platforms := split ( .Get "platforms" ) "," }}
+{{ $uniqid := replace ( .Get "sched_version" ) "." "-" }}
+
+<nav>
+    <div class="nav nav-tabs" id="nav-platforms-{{ $uniqid }}" role="tablist">
+    <br></br>
+    {{- $tabID := $uniqid -}}
+    {{- $tabTotal := len $platforms -}}
+    {{- range $i, $platform := $platforms -}}
+        {{- $tabID = (printf "%v-%v" $tabID $platform ) }}
+        {{- if eq $i 0 -}}
+        <a class="nav-item nav-link active" id="nav-{{ $tabID }}"
+            data-toggle="tab" href="#{{ $platform }}-{{ $uniqid }}" role="tab"
+            aria-controls="nav-home" aria-selected="true">
+            {{ $platform }}
+        </a>
+        {{- else }}
+        <a class="nav-item nav-link" id="nav-{{ $tabID }}" data-toggle="tab"
+            href="#{{ $platform }}-{{ $uniqid }}" role="tab" aria-controls="nav-home"
+            aria-selected="false">
+            {{ $platform }}
+        </a>
+
+        {{- end -}}
+    {{- end -}}
+    </div>
+</nav>
+
+<div class="tab-content" id="{{ $tabID }}">
+    <br></br>
+
+{{- $firstTab := "true" -}}
+{{- range $platform := $platforms -}}
+    {{- $tabName := $platform -}}
+    {{- if eq $firstTab "true" -}}
+    <div class="tab-pane fade show active" id="{{ $platform }}-{{ $uniqid }}" role="tabpanel" aria-labelledby="nav-{{ $platform }}">
+        {{- partial "content/customresource.md" (dict "params" $.Params "platform" $platform) | markdownify -}}
+    </div>
+
+    {{- $firstTab = "false" -}}
+    {{- else -}}
+    <div class="tab-pane fade" id="{{ $platform }}-{{ $uniqid }}" role="tabpanel" aria-labelledby="nav-{{ $platform }}">
+        {{- partial "content/customresource.md" (dict "params" $.Params "platform" $platform) | markdownify -}}
+    </div>
+
+    {{- end -}}
+{{- end -}}
+</div>

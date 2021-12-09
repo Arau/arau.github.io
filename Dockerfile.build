@@ -1,0 +1,18 @@
+FROM node:13-stretch
+
+RUN apt-get update -qq && apt-get install vim -yqq
+
+# Download and install hugo
+ENV HUGO_VERSION 0.65.2
+ENV HUGO_BINARY hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+
+ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY} /tmp/hugo.tar.gz
+RUN tar xzf /tmp/hugo.tar.gz -C /tmp \
+  && mv /tmp/hugo /usr/local/bin/ \
+  && rm /tmp/hugo.tar.gz \
+  && mkdir -p /run
+
+RUN npm install -g autoprefixer
+RUN npm install -g postcss-cli
+
+WORKDIR /run

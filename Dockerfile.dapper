@@ -1,0 +1,5 @@
+FROM       docker-local.artifactory.storageos.net/docs/storageos-docs:0.1
+ENV        DAPPER_SOURCE /run
+ENV        DAPPER_OUTPUT /
+ENV        DAPPER_RUN_ARGS -p 0.0.0.0:1313:1313
+ENTRYPOINT ["hugo"]

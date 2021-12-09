@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: docs
+  labels:
+    app: docs
+    branch: master
+spec:
+  rules:
+  - host: docs.apps.storageos.net
+    http:
+      paths:
+      - backend:
+          serviceName: docs
+          servicePort: 80
+        path: /

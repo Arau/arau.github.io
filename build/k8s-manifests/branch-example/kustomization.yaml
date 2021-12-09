@@ -1,0 +1,18 @@
+bases:
+  - ../bases
+
+namePrefix: branch-example-
+commonLabels:
+  branch: branch-example
+images:
+  - name: nginx
+    newName: hub.apps.storageos.net:443/docs
+    newTag: commit-sha1
+
+patchesJson6902:
+  - path: ingress_patch.yaml
+    target:
+      group: extensions
+      version: v1beta1
+      kind: Ingress
+      name: docs

@@ -1,0 +1,38 @@
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		{{ $tabHREFPrefix := .Get "tabHREFPrefix" }}
+		{{ $tabID := $.Get "tabID" }}
+		{{ $tabTotal := .Get "tabTotal" }}
+		{{ range $i, $sequence := (seq $tabTotal) }}
+
+            {{ $tabNameRef := (print "tabName" $sequence) }}
+            {{ $tabName := $.Get $tabNameRef }}
+
+            {{/* HREF can't have the character '.' in this context. It breaks the tab navigation */}}
+            {{ $nameNoDot := (replace $tabName "." "") }}
+
+            {{ $tabHREF := (print $tabHREFPrefix $nameNoDot) }}
+
+            {{ if eq $sequence 1 }}
+
+		<a class="nav-item nav-link active" id="nav-{{ $tabID }}" data-toggle="tab" href="#{{ $tabHREF | urlize }}" role="tab"
+		   aria-controls="nav-home" aria-selected="true">{{ $tabName }}</a>
+
+            {{ else }}
+
+		<a class="nav-item nav-link" id="nav-{{ $tabID }}" data-toggle="tab" href="#{{ $tabHREF | urlize }}" role="tab"
+		   aria-controls="nav-home" aria-selected="false">{{ $tabName }}</a>
+
+            {{ end }}
+		{{ end }}
+
+	</div>
+</nav>
+
+<div class="tab-content" id="{{ $.Get "tabID" }}">
+    <br></br>
+
+{{ .Inner }}
+
+</div>

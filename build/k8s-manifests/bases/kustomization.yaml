@@ -1,0 +1,5 @@
+namespace: docs-storageos
+resources:
+  - 20-deployment.yaml
+  - 30-svc.yaml
+  - 40-ingress.yaml
